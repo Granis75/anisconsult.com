@@ -85,7 +85,7 @@ export const siteContent = {
         ],
         emphasis: [
           "Le système officiel est rarement la réalité.",
-          "Les équipes compensent.",
+          "Les équipes compensent :",
           "Notes. WhatsApp. Excel parallèle. Mémoire humaine.",
         ],
         objective: "comprendre ce qui se passe réellement, et pourquoi.",
@@ -118,10 +118,26 @@ export const siteContent = {
     ],
     resultTitle: "Résultat",
     result: [
-      "Opérations plus lisibles",
-      "Moins de friction",
-      "Exécution plus stable",
-      "Meilleure capacité de scale",
+      {
+        title: "Opérations plus lisibles",
+        text: "Visibilité plus claire des flux et des points de friction.",
+      },
+      {
+        title: "Moins de friction",
+        text: "Réduction des étapes inutiles et des contournements.",
+      },
+      {
+        title: "Exécution plus stable",
+        text: "Processus plus fiables, moins dépendants de l’improvisation.",
+      },
+      {
+        title: "Meilleure capacité de scale",
+        text: "Système plus propre, plus simple à faire évoluer.",
+      },
     ],
+    cta: {
+      label: "Voir le case study Vesper →",
+      href: "/case-study/vesper",
+    },
   },
 } as const;
