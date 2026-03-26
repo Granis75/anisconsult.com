@@ -56,8 +56,42 @@ export default function HomePage() {
           </Reveal>
         </section>
 
+        <section
+          id="mybi"
+          className="border-t border-line bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)]"
+        >
+          <Reveal className="mx-auto max-w-[1320px] px-6 py-24 lg:px-10 lg:py-28" delayMs={40}>
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
+                MyBi
+              </p>
+              <h2 className="mt-4 text-balance text-4xl font-bold tracking-tighter2 text-ink sm:text-5xl lg:text-[3.7rem] lg:leading-[1.02]">
+                Un système de gestion conçu pour structurer une activité freelance.
+              </h2>
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
+                Clients, missions, facturation, paiements et pilotage.
+              </p>
+
+              <div className="mt-10 flex items-center justify-center">
+                <a
+                  href={mybi.button.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="premium-cta"
+                >
+                  {mybi.button.label}
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-16 lg:mt-20">
+              <MyBiShowcase />
+            </div>
+          </Reveal>
+        </section>
+
         <section className="border-t border-line bg-surface">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={40}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={60}>
             <SectionTitle eyebrow="Chiffres preuves" />
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -77,7 +111,7 @@ export default function HomePage() {
         </section>
 
         <section id="case-study" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={60}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={80}>
             <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
               <div>
                 <SectionTitle eyebrow="Case study" />
@@ -134,33 +168,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        </section>
-
-        <section id="mybi" className="border-t border-line bg-surface">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={80}>
-            <div className="grid gap-10 lg:grid-cols-[0.84fr_1.16fr] lg:items-center">
-              <div>
-                <SectionTitle eyebrow="MyBi" />
-
-                <p className="mt-6 max-w-xl text-base leading-8 text-muted">
-                  {mybi.description}
-                </p>
-
-                <div className="mt-10">
-                  <a
-                    href={mybi.button.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="premium-cta-outline"
-                  >
-                    {mybi.button.label}
-                  </a>
-                </div>
-              </div>
-
-              <MyBiShowcase />
             </div>
           </Reveal>
         </section>

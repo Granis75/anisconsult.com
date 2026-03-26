@@ -4,22 +4,35 @@ import { useEffect, useState } from "react";
 
 type Period = "Week" | "Month" | "Quarter";
 
-type Metric = {
+type SignalStat = {
+  label: string;
+  value: string;
+};
+
+type InsightCard = {
   label: string;
   value: string;
   note: string;
+  tone: "dark" | "light" | "accent";
 };
 
-type ChartPoint = {
+type FinanceCard = {
   label: string;
-  revenue: number;
-  collected: number;
+  value: string;
+  note: string;
+  tone: "dark" | "light" | "accent";
+};
+
+type ProjectionPoint = {
+  label: string;
+  actual: number;
+  target: number;
 };
 
 type Priority = {
   title: string;
   meta: string;
-  tone: "warning" | "neutral" | "success";
+  tone: "warning" | "neutral" | "accent";
 };
 
 type ActivityItem = {
@@ -34,83 +47,130 @@ type ActivityItem = {
 };
 
 type Snapshot = {
-  metrics: Metric[];
-  chart: ChartPoint[];
-  payments: {
-    paid: string;
-    unpaid: string;
-    collectionRate: string;
-    splits: Array<{
-      label: string;
-      value: string;
-      width: number;
-      tone: "dark" | "mid" | "light";
-    }>;
+  signal: {
+    title: string;
+    summary: string;
+    stats: SignalStat[];
   };
-  priorities: Priority[];
+  insights: InsightCard[];
+  finance: FinanceCard[];
+  projection: {
+    title: string;
+    value: string;
+    note: string;
+    points: ProjectionPoint[];
+  };
+  summary: {
+    title: string;
+    note: string;
+    priorities: Priority[];
+  };
   activity: ActivityItem[];
 };
 
 const PERIODS: Period[] = ["Week", "Month", "Quarter"];
-const MODULES = ["Dashboard", "Clients", "Missions", "Invoices", "Payments"];
+const MODULES = ["Overview", "Clients", "Missions", "Invoices", "Payments"];
 
 const SNAPSHOTS: Record<Period, Snapshot> = {
   Week: {
-    metrics: [
-      { label: "Revenue", value: "€3.2k", note: "+12% vs last week" },
-      { label: "Open invoices", value: "€480", note: "2 awaiting payment" },
-      { label: "Clients", value: "7", note: "4 active this week" },
-      { label: "Payments", value: "9", note: "Latest cleared today" },
-    ],
-    chart: [
-      { label: "Mon", revenue: 46, collected: 30 },
-      { label: "Tue", revenue: 52, collected: 39 },
-      { label: "Wed", revenue: 60, collected: 42 },
-      { label: "Thu", revenue: 78, collected: 57 },
-      { label: "Fri", revenue: 66, collected: 48 },
-      { label: "Sat", revenue: 34, collected: 25 },
-      { label: "Sun", revenue: 29, collected: 18 },
-    ],
-    payments: {
-      paid: "€2.7k",
-      unpaid: "€480",
-      collectionRate: "84%",
-      splits: [
-        { label: "Paid", value: "84%", width: 84, tone: "dark" },
-        { label: "Due", value: "11%", width: 11, tone: "mid" },
-        { label: "Overdue", value: "5%", width: 5, tone: "light" },
+    signal: {
+      title: "Cash is moving faster than new exposure is growing.",
+      summary:
+        "The operating view keeps collections, open invoices and current delivery load readable in one place.",
+      stats: [
+        { label: "Cash collected", value: "EUR 2.7k" },
+        { label: "Open invoices", value: "EUR 480" },
+        { label: "Current activity", value: "4 active clients" },
       ],
     },
-    priorities: [
+    insights: [
       {
-        title: "Invoice #1048 pending",
-        meta: "Maison Orme · due in 2 days",
-        tone: "warning",
+        label: "Execution score",
+        value: "86/100",
+        note: "Collection cadence stays ahead of invoice pressure.",
+        tone: "dark",
       },
       {
-        title: "Mission handoff this afternoon",
-        meta: "Atelier Nord · documents complete",
-        tone: "neutral",
+        label: "Client concentration",
+        value: "24%",
+        note: "No account concentration alert this week.",
+        tone: "light",
       },
       {
-        title: "Payment cleared",
-        meta: "Studio Aster · matched automatically",
-        tone: "success",
+        label: "Priority window",
+        value: "2 due",
+        note: "Invoices to resolve before Friday.",
+        tone: "accent",
       },
     ],
+    finance: [
+      {
+        label: "Revenue",
+        value: "EUR 3.2k",
+        note: "+12% vs last week",
+        tone: "light",
+      },
+      {
+        label: "Cash collected",
+        value: "EUR 2.7k",
+        note: "Matched without manual follow-up",
+        tone: "dark",
+      },
+      {
+        label: "Open invoices",
+        value: "EUR 480",
+        note: "2 invoices remain active",
+        tone: "accent",
+      },
+    ],
+    projection: {
+      title: "Weekly projection",
+      value: "EUR 3.7k",
+      note: "Collections remain within the expected window.",
+      points: [
+        { label: "Mon", actual: 30, target: 38 },
+        { label: "Tue", actual: 39, target: 44 },
+        { label: "Wed", actual: 42, target: 49 },
+        { label: "Thu", actual: 57, target: 62 },
+        { label: "Fri", actual: 48, target: 55 },
+        { label: "Sat", actual: 25, target: 31 },
+        { label: "Sun", actual: 18, target: 26 },
+      ],
+    },
+    summary: {
+      title: "Priorities",
+      note: "The dashboard highlights what needs action now, not just what exists in the system.",
+      priorities: [
+        {
+          title: "Invoice #1048 pending",
+          meta: "Maison Orme · due in 2 days",
+          tone: "warning",
+        },
+        {
+          title: "Mission handoff this afternoon",
+          meta: "Atelier Nord · documents complete",
+          tone: "neutral",
+        },
+        {
+          title: "Payment cleared",
+          meta: "Studio Aster · matched automatically",
+          tone: "accent",
+        },
+      ],
+    },
     activity: [
       {
         id: "week-invoice",
         kind: "Invoice",
         title: "Invoice #1048 sent",
         client: "Maison Orme",
-        amount: "€1.2k",
+        amount: "EUR 1.2k",
         status: "Awaiting payment",
-        summary: "CRM cleanup mission · sent today",
+        summary: "CRM cleanup mission sent today with one reminder scheduled.",
         details: [
           "Mission linked to March CRM cleanup.",
           "Due date set for March 29.",
-          "Payment reminder scheduled automatically.",
+          "Reminder timing stays visible from the dashboard.",
         ],
       },
       {
@@ -118,13 +178,13 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Payment",
         title: "Payment received",
         client: "Studio Aster",
-        amount: "€860",
+        amount: "EUR 860",
         status: "Matched",
-        summary: "Bank transfer reconciled without manual update",
+        summary: "Transfer reconciled without manual status changes.",
         details: [
-          "Invoice reconciliation completed.",
-          "Client balance updated immediately.",
-          "Payment status reflected across dashboard cards.",
+          "Invoice reconciliation completed immediately.",
+          "Client balance updated across the operating view.",
+          "Cash collected card reflects the match directly.",
         ],
       },
       {
@@ -132,72 +192,115 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Mission",
         title: "Kickoff confirmed",
         client: "Atelier Nord",
-        amount: "€1.1k",
+        amount: "EUR 1.1k",
         status: "Scheduled",
-        summary: "Operations mapping session confirmed for tomorrow",
+        summary: "Operations mapping session confirmed for tomorrow.",
         details: [
           "Timeline moved into active delivery.",
-          "Client notes attached to the mission record.",
+          "Client notes remain attached to the mission record.",
           "Invoice draft prepared for the next milestone.",
         ],
       },
     ],
   },
   Month: {
-    metrics: [
-      { label: "Revenue", value: "€12.4k", note: "Current month" },
-      { label: "Open invoices", value: "€2.1k", note: "4 awaiting payment" },
-      { label: "Clients", value: "18", note: "12 active this month" },
-      { label: "Payments", value: "36", note: "Collection flow stable" },
-    ],
-    chart: [
-      { label: "W1", revenue: 38, collected: 28 },
-      { label: "W2", revenue: 56, collected: 42 },
-      { label: "W3", revenue: 63, collected: 50 },
-      { label: "W4", revenue: 74, collected: 60 },
-      { label: "W5", revenue: 82, collected: 69 },
-      { label: "W6", revenue: 68, collected: 53 },
-    ],
-    payments: {
-      paid: "€10.3k",
-      unpaid: "€2.1k",
-      collectionRate: "83%",
-      splits: [
-        { label: "Paid", value: "83%", width: 83, tone: "dark" },
-        { label: "Due", value: "12%", width: 12, tone: "mid" },
-        { label: "Overdue", value: "5%", width: 5, tone: "light" },
+    signal: {
+      title: "Collection flow is stable while open exposure stays contained.",
+      summary:
+        "MyBi keeps revenue, cash collected, invoices and active work visible in one operating layer.",
+      stats: [
+        { label: "Cash collected", value: "EUR 10.3k" },
+        { label: "Open invoices", value: "EUR 2.1k" },
+        { label: "Active clients", value: "12 this month" },
       ],
     },
-    priorities: [
+    insights: [
       {
-        title: "2 invoices due this week",
-        meta: "Maison Orme · Nordline",
-        tone: "warning",
+        label: "Execution score",
+        value: "83/100",
+        note: "Collections are strong enough to keep pressure low.",
+        tone: "dark",
       },
       {
-        title: "Mission pipeline aligned",
-        meta: "4 active missions · 2 in setup",
-        tone: "neutral",
+        label: "Client concentration",
+        value: "31%",
+        note: "Largest client share remains readable and contained.",
+        tone: "light",
       },
       {
-        title: "Collections running cleanly",
-        meta: "36 payments logged this month",
-        tone: "success",
+        label: "Priority window",
+        value: "4 open",
+        note: "2 invoices need action this week.",
+        tone: "accent",
       },
     ],
+    finance: [
+      {
+        label: "Revenue",
+        value: "EUR 12.4k",
+        note: "Current month",
+        tone: "light",
+      },
+      {
+        label: "Cash collected",
+        value: "EUR 10.3k",
+        note: "Most payments already cleared",
+        tone: "dark",
+      },
+      {
+        label: "Open invoices",
+        value: "EUR 2.1k",
+        note: "4 invoices remain active",
+        tone: "accent",
+      },
+    ],
+    projection: {
+      title: "Monthly projection",
+      value: "EUR 13.8k",
+      note: "If current collection speed holds, month-end remains on track.",
+      points: [
+        { label: "W1", actual: 28, target: 35 },
+        { label: "W2", actual: 42, target: 48 },
+        { label: "W3", actual: 50, target: 56 },
+        { label: "W4", actual: 60, target: 68 },
+        { label: "W5", actual: 69, target: 76 },
+        { label: "W6", actual: 53, target: 61 },
+      ],
+    },
+    summary: {
+      title: "Priorities",
+      note: "The product surfaces where follow-up is needed and where execution is already healthy.",
+      priorities: [
+        {
+          title: "2 invoices due this week",
+          meta: "Maison Orme · Nordline",
+          tone: "warning",
+        },
+        {
+          title: "Mission pipeline aligned",
+          meta: "4 active missions · 2 in setup",
+          tone: "neutral",
+        },
+        {
+          title: "Collections running cleanly",
+          meta: "36 payments logged this month",
+          tone: "accent",
+        },
+      ],
+    },
     activity: [
       {
         id: "month-client",
         kind: "Client",
         title: "Client record updated",
         client: "Nordline",
-        amount: "€2.8k",
+        amount: "EUR 2.8k",
         status: "Active",
-        summary: "Arrival notes and billing contact synced into one record",
+        summary: "Billing contact and delivery notes remain linked in one record.",
         details: [
-          "Mission, invoice and payment history now linked.",
+          "Mission, invoice and payment history stay attached.",
           "Priority tags updated for the current delivery cycle.",
-          "Open balance remains visible from the dashboard.",
+          "Open balance remains visible without manual reporting.",
         ],
       },
       {
@@ -205,13 +308,13 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Invoice",
         title: "Invoice #2084 pending",
         client: "Maison Orme",
-        amount: "€1.9k",
+        amount: "EUR 1.9k",
         status: "Due in 3 days",
-        summary: "Retainer invoice is open with one reminder scheduled",
+        summary: "Retainer invoice is open with one reminder already planned.",
         details: [
           "Issued after milestone approval.",
-          "Reminder sequence remains in the pending state.",
-          "Client exposure is visible in the priorities panel.",
+          "Reminder sequence remains visible from the same view.",
+          "Client exposure is surfaced in the priorities panel.",
         ],
       },
       {
@@ -219,13 +322,13 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Payment",
         title: "Payment reconciled",
         client: "Studio Aster",
-        amount: "€2.4k",
+        amount: "EUR 2.4k",
         status: "Cleared",
-        summary: "Transfer matched to the correct invoice automatically",
+        summary: "Transfer matched to the correct invoice automatically.",
         details: [
-          "Invoice status switched to paid.",
-          "Revenue card updated with no manual step.",
-          "Timeline remains attached to the original mission.",
+          "Invoice status switched to paid immediately.",
+          "Revenue and cash metrics updated without manual action.",
+          "Timeline remained attached to the original mission.",
         ],
       },
       {
@@ -233,9 +336,9 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Mission",
         title: "Discovery mission extended",
         client: "Atelier Nord",
-        amount: "€1.4k",
+        amount: "EUR 1.4k",
         status: "In progress",
-        summary: "Scope expanded after operating review workshop",
+        summary: "Scope expanded after the operating review workshop.",
         details: [
           "Additional deliverable moved into the active phase.",
           "Follow-up invoice draft prepared in the same record.",
@@ -245,60 +348,103 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
     ],
   },
   Quarter: {
-    metrics: [
-      { label: "Revenue", value: "€37.8k", note: "Quarter to date" },
-      { label: "Open invoices", value: "€4.6k", note: "7 awaiting payment" },
-      { label: "Clients", value: "29", note: "Retention remains stable" },
-      { label: "Payments", value: "94", note: "Execution remains clean" },
-    ],
-    chart: [
-      { label: "Jan", revenue: 52, collected: 39 },
-      { label: "Feb", revenue: 61, collected: 47 },
-      { label: "Mar", revenue: 78, collected: 63 },
-      { label: "Apr", revenue: 70, collected: 57 },
-      { label: "May", revenue: 83, collected: 69 },
-      { label: "Jun", revenue: 76, collected: 60 },
-    ],
-    payments: {
-      paid: "€33.2k",
-      unpaid: "€4.6k",
-      collectionRate: "88%",
-      splits: [
-        { label: "Paid", value: "88%", width: 88, tone: "dark" },
-        { label: "Due", value: "8%", width: 8, tone: "mid" },
-        { label: "Overdue", value: "4%", width: 4, tone: "light" },
+    signal: {
+      title: "Quarter performance stays readable as the business scales.",
+      summary:
+        "The operating layer keeps cash, exposure and client concentration aligned while delivery volume increases.",
+      stats: [
+        { label: "Cash collected", value: "EUR 33.2k" },
+        { label: "Open invoices", value: "EUR 4.6k" },
+        { label: "Retention", value: "29 active clients" },
       ],
     },
-    priorities: [
+    insights: [
       {
-        title: "Quarter collections on track",
-        meta: "Exposure concentrated on 3 large invoices",
-        tone: "warning",
+        label: "Execution score",
+        value: "88/100",
+        note: "Quarter collections remain strong relative to exposure.",
+        tone: "dark",
       },
       {
-        title: "Delivery load remains balanced",
-        meta: "Mission flow stable across active clients",
-        tone: "neutral",
+        label: "Client concentration",
+        value: "28%",
+        note: "Largest account share remains visible and manageable.",
+        tone: "light",
       },
       {
-        title: "Paid share remains high",
-        meta: "88% already collected this quarter",
-        tone: "success",
+        label: "Priority window",
+        value: "7 open",
+        note: "Exposure is concentrated on a few larger invoices.",
+        tone: "accent",
       },
     ],
+    finance: [
+      {
+        label: "Revenue",
+        value: "EUR 37.8k",
+        note: "Quarter to date",
+        tone: "light",
+      },
+      {
+        label: "Cash collected",
+        value: "EUR 33.2k",
+        note: "Execution remains clean",
+        tone: "dark",
+      },
+      {
+        label: "Open invoices",
+        value: "EUR 4.6k",
+        note: "7 invoices remain active",
+        tone: "accent",
+      },
+    ],
+    projection: {
+      title: "Quarter projection",
+      value: "EUR 40.9k",
+      note: "The pipeline supports steady quarter-end revenue without sharp operational strain.",
+      points: [
+        { label: "Jan", actual: 39, target: 46 },
+        { label: "Feb", actual: 47, target: 54 },
+        { label: "Mar", actual: 63, target: 69 },
+        { label: "Apr", actual: 57, target: 65 },
+        { label: "May", actual: 69, target: 75 },
+        { label: "Jun", actual: 60, target: 68 },
+      ],
+    },
+    summary: {
+      title: "Priorities",
+      note: "The view stays focused on concentration, collections and delivery stability across the quarter.",
+      priorities: [
+        {
+          title: "Quarter collections on track",
+          meta: "Exposure concentrated on 3 large invoices",
+          tone: "warning",
+        },
+        {
+          title: "Delivery load remains balanced",
+          meta: "Mission flow stable across active clients",
+          tone: "neutral",
+        },
+        {
+          title: "Paid share remains high",
+          meta: "88% already collected this quarter",
+          tone: "accent",
+        },
+      ],
+    },
     activity: [
       {
         id: "quarter-growth",
         kind: "Client",
         title: "New client added",
         client: "Maison Atlas",
-        amount: "€3.6k",
+        amount: "EUR 3.6k",
         status: "Onboarding",
-        summary: "Client entered the system with full billing structure",
+        summary: "Billing structure and active work were initialized in one flow.",
         details: [
-          "Primary contacts and payment terms are centralized.",
+          "Primary contacts and payment terms remain centralized.",
           "Mission templates generated from the client record.",
-          "Future invoices inherit the agreed structure automatically.",
+          "Future invoices inherit the same structure automatically.",
         ],
       },
       {
@@ -306,9 +452,9 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Invoice",
         title: "Quarterly invoice batch ready",
         client: "Portfolio view",
-        amount: "€6.8k",
+        amount: "EUR 6.8k",
         status: "Prepared",
-        summary: "Invoice drafts consolidated before dispatch",
+        summary: "Invoice drafts are consolidated before dispatch.",
         details: [
           "Drafts grouped by client and due window.",
           "Outstanding balances remain visible before sending.",
@@ -320,41 +466,53 @@ const SNAPSHOTS: Record<Period, Snapshot> = {
         kind: "Payment",
         title: "Largest payment matched",
         client: "Nordline",
-        amount: "€4.2k",
+        amount: "EUR 4.2k",
         status: "Cleared",
-        summary: "The biggest transfer of the quarter has been reconciled",
+        summary: "The biggest transfer of the quarter has been reconciled.",
         details: [
           "Payment linked to the correct invoice chain.",
           "Client balance returned to zero immediately.",
-          "Quarter dashboard totals refreshed with no manual action.",
+          "Quarter totals refreshed without manual reporting.",
         ],
       },
     ],
   },
 };
 
-function priorityToneClass(tone: Priority["tone"]) {
+function insightToneClass(tone: InsightCard["tone"]) {
+  if (tone === "dark") {
+    return "border-slate-800/80 bg-[#0f1728] text-white";
+  }
+
+  if (tone === "accent") {
+    return "border-blue-200 bg-blue-50 text-[#0b1020]";
+  }
+
+  return "border-slate-200 bg-white text-[#0b1020]";
+}
+
+function financeToneClass(tone: FinanceCard["tone"]) {
+  if (tone === "dark") {
+    return "border-slate-800/80 bg-[#0b1220] text-white";
+  }
+
+  if (tone === "accent") {
+    return "border-blue-200 bg-blue-50 text-[#0b1020]";
+  }
+
+  return "border-slate-200 bg-white text-[#0b1020]";
+}
+
+function priorityDotClass(tone: Priority["tone"]) {
   if (tone === "warning") {
     return "bg-amber-500";
   }
 
-  if (tone === "success") {
-    return "bg-emerald-500";
+  if (tone === "accent") {
+    return "bg-blue-500";
   }
 
   return "bg-slate-300";
-}
-
-function paymentToneClass(tone: Snapshot["payments"]["splits"][number]["tone"]) {
-  if (tone === "dark") {
-    return "bg-[var(--ink)]";
-  }
-
-  if (tone === "mid") {
-    return "bg-slate-400";
-  }
-
-  return "bg-slate-200";
 }
 
 type MyBiShowcaseProps = {
@@ -368,43 +526,71 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
   );
 
   const snapshot = SNAPSHOTS[period];
+  const selectedActivity =
+    snapshot.activity.find((item) => item.id === selectedActivityId) ??
+    snapshot.activity[0];
 
   useEffect(() => {
     setSelectedActivityId(SNAPSHOTS[period].activity[0].id);
   }, [period]);
 
-  const selectedActivity =
-    snapshot.activity.find((item) => item.id === selectedActivityId) ??
-    snapshot.activity[0];
+  const chartMax =
+    Math.max(
+      ...snapshot.projection.points.flatMap((point) => [point.actual, point.target]),
+      1
+    ) || 1;
+
+  const linePoints = snapshot.projection.points
+    .map((point, index) => {
+      const x =
+        snapshot.projection.points.length === 1
+          ? 50
+          : 6 + (index * 88) / (snapshot.projection.points.length - 1);
+      const y = 52 - (point.actual / chartMax) * 38;
+
+      return `${x},${y}`;
+    })
+    .join(" ");
 
   return (
     <div
-      className={`relative overflow-hidden rounded-[28px] border border-[var(--line)] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.04),0_18px_50px_rgba(15,23,42,0.06)] ${className}`}
+      className={`relative overflow-hidden rounded-[34px] border border-slate-200/80 bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_22%,#f4f7fb_100%)] shadow-[0_1px_2px_rgba(15,23,42,0.04),0_28px_90px_rgba(15,23,42,0.10)] ${className}`}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(11,16,32,0.06),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(148,163,184,0.12),transparent_36%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.12),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_34%)]" />
 
       <div className="relative">
-        <div className="border-b border-line px-5 py-5 sm:px-6">
-          <div className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
-            <div className="flex items-center gap-4">
-              <div className="showcase-float flex h-12 w-12 items-center justify-center rounded-[18px] bg-[var(--ink)] text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.18)]">
-                MB
+        <div className="border-b border-slate-200/80 bg-white/80 px-6 py-5 backdrop-blur xl:px-8">
+          <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
+              <div className="flex items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-3 py-2">
+                <div className="showcase-float flex h-10 w-10 items-center justify-center rounded-full bg-[#0b1220] text-sm font-semibold text-white">
+                  MB
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    MyBi
+                  </p>
+                  <p className="text-sm text-slate-600">Business operating system</p>
+                </div>
               </div>
 
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-                  Product showcase
-                </p>
-                <h3 className="mt-2 text-xl font-semibold tracking-[-0.02em] text-ink">
-                  MyBi dashboard
-                </h3>
-                <p className="mt-1 text-sm text-muted">
-                  Client, mission, invoice and payment flow
-                </p>
+              <div className="hidden flex-wrap gap-2 lg:flex">
+                {MODULES.map((item, index) => (
+                  <div
+                    key={item}
+                    className={`rounded-full border px-3 py-1.5 text-xs font-medium ${
+                      index === 0
+                        ? "border-slate-200 bg-white text-[#0b1020] shadow-[0_8px_18px_rgba(15,23,42,0.06)]"
+                        : "border-transparent bg-transparent text-slate-500"
+                    }`}
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="inline-flex rounded-full border border-line bg-[var(--soft)] p-1">
+            <div className="inline-flex rounded-full border border-slate-200 bg-white p-1 shadow-[0_8px_20px_rgba(15,23,42,0.05)]">
               {PERIODS.map((item) => {
                 const isActive = item === period;
 
@@ -412,12 +598,12 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
                   <button
                     key={item}
                     type="button"
-                    aria-pressed={isActive}
                     onClick={() => setPeriod(item)}
+                    aria-pressed={isActive}
                     className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                       isActive
-                        ? "bg-white text-ink shadow-[0_8px_18px_rgba(15,23,42,0.08)]"
-                        : "text-muted hover:text-ink"
+                        ? "bg-[#0b1220] text-white"
+                        : "text-slate-500 hover:text-[#0b1020]"
                     }`}
                   >
                     {item}
@@ -426,289 +612,333 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
               })}
             </div>
           </div>
-
-          <div className="mt-5 flex flex-wrap gap-2">
-            {MODULES.map((item, index) => (
-              <div
-                key={item}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
-                  index === 0
-                    ? "border-[var(--line)] bg-[var(--ink)] text-white"
-                    : "border-[var(--line)] bg-white text-muted"
-                }`}
-              >
-                {item}
-              </div>
-            ))}
-          </div>
         </div>
 
-        <div className="grid gap-4 p-5 sm:p-6 xl:grid-cols-[1.42fr_0.9fr]">
-          <div className="space-y-4">
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-              {snapshot.metrics.map((metric) => (
-                <article
-                  key={metric.label}
-                  className="rounded-[22px] border border-line bg-[var(--soft)] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300"
-                >
-                  <p className="text-xs font-medium text-muted">{metric.label}</p>
-                  <p className="mt-3 text-2xl font-bold tracking-[-0.03em] text-ink">
-                    {metric.value}
-                  </p>
-                  <p className="mt-2 text-xs leading-6 text-muted">{metric.note}</p>
-                </article>
-              ))}
-            </div>
+        <div className="space-y-6 p-6 lg:p-8 xl:p-10">
+          <div className="grid gap-6 xl:grid-cols-[1.48fr_0.84fr]">
+            <article className="relative overflow-hidden rounded-[30px] border border-slate-900/80 bg-[#0b1220] p-7 text-white shadow-[0_22px_60px_rgba(15,23,42,0.22)] lg:p-9">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent)]" />
 
-            <div className="grid gap-4 lg:grid-cols-[1.45fr_0.85fr]">
-              <article className="rounded-[24px] border border-line bg-[var(--soft)] p-5">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <div>
-                    <p className="text-sm font-semibold text-ink">Revenue & cash</p>
-                    <p className="mt-1 text-xs text-muted">
-                      Deterministic demo view of the current period
-                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-3 text-xs text-muted">
-                    <div className="flex items-center gap-2">
-                      <span className="h-2.5 w-2.5 rounded-full bg-slate-300" />
-                      Revenue
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="showcase-pulse h-2.5 w-2.5 rounded-full bg-[var(--ink)]" />
-                      Collected
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 flex h-56 items-end gap-3">
-                  {snapshot.chart.map((point) => (
-                    <div
-                      key={point.label}
-                      className="group flex flex-1 flex-col items-center gap-3"
-                    >
-                      <div className="relative flex h-full w-full items-end justify-center rounded-[20px] bg-white px-2 pb-3 pt-4">
-                        <div className="absolute left-1/2 top-3 -translate-x-1/2 rounded-full border border-line bg-white px-2 py-1 text-[10px] font-medium text-ink opacity-0 shadow-[0_8px_18px_rgba(15,23,42,0.08)] transition group-hover:opacity-100">
-                          {point.revenue}% / {point.collected}%
-                        </div>
-
-                        <div className="relative h-full w-full">
-                          <div
-                            className="absolute inset-x-1 bottom-0 rounded-[16px] bg-slate-200 transition-all duration-700 ease-out"
-                            style={{ height: `${point.revenue}%` }}
-                          />
-                          <div
-                            className="absolute inset-x-3 bottom-0 rounded-[14px] bg-[var(--ink)] transition-all duration-700 ease-out"
-                            style={{ height: `${point.collected}%` }}
-                          />
-                        </div>
-                      </div>
-
-                      <span className="text-xs font-medium text-muted">{point.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </article>
-
-              <article className="rounded-[24px] border border-line bg-white p-5">
-                <p className="text-sm font-semibold text-ink">Invoices & payments</p>
-
-                <div className="mt-5 grid grid-cols-2 gap-3">
-                  <div className="rounded-[18px] border border-line bg-[var(--soft)] p-4">
-                    <p className="text-xs text-muted">Paid</p>
-                    <p className="mt-2 text-xl font-bold text-ink">
-                      {snapshot.payments.paid}
-                    </p>
-                  </div>
-
-                  <div className="rounded-[18px] border border-line bg-[var(--soft)] p-4">
-                    <p className="text-xs text-muted">Open</p>
-                    <p className="mt-2 text-xl font-bold text-ink">
-                      {snapshot.payments.unpaid}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-5 rounded-[20px] border border-line bg-[var(--soft)] p-4">
-                  <p className="text-xs text-muted">Collection rate</p>
-                  <p className="mt-2 text-2xl font-bold text-ink">
-                    {snapshot.payments.collectionRate}
-                  </p>
-
-                  <div className="mt-4 flex h-2 overflow-hidden rounded-full bg-white">
-                    {snapshot.payments.splits.map((split) => (
-                      <div
-                        key={split.label}
-                        className={`${paymentToneClass(split.tone)} transition-all duration-700`}
-                        style={{ width: `${split.width}%` }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="mt-4 space-y-2">
-                    {snapshot.payments.splits.map((split) => (
-                      <div
-                        key={split.label}
-                        className="flex items-center justify-between text-xs text-muted"
-                      >
-                        <div className="flex items-center gap-2">
-                          <span
-                            className={`h-2.5 w-2.5 rounded-full ${paymentToneClass(split.tone)}`}
-                          />
-                          {split.label}
-                        </div>
-                        <span className="font-medium text-ink">{split.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            </div>
-
-            <div className="grid gap-4 lg:grid-cols-[1.06fr_0.94fr]">
-              <article className="rounded-[24px] border border-line bg-white p-3">
-                <div className="flex items-center justify-between px-2 pb-3 pt-2">
-                  <p className="text-sm font-semibold text-ink">Recent activity</p>
-                  <p className="text-xs text-muted">Click an item</p>
-                </div>
-
-                <div className="space-y-2">
-                  {snapshot.activity.map((item) => {
-                    const isSelected = item.id === selectedActivity.id;
-
-                    return (
-                      <button
-                        key={item.id}
-                        type="button"
-                        onClick={() => setSelectedActivityId(item.id)}
-                        className={`w-full rounded-[20px] border px-4 py-4 text-left transition-all duration-300 ${
-                          isSelected
-                            ? "border-slate-300 bg-[var(--soft)] shadow-[0_10px_24px_rgba(15,23,42,0.06)]"
-                            : "border-transparent bg-white hover:border-[var(--line)] hover:bg-[var(--soft)]"
-                        }`}
-                      >
-                        <div className="flex items-start justify-between gap-4">
-                          <div>
-                            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                              {item.kind}
-                            </p>
-                            <h4 className="mt-2 text-sm font-semibold text-ink">
-                              {item.title}
-                            </h4>
-                            <p className="mt-1 text-sm text-muted">{item.summary}</p>
-                          </div>
-
-                          <div className="text-right">
-                            <p className="text-sm font-semibold text-ink">{item.amount}</p>
-                            <p className="mt-1 text-xs text-muted">{item.status}</p>
-                          </div>
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </article>
-
-              <article className="rounded-[24px] border border-line bg-[var(--soft)] p-5">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-                      Detail panel
-                    </p>
-                    <h4 className="mt-2 text-lg font-semibold tracking-[-0.02em] text-ink">
-                      {selectedActivity.title}
-                    </h4>
-                  </div>
-
-                  <span className="rounded-full border border-line bg-white px-3 py-1 text-xs font-medium text-ink">
-                    {selectedActivity.status}
+              <div className="relative">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300">
+                    Business signal
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-blue-400/25 bg-blue-400/10 px-3 py-1.5 text-xs font-medium text-blue-100">
+                    <span className="showcase-pulse h-2 w-2 rounded-full bg-blue-300" />
+                    Live operating view
                   </span>
                 </div>
 
-                <div className="mt-5 grid grid-cols-2 gap-3">
-                  <div className="rounded-[18px] border border-line bg-white p-4">
-                    <p className="text-xs text-muted">Client</p>
-                    <p className="mt-2 text-sm font-semibold text-ink">
-                      {selectedActivity.client}
-                    </p>
-                  </div>
+                <h3 className="mt-8 max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-white sm:text-[2.5rem] sm:leading-[1.05]">
+                  {snapshot.signal.title}
+                </h3>
 
-                  <div className="rounded-[18px] border border-line bg-white p-4">
-                    <p className="text-xs text-muted">Amount</p>
-                    <p className="mt-2 text-sm font-semibold text-ink">
-                      {selectedActivity.amount}
-                    </p>
-                  </div>
-                </div>
+                <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+                  {snapshot.signal.summary}
+                </p>
 
-                <div className="mt-5 rounded-[20px] border border-line bg-white p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                    Summary
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-muted">
-                    {selectedActivity.summary}
-                  </p>
+                <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                  {snapshot.signal.stats.map((item) => (
+                    <div
+                      key={item.label}
+                      className="rounded-[22px] border border-white/10 bg-white/5 px-5 py-4"
+                    >
+                      <p className="text-xs font-medium uppercase tracking-[0.14em] text-slate-400">
+                        {item.label}
+                      </p>
+                      <p className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white">
+                        {item.value}
+                      </p>
+                    </div>
+                  ))}
                 </div>
+              </div>
+            </article>
 
-                <div className="mt-5">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                    Signals
+            <div className="grid gap-4">
+              {snapshot.insights.map((item) => (
+                <article
+                  key={item.label}
+                  className={`rounded-[28px] border p-6 shadow-[0_16px_40px_rgba(15,23,42,0.08)] ${insightToneClass(item.tone)}`}
+                >
+                  <p
+                    className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                      item.tone === "dark" ? "text-slate-400" : "text-slate-500"
+                    }`}
+                  >
+                    {item.label}
                   </p>
-                  <ul className="mt-3 space-y-3 text-sm leading-7 text-muted">
-                    {selectedActivity.details.map((detail) => (
-                      <li key={detail} className="flex gap-3">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--ink)]" />
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
+                  <p className="mt-4 text-4xl font-semibold tracking-[-0.05em]">
+                    {item.value}
+                  </p>
+                  <p
+                    className={`mt-3 text-sm leading-7 ${
+                      item.tone === "dark" ? "text-slate-300" : "text-slate-600"
+                    }`}
+                  >
+                    {item.note}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
 
-          <div className="space-y-4">
-            <article className="rounded-[24px] border border-line bg-[var(--soft)] p-5">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-ink">Priorities</p>
-                <span className="text-xs text-muted">Focused view</span>
+          <div className="grid gap-4 lg:grid-cols-3">
+            {snapshot.finance.map((item) => (
+              <article
+                key={item.label}
+                className={`rounded-[28px] border p-6 shadow-[0_16px_36px_rgba(15,23,42,0.06)] lg:p-7 ${financeToneClass(item.tone)}`}
+              >
+                <p
+                  className={`text-xs font-semibold uppercase tracking-[0.14em] ${
+                    item.tone === "dark" ? "text-slate-400" : "text-slate-500"
+                  }`}
+                >
+                  {item.label}
+                </p>
+                <p className="mt-4 text-4xl font-semibold tracking-[-0.05em]">
+                  {item.value}
+                </p>
+                <p
+                  className={`mt-3 text-sm leading-7 ${
+                    item.tone === "dark" ? "text-slate-300" : "text-slate-600"
+                  }`}
+                >
+                  {item.note}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="grid gap-6 xl:grid-cols-[1.28fr_0.72fr]">
+            <article className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-[0_18px_44px_rgba(15,23,42,0.07)] lg:p-8">
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    {snapshot.projection.title}
+                  </p>
+                  <p className="mt-3 text-4xl font-semibold tracking-[-0.05em] text-[#0b1020]">
+                    {snapshot.projection.value}
+                  </p>
+                </div>
+                <p className="max-w-sm text-sm leading-7 text-slate-600">
+                  {snapshot.projection.note}
+                </p>
               </div>
 
-              <div className="mt-5 space-y-3">
-                {snapshot.priorities.map((item) => (
+              <div className="mt-8 rounded-[28px] border border-slate-200 bg-[#f8fbff] px-4 py-5 lg:px-6">
+                <div className="grid grid-cols-6 gap-3 text-[11px] uppercase tracking-[0.14em] text-slate-400">
+                  <span>Low</span>
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                  <span className="text-right">High</span>
+                </div>
+
+                <div className="relative mt-5 h-72">
+                  <div className="absolute inset-0">
+                    {Array.from({ length: 4 }).map((_, index) => (
+                      <div
+                        key={index}
+                        className="absolute inset-x-0 border-t border-dashed border-slate-200"
+                        style={{ top: `${index * 33.3}%` }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="absolute inset-0 flex items-end gap-3">
+                    {snapshot.projection.points.map((point) => {
+                      const targetHeight = `${(point.target / chartMax) * 100}%`;
+                      const actualHeight = `${(point.actual / chartMax) * 100}%`;
+
+                      return (
+                        <div key={point.label} className="flex flex-1 flex-col items-center gap-3">
+                          <div className="relative flex h-full w-full items-end justify-center rounded-[22px] border border-slate-200 bg-white px-2 pb-3 pt-4">
+                            <div
+                              className="absolute inset-x-2 bottom-3 rounded-[18px] bg-slate-100 transition-all duration-700 ease-out"
+                              style={{ height: targetHeight }}
+                            />
+                            <div
+                              className="absolute inset-x-4 bottom-3 rounded-[16px] bg-[#0b1220] transition-all duration-700 ease-out"
+                              style={{ height: actualHeight }}
+                            />
+                          </div>
+                          <span className="text-xs font-medium text-slate-500">{point.label}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <svg
+                    viewBox="0 0 100 60"
+                    className="pointer-events-none absolute inset-x-0 top-3 h-[75%] w-full"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                  >
+                    <polyline
+                      fill="none"
+                      stroke="rgba(59, 130, 246, 0.18)"
+                      strokeWidth="4"
+                      points={linePoints}
+                    />
+                    <polyline
+                      key={period}
+                      pathLength={1}
+                      className="showcase-line"
+                      fill="none"
+                      stroke="#2563eb"
+                      strokeWidth="2.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      points={linePoints}
+                    />
+                  </svg>
+                </div>
+              </div>
+            </article>
+
+            <article className="rounded-[30px] border border-slate-800/80 bg-[#0f1728] p-6 text-white shadow-[0_22px_60px_rgba(15,23,42,0.18)] lg:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                {snapshot.summary.title}
+              </p>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                {snapshot.summary.note}
+              </p>
+
+              <div className="mt-8 space-y-4">
+                {snapshot.summary.priorities.map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-[18px] border border-line bg-white p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(15,23,42,0.06)]"
+                    className="rounded-[24px] border border-white/10 bg-white/5 px-5 py-4"
                   >
                     <div className="flex items-start gap-3">
                       <span
-                        className={`mt-1.5 h-2.5 w-2.5 rounded-full ${priorityToneClass(item.tone)}`}
+                        className={`mt-2 h-2.5 w-2.5 rounded-full ${priorityDotClass(item.tone)}`}
                       />
                       <div>
-                        <p className="text-sm font-semibold text-ink">{item.title}</p>
-                        <p className="mt-1 text-sm text-muted">{item.meta}</p>
+                        <p className="text-sm font-semibold text-white">{item.title}</p>
+                        <p className="mt-1 text-sm leading-7 text-slate-300">{item.meta}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
             </article>
+          </div>
 
-            <article className="rounded-[24px] border border-line bg-white p-5">
-              <p className="text-sm font-semibold text-ink">Operating flow</p>
-              <div className="mt-5 flex flex-col gap-3">
-                {["Client", "Mission", "Invoice", "Payment"].map((item, index) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 rounded-[18px] border border-line bg-[var(--soft)] px-4 py-3"
-                  >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-xs font-semibold text-ink">
-                      {index + 1}
-                    </div>
-                    <div className="text-sm font-medium text-ink">{item}</div>
-                  </div>
-                ))}
+          <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
+            <article className="rounded-[30px] border border-slate-200 bg-white p-4 shadow-[0_18px_44px_rgba(15,23,42,0.06)] sm:p-5">
+              <div className="flex items-center justify-between gap-4 px-2 pb-4 pt-2">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    Recent activity
+                  </p>
+                  <p className="mt-2 text-sm text-slate-600">
+                    Click a record to inspect the operating context.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {snapshot.activity.map((item) => {
+                  const isSelected = item.id === selectedActivity.id;
+
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => setSelectedActivityId(item.id)}
+                      className={`w-full rounded-[24px] border px-5 py-5 text-left transition-all duration-300 ${
+                        isSelected
+                          ? "border-blue-200 bg-blue-50 shadow-[0_16px_34px_rgba(37,99,235,0.10)]"
+                          : "border-transparent bg-[#f7f9fc] hover:border-slate-200 hover:bg-white hover:shadow-[0_14px_28px_rgba(15,23,42,0.05)]"
+                      }`}
+                    >
+                      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                        <div>
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                            {item.kind}
+                          </p>
+                          <h4 className="mt-2 text-lg font-semibold tracking-[-0.02em] text-[#0b1020]">
+                            {item.title}
+                          </h4>
+                          <p className="mt-2 text-sm leading-7 text-slate-600">
+                            {item.summary}
+                          </p>
+                        </div>
+
+                        <div className="sm:text-right">
+                          <p className="text-base font-semibold text-[#0b1020]">
+                            {item.amount}
+                          </p>
+                          <p className="mt-1 text-sm text-slate-500">{item.status}</p>
+                        </div>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </article>
+
+            <article className="rounded-[30px] border border-slate-200 bg-[#f8fbff] p-6 shadow-[0_18px_44px_rgba(15,23,42,0.06)] lg:p-8">
+              <div className="flex flex-col gap-4 border-b border-slate-200 pb-5 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+                    Detail panel
+                  </p>
+                  <h4 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-[#0b1020]">
+                    {selectedActivity.title}
+                  </h4>
+                </div>
+
+                <span className="inline-flex rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-[#0b1020]">
+                  {selectedActivity.status}
+                </span>
+              </div>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-[24px] border border-slate-200 bg-white p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    Client
+                  </p>
+                  <p className="mt-3 text-lg font-semibold text-[#0b1020]">
+                    {selectedActivity.client}
+                  </p>
+                </div>
+
+                <div className="rounded-[24px] border border-slate-200 bg-white p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    Amount
+                  </p>
+                  <p className="mt-3 text-lg font-semibold text-[#0b1020]">
+                    {selectedActivity.amount}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-5 rounded-[24px] border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Context
+                </p>
+                <p className="mt-3 text-sm leading-8 text-slate-600">
+                  {selectedActivity.summary}
+                </p>
+              </div>
+
+              <div className="mt-5 rounded-[24px] border border-slate-200 bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                  Signals
+                </p>
+                <ul className="mt-4 space-y-3">
+                  {selectedActivity.details.map((detail) => (
+                    <li key={detail} className="flex gap-3 text-sm leading-7 text-slate-600">
+                      <span className="mt-3 h-1.5 w-1.5 rounded-full bg-blue-500" />
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </article>
           </div>
