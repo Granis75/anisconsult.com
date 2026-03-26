@@ -7,7 +7,7 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    eyebrow: "Operations · CRM · Automatisation.",
+    eyebrow: "Operations · CRM · Automatisation",
     title: "Des opérations plus claires, plus fiables, plus pilotables.",
     description:
       "Je conçois des systèmes simples pour structurer les flux métier, fiabiliser la donnée et améliorer l’exécution quotidienne.",
@@ -18,8 +18,8 @@ export const siteContent = {
       href: "/case-study/vesper",
     },
     secondaryCta: {
-      label: "Discuter du besoin",
-      href: "mailto:anis.contactme@gmail.com",
+      label: "Contact",
+      href: "/#contact",
     },
   },
   proofs: [
@@ -71,20 +71,14 @@ export const siteContent = {
     {
       step: "Étape 1",
       title: "Lire le réel",
-      description:
-        "Comprendre le fonctionnement réel, les frictions et les priorités.",
     },
     {
       step: "Étape 2",
       title: "Structurer",
-      description:
-        "Définir les flux, la donnée utile, les états et les automatisations pertinentes.",
     },
     {
       step: "Étape 3",
       title: "Déployer",
-      description:
-        "Mettre en place une solution simple, maintenable et directement utile.",
     },
   ],
   positioning: [

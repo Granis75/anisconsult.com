@@ -40,12 +40,12 @@ export default function HomePage() {
                   {hero.primaryCta.label}
                 </Link>
 
-                <a
+                <Link
                   href={hero.secondaryCta.href}
                   className="inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3 text-sm font-semibold text-ink transition hover:border-ink"
                 >
                   {hero.secondaryCta.label}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -218,9 +218,6 @@ export default function HomePage() {
                 >
                   <p className="text-sm font-semibold text-muted">{item.step}</p>
                   <h3 className="mt-3 text-xl font-bold text-ink">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-muted">
-                    {item.description}
-                  </p>
                 </article>
               ))}
             </div>
@@ -249,7 +246,7 @@ export default function HomePage() {
                 href="mailto:anis.contactme@gmail.com"
                 className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition hover:opacity-90"
               >
-                Prendre contact
+                Contact
               </a>
             </div>
           </div>
