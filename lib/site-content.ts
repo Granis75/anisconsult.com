@@ -74,75 +74,58 @@ export const siteContent = {
       {
         step: "Étape 1",
         title: "Lire le réel",
-        body: [
-          "Le point de départ n’est pas l’outil. C’est le fonctionnement réel.",
-          "Observation des flux sur le terrain. Analyse des interactions entre équipes. Identification des points de friction et des dépendances critiques.",
-          "Très souvent, le système officiel ne reflète pas la réalité. Les équipes compensent avec des solutions de contournement : notes, WhatsApp, Excel parallèle, mémoire humaine.",
-          "L’objectif est simple : comprendre ce qui se passe réellement, et pourquoi.",
+        intro: [
+          "Le point de départ n’est pas l’outil.",
+          "C’est le fonctionnement réel.",
         ],
-        caseStudyTitle: "Cas Vesper",
-        caseStudy:
-          "Fonctionnement fragmenté, fortement dépendant du front desk. Informations dispersées, expérience client non homogène, peu de structure dans les flux et la donnée. Une partie du travail réel reposait sur des ajustements manuels et des habitudes d’équipe.",
+        bullets: [
+          "Observation des flux sur le terrain",
+          "Analyse des interactions entre équipes",
+          "Identification des frictions et des dépendances",
+        ],
+        emphasis: [
+          "Le système officiel est rarement la réalité.",
+          "Les équipes compensent.",
+          "Notes. WhatsApp. Excel parallèle. Mémoire humaine.",
+        ],
+        objective: "comprendre ce qui se passe réellement, et pourquoi.",
       },
       {
         step: "Étape 2",
         title: "Structurer",
-        body: [
-          "Avant de parler d’outil, on corrige le système.",
-          "Modélisation des flux : qui fait quoi, quand, avec quelle information. Simplification des étapes. Définition des états clés et de la donnée réellement utile.",
-          "On transforme un fonctionnement implicite en système lisible.",
-          "Objectif : enlever la complexité inutile, clarifier les responsabilités, rendre le pilotage possible.",
+        intro: [
+          "On ne corrige pas un problème avec un outil.",
+          "On corrige le système.",
         ],
-        caseStudyTitle: "Cas Vesper",
-        caseStudy:
-          "Reconstruction de la logique opérationnelle autour d’un modèle plus autonome. Structuration du parcours client. Centralisation et organisation de la donnée client pour permettre une exploitation réelle.",
+        bullets: [
+          "Modélisation des flux",
+          "Simplification des étapes",
+          "Définition des états et des données utiles",
+        ],
+        objective: "clarifier, simplifier, rendre pilotable.",
       },
       {
         step: "Étape 3",
         title: "Déployer",
-        body: [
-          "Une fois le système clair, on l’outille.",
-          "Intégration de solutions existantes ou création d’outils ciblés. Mise en place progressive. Adoption par les équipes prioritaire sur la sophistication technique.",
-          "Le système doit être utilisable immédiatement, et évoluer rapidement.",
+        intro: ["Une fois le système clair, on l’outille."],
+        bullets: [
+          "Intégration de solutions existantes ou outils ciblés",
+          "Mise en place progressive",
+          "Adoption réelle par les équipes",
         ],
-        caseStudyTitle: "Cas Vesper",
-        caseStudy:
-          "Déploiement d’un système d’accès RFID / Bluetooth. Mise en place de supports digitaux multilingues. Intégration d’une logique CRM pour structurer et exploiter la donnée client.",
-        resultTitle: "Résultat",
-        result: [
-          "Opérations plus lisibles",
-          "Moins de friction",
-          "Capacité d’exécution plus stable et plus scalable",
-        ],
+        objective: "un système utilisable immédiatement, qui évolue vite.",
       },
     ],
-    tracking: {
-      eyebrow: "Suivi & pilotage",
-      title: "Un système opérationnel doit rester lisible.",
-      body: [
-        "Un système opérationnel ne s’arrête pas au déploiement. Il doit être pilotable.",
-        "L’objectif est de rendre visibles les indicateurs qui reflètent réellement l’activité.",
-        "MyBi est un système de gestion conçu pour structurer une activité freelance autour d’un flux simple :",
-        "Chaque étape est reliée à une donnée exploitable.",
-      ],
-      dashboardIntro: "Le dashboard permet de suivre en temps réel :",
-      benefitsIntro: "Ce type d’outil permet :",
-      benefits: [
-        "d’identifier immédiatement les retards de paiement",
-        "de comprendre la dépendance à certains clients",
-        "de suivre l’activité sans retraitement manuel",
-        "de transformer la donnée en décision opérationnelle",
-      ],
-      closing:
-        "Ce n’est pas un outil de plus. C’est une couche de lecture du système.",
-    },
-    positioning: {
-      title: "Positionnement",
-      items: [
-        "Pas de tech pour la tech.",
-        "Pas de digitalisation d’un mauvais flux.",
-        "Des systèmes simples.",
-      ],
+    resultTitle: "Résultat",
+    result: [
+      "Opérations plus lisibles",
+      "Moins de friction",
+      "Exécution plus stable",
+      "Meilleure capacité de scale",
+    ],
+    cta: {
+      label: "Voir le case study Vesper →",
+      href: "/case-study/vesper",
     },
   },
 } as const;
