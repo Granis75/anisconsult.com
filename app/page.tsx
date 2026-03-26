@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ContactModal } from "@/components/contact-modal";
+import { MyBiShowcase } from "@/components/mybi-showcase";
 import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -140,7 +140,7 @@ export default function HomePage() {
 
         <section id="mybi" className="border-t border-line bg-surface">
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={80}>
-            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div className="grid gap-10 lg:grid-cols-[0.84fr_1.16fr] lg:items-center">
               <div>
                 <SectionTitle eyebrow="MyBi" />
 
@@ -160,52 +160,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="premium-card p-4">
-                <div className="overflow-hidden rounded-[1.5rem] border border-line bg-soft">
-                  <Image
-                    src="/mybi_mockup.png"
-                    alt="Interface MyBi"
-                    width={1400}
-                    height={1000}
-                    className="h-auto w-full"
-                    priority
-                  />
-                </div>
-
-                <div className="mt-4 grid gap-4 md:grid-cols-2">
-                  <div className="rounded-2xl border border-line bg-surface p-4">
-                    <div className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                      Dashboard
-                    </div>
-                    <div className="mt-4 grid grid-cols-2 gap-3">
-                      {mybi.dashboard.map((item) => (
-                        <div key={item.label} className="rounded-xl bg-white p-3">
-                          <div className="text-xs text-muted">{item.label}</div>
-                          <div className="mt-2 text-lg font-bold text-ink">
-                            {item.value}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl border border-line bg-surface p-4">
-                    <div className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                      Flux métier
-                    </div>
-                    <div className="mt-4 space-y-3">
-                      {mybi.flow.map((step) => (
-                        <div
-                          key={step}
-                          className="rounded-xl bg-white px-4 py-3 text-sm font-medium text-ink"
-                        >
-                          {step}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <MyBiShowcase />
             </div>
           </Reveal>
         </section>
