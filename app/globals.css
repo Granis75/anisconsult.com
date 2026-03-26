@@ -115,12 +115,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 9999px;
-    background: var(--ink);
-    padding: 0.75rem 1.5rem;
+    background: #000000;
+    padding: 0.875rem 1.75rem;
     color: #ffffff;
     font-size: 0.875rem;
     font-weight: 600;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     transition:
       transform 200ms ease,
       opacity 200ms ease,
@@ -128,7 +128,8 @@
   }
 
   .premium-cta:hover {
-    transform: scale(1.02);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
   }
 
   .premium-cta-outline {
@@ -137,28 +138,30 @@
     justify-content: center;
     border: 1px solid var(--line);
     border-radius: 9999px;
-    background: #ffffff;
-    padding: 0.75rem 1.5rem;
+    background: transparent;
+    padding: 0.875rem 1.75rem;
     color: var(--ink);
     font-size: 0.875rem;
     font-weight: 600;
     transition:
       border-color 200ms ease,
       transform 200ms ease,
+      color 200ms ease,
       box-shadow 200ms ease;
   }
 
   .premium-cta-outline:hover {
-    transform: scale(1.02);
+    transform: translateY(-1px);
     border-color: rgba(15, 23, 42, 0.18);
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    color: #000000;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
   }
 
   .field-input {
     width: 100%;
-    border: 1px solid rgba(148, 163, 184, 0.45);
+    border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 18px;
-    background: #ffffff;
+    background: rgb(250 250 250);
     padding: 0.875rem 1rem;
     color: var(--foreground);
     outline: none;
@@ -168,11 +171,11 @@
   }
 
   .field-input::placeholder {
-    color: #94a3b8;
+    color: #a3a3a3;
   }
 
   .field-input:focus {
-    border-color: rgba(15, 23, 42, 0.2);
-    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.04);
+    border-color: #000000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
   }
 }

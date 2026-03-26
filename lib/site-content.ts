@@ -123,9 +123,5 @@ export const siteContent = {
       "Exécution plus stable",
       "Meilleure capacité de scale",
     ],
-    cta: {
-      label: "Voir le case study Vesper →",
-      href: "/case-study/vesper",
-    },
   },
 } as const;

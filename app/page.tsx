@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ContactModal } from "@/components/contact-modal";
+import { ContactSection } from "@/components/contact-section";
 import { MyBiShowcase } from "@/components/mybi-showcase";
 import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
@@ -127,7 +127,7 @@ export default function HomePage() {
                       href={caseStudy.cta.href}
                       event="case_study_cta_click"
                       data={{ location: "case_study_block" }}
-                      className="premium-cta"
+                      className="premium-cta-outline"
                     >
                       {caseStudy.cta.label}
                     </TrackedLink>
@@ -207,8 +207,8 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-16 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
-              <div className="premium-card">
+            <div className="mt-16">
+              <div className="premium-card max-w-3xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
                   {method.resultTitle}
                 </p>
@@ -218,30 +218,13 @@ export default function HomePage() {
                   ))}
                 </ul>
               </div>
-
-              <div className="flex items-center lg:justify-end">
-                <TrackedLink
-                  href={method.cta.href}
-                  event="case_study_cta_click"
-                  data={{ location: "method_section" }}
-                  className="premium-cta"
-                >
-                  {method.cta.label}
-                </TrackedLink>
-              </div>
             </div>
           </Reveal>
         </section>
 
         <section id="contact" className="border-t border-line bg-white">
-          <Reveal
-            className="mx-auto max-w-5xl px-6 py-20 text-center lg:px-10"
-            delayMs={120}
-          >
-            <SectionTitle eyebrow="Contact" />
-            <div className="mt-10">
-              <ContactModal />
-            </div>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={120}>
+            <ContactSection />
           </Reveal>
         </section>
       </main>
