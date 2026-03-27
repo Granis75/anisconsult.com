@@ -1,47 +1,84 @@
-import { AutomationPreview } from "@/components/automation-preview";
-import { ClientListMiniPreview } from "@/components/client-list-mini-preview";
-import { ImpactChartMiniPreview } from "@/components/impact-chart-mini-preview";
-import { StatusPreview } from "@/components/status-preview";
+type ResultsVariant = "clean" | "compact";
 
-const resultCards = [
+type ResultItem = {
+  value: string;
+  label: string;
+  subtext: string;
+};
+
+const resultItems: ResultItem[] = [
   {
-    title: "Clearer operations",
-    description: "A cleaner view of what is happening and what is already done.",
-    Preview: ClientListMiniPreview,
+    value: "9.2",
+    label: "Review score",
+    subtext: "from 7.6",
   },
   {
-    title: "Less friction",
-    description: "Fewer manual steps, faster execution, smoother workflows.",
-    Preview: ImpactChartMiniPreview,
+    value: "+32%",
+    label: "Efficiency",
+    subtext: "faster execution",
   },
   {
-    title: "More stable execution",
-    description: "Clear states and less ambiguity across the workflow.",
-    Preview: StatusPreview,
+    value: "In Progress / Done",
+    label: "Project states",
+    subtext: "clear status",
   },
   {
-    title: "Better scalability",
-    description: "A system that handles more activity without complexity.",
-    Preview: AutomationPreview,
+    value: "100%",
+    label: "Automation",
+    subtext: "10h saved / week",
   },
 ] as const;
 
-export function MyBiResultsGrid() {
+export function ResultsClean() {
   return (
-    <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-      {resultCards.map(({ title, description, Preview }) => (
-        <article
-          key={title}
-          className="rounded-[24px] border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
-        >
-          <Preview />
+    <div className="grid gap-x-12 gap-y-10 md:grid-cols-2 xl:gap-x-16 xl:grid-cols-4">
+      {resultItems.map((item) => (
+        <div key={item.label} className="space-y-3">
+          <p className="text-3xl font-semibold tracking-tight text-neutral-950">
+            {item.value}
+          </p>
+          <div className="space-y-1.5">
+            <p className="text-sm font-medium text-neutral-600">{item.label}</p>
+            <p className="text-xs text-neutral-400">{item.subtext}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
-          <h3 className="mt-6 text-xl font-bold tracking-[-0.02em] text-ink">
-            {title}
-          </h3>
-          <p className="mt-3 text-sm leading-7 text-muted">{description}</p>
+export function ResultsCompactCards() {
+  return (
+    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      {resultItems.map((item) => (
+        <article
+          key={item.label}
+          className="flex items-center justify-between rounded-2xl border border-neutral-200 bg-white px-5 py-4"
+        >
+          <p className="max-w-[8.5rem] text-2xl font-semibold tracking-tight text-neutral-950">
+            {item.value}
+          </p>
+
+          <div className="pl-4 text-right">
+            <p className="text-sm font-medium text-neutral-600">{item.label}</p>
+            <p className="mt-1 text-xs text-neutral-400">{item.subtext}</p>
+          </div>
         </article>
       ))}
     </div>
   );
+}
+
+type MyBiResultsGridProps = {
+  variant?: ResultsVariant;
+};
+
+export function MyBiResultsGrid({
+  variant = "clean",
+}: MyBiResultsGridProps) {
+  if (variant === "compact") {
+    return <ResultsCompactCards />;
+  }
+
+  return <ResultsClean />;
 }

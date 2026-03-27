@@ -158,7 +158,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-16 rounded-[32px] border border-line bg-[linear-gradient(180deg,#f7f9fc_0%,#ffffff_100%)] p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_20px_60px_rgba(15,23,42,0.04)] lg:p-10">
+            <div className="mt-16 rounded-[32px] border border-line bg-white p-8 shadow-sm lg:p-10">
               <div className="max-w-2xl">
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
                   {method.resultTitle}
@@ -166,7 +166,7 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8">
-                <MyBiResultsGrid />
+                <MyBiResultsGrid variant="clean" />
               </div>
 
               <div className="mt-10 flex justify-start">
