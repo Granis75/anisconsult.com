@@ -8,7 +8,7 @@ export function SiteHeader() {
         <Link
           href="/"
           className="text-xl font-extrabold tracking-tighter2 text-ink transition-opacity hover:opacity-80"
-          aria-label="Retour à l'accueil"
+          aria-label="Back to home"
         >
           anisconsult
         </Link>

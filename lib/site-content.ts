@@ -1,20 +1,24 @@
 export const siteContent = {
   brand: "AnisConsult",
   navigation: [
-    { label: "Case study", href: "/case-study/vesper" },
+    { label: "Case Study", href: "/case-study/vesper" },
     { label: "MyBi", href: "/#mybi" },
-    { label: "Méthode", href: "/#method" },
+    { label: "Method", href: "/#method" },
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    eyebrow: "Operations · CRM · Automatisation",
-    title: "Des opérations plus claires, plus fiables, plus pilotables.",
+    title: "Operations. Systemized.",
+    subtitle:
+      "From fragmented workflows to a clear, reliable operating system.",
     description:
-      "Je conçois des systèmes simples pour structurer les flux métier, fiabiliser la donnée et améliorer l’exécution quotidienne.",
-    emphasis:
-      "L’objectif n’est pas d’ajouter des outils. L’objectif est de faire mieux fonctionner l’activité.",
+      "I design systems that structure your operations, make your data usable, and improve execution.",
+    notes: [
+      "No extra tools.",
+      "No unnecessary complexity.",
+      "Just better operations.",
+    ],
     primaryCta: {
-      label: "Voir le case study",
+      label: "View Case Study",
       href: "/case-study/vesper",
     },
     secondaryCta: {
@@ -22,121 +26,63 @@ export const siteContent = {
       href: "/#contact",
     },
   },
-  proofs: [
-    { label: "Review score", value: "7.6 → 9.2", meta: "TripAdvisor" },
-    { label: "Classement", value: "450 → Top 30", meta: "" },
-    { label: "Temps administratif", value: "~10h / semaine", meta: "" },
-    { label: "Nouveau marché", value: "+50% CA", meta: "" },
-  ],
-  caseStudy: {
-    title:
-      "Transformation d’un modèle opérationnel en système plus clair, plus autonome et plus pilotable.",
-    context:
-      "Un fonctionnement fragmenté, dépendant du front desk et encore peu structuré sur les flux, la donnée et l’expérience.",
-    intervention:
-      "Refonte de la logique opérationnelle, de l’expérience client et des systèmes de gestion pour rendre l’activité plus lisible et plus robuste.",
-    actions: [
-      "Passage à un modèle plus autonome avec support ciblé",
-      "Système d’accès RFID / Bluetooth",
-      "Supports digitaux multilingues",
-      "Structuration de la donnée client et intégration CRM",
-    ],
-    results: [
-      "Réduction des frictions",
-      "Meilleure exploitation de la donnée client",
-      "Opérations plus lisibles et plus stables",
-      "Capacité d’exécution plus fiable et plus scalable",
-    ],
-    cta: {
-      label: "Ouvrir le case study",
-      href: "/case-study/vesper",
-    },
-  },
   mybi: {
+    title: "MyBi — Business Operating System",
     description:
-      "Un système de gestion conçu pour structurer une activité freelance : clients, missions, facturation, paiements et pilotage.",
-    button: {
-      label: "Voir MyBi",
-      href: "https://mybi-business-app.vercel.app/",
-    },
-    dashboard: [
-      { label: "Revenue", value: "€12.4k" },
-      { label: "Impayés", value: "€2.1k" },
-      { label: "Clients", value: "18" },
-      { label: "Paiements", value: "36" },
-    ],
-    flow: ["Client", "Mission", "Facture", "Paiement"],
+      "A lightweight system designed to structure freelance activity.",
+    summary: "A clear view of revenue, payments and execution.",
+    notes: ["No complexity.", "Just control."],
+    flow: ["Client", "Mission", "Invoice", "Payment"],
   },
   method: {
-    title: "Méthode",
-    subtitle: "Une méthode ancrée dans le réel.",
+    title: "Method",
+    subtitle: "A system-first approach",
     steps: [
       {
-        step: "Étape 1",
-        title: "Lire le réel",
-        intro: [
-          "Le point de départ n’est pas l’outil.",
-          "C’est le fonctionnement réel.",
-        ],
+        step: "Step 1",
+        title: "Read real activity",
         bullets: [
-          "Observation des flux sur le terrain",
-          "Analyse des interactions entre équipes",
-          "Identification des frictions et des dépendances",
+          "Field workflows",
+          "Team interactions",
+          "Friction & dependencies",
         ],
         emphasis: [
-          "Le système officiel est rarement la réalité.",
-          "Les équipes compensent :",
-          "Notes. WhatsApp. Excel parallèle. Mémoire humaine.",
+          "The official system is rarely the real one.",
+          "Teams compensate.",
+          "Notes. WhatsApp. Spreadsheets. Memory.",
         ],
-        objective: "comprendre ce qui se passe réellement, et pourquoi.",
+        objective: "Understand what is really happening — and why.",
       },
       {
-        step: "Étape 2",
-        title: "Structurer",
-        intro: [
-          "On ne corrige pas un problème avec un outil.",
-          "On corrige le système.",
-        ],
+        step: "Step 2",
+        title: "Structure",
         bullets: [
-          "Modélisation des flux",
-          "Simplification des étapes",
-          "Définition des états et des données utiles",
+          "Flow modeling",
+          "Step simplification",
+          "Data definition",
         ],
-        objective: "clarifier, simplifier, rendre pilotable.",
+        objective: "Clarify, simplify, make it operable.",
       },
       {
-        step: "Étape 3",
-        title: "Déployer",
-        intro: ["Une fois le système clair, on l’outille."],
+        step: "Step 3",
+        title: "Deploy",
         bullets: [
-          "Intégration de solutions existantes ou outils ciblés",
-          "Mise en place progressive",
-          "Adoption réelle par les équipes",
+          "Existing tools or custom logic",
+          "Progressive rollout",
+          "Real team adoption",
         ],
-        objective: "un système utilisable immédiatement, qui évolue vite.",
+        objective: "A system that works immediately — and evolves fast.",
       },
     ],
-    resultTitle: "Résultat",
+    resultTitle: "Results",
     result: [
-      {
-        title: "Opérations plus lisibles",
-        text: "Visibilité plus claire des flux et des points de friction.",
-      },
-      {
-        title: "Moins de friction",
-        text: "Réduction des étapes inutiles et des contournements.",
-      },
-      {
-        title: "Exécution plus stable",
-        text: "Processus plus fiables, moins dépendants de l’improvisation.",
-      },
-      {
-        title: "Meilleure capacité de scale",
-        text: "Système plus propre, plus simple à faire évoluer.",
-      },
+      "Clearer operations",
+      "Less friction",
+      "More stable execution",
+      "Better scalability",
     ],
     cta: {
-      label: "Voir le case study Vesper →",
+      label: "→ View Case Study",
       href: "/case-study/vesper",
     },
   },

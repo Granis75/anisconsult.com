@@ -15,8 +15,27 @@ const methodResultVisuals = [
   [58, 80, 94],
 ] as const;
 
+const caseStudyMetrics = [
+  { label: "Review score", value: "7.6 → 9.2", meta: "TripAdvisor" },
+  { label: "Ranking", value: "450 → Top 30", meta: "Market visibility" },
+  { label: "Admin load", value: "~10h / week", meta: "Administrative time reduced" },
+  { label: "New market", value: "+50% revenue", meta: "Growth from a new market" },
+] as const;
+
+const caseStudyBefore = [
+  "Manual coordination across daily operations",
+  "Strong dependence on the front desk",
+  "Customer data spread across multiple touchpoints",
+] as const;
+
+const caseStudyAfter = [
+  "Clearer operating flows",
+  "More autonomy with less friction",
+  "Structured CRM and more reliable execution",
+] as const;
+
 export default function HomePage() {
-  const { hero, proofs, mybi, method } = siteContent;
+  const { hero, mybi, method } = siteContent;
 
   return (
     <>
@@ -25,22 +44,24 @@ export default function HomePage() {
       <main id="home" className="bg-white text-ink antialiased">
         <section className="relative overflow-hidden">
           <Reveal className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
-            <div className="max-w-4xl">
-              <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                {hero.eyebrow}
-              </p>
-
+            <div className="max-w-5xl">
               <h1 className="max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
                 {hero.title}
               </h1>
 
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-muted sm:text-xl">
+              <p className="mt-6 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
+                {hero.subtitle}
+              </p>
+
+              <p className="mt-8 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
                 {hero.description}
               </p>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-ink">
-                {hero.emphasis}
-              </p>
+              <div className="mt-8 space-y-2 text-lg leading-8 text-ink">
+                {hero.notes.map((note) => (
+                  <p key={note}>{note}</p>
+                ))}
+              </div>
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <TrackedLink
@@ -63,62 +84,8 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        <section
-          id="mybi"
-          className="border-t border-line bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)]"
-        >
-          <Reveal className="mx-auto max-w-[1320px] px-6 py-24 lg:px-10 lg:py-28" delayMs={40}>
-            <div className="mx-auto max-w-4xl text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                MyBi
-              </p>
-              <h2 className="mt-4 text-balance text-4xl font-bold tracking-tighter2 text-ink sm:text-5xl lg:text-[3.7rem] lg:leading-[1.02]">
-                Un système de gestion conçu pour structurer une activité freelance.
-              </h2>
-              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
-                Clients, missions, facturation, paiements et pilotage.
-              </p>
-
-              <div className="mt-10 flex items-center justify-center">
-                <a
-                  href={mybi.button.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="premium-cta"
-                >
-                  {mybi.button.label}
-                </a>
-              </div>
-            </div>
-
-            <div className="mt-16 lg:mt-20">
-              <MyBiShowcase />
-            </div>
-          </Reveal>
-        </section>
-
-        <section className="border-t border-line bg-surface">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={60}>
-            <SectionTitle eyebrow="Chiffres preuves" />
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {proofs.map((item) => (
-                <article key={`${item.label}-${item.value}`} className="premium-card p-7">
-                  <p className="text-sm font-medium text-muted">{item.label}</p>
-                  <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
-                    {item.value}
-                  </p>
-                  {item.meta ? (
-                    <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
-                  ) : null}
-                </article>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
         <section id="case-study" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={80}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={40}>
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-black/45">
                 Vesper Collection
@@ -132,47 +99,20 @@ export default function HomePage() {
             </div>
 
             <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
-                  Review score
-                </p>
-                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
-                  7.6 → 9.2
-                </p>
-                <p className="mt-3 text-sm text-black/55">TripAdvisor</p>
-              </article>
-
-              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
-                  Ranking
-                </p>
-                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
-                  450 → Top 30
-                </p>
-                <p className="mt-3 text-sm text-black/55">Market visibility</p>
-              </article>
-
-              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
-                  Admin load
-                </p>
-                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
-                  ~10h / week
-                </p>
-                <p className="mt-3 text-sm text-black/55">
-                  Administrative time reduced
-                </p>
-              </article>
-
-              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
-                  New market
-                </p>
-                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
-                  +50% revenue
-                </p>
-                <p className="mt-3 text-sm text-black/55">Growth from a new market</p>
-              </article>
+              {caseStudyMetrics.map((item) => (
+                <article
+                  key={item.label}
+                  className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
+                    {item.label}
+                  </p>
+                  <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
+                    {item.value}
+                  </p>
+                  <p className="mt-3 text-sm text-black/55">{item.meta}</p>
+                </article>
+              ))}
             </div>
 
             <div className="mt-14 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
@@ -181,9 +121,9 @@ export default function HomePage() {
                   Before
                 </p>
                 <ul className="mt-5 space-y-3 text-sm leading-7 text-black/70">
-                  <li>Manual coordination across daily operations</li>
-                  <li>Strong dependence on the front desk</li>
-                  <li>Customer data spread across multiple touchpoints</li>
+                  {caseStudyBefore.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -192,9 +132,9 @@ export default function HomePage() {
                   After
                 </p>
                 <ul className="mt-5 space-y-3 text-sm leading-7 text-white/80">
-                  <li>Clearer operating flows</li>
-                  <li>More autonomy with less friction</li>
-                  <li>Structured CRM and more reliable execution</li>
+                  {caseStudyAfter.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -208,7 +148,7 @@ export default function HomePage() {
                 href="/case-study/vesper"
                 event="case_study_cta_click"
                 data={{ location: "case_study_section" }}
-                className="inline-flex items-center justify-center rounded-full border border-black bg-black px-6 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:bg-black/90"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
                 See how the system was built →
               </TrackedLink>
@@ -217,22 +157,19 @@ export default function HomePage() {
         </section>
 
         <section id="method" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={100}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={60}>
             <SectionTitle eyebrow={method.title} title={method.subtitle} />
 
             <div className="mt-14 grid gap-6 lg:grid-cols-3">
               {method.steps.map((item) => (
-                <article key={item.step} className="premium-soft-card flex h-full flex-col p-8 lg:p-9">
+                <article
+                  key={item.step}
+                  className="premium-soft-card flex h-full flex-col p-8 lg:p-9"
+                >
                   <p className="text-sm font-semibold text-muted">{item.step}</p>
                   <h3 className="mt-3 text-2xl font-bold tracking-[-0.02em] text-ink">
                     {item.title}
                   </h3>
-
-                  <div className="mt-6 space-y-3 text-sm leading-7 text-muted">
-                    {item.intro.map((line) => (
-                      <p key={line}>{line}</p>
-                    ))}
-                  </div>
 
                   <ul className="mt-8 space-y-3 text-sm leading-7 text-muted">
                     {item.bullets.map((bullet) => (
@@ -256,7 +193,7 @@ export default function HomePage() {
 
                   <div className="mt-auto pt-8">
                     <div className="rounded-[22px] border border-line bg-white px-5 py-5">
-                      <p className="text-sm font-semibold text-ink">Objectif :</p>
+                      <p className="text-sm font-semibold text-ink">Objective</p>
                       <p className="mt-3 text-sm leading-7 text-muted">{item.objective}</p>
                     </div>
                   </div>
@@ -274,7 +211,7 @@ export default function HomePage() {
               <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
                 {method.result.map((item, index) => (
                   <article
-                    key={item.title}
+                    key={item}
                     className="flex h-full flex-col rounded-[26px] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_12px_32px_rgba(15,23,42,0.04)]"
                   >
                     <div className="rounded-[20px] border border-line bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-4">
@@ -285,7 +222,7 @@ export default function HomePage() {
 
                       <div className="mt-5 space-y-2.5">
                         {methodResultVisuals[index].map((width, visualIndex) => (
-                          <div key={`${item.title}-${visualIndex}`} className="h-2 rounded-full bg-surface">
+                          <div key={`${item}-${visualIndex}`} className="h-2 rounded-full bg-surface">
                             <div
                               className="h-full rounded-full bg-ink"
                               style={{ width: `${width}%`, opacity: 1 - visualIndex * 0.14 }}
@@ -301,9 +238,8 @@ export default function HomePage() {
                     </div>
 
                     <h3 className="mt-6 text-xl font-bold tracking-[-0.02em] text-ink">
-                      {item.title}
+                      {item}
                     </h3>
-                    <p className="mt-3 text-sm leading-7 text-muted">{item.text}</p>
                   </article>
                 ))}
               </div>
@@ -313,7 +249,7 @@ export default function HomePage() {
                   href={method.cta.href}
                   event="case_study_cta_click"
                   data={{ location: "method" }}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color,opacity] duration-200 hover:gap-3 hover:text-black"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                 >
                   {method.cta.label}
                 </TrackedLink>
@@ -322,8 +258,44 @@ export default function HomePage() {
           </Reveal>
         </section>
 
+        <section
+          id="mybi"
+          className="border-t border-line bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)]"
+        >
+          <Reveal
+            className="mx-auto max-w-[1320px] px-6 py-24 lg:px-10 lg:py-28"
+            delayMs={80}
+          >
+            <div className="mx-auto max-w-4xl text-center">
+              <SectionTitle eyebrow="MyBi" title={mybi.title} />
+
+              <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
+                {mybi.description}
+              </p>
+
+              <p className="mt-8 text-lg font-semibold leading-8 text-ink sm:text-xl">
+                {mybi.flow.join(" → ")}
+              </p>
+
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
+                {mybi.summary}
+              </p>
+
+              <div className="mt-8 space-y-2 text-base leading-7 text-ink">
+                {mybi.notes.map((note) => (
+                  <p key={note}>{note}</p>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-16 lg:mt-20">
+              <MyBiShowcase />
+            </div>
+          </Reveal>
+        </section>
+
         <section id="contact" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={120}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={100}>
             <ContactSection />
           </Reveal>
         </section>

@@ -16,17 +16,17 @@ const INITIAL_STATE: ContactFormState = {
 };
 
 const ERROR_MESSAGES: Record<string, string> = {
-  EMAIL_INVALID: "Email invalide.",
-  SUBJECT_INVALID: "Sujet invalide.",
-  MESSAGE_INVALID: "Message invalide.",
-  RESEND_NOT_CONFIGURED: "Le formulaire n’est pas encore configuré.",
-  EMAIL_SEND_FAILED: "L’envoi a échoué.",
-  CONTACT_ROUTE_FAILED: "L’envoi a échoué.",
-  REQUEST_FAILED: "Impossible d’envoyer le message.",
+  EMAIL_INVALID: "Invalid email.",
+  SUBJECT_INVALID: "Invalid subject.",
+  MESSAGE_INVALID: "Invalid message.",
+  RESEND_NOT_CONFIGURED: "The form is not configured yet.",
+  EMAIL_SEND_FAILED: "Sending failed.",
+  CONTACT_ROUTE_FAILED: "Sending failed.",
+  REQUEST_FAILED: "Unable to send the message.",
 };
 
 function getErrorMessage(error: string) {
-  return ERROR_MESSAGES[error] || "Impossible d’envoyer le message.";
+  return ERROR_MESSAGES[error] || "Unable to send the message.";
 }
 
 export function ContactSection() {
@@ -54,7 +54,7 @@ export function ContactSection() {
     const message = form.message.trim();
 
     if (!email || !subject || !message) {
-      setError("Tous les champs sont requis.");
+      setError("All fields are required.");
       return;
     }
 
@@ -86,7 +86,7 @@ export function ContactSection() {
       });
 
       setForm(INITIAL_STATE);
-      setSuccess("Message envoyé.");
+      setSuccess("Message sent.");
     } catch (submitError) {
       setError(
         getErrorMessage(
@@ -105,10 +105,10 @@ export function ContactSection() {
           Contact
         </p>
         <h2 className="mt-4 text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
-          Travaillons ensemble
+          Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted">
-          Décris le contexte, le sujet et le besoin directement ici.
+          Email, subject and message.
         </p>
       </div>
 
@@ -130,7 +130,7 @@ export function ContactSection() {
 
           <div className="space-y-2">
             <label className="text-sm font-medium text-ink" htmlFor="contact-subject">
-              Sujet
+              Subject
             </label>
             <input
               id="contact-subject"
@@ -161,7 +161,7 @@ export function ContactSection() {
 
           <div className="pt-2">
             <button type="submit" disabled={isLoading} className="premium-cta w-full sm:w-auto">
-              {isLoading ? "Envoi..." : "Envoyer"}
+              {isLoading ? "Sending..." : "Send"}
             </button>
           </div>
         </form>

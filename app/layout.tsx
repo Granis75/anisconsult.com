@@ -3,9 +3,9 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "anisconsult — Operations, CRM & Automatisation",
+  title: "anisconsult — Operations, CRM & Automation",
   description:
-    "anisconsult — Structuration des flux métier, CRM, automatisation et systèmes opérationnels pour des opérations plus claires, plus fiables et plus pilotables.",
+    "anisconsult — Systems for clearer operations, usable data and more reliable execution.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body>
         {children}
         <Analytics />
