@@ -3,30 +3,11 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const sectionLinks = [
-  { label: "Overview", href: "#overview" },
-  { label: "Challenge", href: "#challenge" },
+  { label: "Snapshot", href: "#snapshot" },
+  { label: "Situation", href: "#situation" },
   { label: "Transformation", href: "#transformation" },
-  { label: "Results", href: "#results" },
   { label: "Architecture", href: "#architecture" },
-] as const;
-
-const introBlocks = [
-  {
-    label: "Business context",
-    text: "23 units · ~€1.2M annual revenue · aging model requiring repositioning and operational reset.",
-  },
-  {
-    label: "Transformation scope",
-    text: "Experience, CRM, payments, internal tools, multilingual information flow, access systems and reporting.",
-  },
-  {
-    label: "Execution approach",
-    text: "Reduce friction, increase autonomy, centralize information and build cleaner operating workflows.",
-  },
-  {
-    label: "Outcome",
-    text: "Higher reputation, stronger customer experience, reduced admin load and successful acquisition of a new market.",
-  },
+  { label: "Results", href: "#results" },
 ] as const;
 
 const executiveKpis = [
@@ -52,14 +33,7 @@ const executiveKpis = [
   },
 ] as const;
 
-const strategicMoves = [
-  "Shift from manual presence-heavy operations toward guided autonomy.",
-  "Replace fragile magnetic access with connected RFID / Bluetooth infrastructure.",
-  "Upgrade customer information delivery through multilingual QR-based digital content.",
-  "Build CRM-enabled personalization using PMS customer data and service signals.",
-] as const;
-
-const challengeBefore = [
+const initialSituation = [
   "Post-COVID business with aging operating logic and weak differentiation.",
   "24/7 front-desk dependence with high manual coordination.",
   "Magnetic cards prone to demagnetization and repeated customer friction.",
@@ -68,7 +42,7 @@ const challengeBefore = [
   "Underused reputation and weak penetration of high-value international demand.",
 ] as const;
 
-const challengeTarget = [
+const designTarget = [
   "Experience closer to a premium serviced living model than a classic hospitality setup.",
   "Autonomy-first operating model with focused human support from 9am to 6pm.",
   "Connected access, simplified onboarding and smoother information delivery.",
@@ -80,8 +54,6 @@ const challengeTarget = [
 const transformationLevers = [
   {
     title: "Experience & identity",
-    description:
-      "Reframed the environment around a more residential, premium and welcoming experience inspired by Scandinavian coliving principles.",
     points: [
       "Less transactional, more “feel at home”.",
       "Clearer identity beyond a standard lodging product.",
@@ -90,8 +62,6 @@ const transformationLevers = [
   },
   {
     title: "Access & autonomy",
-    description:
-      "Replaced unreliable magnetic card systems with connected RFID / Bluetooth access and reduced physical friction in the arrival journey.",
     points: [
       "Lower support load from card failures.",
       "More dependable access experience.",
@@ -99,9 +69,7 @@ const transformationLevers = [
     ],
   },
   {
-    title: "Multilingual information layer",
-    description:
-      "Converted static printed room documentation into QR-driven HTML pages with multilingual support for better customer understanding and smoother information transfer.",
+    title: "Multilingual information",
     points: [
       "Improved self-service information access.",
       "Reduced repeated front-desk explanations.",
@@ -109,9 +77,7 @@ const transformationLevers = [
     ],
   },
   {
-    title: "CRM-enabled personalization",
-    description:
-      "Built a customer experience layer that retrieved PMS data such as arrival times, preferences, special notes and birthdays to improve follow-up and reputation outcomes.",
+    title: "CRM personalization",
     points: [
       "Better preparation before customer arrival.",
       "More personalized interactions.",
@@ -119,9 +85,7 @@ const transformationLevers = [
     ],
   },
   {
-    title: "Payments & process simplification",
-    description:
-      "Integrated payments and internal process logic to reduce administrative friction and simplify recurring operational tasks.",
+    title: "Payments & processes",
     points: [
       "Cleaner financial flow.",
       "Reduced repetitive administrative handling.",
@@ -129,9 +93,7 @@ const transformationLevers = [
     ],
   },
   {
-    title: "Internal tools & communication",
-    description:
-      "Introduced internal tools and communication channels to improve autonomy, execution quality and day-to-day coordination.",
+    title: "Internal tools",
     points: [
       "Faster information circulation.",
       "Clearer operating workflows.",
@@ -140,61 +102,38 @@ const transformationLevers = [
   },
 ] as const;
 
-const performanceKpis = [
-  {
-    label: "Reputation score",
-    value: "9.2",
-    meta: "from 7.6 previously",
-  },
-  {
-    label: "TripAdvisor ranking",
-    value: "Top 30",
-    meta: "from around 450th",
-  },
-  {
-    label: "Admin time reduction",
-    value: "~10h",
-    meta: "saved each week",
-  },
-  {
-    label: "New market contribution",
-    value: "50%",
-    meta: "revenue from Korean clientele",
-  },
-] as const;
-
-const resultIndicators = [
-  "Review score",
-  "Reputation rank",
-  "Operational efficiency",
-  "New market share",
-] as const;
-
 const architectureFlow = [
   {
     title: "Acquisition",
     text: "Website · Platforms · Naver",
   },
   {
-    title: "Reservation Layer",
+    title: "Reservation",
     text: "Booking & customer intake",
   },
   {
-    title: "PMS / Data",
+    title: "Data",
     text: "Arrival time · notes · preferences",
   },
   {
-    title: "CRM Experience",
+    title: "CRM",
     text: "Follow-up & personalization",
   },
   {
-    title: "Payment & Access",
+    title: "Access",
     text: "Automation · RFID · Bluetooth",
   },
   {
-    title: "Support & Reporting",
+    title: "Support",
     text: "Internal tools · dashboards",
   },
+] as const;
+
+const resultThemes = [
+  "Less friction",
+  "More autonomy",
+  "Stronger personalization",
+  "Clearer performance visibility",
 ] as const;
 
 const operationalChanges = [
@@ -205,7 +144,7 @@ const operationalChanges = [
   "Better preparation and follow-up using customer data signals.",
 ] as const;
 
-const commercialChanges = [
+const commercialImpact = [
   "Reputation moved from acceptable to high-performing.",
   "Experience became distinctive rather than generic.",
   "Korean market acquisition created a major new revenue source.",
@@ -262,69 +201,36 @@ export default function VesperCaseStudyPage() {
           </div>
         </section>
 
-        <section id="overview" className="border-b border-line bg-white">
+        <section id="snapshot" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-4">
-              {introBlocks.map((item) => (
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
+                KPI Snapshot
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+              {executiveKpis.map((item) => (
                 <article
                   key={item.label}
-                  className="rounded-3xl border border-line bg-surface p-7"
+                  className="rounded-[2rem] border border-line bg-surface p-7 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
                 >
-                  <p className="text-sm font-semibold text-muted">{item.label}</p>
-                  <p className="mt-4 text-sm leading-7 text-ink">{item.text}</p>
+                  <p className="text-sm font-medium text-muted">{item.label}</p>
+                  <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
+                    {item.value}
+                  </p>
+                  <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
                 </article>
               ))}
-            </div>
-
-            <div className="mt-16">
-              <div className="max-w-3xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  Executive KPI Snapshot
-                </p>
-              </div>
-
-              <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                {executiveKpis.map((item) => (
-                  <article
-                    key={item.label}
-                    className="rounded-3xl border border-line bg-white p-7 shadow-card"
-                  >
-                    <p className="text-sm font-medium text-muted">{item.label}</p>
-                    <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
-                      {item.value}
-                    </p>
-                    <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-16 rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-              <div className="max-w-3xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  Core Strategic Moves
-                </p>
-              </div>
-
-              <div className="mt-8 grid gap-4 lg:grid-cols-2">
-                {strategicMoves.map((item) => (
-                  <article
-                    key={item}
-                    className="rounded-2xl border border-line bg-white p-6 text-sm leading-7 text-ink"
-                  >
-                    {item}
-                  </article>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
-        <section id="challenge" className="border-b border-line bg-white">
+        <section id="situation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                Initial challenge
+                Initial situation
               </p>
               <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
                 The objective was not to operate a legacy environment as-is, but to
@@ -336,21 +242,21 @@ export default function VesperCaseStudyPage() {
             <div className="mt-12 grid gap-6 lg:grid-cols-2">
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
-                  Before
+                  Initial situation
                 </h2>
                 <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
-                  {challengeBefore.map((item) => (
+                  {initialSituation.map((item) => (
                     <li key={item}>• {item}</li>
                   ))}
                 </ul>
               </article>
 
-              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-card">
+              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
                   Design target
                 </h2>
                 <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
-                  {challengeTarget.map((item) => (
+                  {designTarget.map((item) => (
                     <li key={item}>• {item}</li>
                   ))}
                 </ul>
@@ -376,14 +282,11 @@ export default function VesperCaseStudyPage() {
               {transformationLevers.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-[2rem] border border-line bg-white p-8 shadow-card"
+                  className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
                 >
                   <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
                     {item.title}
                   </h2>
-                  <p className="mt-5 text-sm leading-7 text-muted">
-                    {item.description}
-                  </p>
                   <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
                     {item.points.map((point) => (
                       <li key={point}>• {point}</li>
@@ -395,123 +298,7 @@ export default function VesperCaseStudyPage() {
           </div>
         </section>
 
-        <section id="results" className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                Performance dashboard
-              </p>
-              <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-                The transformation produced operational, reputational and
-                commercial effects. The business became easier to run, easier to
-                understand and more attractive to a broader international customer
-                base.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {performanceKpis.map((item) => (
-                <article
-                  key={item.label}
-                  className="rounded-3xl border border-line bg-surface p-7"
-                >
-                  <p className="text-sm font-medium text-muted">{item.label}</p>
-                  <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
-                    {item.value}
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-16 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-              <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  Transformation Results
-                </p>
-                <p className="mt-5 text-sm leading-7 text-muted">
-                  Before / after view across reputation, operations and market
-                  reach
-                </p>
-
-                <div className="mt-8 rounded-3xl border border-line bg-white p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                    Dashboard View
-                  </p>
-                  <h2 className="mt-3 text-2xl font-bold tracking-[-0.02em] text-ink">
-                    Key indicators
-                  </h2>
-
-                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {resultIndicators.map((item) => (
-                      <div
-                        key={item}
-                        className="rounded-2xl border border-line bg-surface px-4 py-4 text-sm font-medium text-ink"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </article>
-
-              <div className="space-y-8">
-                <article className="rounded-[2rem] border border-line bg-white p-8 shadow-card">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
-                    Highlight
-                  </p>
-                  <p className="mt-5 text-sm font-semibold text-muted">
-                    Reputation uplift
-                  </p>
-                  <p className="mt-3 text-5xl font-extrabold tracking-tighter2 text-ink">
-                    Top 30
-                  </p>
-                  <p className="mt-3 text-sm leading-7 text-muted">
-                    TripAdvisor position
-                  </p>
-                </article>
-
-                <article className="rounded-[2rem] border border-line bg-surface p-8">
-                  <p className="text-base leading-8 text-muted">
-                    Major shift from low visibility into a high-performing
-                    reputation tier.
-                  </p>
-                  <p className="mt-6 text-base leading-8 text-muted">
-                    The outcome was not just better service delivery. It was a
-                    cleaner operating system: less friction, more autonomy,
-                    stronger personalization and clearer performance visibility.
-                  </p>
-                </article>
-              </div>
-            </div>
-
-            <div className="mt-16 grid gap-6 lg:grid-cols-2">
-              <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
-                  What changed operationally
-                </h2>
-                <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
-                  {operationalChanges.map((item) => (
-                    <li key={item}>• {item}</li>
-                  ))}
-                </ul>
-              </article>
-
-              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-card">
-                <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
-                  What changed commercially
-                </h2>
-                <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
-                  {commercialChanges.map((item) => (
-                    <li key={item}>• {item}</li>
-                  ))}
-                </ul>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="architecture" className="border-b border-line bg-surface">
+        <section id="architecture" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
@@ -525,19 +312,109 @@ export default function VesperCaseStudyPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {architectureFlow.map((item) => (
+            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
+              {architectureFlow.map((item, index) => (
                 <article
                   key={item.title}
-                  className="rounded-3xl border border-line bg-white p-7 shadow-card"
+                  className="rounded-[2rem] border border-line bg-surface p-6"
                 >
-                  <p className="text-sm font-semibold text-muted">{item.title}</p>
-                  <p className="mt-4 text-base leading-7 text-ink">{item.text}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h2 className="mt-4 text-xl font-bold tracking-[-0.02em] text-ink">
+                    {item.title}
+                  </h2>
+                  <p className="mt-4 text-sm leading-7 text-muted">{item.text}</p>
                 </article>
               ))}
             </div>
+          </div>
+        </section>
 
-            <div className="mt-16 rounded-[2rem] border border-line bg-white p-8 shadow-card">
+        <section id="results" className="border-b border-line bg-surface">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="max-w-4xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
+                Transformation results
+              </p>
+              <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
+                The transformation produced operational, reputational and
+                commercial effects. The business became easier to run, easier to
+                understand and more attractive to a broader international customer
+                base.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)] lg:p-10">
+                <p className="text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
+                  Major shift from low visibility into a high-performing
+                  reputation tier.
+                </p>
+                <p className="mt-6 max-w-3xl text-base leading-8 text-muted">
+                  The outcome was not just better service delivery. It was a
+                  cleaner operating system: less friction, more autonomy,
+                  stronger personalization and clearer performance visibility.
+                </p>
+              </article>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                {resultThemes.map((item) => (
+                  <article
+                    key={item}
+                    className="rounded-[2rem] border border-line bg-white px-6 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
+                  >
+                    <p className="text-sm font-semibold text-ink">{item}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-line bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
+                Operational changes
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <article className="rounded-[2rem] border border-line bg-surface p-8">
+                <ul className="space-y-3 text-sm leading-7 text-muted">
+                  {operationalChanges.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-line bg-surface">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
+                Commercial impact
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
+                <ul className="space-y-3 text-sm leading-7 text-muted">
+                  {commercialImpact.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-line bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
                 Closing note
               </p>
