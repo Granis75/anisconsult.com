@@ -28,6 +28,12 @@ const caseStudyResults = [
   },
 ] as const;
 
+const keplerTeaserPoints = [
+  "Order → Delivery → Invoice → Payment",
+  "~60% less admin workload",
+  "Same-day invoicing",
+] as const;
+
 export default function HomePage() {
   const { method } = siteContent;
 
@@ -86,6 +92,42 @@ export default function HomePage() {
               >
                 See how the system was built →
               </TrackedLink>
+            </div>
+          </Reveal>
+        </section>
+
+        <section className="border-t border-line bg-surface">
+          <Reveal className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20" delayMs={50}>
+            <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+              <div className="max-w-xl">
+                <SectionKicker label="Case Study" />
+                <h2 className="mt-5 text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
+                  Kepler Express
+                </h2>
+                <p className="mt-5 text-lg leading-8 text-muted">
+                  Structuring a fragmented logistics workflow into a connected
+                  operational system.
+                </p>
+
+                <div className="mt-8">
+                  <TrackedLink
+                    href="/case-study/kepler-express"
+                    event="case_study_cta_click"
+                    data={{ location: "kepler_teaser" }}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                  >
+                    View case study →
+                  </TrackedLink>
+                </div>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-3">
+                {keplerTeaserPoints.map((item) => (
+                  <div key={item} className="border-t border-line pt-4">
+                    <p className="text-sm font-semibold leading-7 text-ink">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </section>
