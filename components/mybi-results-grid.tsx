@@ -31,18 +31,54 @@ const resultItems: ResultItem[] = [
 
 export function ResultsClean() {
   return (
-    <div className="grid gap-x-12 gap-y-10 md:grid-cols-2 xl:gap-x-16 xl:grid-cols-4">
-      {resultItems.map((item) => (
-        <div key={item.label} className="space-y-3">
-          <p className="text-3xl font-semibold tracking-tight text-neutral-950">
-            {item.value}
-          </p>
-          <div className="space-y-1.5">
-            <p className="text-sm font-medium text-neutral-600">{item.label}</p>
-            <p className="text-xs text-neutral-400">{item.subtext}</p>
-          </div>
-        </div>
-      ))}
+    <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2">
+      <div className="flex flex-col gap-2 border-t border-zinc-200 pt-4 dark:border-zinc-800">
+        <span className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          9.2/10
+        </span>
+        <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+          Satisfaction client
+        </span>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          Hausse immédiate de la notation interne (base précédente à 7.6).
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-2 border-t border-zinc-200 pt-4 dark:border-zinc-800">
+        <span className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          +32%
+        </span>
+        <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+          Vitesse d&apos;exécution
+        </span>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          Élimination des goulots d&apos;étranglement opérationnels.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-2 border-t border-zinc-200 pt-4 dark:border-zinc-800">
+        <span className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          Live
+        </span>
+        <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+          Suivi des projets
+        </span>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          Statuts automatisés (En cours / Livré) sans point de synchro manuel.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-2 border-t border-zinc-200 pt-4 dark:border-zinc-800">
+        <span className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-white">
+          10h
+        </span>
+        <span className="text-sm font-semibold text-zinc-800 dark:text-zinc-200">
+          Temps récupéré / semaine
+        </span>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          Focus réorienté sur les tâches à forte valeur ajoutée.
+        </p>
+      </div>
     </div>
   );
 }
