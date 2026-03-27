@@ -46,7 +46,7 @@ export function Hero({
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
           <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-[-0.045em] text-ink sm:text-5xl lg:text-6xl">
             Operations. Systemized.
           </h1>
@@ -55,17 +55,26 @@ export function Hero({
             From fragmented workflows to a clear, reliable operating system.
           </p>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {points.map((point) => (
-              <div key={point.title} className="space-y-2">
-                <p className="text-base font-semibold tracking-[-0.02em] text-neutral-800">
-                  {point.title}
-                </p>
-                <p className="text-sm leading-6 text-neutral-500">
-                  {point.description}
-                </p>
-              </div>
-            ))}
+          <div className="mt-14 border-t border-neutral-200/80 pt-8">
+            <div className="grid gap-y-8 md:grid-cols-2 md:gap-x-8 xl:grid-cols-3 xl:gap-x-0">
+              {points.map((point, index) => (
+                <div
+                  key={point.title}
+                  className={[
+                    "space-y-2.5",
+                    index === 0 ? "xl:pr-8" : "xl:border-l xl:border-neutral-200/80 xl:px-8",
+                    index === points.length - 1 ? "xl:pr-0" : "",
+                  ].join(" ")}
+                >
+                  <p className="text-base font-semibold tracking-[-0.02em] text-neutral-800">
+                    {point.title}
+                  </p>
+                  <p className="max-w-[18rem] text-sm leading-6 text-neutral-500">
+                    {point.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 flex flex-col gap-4 sm:flex-row">

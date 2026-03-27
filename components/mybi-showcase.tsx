@@ -517,13 +517,18 @@ function priorityDotClass(tone: Priority["tone"]) {
 
 type MyBiShowcaseProps = {
   className?: string;
+  variant?: "default" | "minimal";
 };
 
-export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
+export function MyBiShowcase({
+  className = "",
+  variant = "default",
+}: MyBiShowcaseProps) {
   const [period, setPeriod] = useState<Period>("Month");
   const [selectedActivityId, setSelectedActivityId] = useState(
     SNAPSHOTS.Month.activity[0].id
   );
+  const isMinimal = variant === "minimal";
 
   const snapshot = SNAPSHOTS[period];
   const selectedActivity =
@@ -554,12 +559,24 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
 
   return (
     <div
-      className={`relative overflow-hidden rounded-[34px] border border-slate-200/80 bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_22%,#f4f7fb_100%)] shadow-[0_1px_2px_rgba(15,23,42,0.04),0_28px_90px_rgba(15,23,42,0.10)] ${className}`}
+      className={`relative overflow-hidden rounded-[34px] border ${
+        isMinimal
+          ? "border-neutral-200 bg-white shadow-sm"
+          : "border-slate-200/80 bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_22%,#f4f7fb_100%)] shadow-[0_1px_2px_rgba(15,23,42,0.04),0_28px_90px_rgba(15,23,42,0.10)]"
+      } ${className}`}
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.12),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_34%)]" />
+      {!isMinimal ? (
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.12),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.08),transparent_34%)]" />
+      ) : null}
 
       <div className="relative">
-        <div className="border-b border-slate-200/80 bg-white/80 px-6 py-5 backdrop-blur xl:px-8">
+        <div
+          className={`border-b px-6 py-5 xl:px-8 ${
+            isMinimal
+              ? "border-neutral-200 bg-white"
+              : "border-slate-200/80 bg-white/80 backdrop-blur"
+          }`}
+        >
           <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
               <div className="flex items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-3 py-2">
@@ -580,7 +597,9 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
                     key={item}
                     className={`rounded-full border px-3 py-1.5 text-xs font-medium ${
                       index === 0
-                        ? "border-slate-200 bg-white text-[#0b1020] shadow-[0_8px_18px_rgba(15,23,42,0.06)]"
+                        ? isMinimal
+                          ? "border-slate-200 bg-white text-[#0b1020] shadow-sm"
+                          : "border-slate-200 bg-white text-[#0b1020] shadow-[0_8px_18px_rgba(15,23,42,0.06)]"
                         : "border-transparent bg-transparent text-slate-500"
                     }`}
                   >
@@ -590,7 +609,11 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
               </div>
             </div>
 
-            <div className="inline-flex rounded-full border border-slate-200 bg-white p-1 shadow-[0_8px_20px_rgba(15,23,42,0.05)]">
+            <div
+              className={`inline-flex rounded-full border border-slate-200 bg-white p-1 ${
+                isMinimal ? "shadow-sm" : "shadow-[0_8px_20px_rgba(15,23,42,0.05)]"
+              }`}
+            >
               {PERIODS.map((item) => {
                 const isActive = item === period;
 
@@ -616,8 +639,14 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
 
         <div className="space-y-6 p-6 lg:p-8 xl:p-10">
           <div className="grid gap-6 xl:grid-cols-[1.48fr_0.84fr]">
-            <article className="relative overflow-hidden rounded-[30px] border border-slate-900/80 bg-[#0b1220] p-7 text-white shadow-[0_22px_60px_rgba(15,23,42,0.22)] lg:p-9">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent)]" />
+            <article
+              className={`relative overflow-hidden rounded-[30px] border border-slate-900/80 bg-[#0b1220] p-7 text-white ${
+                isMinimal ? "shadow-sm" : "shadow-[0_22px_60px_rgba(15,23,42,0.22)]"
+              } lg:p-9`}
+            >
+              {!isMinimal ? (
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.22),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent)]" />
+              ) : null}
 
               <div className="relative">
                 <div className="flex flex-wrap items-center gap-3">
@@ -660,7 +689,9 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
               {snapshot.insights.map((item) => (
                 <article
                   key={item.label}
-                  className={`rounded-[28px] border p-6 shadow-[0_16px_40px_rgba(15,23,42,0.08)] ${insightToneClass(item.tone)}`}
+                  className={`rounded-[28px] border p-6 ${
+                    isMinimal ? "shadow-sm" : "shadow-[0_16px_40px_rgba(15,23,42,0.08)]"
+                  } ${insightToneClass(item.tone)}`}
                 >
                   <p
                     className={`text-xs font-semibold uppercase tracking-[0.16em] ${
@@ -688,7 +719,9 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
             {snapshot.finance.map((item) => (
               <article
                 key={item.label}
-                className={`rounded-[28px] border p-6 shadow-[0_16px_36px_rgba(15,23,42,0.06)] lg:p-7 ${financeToneClass(item.tone)}`}
+                className={`rounded-[28px] border p-6 ${
+                  isMinimal ? "shadow-sm" : "shadow-[0_16px_36px_rgba(15,23,42,0.06)]"
+                } lg:p-7 ${financeToneClass(item.tone)}`}
               >
                 <p
                   className={`text-xs font-semibold uppercase tracking-[0.14em] ${
@@ -712,7 +745,11 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
           </div>
 
           <div className="grid gap-6 xl:grid-cols-[1.28fr_0.72fr]">
-            <article className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-[0_18px_44px_rgba(15,23,42,0.07)] lg:p-8">
+            <article
+              className={`rounded-[30px] border border-slate-200 bg-white p-6 ${
+                isMinimal ? "shadow-sm" : "shadow-[0_18px_44px_rgba(15,23,42,0.07)]"
+              } lg:p-8`}
+            >
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
@@ -799,7 +836,11 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
               </div>
             </article>
 
-            <article className="rounded-[30px] border border-slate-800/80 bg-[#0f1728] p-6 text-white shadow-[0_22px_60px_rgba(15,23,42,0.18)] lg:p-8">
+            <article
+              className={`rounded-[30px] border border-slate-800/80 bg-[#0f1728] p-6 text-white ${
+                isMinimal ? "shadow-sm" : "shadow-[0_22px_60px_rgba(15,23,42,0.18)]"
+              } lg:p-8`}
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
                 {snapshot.summary.title}
               </p>
@@ -829,7 +870,11 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
           </div>
 
           <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
-            <article className="rounded-[30px] border border-slate-200 bg-white p-4 shadow-[0_18px_44px_rgba(15,23,42,0.06)] sm:p-5">
+            <article
+              className={`rounded-[30px] border border-slate-200 bg-white p-4 ${
+                isMinimal ? "shadow-sm" : "shadow-[0_18px_44px_rgba(15,23,42,0.06)]"
+              } sm:p-5`}
+            >
               <div className="flex items-center justify-between gap-4 px-2 pb-4 pt-2">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
@@ -852,8 +897,12 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
                       onClick={() => setSelectedActivityId(item.id)}
                       className={`w-full rounded-[24px] border px-5 py-5 text-left transition-all duration-300 ${
                         isSelected
-                          ? "border-blue-200 bg-blue-50 shadow-[0_16px_34px_rgba(37,99,235,0.10)]"
-                          : "border-transparent bg-[#f7f9fc] hover:border-slate-200 hover:bg-white hover:shadow-[0_14px_28px_rgba(15,23,42,0.05)]"
+                          ? isMinimal
+                            ? "border-blue-200 bg-blue-50 shadow-sm"
+                            : "border-blue-200 bg-blue-50 shadow-[0_16px_34px_rgba(37,99,235,0.10)]"
+                          : isMinimal
+                            ? "border-transparent bg-[#f7f9fc] hover:border-slate-200 hover:bg-white hover:shadow-sm"
+                            : "border-transparent bg-[#f7f9fc] hover:border-slate-200 hover:bg-white hover:shadow-[0_14px_28px_rgba(15,23,42,0.05)]"
                       }`}
                     >
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
@@ -882,7 +931,11 @@ export function MyBiShowcase({ className = "" }: MyBiShowcaseProps) {
               </div>
             </article>
 
-            <article className="rounded-[30px] border border-slate-200 bg-[#f8fbff] p-6 shadow-[0_18px_44px_rgba(15,23,42,0.06)] lg:p-8">
+            <article
+              className={`rounded-[30px] border border-slate-200 bg-[#f8fbff] p-6 ${
+                isMinimal ? "shadow-sm" : "shadow-[0_18px_44px_rgba(15,23,42,0.06)]"
+              } lg:p-8`}
+            >
               <div className="flex flex-col gap-4 border-b border-slate-200 pb-5 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
