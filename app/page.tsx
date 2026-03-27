@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ContactSection } from "@/components/contact-section";
+import { Hero } from "@/components/hero";
 import { MyBiResultsGrid } from "@/components/mybi-results-grid";
 import { MyBiShowcase } from "@/components/mybi-showcase";
 import { Reveal } from "@/components/reveal";
@@ -30,7 +30,7 @@ const caseStudyAfter = [
 ] as const;
 
 export default function HomePage() {
-  const { hero, mybi, method } = siteContent;
+  const { mybi, method } = siteContent;
 
   return (
     <>
@@ -38,44 +38,8 @@ export default function HomePage() {
 
       <main id="home" className="bg-white text-ink antialiased">
         <section className="relative overflow-hidden">
-          <Reveal className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
-            <div className="max-w-5xl">
-              <h1 className="max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
-                {hero.title}
-              </h1>
-
-              <p className="mt-6 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                {hero.subtitle}
-              </p>
-
-              <p className="mt-8 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
-                {hero.description}
-              </p>
-
-              <div className="mt-8 space-y-2 text-lg leading-8 text-ink">
-                {hero.notes.map((note) => (
-                  <p key={note}>{note}</p>
-                ))}
-              </div>
-
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <TrackedLink
-                  href={hero.primaryCta.href}
-                  event="case_study_cta_click"
-                  data={{ location: "hero" }}
-                  className="premium-cta"
-                >
-                  {hero.primaryCta.label}
-                </TrackedLink>
-
-                <Link
-                  href={hero.secondaryCta.href}
-                  className="premium-cta-outline"
-                >
-                  {hero.secondaryCta.label}
-                </Link>
-              </div>
-            </div>
+          <Reveal>
+            <Hero />
           </Reveal>
         </section>
 
