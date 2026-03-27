@@ -101,10 +101,7 @@ export function ContactSection() {
   return (
     <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
       <div className="max-w-xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-          Contact
-        </p>
-        <h2 className="mt-4 text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
           Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted">

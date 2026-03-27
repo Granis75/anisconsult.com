@@ -33,10 +33,14 @@ export const siteContent = {
     summary: "A clear view of revenue, payments and execution.",
     notes: ["No complexity.", "Just control."],
     flow: ["Client", "Mission", "Invoice", "Payment"],
+    cta: {
+      label: "Open MyBi ↗",
+      href: "https://mybi-business-app.vercel.app/",
+    },
   },
   method: {
     title: "Method",
-    subtitle: "A system-first approach",
+    subtitle: "A system-first approach.",
     steps: [
       {
         step: "Step 1",
@@ -82,7 +86,7 @@ export const siteContent = {
       "Better scalability",
     ],
     cta: {
-      label: "→ View Case Study",
+      label: "View Case Study →",
       href: "/case-study/vesper",
     },
   },

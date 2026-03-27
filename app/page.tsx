@@ -1,18 +1,25 @@
 import Link from "next/link";
 import { ContactSection } from "@/components/contact-section";
+import {
+  CashFlowMiniPreview,
+  ClientListMiniPreview,
+  MissionCardStackMiniPreview,
+  ProjectStatusMiniPreview,
+} from "@/components/mybi-mini-previews";
 import { MyBiShowcase } from "@/components/mybi-showcase";
 import { Reveal } from "@/components/reveal";
+import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { SectionTitle } from "@/components/section-title";
 import { TrackedLink } from "@/components/tracked-link";
 import { siteContent } from "@/lib/site-content";
 
-const methodResultVisuals = [
-  [82, 56, 92],
-  [68, 88, 52],
-  [74, 46, 86],
-  [58, 80, 94],
+const methodResultPreviews = [
+  ClientListMiniPreview,
+  CashFlowMiniPreview,
+  ProjectStatusMiniPreview,
+  MissionCardStackMiniPreview,
 ] as const;
 
 const caseStudyMetrics = [
@@ -87,11 +94,9 @@ export default function HomePage() {
         <section id="case-study" className="border-t border-line bg-white">
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={40}>
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-black/45">
+              <SectionKicker label="Case Study" />
+              <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-black/40">
                 Vesper Collection
-              </p>
-              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-black/55">
-                Case study
               </p>
               <h2 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-black sm:text-5xl lg:text-6xl">
                 Turning fragmented operations into a clearer, more scalable system.
@@ -209,39 +214,22 @@ export default function HomePage() {
               </div>
 
               <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-                {method.result.map((item, index) => (
-                  <article
-                    key={item}
-                    className="flex h-full flex-col rounded-[26px] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_12px_32px_rgba(15,23,42,0.04)]"
-                  >
-                    <div className="rounded-[20px] border border-line bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fc_100%)] p-4">
-                      <div className="flex items-center justify-between">
-                        <span className="h-2.5 w-2.5 rounded-full bg-ink/80" />
-                        <span className="h-8 w-8 rounded-full border border-line bg-surface" />
-                      </div>
+                {method.result.map((item, index) => {
+                  const Preview = methodResultPreviews[index];
 
-                      <div className="mt-5 space-y-2.5">
-                        {methodResultVisuals[index].map((width, visualIndex) => (
-                          <div key={`${item}-${visualIndex}`} className="h-2 rounded-full bg-surface">
-                            <div
-                              className="h-full rounded-full bg-ink"
-                              style={{ width: `${width}%`, opacity: 1 - visualIndex * 0.14 }}
-                            />
-                          </div>
-                        ))}
-                      </div>
+                  return (
+                    <article
+                      key={item}
+                      className="flex h-full flex-col rounded-[26px] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_12px_32px_rgba(15,23,42,0.04)]"
+                    >
+                      <Preview />
 
-                      <div className="mt-5 grid grid-cols-2 gap-2">
-                        <div className="rounded-2xl border border-line bg-white px-3 py-3" />
-                        <div className="rounded-2xl border border-line bg-white px-3 py-3" />
-                      </div>
-                    </div>
-
-                    <h3 className="mt-6 text-xl font-bold tracking-[-0.02em] text-ink">
-                      {item}
-                    </h3>
-                  </article>
-                ))}
+                      <h3 className="mt-6 text-xl font-bold tracking-[-0.02em] text-ink">
+                        {item}
+                      </h3>
+                    </article>
+                  );
+                })}
               </div>
 
               <div className="mt-10 flex justify-start">
@@ -285,6 +273,17 @@ export default function HomePage() {
                 {mybi.notes.map((note) => (
                   <p key={note}>{note}</p>
                 ))}
+              </div>
+
+              <div className="mt-10 flex items-center justify-center">
+                <a
+                  href={mybi.cta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-5 py-3 text-sm font-semibold text-ink transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-black/15 hover:shadow-[0_8px_24px_rgba(15,23,42,0.05)]"
+                >
+                  {mybi.cta.label}
+                </a>
               </div>
             </div>
 

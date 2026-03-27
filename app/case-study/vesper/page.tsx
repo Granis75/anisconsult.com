@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -102,22 +103,12 @@ export default function VesperCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                Operational Systems · CRM · Customer Experience
-              </p>
-
               <h1 className="mt-6 max-w-5xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
                 Business Systems Transformation
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 From aging operations to a structured, data-driven operating model.
-              </p>
-
-              <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Reconstruction of a post-COVID service business through systems
-                redesign, customer experience orchestration, process automation,
-                multilingual support and operating model simplification.
               </p>
             </div>
           </div>
@@ -145,9 +136,7 @@ export default function VesperCaseStudyPage() {
         <section id="kpi" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                KPI
-              </p>
+              <SectionKicker label="KPI" />
             </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -171,9 +160,7 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-6 lg:grid-cols-2">
               <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  Context
-                </p>
+                <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
                   A fragmented operation with heavy front-desk dependence, weak
                   system structure, and limited use of customer data.
@@ -181,9 +168,7 @@ export default function VesperCaseStudyPage() {
               </article>
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  Target
-                </p>
+                <SectionKicker label="Target" />
                 <p className="mt-6 text-base leading-8 text-ink">
                   A more autonomous, structured and scalable operating model.
                 </p>
@@ -195,9 +180,7 @@ export default function VesperCaseStudyPage() {
         <section id="system" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                System
-              </p>
+              <SectionKicker label="System" />
               <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
                 Acquisition → Booking → Data → CRM → Access → Operations
               </p>
@@ -225,9 +208,7 @@ export default function VesperCaseStudyPage() {
         <section id="transformation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                Transformation
-              </p>
+              <SectionKicker label="Transformation" />
             </div>
 
             <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -250,9 +231,7 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)] lg:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  Results
-                </p>
+                <SectionKicker label="Results" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                   Operations became easier to run, easier to understand and more
                   scalable.
@@ -276,9 +255,7 @@ export default function VesperCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                Closing
-              </p>
+              <SectionKicker label="Closing" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 This is not a hospitality project.
               </p>
