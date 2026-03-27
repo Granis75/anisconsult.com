@@ -1,7 +1,6 @@
 import { ContactSection } from "@/components/contact-section";
 import { Hero } from "@/components/hero";
 import { MyBiHomeSection } from "@/components/mybi-home-section";
-import { MyBiResultsGrid } from "@/components/mybi-results-grid";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
@@ -10,23 +9,23 @@ import { SectionTitle } from "@/components/section-title";
 import { TrackedLink } from "@/components/tracked-link";
 import { siteContent } from "@/lib/site-content";
 
-const caseStudyMetrics = [
-  { label: "Review score", value: "7.6 → 9.2", meta: "TripAdvisor" },
-  { label: "Ranking", value: "450 → Top 30", meta: "Market visibility" },
-  { label: "Admin load", value: "~10h / week", meta: "Administrative time reduced" },
-  { label: "New market", value: "+50% revenue", meta: "Growth from a new market" },
-] as const;
-
-const caseStudyBefore = [
-  "Manual coordination across daily operations",
-  "Strong dependence on the front desk",
-  "Customer data spread across multiple touchpoints",
-] as const;
-
-const caseStudyAfter = [
-  "Clearer operating flows",
-  "More autonomy with less friction",
-  "Structured CRM and more reliable execution",
+const caseStudyResults = [
+  {
+    title: "9.2/10 Customer Satisfaction",
+    description: "Immediate increase in internal rating.",
+  },
+  {
+    title: "+32% Execution Speed",
+    description: "Operational bottlenecks reduced.",
+  },
+  {
+    title: "10h Saved / Week",
+    description: "Administrative time reduced.",
+  },
+  {
+    title: "Live Project Tracking",
+    description: "Automated statuses without manual follow-up.",
+  },
 ] as const;
 
 export default function HomePage() {
@@ -55,45 +54,23 @@ export default function HomePage() {
               </h2>
             </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              {caseStudyMetrics.map((item) => (
-                <article
-                  key={item.label}
-                  className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
-                    {item.label}
-                  </p>
-                  <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
-                    {item.value}
-                  </p>
-                  <p className="mt-3 text-sm text-black/55">{item.meta}</p>
-                </article>
-              ))}
+            <div className="mt-12 max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/45">
+                Results
+              </p>
             </div>
 
-            <div className="mt-14 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="rounded-[32px] border border-black/10 bg-white p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
-                  Before
-                </p>
-                <ul className="mt-5 space-y-3 text-sm leading-7 text-black/70">
-                  {caseStudyBefore.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="rounded-[32px] border border-black/10 bg-black p-8 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
-                  After
-                </p>
-                <ul className="mt-5 space-y-3 text-sm leading-7 text-white/80">
-                  {caseStudyAfter.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
+            <div className="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+              {caseStudyResults.map((item) => (
+                <div key={item.title} className="border-t border-black/10 pt-4">
+                  <h3 className="text-xl font-semibold tracking-tight text-neutral-950">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-neutral-500">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <div className="mt-10 flex flex-col gap-6 border-t border-black/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
@@ -158,27 +135,15 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-16 rounded-[32px] border border-line bg-white p-8 shadow-sm lg:p-10">
-              <div className="max-w-2xl">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">
-                  {method.resultTitle}
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <MyBiResultsGrid variant="clean" />
-              </div>
-
-              <div className="mt-10 flex justify-start">
-                <TrackedLink
-                  href={method.cta.href}
-                  event="case_study_cta_click"
-                  data={{ location: "method" }}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                >
-                  {method.cta.label}
-                </TrackedLink>
-              </div>
+            <div className="mt-12 flex justify-start border-t border-line pt-6">
+              <TrackedLink
+                href={method.cta.href}
+                event="case_study_cta_click"
+                data={{ location: "method" }}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+              >
+                {method.cta.label}
+              </TrackedLink>
             </div>
           </Reveal>
         </section>

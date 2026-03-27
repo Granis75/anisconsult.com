@@ -26,18 +26,6 @@ export const siteContent = {
       href: "/#contact",
     },
   },
-  mybi: {
-    title: "MyBi — Business Operating System",
-    description:
-      "A lightweight system designed to structure freelance activity.",
-    summary: "A clear view of revenue, payments and execution.",
-    notes: ["No complexity.", "Just control."],
-    flow: ["Client", "Mission", "Invoice", "Payment"],
-    cta: {
-      label: "Open MyBi ↗",
-      href: "https://mybi-business-app.vercel.app/",
-    },
-  },
   method: {
     title: "Method",
     subtitle: "A system-first approach.",
@@ -77,13 +65,6 @@ export const siteContent = {
         ],
         objective: "A system that works immediately — and evolves fast.",
       },
-    ],
-    resultTitle: "Results",
-    result: [
-      "Clearer operations",
-      "Less friction",
-      "More stable execution",
-      "Better scalability",
     ],
     cta: {
       label: "View Case Study →",
