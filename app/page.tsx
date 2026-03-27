@@ -16,7 +16,7 @@ const methodResultVisuals = [
 ] as const;
 
 export default function HomePage() {
-  const { hero, proofs, caseStudy, mybi, method } = siteContent;
+  const { hero, proofs, mybi, method } = siteContent;
 
   return (
     <>
@@ -119,62 +119,99 @@ export default function HomePage() {
 
         <section id="case-study" className="border-t border-line bg-white">
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={80}>
-            <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-              <div>
-                <SectionTitle eyebrow="Case study" />
-                <h2 className="mt-4 max-w-3xl text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
-                  {caseStudy.title}
-                </h2>
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-black/45">
+                Vesper Collection
+              </p>
+              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-black/55">
+                Case study
+              </p>
+              <h2 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-black sm:text-5xl lg:text-6xl">
+                Turning fragmented operations into a clearer, more scalable system.
+              </h2>
+            </div>
 
-                <div className="mt-10 space-y-8">
-                  <div>
-                    <h3 className="text-base font-semibold text-ink">Contexte</h3>
-                    <p className="mt-3 max-w-2xl text-base leading-8 text-muted">
-                      {caseStudy.context}
-                    </p>
-                  </div>
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
+                  Review score
+                </p>
+                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
+                  7.6 → 9.2
+                </p>
+                <p className="mt-3 text-sm text-black/55">TripAdvisor</p>
+              </article>
 
-                  <div>
-                    <h3 className="text-base font-semibold text-ink">Intervention</h3>
-                    <p className="mt-3 max-w-2xl text-base leading-8 text-muted">
-                      {caseStudy.intervention}
-                    </p>
-                  </div>
-                </div>
+              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
+                  Ranking
+                </p>
+                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
+                  450 → Top 30
+                </p>
+                <p className="mt-3 text-sm text-black/55">Market visibility</p>
+              </article>
+
+              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
+                  Admin load
+                </p>
+                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
+                  ~10h / week
+                </p>
+                <p className="mt-3 text-sm text-black/55">
+                  Administrative time reduced
+                </p>
+              </article>
+
+              <article className="rounded-[28px] border border-black/10 bg-[#f7f7f5] p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
+                  New market
+                </p>
+                <p className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black">
+                  +50% revenue
+                </p>
+                <p className="mt-3 text-sm text-black/55">Growth from a new market</p>
+              </article>
+            </div>
+
+            <div className="mt-14 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+              <div className="rounded-[32px] border border-black/10 bg-white p-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/50">
+                  Before
+                </p>
+                <ul className="mt-5 space-y-3 text-sm leading-7 text-black/70">
+                  <li>Manual coordination across daily operations</li>
+                  <li>Strong dependence on the front desk</li>
+                  <li>Customer data spread across multiple touchpoints</li>
+                </ul>
               </div>
 
-              <div className="premium-soft-card">
-                <div className="space-y-8">
-                  <div>
-                    <h3 className="text-base font-semibold text-ink">Actions clés</h3>
-                    <ul className="mt-4 space-y-3 text-sm leading-7 text-muted">
-                      {caseStudy.actions.map((action) => (
-                        <li key={action}>• {action}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="border-t border-line pt-8">
-                    <h3 className="text-base font-semibold text-ink">Résultats</h3>
-                    <ul className="mt-4 space-y-3 text-sm leading-7 text-muted">
-                      {caseStudy.results.map((result) => (
-                        <li key={result}>• {result}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="border-t border-line pt-8">
-                    <TrackedLink
-                      href={caseStudy.cta.href}
-                      event="case_study_cta_click"
-                      data={{ location: "case_study_block" }}
-                      className="premium-cta-outline"
-                    >
-                      {caseStudy.cta.label}
-                    </TrackedLink>
-                  </div>
-                </div>
+              <div className="rounded-[32px] border border-black/10 bg-black p-8 text-white">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
+                  After
+                </p>
+                <ul className="mt-5 space-y-3 text-sm leading-7 text-white/80">
+                  <li>Clearer operating flows</li>
+                  <li>More autonomy with less friction</li>
+                  <li>Structured CRM and more reliable execution</li>
+                </ul>
               </div>
+            </div>
+
+            <div className="mt-10 flex flex-col gap-6 border-t border-black/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
+              <p className="max-w-2xl text-base leading-7 text-black/60">
+                Better results came from a cleaner system, not from adding more tools.
+              </p>
+
+              <TrackedLink
+                href="/case-study/vesper"
+                event="case_study_cta_click"
+                data={{ location: "case_study_section" }}
+                className="inline-flex items-center justify-center rounded-full border border-black bg-black px-6 py-3 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:bg-black/90"
+              >
+                See how the system was built →
+              </TrackedLink>
             </div>
           </Reveal>
         </section>
