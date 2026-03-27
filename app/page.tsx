@@ -1,7 +1,7 @@
 import { ContactSection } from "@/components/contact-section";
 import { Hero } from "@/components/hero";
+import { MyBiHomeSection } from "@/components/mybi-home-section";
 import { MyBiResultsGrid } from "@/components/mybi-results-grid";
-import { MyBiShowcase } from "@/components/mybi-showcase";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
@@ -30,7 +30,7 @@ const caseStudyAfter = [
 ] as const;
 
 export default function HomePage() {
-  const { mybi, method } = siteContent;
+  const { method } = siteContent;
 
   return (
     <>
@@ -183,50 +183,9 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        <section id="mybi" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={80}>
-            <div className="rounded-[32px] border border-neutral-200 bg-neutral-50 p-6 shadow-sm lg:p-8 xl:p-10">
-              <div className="grid gap-10 xl:grid-cols-[0.82fr_1.18fr] xl:items-center xl:gap-12">
-                <div className="max-w-xl">
-                  <SectionTitle eyebrow="MyBi" title={mybi.title} />
-
-                  <p className="mt-6 max-w-lg text-lg leading-8 text-muted sm:text-xl">
-                    {mybi.description}
-                  </p>
-
-                  <p className="mt-8 text-lg font-semibold leading-8 text-ink sm:text-xl">
-                    {mybi.flow.join(" → ")}
-                  </p>
-
-                  <p className="mt-6 max-w-lg text-lg leading-8 text-muted">
-                    {mybi.summary}
-                  </p>
-
-                  <div className="mt-8 space-y-2 text-base leading-7 text-ink">
-                    {mybi.notes.map((note) => (
-                      <p key={note}>{note}</p>
-                    ))}
-                  </div>
-
-                  <div className="mt-10 flex items-center">
-                    <a
-                      href={mybi.cta.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex h-11 items-center gap-2 rounded-full border border-neutral-200 bg-white px-5 text-sm font-semibold text-ink shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-100"
-                    >
-                      {mybi.cta.label}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="rounded-[28px] border border-neutral-200 bg-white p-3 shadow-sm sm:p-4">
-                  <MyBiShowcase variant="minimal" />
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </section>
+        <Reveal delayMs={80}>
+          <MyBiHomeSection />
+        </Reveal>
 
         <section id="contact" className="border-t border-line bg-white">
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={100}>
