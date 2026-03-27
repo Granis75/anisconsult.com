@@ -26,9 +26,7 @@ export function MyBiHomeSection() {
 
               <div className="mt-10">
                 <a
-                  href="https://mybi-business-app.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="https://mybi-business-app.vercel.app/dashboard"
                   className="inline-flex h-11 items-center justify-center rounded-full border border-neutral-200 bg-white px-5 text-sm font-semibold text-neutral-950 transition-colors duration-200 hover:bg-neutral-100"
                 >
                   Explore MyBi
