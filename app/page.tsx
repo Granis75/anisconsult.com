@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { ContactSection } from "@/components/contact-section";
-import {
-  CashFlowMiniPreview,
-  ClientListMiniPreview,
-  MissionCardStackMiniPreview,
-  ProjectStatusMiniPreview,
-} from "@/components/mybi-mini-previews";
+import { MyBiResultsGrid } from "@/components/mybi-results-grid";
 import { MyBiShowcase } from "@/components/mybi-showcase";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
@@ -14,13 +9,6 @@ import { SiteHeader } from "@/components/site-header";
 import { SectionTitle } from "@/components/section-title";
 import { TrackedLink } from "@/components/tracked-link";
 import { siteContent } from "@/lib/site-content";
-
-const methodResultPreviews = [
-  ClientListMiniPreview,
-  CashFlowMiniPreview,
-  ProjectStatusMiniPreview,
-  MissionCardStackMiniPreview,
-] as const;
 
 const caseStudyMetrics = [
   { label: "Review score", value: "7.6 → 9.2", meta: "TripAdvisor" },
@@ -213,23 +201,8 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-                {method.result.map((item, index) => {
-                  const Preview = methodResultPreviews[index];
-
-                  return (
-                    <article
-                      key={item}
-                      className="flex h-full flex-col rounded-[26px] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_12px_32px_rgba(15,23,42,0.04)]"
-                    >
-                      <Preview />
-
-                      <h3 className="mt-6 text-xl font-bold tracking-[-0.02em] text-ink">
-                        {item}
-                      </h3>
-                    </article>
-                  );
-                })}
+              <div className="mt-8">
+                <MyBiResultsGrid />
               </div>
 
               <div className="mt-10 flex justify-start">
