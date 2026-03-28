@@ -96,20 +96,20 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        <section className="border-t border-line bg-surface">
-          <Reveal className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20" delayMs={50}>
-            <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-              <div className="max-w-xl">
+        <section className="border-t border-line bg-white">
+          <Reveal className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:py-16" delayMs={50}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_1fr] lg:items-end lg:gap-12">
+              <div className="max-w-lg">
                 <SectionKicker label="Case Study" />
-                <h2 className="mt-5 text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
+                <h2 className="mt-4 text-2xl font-bold tracking-tighter2 text-ink sm:text-3xl">
                   Kepler Express
                 </h2>
-                <p className="mt-5 text-lg leading-8 text-muted">
+                <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
                   Structuring a fragmented logistics workflow into a connected
                   operational system.
                 </p>
 
-                <div className="mt-8">
+                <div className="mt-6">
                   <TrackedLink
                     href="/case-study/kepler-express"
                     event="case_study_cta_click"
@@ -121,10 +121,10 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="grid gap-6 md:grid-cols-3">
+              <div className="grid gap-5 sm:grid-cols-3 sm:gap-6">
                 {keplerTeaserPoints.map((item) => (
                   <div key={item} className="border-t border-line pt-4">
-                    <p className="text-sm font-semibold leading-7 text-ink">{item}</p>
+                    <p className="text-sm font-semibold leading-7 text-ink/90">{item}</p>
                   </div>
                 ))}
               </div>

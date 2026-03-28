@@ -84,24 +84,29 @@ export default function KeplerExpressCaseStudyPage() {
 
         <section id="context" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="max-w-3xl">
-              <SectionKicker label="Context" />
-              <p className="mt-6 text-base leading-8 text-ink sm:text-lg">
-                A small logistics company (SASU, 1–7 employees) operating across
-                France and Europe.
-              </p>
-              <p className="mt-4 text-base leading-8 text-muted sm:text-lg">
-                The company handled subcontracted deliveries, including small
-                parcels and light pallets, using a compact fleet of vans.
-              </p>
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.88fr)_1fr] lg:gap-14">
+              <div className="max-w-2xl">
+                <SectionKicker label="Context" />
+                <p className="mt-6 text-base leading-8 text-ink sm:text-lg">
+                  A small logistics company (SASU, 1–7 employees) operating
+                  across France and Europe.
+                </p>
+              </div>
+
+              <div className="border-t border-line pt-4">
+                <p className="text-base leading-8 text-muted sm:text-lg">
+                  The company handled subcontracted deliveries, including small
+                  parcels and light pallets, using a compact fleet of vans.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         <section id="problem" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
+            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+              <article>
                 <SectionKicker label="Problem" />
                 <p className="mt-6 text-base leading-8 text-ink">
                   Operations were fragmented and mostly manual:
@@ -115,8 +120,10 @@ export default function KeplerExpressCaseStudyPage() {
                 </ul>
               </article>
 
-              <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <SectionKicker label="Impact" />
+              <article className="border-t border-line pt-4 lg:mt-10">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                  This resulted in
+                </p>
                 <ul className="mt-6 space-y-3 text-sm leading-7 text-muted">
                   <li>• No real-time visibility on operations</li>
                   <li>• Frequent tracking errors</li>
@@ -153,25 +160,25 @@ export default function KeplerExpressCaseStudyPage() {
               </div>
             </div>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              <article className="rounded-[2rem] border border-line bg-surface p-6">
+            <div className="mt-10 grid gap-x-10 gap-y-6 md:grid-cols-2 xl:grid-cols-3">
+              <article className="border-t border-line pt-4">
                 <p className="text-sm font-semibold text-ink">Website & platforms</p>
               </article>
-              <article className="rounded-[2rem] border border-line bg-surface p-6">
+              <article className="border-t border-line pt-4">
                 <p className="text-sm font-semibold text-ink">Booking intake</p>
               </article>
-              <article className="rounded-[2rem] border border-line bg-surface p-6">
+              <article className="border-t border-line pt-4">
                 <p className="text-sm font-semibold text-ink">Customer data (PMS)</p>
               </article>
-              <article className="rounded-[2rem] border border-line bg-surface p-6">
+              <article className="border-t border-line pt-4">
                 <p className="text-sm font-semibold text-ink">
                   CRM logic (preferences, follow-ups)
                 </p>
               </article>
-              <article className="rounded-[2rem] border border-line bg-surface p-6">
+              <article className="border-t border-line pt-4">
                 <p className="text-sm font-semibold text-ink">RFID / Bluetooth access</p>
               </article>
-              <article className="rounded-[2rem] border border-line bg-surface p-6">
+              <article className="border-t border-line pt-4">
                 <p className="text-sm font-semibold text-ink">Internal tools & reporting</p>
               </article>
             </div>
@@ -184,11 +191,11 @@ export default function KeplerExpressCaseStudyPage() {
               <SectionKicker label="What Was Structured" />
             </div>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-10 grid gap-4 lg:grid-cols-2">
               {structuredItems.map((item) => (
                 <article
                   key={item}
-                  className="rounded-[2rem] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
+                  className="rounded-[2rem] border border-line bg-white p-6"
                 >
                   <p className="text-sm leading-7 text-ink">{item}</p>
                 </article>
@@ -199,33 +206,28 @@ export default function KeplerExpressCaseStudyPage() {
 
         <section id="results" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-              <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
+            <div className="max-w-3xl">
                 <SectionKicker label="Results" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                   Operations became more visible, more connected and easier to run.
                 </p>
-              </article>
+            </div>
 
-              <div className="grid gap-4">
-                {resultItems.map((item) => (
-                  <article
-                    key={item}
-                    className="rounded-[2rem] border border-line bg-white px-6 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
-                  >
-                    <p className="text-sm font-semibold text-ink">{item}</p>
-                  </article>
-                ))}
-              </div>
+            <div className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:mt-12">
+              {resultItems.map((item) => (
+                <article key={item} className="border-t border-line pt-4">
+                  <p className="text-sm font-semibold text-ink">{item}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
         <section className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
+            <div className="max-w-4xl">
               <SectionKicker label="Connection" />
-              <p className="mt-6 max-w-4xl text-base leading-8 text-ink sm:text-lg">
+              <p className="mt-6 text-base leading-8 text-ink sm:text-lg">
                 This project reflects the same operational logic applied in MyBi
                 — a lightweight business operating system designed to structure
                 service-based activity through clear workflows, financial
