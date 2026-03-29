@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SectionKicker } from "@/components/section-kicker";
 
 export function MyBiHomeSection() {
@@ -28,19 +27,19 @@ export function MyBiHomeSection() {
           </div>
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <div className="w-full max-w-[720px] overflow-hidden rounded-2xl border border-slate-100 shadow-sm">
-            <Image
-              src="/visuals/mybi-control-view.svg"
-              alt="Business control view showing revenue, unpaid invoices, clients, and recent activity."
-              width={1600}
-              height={1200}
-              className="h-auto w-full"
-            />
+        <div className="mt-10 max-w-2xl">
+          <p className="text-base font-semibold tracking-[-0.03em] text-neutral-950 sm:text-lg">
+            Client → Mission → Invoice → Payment
+          </p>
+
+          <div className="mt-5 space-y-1.5 text-sm leading-7 text-neutral-600 sm:text-base">
+            <p>3 invoices overdue — €1,450</p>
+            <p>2 active clients</p>
+            <p>1 mission in progress</p>
           </div>
         </div>
 
-        <div className="mt-8 max-w-xl">
+        <div className="mt-10 max-w-xl">
           <a
             href="https://mybi-business-app.vercel.app/dashboard"
             className="inline-flex h-11 items-center justify-center rounded-full border border-neutral-200 bg-white px-5 text-sm font-semibold text-neutral-950 transition-colors duration-200 hover:bg-neutral-100"

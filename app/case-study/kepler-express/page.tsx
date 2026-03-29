@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
@@ -84,32 +83,6 @@ export default function KeplerExpressCaseStudyPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="max-w-3xl">
-              <SectionKicker label="Product" />
-            </div>
-
-            <div className="mt-10 flex justify-center">
-              <div className="w-full max-w-[900px] overflow-hidden rounded-[24px] border border-line">
-                <Image
-                  src="/visuals/kepler-operations-flow.svg"
-                  alt="Operational mission tracking view showing a pharma delivery in transit with expenses and invoice status."
-                  width={1600}
-                  height={1200}
-                  className="h-auto w-full"
-                />
-              </div>
-            </div>
-
-            <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-7 text-muted">
-              One operational view keeps missions, expenses, invoice state, and
-              payment follow-up in the same place, so coordination happens in
-              context instead of across separate files.
-            </p>
           </div>
         </section>
 
