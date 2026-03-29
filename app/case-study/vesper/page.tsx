@@ -4,94 +4,67 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const sectionLinks = [
-  { label: "KPI", href: "#kpi" },
   { label: "Context", href: "#context" },
-  { label: "System", href: "#system" },
-  { label: "Transformation", href: "#transformation" },
+  { label: "Problem", href: "#problem" },
+  { label: "Implementation", href: "#implementation" },
   { label: "Results", href: "#results" },
+  { label: "Change", href: "#change" },
+  { label: "Insight", href: "#insight" },
 ] as const;
 
-const executiveKpis = [
+const problemItems = [
+  "Disconnected tools (Excel, PMS, manual tracking)",
+  "Strong reliance on front-desk presence",
+  "Limited use of customer data",
+  "Repetitive administrative tasks",
+  "Lack of clear operational flow",
+] as const;
+
+const implementationItems = [
+  "Structured end-to-end workflow (acquisition → booking → operations → reporting)",
+  "Introduced CRM logic (customer data, preferences, follow-ups)",
+  "Reduced front-desk dependency through access automation (RFID / Bluetooth)",
+  "Simplified payment and administrative processes",
+  "Built internal tools to support daily operations",
+  "Centralized data for better tracking and decision-making",
+] as const;
+
+const resultItems = [
   {
-    label: "Review Score",
     value: "9.2",
+    label: "Review score",
     meta: "from 7.6",
   },
   {
-    label: "TripAdvisor",
     value: "Top 30",
+    label: "Ranking",
     meta: "from ~450",
   },
   {
-    label: "Admin time saved",
     value: "~10h/week",
-    meta: "saved",
+    label: "Saved on admin",
+    meta: "less repetitive work",
   },
   {
-    label: "New market revenue",
-    value: "50%",
-    meta: "from a new market",
+    value: "+50%",
+    label: "Revenue from a new market",
+    meta: "new business contribution",
   },
 ] as const;
 
-const systemFlow = [
-  {
-    title: "Acquisition",
-    text: "Website & platforms",
-  },
-  {
-    title: "Booking",
-    text: "Booking intake",
-  },
-  {
-    title: "Data",
-    text: "Customer data (PMS)",
-  },
-  {
-    title: "CRM",
-    text: "CRM logic (preferences, follow-ups)",
-  },
-  {
-    title: "Access",
-    text: "RFID / Bluetooth access",
-  },
-  {
-    title: "Operations",
-    text: "Internal tools & reporting",
-  },
+const changeItems = [
+  "Less friction in daily execution",
+  "More autonomy across operations",
+  "Better visibility on performance",
+  "More consistent customer experience",
 ] as const;
 
-const transformationCards = [
-  {
-    title: "Experience & Identity",
-    text: "Customer journey redesigned around comfort and clarity.",
-  },
-  {
-    title: "Access & Autonomy",
-    text: "Operating model no longer tied to 24/7 desk presence.",
-  },
-  {
-    title: "Multilingual Layer",
-    text: "Communication made more scalable for international clientele.",
-  },
-  {
-    title: "CRM Logic",
-    text: "Better preparation before customer arrival.",
-  },
-  {
-    title: "Payments & Processes",
-    text: "Reduced repetitive administrative handling.",
-  },
-  {
-    title: "Internal Tools",
-    text: "Clearer operating workflows.",
-  },
-] as const;
-
-const resultThemes = [
-  "Less friction.",
-  "More autonomy.",
-  "Stronger execution.",
+const flowSteps = [
+  "Acquisition",
+  "Booking",
+  "CRM",
+  "Access",
+  "Operations",
 ] as const;
 
 export default function VesperCaseStudyPage() {
@@ -103,12 +76,14 @@ export default function VesperCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
+              <SectionKicker label="Case Study" />
               <h1 className="mt-6 max-w-5xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
-                Business Systems Transformation
+                Vesper Collection
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                From aging operations to a structured, data-driven operating model.
+                Turning fragmented hospitality operations into a clearer, more
+                reliable system.
               </p>
             </div>
           </div>
@@ -133,17 +108,87 @@ export default function VesperCaseStudyPage() {
           </div>
         </section>
 
-        <section id="kpi" className="border-b border-line bg-white">
+        <section id="context" className="border-b border-line bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="grid gap-6 lg:grid-cols-2">
+              <article className="rounded-[2rem] border border-line bg-surface p-8">
+                <SectionKicker label="Context" />
+                <p className="mt-6 text-base leading-8 text-ink">
+                  A hospitality business relying on fragmented tools, manual
+                  coordination and strong front-desk dependency.
+                </p>
+              </article>
+
+              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                  Operating reality
+                </p>
+                <p className="mt-6 text-base leading-8 text-ink">
+                  Operations were difficult to manage, with limited visibility
+                  on performance and heavy administrative workload.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="problem" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="KPI" />
+              <SectionKicker label="Problem" />
+              <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
+                The business was running through fragmented tools and manual
+                coordination.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-4 lg:grid-cols-2">
+              {problemItems.map((item) => (
+                <article
+                  key={item}
+                  className="rounded-[2rem] border border-line bg-white p-6"
+                >
+                  <p className="text-sm leading-7 text-ink">{item}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="implementation" className="border-b border-line bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="max-w-4xl">
+              <SectionKicker label="What Was Implemented" />
+              <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
+                The work focused on making day-to-day execution easier to run
+                and easier to track.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+              {implementationItems.map((item) => (
+                <article
+                  key={item}
+                  className="rounded-[2rem] border border-line bg-surface p-8"
+                >
+                  <p className="text-sm leading-7 text-ink">{item}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="results" className="border-b border-line bg-surface">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="max-w-3xl">
+              <SectionKicker label="Results" />
             </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {executiveKpis.map((item) => (
+              {resultItems.map((item) => (
                 <article
                   key={item.label}
-                  className="rounded-[2rem] border border-line bg-surface p-7 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
+                  className="rounded-[2rem] border border-line bg-white p-7 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
                 >
                   <p className="text-sm font-medium text-muted">{item.label}</p>
                   <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
@@ -156,90 +201,19 @@ export default function VesperCaseStudyPage() {
           </div>
         </section>
 
-        <section id="context" className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="grid gap-6 lg:grid-cols-2">
-              <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <SectionKicker label="Context" />
-                <p className="mt-6 text-base leading-8 text-ink">
-                  A fragmented operation with heavy front-desk dependence, weak
-                  system structure, and limited use of customer data.
-                </p>
-              </article>
-
-              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
-                <SectionKicker label="Target" />
-                <p className="mt-6 text-base leading-8 text-ink">
-                  A more autonomous, structured and scalable operating model.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="system" className="border-b border-line bg-surface">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="max-w-4xl">
-              <SectionKicker label="System" />
-              <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-                Acquisition → Booking → Data → CRM → Access → Operations
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
-              {systemFlow.map((item, index) => (
-                <article
-                  key={item.title}
-                  className="rounded-[2rem] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h2 className="mt-4 text-xl font-bold tracking-[-0.02em] text-ink">
-                    {item.title}
-                  </h2>
-                  <p className="mt-4 text-sm leading-7 text-muted">{item.text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="transformation" className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="max-w-4xl">
-              <SectionKicker label="Transformation" />
-            </div>
-
-            <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-              {transformationCards.map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-[2rem] border border-line bg-surface p-8"
-                >
-                  <h2 className="text-2xl font-bold tracking-[-0.02em] text-ink">
-                    {item.title}
-                  </h2>
-                  <p className="mt-5 text-sm leading-7 text-muted">{item.text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="results" className="border-b border-line bg-surface">
+        <section id="change" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)] lg:p-10">
-                <SectionKicker label="Results" />
+              <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
+                <SectionKicker label="What Changed" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Operations became easier to run, easier to understand and more
-                  scalable.
+                  Operations became easier to run and less dependent on manual
+                  coordination.
                 </p>
               </article>
 
               <div className="grid gap-4">
-                {resultThemes.map((item) => (
+                {changeItems.map((item) => (
                   <article
                     key={item}
                     className="rounded-[2rem] border border-line bg-white px-6 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
@@ -252,16 +226,33 @@ export default function VesperCaseStudyPage() {
           </div>
         </section>
 
-        <section className="border-b border-line bg-white">
+        <section id="insight" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-              <SectionKicker label="Closing" />
+            <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
+              <SectionKicker label="Key Insight" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                This is not a hospitality project.
+                Better results came from structuring the system — not adding
+                more tools.
               </p>
-              <p className="mt-4 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                This is an operating system redesign.
-              </p>
+
+              <div className="mt-10 border-t border-line pt-6">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                  System flow
+                </p>
+
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  {flowSteps.map((item, index) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <span className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink">
+                        {item}
+                      </span>
+                      {index < flowSteps.length - 1 ? (
+                        <span className="text-sm text-black/25">→</span>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
               <div className="mt-8">
                 <Link
