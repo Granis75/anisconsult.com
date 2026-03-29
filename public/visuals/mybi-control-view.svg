@@ -1,0 +1,46 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softShadow" x="0" y="0" width="1600" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="#F5F5F2"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="180" y="150" width="1240" height="900" rx="30" fill="#FFFFFF"/>
+    <rect x="180.5" y="150.5" width="1239" height="899" rx="29.5" stroke="#E5E7EB"/>
+  </g>
+
+  <text x="260" y="244" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600" letter-spacing="0.12em">BUSINESS CONTROL VIEW</text>
+  <text x="260" y="296" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="48" font-weight="600">Overview</text>
+  <text x="1298" y="244" text-anchor="end" fill="#9CA3AF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="500">Current month</text>
+
+  <line x1="260" y1="366" x2="1340" y2="366" stroke="#E5E7EB"/>
+  <line x1="620" y1="410" x2="620" y2="610" stroke="#E5E7EB"/>
+  <line x1="980" y1="410" x2="980" y2="610" stroke="#E5E7EB"/>
+
+  <text x="260" y="438" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="500">Revenue</text>
+  <text x="260" y="530" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="600" letter-spacing="-0.04em">12,450€</text>
+
+  <text x="700" y="438" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="500">Unpaid</text>
+  <text x="700" y="530" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="600" letter-spacing="-0.04em">2,150€</text>
+
+  <text x="1060" y="438" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="500">Clients</text>
+  <text x="1060" y="530" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="600" letter-spacing="-0.04em">8</text>
+
+  <line x1="260" y1="676" x2="1340" y2="676" stroke="#E5E7EB"/>
+
+  <text x="260" y="748" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600" letter-spacing="0.12em">RECENT ACTIVITY</text>
+
+  <circle cx="278" cy="846" r="6" fill="#94A3B8"/>
+  <text x="310" y="854" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="500">Invoice sent</text>
+  <line x1="260" y1="900" x2="1340" y2="900" stroke="#ECEFF3"/>
+
+  <circle cx="278" cy="970" r="6" fill="#94A3B8"/>
+  <text x="310" y="978" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="500">Payment received</text>
+  <line x1="260" y1="1024" x2="1340" y2="1024" stroke="#ECEFF3"/>
+
+  <circle cx="278" cy="1094" r="6" fill="#94A3B8"/>
+  <text x="310" y="1102" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="500">New client added</text>
+</svg>

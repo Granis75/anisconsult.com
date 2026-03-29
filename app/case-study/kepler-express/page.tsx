@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
@@ -152,6 +153,18 @@ export default function KeplerExpressCaseStudyPage() {
                   <p className="text-sm leading-7 text-ink">{item}</p>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <div className="w-full max-w-[900px] overflow-hidden rounded-[24px] border border-line bg-surface">
+                <Image
+                  src="/visuals/kepler-operations-flow.svg"
+                  alt="Operational mission tracking view showing a pharma delivery in transit with expenses and invoice status."
+                  width={1600}
+                  height={1200}
+                  className="h-auto w-full"
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -1,0 +1,45 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="softShadow" x="0" y="0" width="1600" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="#F5F5F2"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="320" y="170" width="960" height="860" rx="30" fill="#FFFFFF"/>
+    <rect x="320.5" y="170.5" width="959" height="859" rx="29.5" stroke="#E5E7EB"/>
+  </g>
+
+  <text x="400" y="264" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="600" letter-spacing="0.12em">MISSION TRACKING VIEW</text>
+  <text x="400" y="332" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="56" font-weight="600" letter-spacing="-0.04em">Pharma delivery</text>
+
+  <rect x="1078" y="250" width="122" height="42" rx="21" fill="#F3F4F6"/>
+  <rect x="1078.5" y="250.5" width="121" height="41" rx="20.5" stroke="#E5E7EB"/>
+  <text x="1139" y="277" text-anchor="middle" fill="#334155" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600">In transit</text>
+
+  <line x1="400" y1="396" x2="1200" y2="396" stroke="#E5E7EB"/>
+
+  <text x="400" y="474" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" letter-spacing="0.12em">MISSION</text>
+  <text x="400" y="530" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="34" font-weight="500">Pharma delivery</text>
+
+  <line x1="400" y1="584" x2="1200" y2="584" stroke="#ECEFF3"/>
+
+  <text x="400" y="662" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" letter-spacing="0.12em">STATUS</text>
+  <text x="400" y="718" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="34" font-weight="500">In transit</text>
+
+  <line x1="400" y1="772" x2="1200" y2="772" stroke="#ECEFF3"/>
+
+  <text x="400" y="850" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" letter-spacing="0.12em">EXPENSES</text>
+  <text x="400" y="906" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">Fuel</text>
+  <text x="1200" y="906" text-anchor="end" fill="#475569" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="500">submitted</text>
+  <line x1="400" y1="944" x2="1200" y2="944" stroke="#ECEFF3"/>
+  <text x="400" y="998" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">Toll</text>
+  <text x="1200" y="998" text-anchor="end" fill="#475569" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="28" font-weight="500">pending</text>
+
+  <line x1="400" y1="1044" x2="1200" y2="1044" stroke="#ECEFF3"/>
+
+  <text x="400" y="1110" fill="#6B7280" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" letter-spacing="0.12em">INVOICE</text>
+  <text x="1200" y="1110" text-anchor="end" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="500">Draft ready</text>
+</svg>

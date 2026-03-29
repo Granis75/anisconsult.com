@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionKicker } from "@/components/section-kicker";
 
 const flow = ["Client", "Mission", "Invoice", "Payment"] as const;
@@ -53,6 +54,18 @@ export function MyBiHomeSection() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <div className="w-full max-w-[900px] overflow-hidden rounded-[24px] border border-neutral-200/80 bg-white">
+              <Image
+                src="/visuals/mybi-control-view.svg"
+                alt="Business control view showing revenue, unpaid invoices, clients, and recent activity."
+                width={1600}
+                height={1200}
+                className="h-auto w-full"
+              />
             </div>
           </div>
         </div>
