@@ -99,18 +99,18 @@ export default function HomePage() {
 
         <section className="border-t border-line bg-white">
           <Reveal className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:py-16" delayMs={50}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_1fr] lg:items-end lg:gap-12">
-              <div className="max-w-lg">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:items-end lg:gap-16">
+              <div className="max-w-2xl lg:pr-8">
                 <SectionKicker label="Case Study" />
-                <h2 className="mt-4 text-2xl font-bold tracking-tighter2 text-ink sm:text-3xl">
+                <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-ink sm:text-5xl">
                   Kepler Express Ops
                 </h2>
-                <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
+                <p className="mt-5 max-w-xl text-lg leading-8 text-muted sm:text-xl">
                   Replacing Excel, calls, and manual tracking with one
                   connected logistics flow.
                 </p>
 
-                <div className="mt-6">
+                <div className="mt-8">
                   <TrackedLink
                     href="/case-study/kepler-express"
                     event="case_study_cta_click"
@@ -122,12 +122,18 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="grid gap-5 sm:grid-cols-3 sm:gap-6">
-                {keplerTeaserPoints.map((item) => (
-                  <div key={item} className="border-t border-line pt-4">
-                    <p className="text-sm font-semibold leading-7 text-ink/90">{item}</p>
+              <div className="max-w-xl lg:ml-auto">
+                <div className="border-t border-line pt-5">
+                  <div className="grid gap-5 sm:grid-cols-3 sm:gap-6">
+                    {keplerTeaserPoints.map((item) => (
+                      <div key={item} className="pt-1">
+                        <p className="text-sm font-medium leading-7 text-ink/75">
+                          {item}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </Reveal>
