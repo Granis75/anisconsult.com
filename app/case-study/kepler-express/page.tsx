@@ -11,45 +11,18 @@ export const metadata: Metadata = {
     "A logistics case study about replacing manual coordination with a connected operational workflow.",
 };
 
-const sectionLinks = [
-  { label: "Context", href: "#context" },
-  { label: "Problem", href: "#problem" },
-  { label: "What Was Implemented", href: "#implementation" },
-  { label: "Results", href: "#results" },
-  { label: "What Changed", href: "#change" },
-  { label: "Key Insight", href: "#insight" },
-] as const;
-
 const problemItems = [
-  "No real-time visibility on missions",
-  "Execution depended on calls, memory and scattered files",
-  "Driver expenses tracked manually, often after the mission",
-  "No clear view of costs or profitability per mission",
-  "Invoicing disconnected from operations",
+  "Excel, paper notes, and calls were used to coordinate daily missions.",
+  "Mission follow-up depended on memory and scattered files rather than one shared view.",
+  "Expenses were captured manually, often after the mission was already completed.",
+  "Billing sat outside execution, making costs and profitability hard to read.",
 ] as const;
 
-const implementationItems = [
-  "Structured operational flow: client → mission → expense → invoice → payment",
-  "Centralized workflows from intake to delivery tracking and billing",
-  "Linked expenses directly to mission execution",
-  "Separated driver advances and company costs",
-  "Introduced mission-level profitability logic",
-  "Built a unified operational view (missions, costs, invoices, maintenance)",
-] as const;
-
-const resultItems = [
-  "Reduced manual tracking and follow-up",
-  "Clear visibility on mission execution and billing state",
-  "Costs understood in context, not after the fact",
-  "Mission-level profitability became readable",
-  "Operations became easier to manage and coordinate",
-] as const;
-
-const changeItems = [
-  "One source of truth for operations and admin",
-  "Better alignment between execution and billing",
-  "More reliable follow-up on missions and payments",
-  "Clearer decision-making on costs and performance",
+const impactItems = [
+  "Reduced manual tracking and follow-up across missions.",
+  "Made costs easier to read while work was still in progress.",
+  "Kept billing closer to execution and expense capture.",
+  "Gave the team a clearer operational view from mission status to payment.",
 ] as const;
 
 const flowSteps = ["Client", "Mission", "Expense", "Invoice", "Payment"] as const;
@@ -61,60 +34,19 @@ export default function KeplerExpressCaseStudyPage() {
 
       <main className="bg-white text-ink antialiased">
         <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
+          <div className="mx-auto max-w-7xl px-6 pb-16 pt-16 lg:px-10 lg:pb-24 lg:pt-24">
             <div className="max-w-5xl">
               <SectionKicker label="Case Study" />
-              <h1 className="mt-6 max-w-5xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
+              <p className="mt-6 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                 Kepler Express Ops
-              </h1>
-
-              <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Replacing manual logistics coordination with a connected
-                operational workflow.
               </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-b border-line bg-surface">
-          <div className="mx-auto max-w-7xl px-6 py-5 lg:px-10">
-            <nav
-              aria-label="Section navigation"
-              className="-mx-1 flex gap-6 overflow-x-auto px-1"
-            >
-              {sectionLinks.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="whitespace-nowrap text-sm font-medium text-muted transition hover:text-ink"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </section>
-
-        <section id="context" className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="grid gap-6 lg:grid-cols-2">
-              <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <SectionKicker label="Context" />
-                <p className="mt-6 text-base leading-8 text-ink">
-                  A small logistics company managing daily missions with a lean
-                  team.
-                </p>
-              </article>
-
-              <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Operating reality
-                </p>
-                <p className="mt-6 text-base leading-8 text-ink">
-                  Operations relied on Excel, paper notes and calls, with no
-                  structured system linking execution, costs and billing.
-                </p>
-              </article>
+              <h1 className="mt-4 max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
+                From fragmented logistics operations to a structured system.
+              </h1>
+              <p className="mt-7 max-w-3xl text-xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-2xl">
+                A connected product designed to replace Excel, calls, and
+                manual follow-up in a small logistics company.
+              </p>
             </div>
           </div>
         </section>
@@ -123,40 +55,46 @@ export default function KeplerExpressCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
               <SectionKicker label="Problem" />
-            </div>
+              <p className="mt-6 text-lg leading-8 text-ink">
+                Daily logistics work relied on tools that were never meant to
+                operate together.
+              </p>
 
-            <div className="mt-10 grid gap-4 lg:grid-cols-2">
-              {problemItems.map((item) => (
-                <article
-                  key={item}
-                  className="rounded-[2rem] border border-line bg-white p-6"
-                >
-                  <p className="text-sm leading-7 text-ink">{item}</p>
-                </article>
-              ))}
+              <ul className="mt-8 space-y-4 pl-5 text-base leading-8 text-ink marker:text-black/30">
+                {problemItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        <section id="implementation" className="border-b border-line bg-white">
+        <section className="border-b border-line bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
+            <div className="max-w-5xl">
+              <SectionKicker label="System Logic" />
+              <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 text-lg font-semibold tracking-[-0.03em] text-ink sm:text-2xl">
+                {flowSteps.map((item, index) => (
+                  <div key={item} className="flex items-center gap-x-4">
+                    <span>{item}</span>
+                    {index < flowSteps.length - 1 ? (
+                      <span className="text-black/25">→</span>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="max-w-4xl">
-              <SectionKicker label="What Was Implemented" />
+            <div className="max-w-3xl">
+              <SectionKicker label="Product" />
             </div>
 
-            <div className="mt-10 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-              {implementationItems.map((item) => (
-                <article
-                  key={item}
-                  className="rounded-[2rem] border border-line bg-surface p-8"
-                >
-                  <p className="text-sm leading-7 text-ink">{item}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-12 flex justify-center">
-              <div className="w-full max-w-[900px] overflow-hidden rounded-[24px] border border-line bg-surface">
+            <div className="mt-10 flex justify-center">
+              <div className="w-full max-w-[900px] overflow-hidden rounded-[24px] border border-line">
                 <Image
                   src="/visuals/kepler-operations-flow.svg"
                   alt="Operational mission tracking view showing a pharma delivery in transit with expenses and invoice status."
@@ -166,82 +104,40 @@ export default function KeplerExpressCaseStudyPage() {
                 />
               </div>
             </div>
+
+            <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-7 text-muted">
+              One operational view keeps missions, expenses, invoice state, and
+              payment follow-up in the same place, so coordination happens in
+              context instead of across separate files.
+            </p>
           </div>
         </section>
 
-        <section id="results" className="border-b border-line bg-surface">
+        <section className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="Results" />
-            </div>
-
-            <div className="mt-10 grid gap-4 lg:grid-cols-2">
-              {resultItems.map((item) => (
-                <article
-                  key={item}
-                  className="rounded-[2rem] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
-                >
-                  <p className="text-sm font-semibold leading-7 text-ink">{item}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="change" className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-              <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-                <SectionKicker label="What Changed" />
-                <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Daily operations no longer relied on scattered tools and
-                  manual coordination.
-                </p>
-              </article>
-
-              <div className="grid gap-4">
-                {changeItems.map((item) => (
-                  <article
-                    key={item}
-                    className="rounded-[2rem] border border-line bg-white px-6 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
-                  >
-                    <p className="text-sm font-semibold text-ink">{item}</p>
-                  </article>
+              <SectionKicker label="Impact" />
+              <ul className="mt-8 space-y-4 pl-5 text-base leading-8 text-ink marker:text-black/30">
+                {impactItems.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </section>
 
-        <section id="insight" className="border-b border-line bg-surface">
+        <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
-              <SectionKicker label="Key Insight" />
-              <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Operational clarity came from connecting the flow — not adding
-                complexity.
+            <div className="max-w-4xl">
+              <SectionKicker label="Product Thinking" />
+              <p className="mt-6 text-xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-2xl">
+                Simplicity mattered more than feature volume: the product was
+                designed to connect the core flow, keep the data model
+                consistent, and support real logistics constraints without
+                adding more tools to manage.
               </p>
 
-              <div className="mt-10 border-t border-line pt-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  System flow
-                </p>
-
-                <div className="mt-5 flex flex-wrap items-center gap-3">
-                  {flowSteps.map((item, index) => (
-                    <div key={item} className="flex items-center gap-3">
-                      <span className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink">
-                        {item}
-                      </span>
-                      {index < flowSteps.length - 1 ? (
-                        <span className="text-sm text-black/25">→</span>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-8">
+              <div className="mt-10">
                 <Link
                   href="/"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
