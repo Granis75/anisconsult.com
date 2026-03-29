@@ -1,5 +1,14 @@
 import { SectionKicker } from "@/components/section-kicker";
 
+const systemSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
+
+const signalBadges = [
+  "3 overdue",
+  "€1,450 unpaid",
+  "2 clients",
+  "1 mission",
+] as const;
+
 export function MyBiHomeSection() {
   return (
     <section id="mybi" className="border-t border-line bg-white">
@@ -28,21 +37,35 @@ export function MyBiHomeSection() {
         </div>
 
         <div className="mt-10 max-w-2xl">
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-            System flow
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+            System
           </p>
-          <p className="mt-4 text-base font-semibold tracking-[-0.03em] text-neutral-950 sm:text-lg">
-            Client → Mission → Invoice → Payment
-          </p>
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            {systemSteps.map((item, index) => (
+              <div key={item} className="flex items-center gap-2">
+                <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-700">
+                  {item}
+                </span>
+                {index < systemSteps.length - 1 ? (
+                  <span className="text-sm text-slate-300">→</span>
+                ) : null}
+              </div>
+            ))}
+          </div>
 
-          <p className="mt-8 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-            Live signals
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+            Signals
           </p>
-          <ul className="mt-4 space-y-1.5 text-sm leading-7 text-neutral-600 sm:text-base">
-            <li>3 invoices overdue — €1,450</li>
-            <li>2 active clients</li>
-            <li>1 mission in progress</li>
-          </ul>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {signalBadges.map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-700"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 max-w-xl">
