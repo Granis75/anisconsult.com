@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 const problemItems = [
   "Excel, paper notes, and calls were used to coordinate daily missions",
-  "Mission follow-up depended on memory and scattered files",
-  "Expenses were captured manually, often after the mission",
-  "Billing sat outside execution, making costs and profitability harder to read",
+  "Mission follow-up depended on memory and scattered files rather than one shared view",
+  "Expenses were captured manually, often after the mission was already completed",
+  "Billing sat outside execution, making costs and profitability hard to read",
 ] as const;
 
 const resultItems = [
@@ -37,7 +37,6 @@ const resultItems = [
 ] as const;
 
 const implementationItems = [
-  "Structured operational flow: Client → Mission → Expense → Invoice → Payment",
   "Centralized workflows from intake to billing",
   "Linked expenses directly to mission execution",
   "Separated driver advances and company costs",
@@ -95,15 +94,15 @@ export default function KeplerExpressCaseStudyPage() {
                 </div>
               </section>
 
-              <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+              <div className="grid gap-6 pt-2 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-7">
                 <section
                   id="problem"
-                  className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7"
                 >
                   <SectionKicker label="Problem" />
-                  <p className="mt-5 max-w-xl text-base leading-8 text-ink sm:text-lg">
-                    Daily logistics work relied on tools that were never meant
-                    to operate together.
+                  <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
+                    Daily logistics work relied on disconnected tools and manual
+                    coordination.
                   </p>
 
                   <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
@@ -113,31 +112,37 @@ export default function KeplerExpressCaseStudyPage() {
                   </ul>
                 </section>
 
-                <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+                <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
                   <SectionKicker label="What was implemented" />
-                  <ul className="mt-5 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
+                  <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
+                    A connected operational chain replaced fragmented follow-up.
+                  </p>
+
+                  <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 sm:px-5">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                      System flow
+                    </p>
+                    <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                      {flowSteps.map((item, index) => (
+                        <div key={item} className="flex items-center gap-2.5">
+                          <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-ink">
+                            {item}
+                          </span>
+                          {index < flowSteps.length - 1 ? (
+                            <span className="text-sm text-black/25">→</span>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
                     {implementationItems.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </section>
               </div>
-
-              <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-                <SectionKicker label="System flow" />
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  {flowSteps.map((item, index) => (
-                    <div key={item} className="flex items-center gap-3">
-                      <span className="inline-flex min-h-11 items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold tracking-[-0.01em] text-ink sm:px-5">
-                        {item}
-                      </span>
-                      {index < flowSteps.length - 1 ? (
-                        <span className="text-sm text-black/25">→</span>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-              </section>
 
               <section className="space-y-8">
                 <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
