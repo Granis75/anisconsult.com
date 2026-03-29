@@ -6,10 +6,10 @@ import { SiteHeader } from "@/components/site-header";
 const sectionLinks = [
   { label: "Context", href: "#context" },
   { label: "Problem", href: "#problem" },
-  { label: "Implementation", href: "#implementation" },
+  { label: "What Was Implemented", href: "#implementation" },
   { label: "Results", href: "#results" },
-  { label: "Change", href: "#change" },
-  { label: "Insight", href: "#insight" },
+  { label: "What Changed", href: "#change" },
+  { label: "Key Insight", href: "#insight" },
 ] as const;
 
 const problemItems = [
@@ -32,23 +32,23 @@ const implementationItems = [
 const resultItems = [
   {
     value: "9.2",
-    label: "Review score",
+    label: "review score",
     meta: "from 7.6",
   },
   {
     value: "Top 30",
-    label: "Ranking",
+    label: "ranking",
     meta: "from ~450",
   },
   {
     value: "~10h/week",
-    label: "Saved on admin",
-    meta: "less repetitive work",
+    label: "saved on admin",
+    meta: "",
   },
   {
     value: "+50%",
-    label: "Revenue from a new market",
-    meta: "new business contribution",
+    label: "revenue from a new market",
+    meta: "",
   },
 ] as const;
 
@@ -121,7 +121,7 @@ export default function VesperCaseStudyPage() {
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Operating reality
+                  Context
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
                   Operations were difficult to manage, with limited visibility
@@ -137,8 +137,8 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-3xl">
               <SectionKicker label="Problem" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The business was running through fragmented tools and manual
-                coordination.
+                Disconnected tools, front-desk dependency and repetitive admin
+                were making the business harder to run.
               </p>
             </div>
 
@@ -160,8 +160,8 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-4xl">
               <SectionKicker label="What Was Implemented" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The work focused on making day-to-day execution easier to run
-                and easier to track.
+                The work focused on flow, customer data, access, payments and
+                internal tools that supported daily execution.
               </p>
             </div>
 
@@ -194,7 +194,9 @@ export default function VesperCaseStudyPage() {
                   <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
                     {item.value}
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
+                  {item.meta ? (
+                    <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
+                  ) : null}
                 </article>
               ))}
             </div>
