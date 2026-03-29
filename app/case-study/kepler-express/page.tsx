@@ -71,7 +71,7 @@ export default function KeplerExpressCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
             <div className="max-w-5xl">
-              <SectionKicker label="System Logic" />
+              <SectionKicker label="System flow" />
               <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 text-lg font-semibold tracking-[-0.03em] text-ink sm:text-2xl">
                 {flowSteps.map((item, index) => (
                   <div key={item} className="flex items-center gap-x-4">

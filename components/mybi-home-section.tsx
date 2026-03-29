@@ -28,15 +28,21 @@ export function MyBiHomeSection() {
         </div>
 
         <div className="mt-10 max-w-2xl">
-          <p className="text-base font-semibold tracking-[-0.03em] text-neutral-950 sm:text-lg">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+            System flow
+          </p>
+          <p className="mt-4 text-base font-semibold tracking-[-0.03em] text-neutral-950 sm:text-lg">
             Client → Mission → Invoice → Payment
           </p>
 
-          <div className="mt-5 space-y-1.5 text-sm leading-7 text-neutral-600 sm:text-base">
-            <p>3 invoices overdue — €1,450</p>
-            <p>2 active clients</p>
-            <p>1 mission in progress</p>
-          </div>
+          <p className="mt-8 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+            Live signals
+          </p>
+          <ul className="mt-4 space-y-1.5 text-sm leading-7 text-neutral-600 sm:text-base">
+            <li>3 invoices overdue — €1,450</li>
+            <li>2 active clients</li>
+            <li>1 mission in progress</li>
+          </ul>
         </div>
 
         <div className="mt-10 max-w-xl">
