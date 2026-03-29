@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const problemItems = [
-  "Excel, paper notes, and calls were used to coordinate daily missions.",
-  "Mission follow-up depended on memory and scattered files rather than one shared view.",
-  "Expenses were captured manually, often after the mission was already completed.",
-  "Billing sat outside execution, making costs and profitability hard to read.",
+  "Excel, paper notes, and calls were used to coordinate daily missions",
+  "Mission follow-up depended on memory and scattered files",
+  "Expenses were captured manually, often after the mission",
+  "Billing sat outside execution, making costs and profitability harder to read",
 ] as const;
 
 const resultItems = [
@@ -24,15 +24,15 @@ const resultItems = [
   },
   {
     title: "Mission-level cost visibility",
-    detail: "Costs became readable in context instead of after the fact.",
+    detail: "Costs became readable in context.",
   },
   {
     title: "Billing closer to execution",
-    detail: "Invoicing stayed connected to mission flow and expense capture.",
+    detail: "Invoicing stayed connected to mission flow.",
   },
   {
     title: "Clearer operations follow-up",
-    detail: "One structured chain improved coordination across the team.",
+    detail: "One structured chain improved coordination.",
   },
 ] as const;
 
@@ -53,16 +53,16 @@ export default function KeplerExpressCaseStudyPage() {
 
       <main className="bg-white text-ink antialiased">
         <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
-            <div className="max-w-5xl">
+          <div className="mx-auto max-w-6xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
+            <div className="max-w-4xl">
               <SectionKicker label="Case Study" />
               <p className="mt-6 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                 Kepler Express Ops
               </p>
-              <h1 className="mt-4 max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-[3.65rem]">
                 From fragmented logistics operations to a structured system.
               </h1>
-              <p className="mt-7 max-w-3xl text-xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-2xl">
+              <p className="mt-6 max-w-2xl text-xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-2xl">
                 A connected product designed to replace Excel, calls, and
                 manual follow-up in a small logistics company.
               </p>
@@ -70,102 +70,93 @@ export default function KeplerExpressCaseStudyPage() {
           </div>
         </section>
 
-        <section className="border-b border-line bg-surface">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-            <div className="max-w-3xl">
-              <SectionKicker label="Results" />
-            </div>
+        <section className="bg-surface">
+          <div className="mx-auto max-w-6xl px-6 py-10 lg:px-10 lg:py-14">
+            <div className="space-y-12 lg:space-y-16">
+              <section className="space-y-6">
+                <div className="max-w-3xl">
+                  <SectionKicker label="Results" />
+                </div>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:max-w-5xl">
-              {resultItems.map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-[1.75rem] border border-line bg-white px-6 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.03)]"
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                  {resultItems.map((item) => (
+                    <article
+                      key={item.title}
+                      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                    >
+                      <p className="text-sm font-semibold tracking-[-0.01em] text-ink">
+                        {item.title}
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-muted">
+                        {item.detail}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+                <section
+                  id="problem"
+                  className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
                 >
-                  <p className="text-sm font-semibold tracking-[-0.01em] text-ink">
-                    {item.title}
+                  <SectionKicker label="Problem" />
+                  <p className="mt-5 max-w-xl text-base leading-8 text-ink sm:text-lg">
+                    Daily logistics work relied on tools that were never meant
+                    to operate together.
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-muted">{item.detail}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        <section id="problem" className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
-            <div className="max-w-3xl">
-              <SectionKicker label="Problem" />
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-ink">
-                Daily logistics work relied on disconnected tools and manual
-                coordination.
-              </p>
+                  <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
+                    {problemItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
 
-              <ul className="mt-8 space-y-4 pl-5 text-base leading-8 text-ink marker:text-black/30">
-                {problemItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
-            <div className="max-w-3xl">
-              <SectionKicker label="What was implemented" />
-              <ul className="mt-8 space-y-4 pl-5 text-base leading-8 text-ink marker:text-black/30">
-                {implementationItems.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-b border-line bg-surface">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
-            <div className="max-w-5xl">
-              <SectionKicker label="System flow" />
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                {flowSteps.map((item, index) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <span className="inline-flex min-h-11 items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold tracking-[-0.01em] text-ink sm:px-5">
-                      {item}
-                    </span>
-                    {index < flowSteps.length - 1 ? (
-                      <span className="text-sm text-black/25">→</span>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
-            <div className="max-w-4xl">
-              <SectionKicker label="Key takeaway" />
-              <div className="mt-6 rounded-[2rem] border border-line bg-surface px-7 py-8 sm:px-8 sm:py-9">
-                <p className="max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Operational clarity came from connecting the flow — not adding
-                  complexity.
-                </p>
-                <p className="mt-5 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-                  The value came from a tighter operational chain, clearer cost
-                  capture, and better alignment between execution and billing.
-                </p>
+                <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+                  <SectionKicker label="What was implemented" />
+                  <ul className="mt-5 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
+                    {implementationItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
               </div>
 
-              <div className="mt-10">
-                <Link
-                  href="/"
-                  className="inline-flex items-center rounded-full border border-line px-5 py-3 text-sm font-semibold text-ink transition hover:bg-surface"
-                >
-                  Back to home
-                </Link>
-              </div>
+              <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+                <SectionKicker label="System flow" />
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  {flowSteps.map((item, index) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <span className="inline-flex min-h-11 items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold tracking-[-0.01em] text-ink sm:px-5">
+                        {item}
+                      </span>
+                      {index < flowSteps.length - 1 ? (
+                        <span className="text-sm text-black/25">→</span>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="space-y-8">
+                <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                  <SectionKicker label="Key takeaway" />
+                  <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
+                    Operational clarity came from connecting the flow — not
+                    adding complexity.
+                  </p>
+                </div>
+
+                <div>
+                  <Link
+                    href="/"
+                    className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
+                  >
+                    Back to home
+                  </Link>
+                </div>
+              </section>
             </div>
           </div>
         </section>
