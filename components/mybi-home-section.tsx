@@ -1,14 +1,12 @@
 import Image from "next/image";
 import { SectionKicker } from "@/components/section-kicker";
 
-const flow = ["Client", "Mission", "Invoice", "Payment"] as const;
-
 export function MyBiHomeSection() {
   return (
     <section id="mybi" className="border-t border-line bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
         <div className="rounded-[32px] bg-neutral-50 p-6 shadow-sm lg:p-8 xl:p-10">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_0.92fr] lg:items-center lg:gap-16">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-center lg:gap-16">
             <div className="max-w-xl">
               <SectionKicker label="MYBI" />
 
@@ -41,24 +39,7 @@ export function MyBiHomeSection() {
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-neutral-200/80 bg-white/80 p-5 shadow-sm sm:p-6">
-              <div className="flex flex-wrap items-center gap-3">
-                {flow.map((item, index) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <span className="inline-flex min-h-11 items-center rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm font-medium text-neutral-800">
-                      {item}
-                    </span>
-                    {index < flow.length - 1 ? (
-                      <span className="text-sm text-neutral-300">→</span>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <div className="w-full max-w-[900px] overflow-hidden rounded-[24px] border border-neutral-200/80 bg-white">
+            <div className="overflow-hidden rounded-[24px] border border-neutral-200/80 bg-white">
               <Image
                 src="/visuals/mybi-control-view.svg"
                 alt="Business control view showing revenue, unpaid invoices, clients, and recent activity."

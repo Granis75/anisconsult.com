@@ -66,12 +66,10 @@ export default function WorkPage() {
 
         <section className="bg-white">
           <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:px-10 lg:py-20">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <article
                 key={project.title}
-                className={`rounded-[2rem] border border-line p-8 lg:p-10 ${
-                  index === 0 ? "bg-surface" : "bg-white shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
-                }`}
+                className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10"
               >
                 <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
                   <div className="max-w-xl">
@@ -92,7 +90,7 @@ export default function WorkPage() {
                         data={{ location: project.location }}
                         className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                       >
-                        View case study →
+                        View case study
                       </TrackedLink>
                     </div>
                   </div>

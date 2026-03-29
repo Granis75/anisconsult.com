@@ -91,7 +91,7 @@ export default function HomePage() {
                 data={{ location: "case_study_section" }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Read case study →
+                Read case study
               </TrackedLink>
             </div>
           </Reveal>
@@ -117,7 +117,7 @@ export default function HomePage() {
                     data={{ location: "kepler_teaser" }}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                   >
-                    Read case study →
+                    Read case study
                   </TrackedLink>
                 </div>
               </div>

@@ -67,7 +67,7 @@ export const siteContent = {
       },
     ],
     cta: {
-      label: "View work →",
+      label: "View work",
       href: "/work",
     },
   },

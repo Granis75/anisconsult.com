@@ -121,7 +121,7 @@ export default function VesperCaseStudyPage() {
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Context
+                  Operating reality
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
                   Operations were difficult to manage, with limited visibility
