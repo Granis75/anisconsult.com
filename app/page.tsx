@@ -29,9 +29,9 @@ const caseStudyResults = [
 ] as const;
 
 const keplerTeaserPoints = [
-  "Order → Delivery → Invoice → Payment",
-  "~60% less admin workload",
-  "Same-day invoicing",
+  "Client → Mission → Expense → Invoice → Payment",
+  "Driver vs company expense tracking",
+  "Mission-level cost visibility",
 ] as const;
 
 export default function HomePage() {
@@ -102,11 +102,11 @@ export default function HomePage() {
               <div className="max-w-lg">
                 <SectionKicker label="Case Study" />
                 <h2 className="mt-4 text-2xl font-bold tracking-tighter2 text-ink sm:text-3xl">
-                  Kepler Express
+                  Kepler Express Ops
                 </h2>
                 <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-                  Structuring a fragmented logistics workflow into a connected
-                  operational system.
+                  A logistics operations system designed to replace Excel,
+                  calls, and manual tracking with one structured workflow.
                 </p>
 
                 <div className="mt-6">

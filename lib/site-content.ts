@@ -1,7 +1,7 @@
 export const siteContent = {
   brand: "AnisConsult",
   navigation: [
-    { label: "Case Study", href: "/case-study/vesper" },
+    { label: "Case Studies", href: "/#case-study" },
     { label: "MyBi", href: "/#mybi" },
     { label: "Method", href: "/#method" },
     { label: "Contact", href: "/#contact" },
