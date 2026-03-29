@@ -7,18 +7,18 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "Operations. Systemized.",
+    title: "Run your business with less manual work.",
     subtitle:
-      "From fragmented workflows to a clear, reliable operating system.",
+      "I help service businesses connect CRM, admin and billing, reduce repetition, and keep daily operations easier to manage.",
     description:
-      "I design systems that structure your operations, make your data usable, and improve execution.",
+      "I help service businesses connect CRM, admin and billing, reduce repetition, and keep daily operations easier to manage.",
     notes: [
-      "No extra tools.",
-      "No unnecessary complexity.",
-      "Just better operations.",
+      "Use what you already have.",
+      "Reduce manual work.",
+      "Improve visibility.",
     ],
     primaryCta: {
-      label: "View Case Study",
+      label: "View case studies",
       href: "/case-study/vesper",
     },
     secondaryCta: {
@@ -28,46 +28,46 @@ export const siteContent = {
   },
   method: {
     title: "Method",
-    subtitle: "A system-first approach.",
+    subtitle: "A practical approach.",
     steps: [
       {
         step: "Step 1",
-        title: "Read real activity",
+        title: "Read the real activity",
         bullets: [
-          "Field workflows",
-          "Team interactions",
-          "Friction & dependencies",
+          "Field work",
+          "Team habits",
+          "Bottlenecks and dependencies",
         ],
         emphasis: [
-          "The official system is rarely the real one.",
-          "Teams compensate.",
-          "Notes. WhatsApp. Spreadsheets. Memory.",
+          "The documented process is rarely the one people actually follow.",
+          "Teams fill the gaps themselves.",
+          "Notes. Calls. Spreadsheets. Memory.",
         ],
-        objective: "Understand what is really happening — and why.",
+        objective: "Understand how the business really runs before changing anything.",
       },
       {
         step: "Step 2",
-        title: "Structure",
+        title: "Design the right setup",
         bullets: [
-          "Flow modeling",
-          "Step simplification",
-          "Data definition",
+          "Map the flow",
+          "Simplify key steps",
+          "Define useful data",
         ],
-        objective: "Clarify, simplify, make it operable.",
+        objective: "Make the work easier to handle, simpler to manage, and fit for daily use.",
       },
       {
         step: "Step 3",
-        title: "Deploy",
+        title: "Put it in place",
         bullets: [
           "Existing tools or custom logic",
           "Progressive rollout",
-          "Real team adoption",
+          "Adoption in real conditions",
         ],
-        objective: "A system that works immediately — and evolves fast.",
+        objective: "Deliver something usable now, with room to improve over time.",
       },
     ],
     cta: {
-      label: "View Case Study →",
+      label: "View case studies →",
       href: "/case-study/vesper",
     },
   },

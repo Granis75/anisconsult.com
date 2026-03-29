@@ -16,12 +16,18 @@ export function MyBiHomeSection() {
               </h2>
 
               <p className="mt-6 max-w-lg text-lg leading-8 text-neutral-600 sm:text-xl">
-                A lightweight system designed to structure freelance activity.
+                A system built from real operational needs.
               </p>
 
               <div className="mt-6 space-y-1.5 text-base leading-7 text-neutral-600 sm:text-lg">
-                <p>From client to payment, everything stays connected.</p>
-                <p>Clear visibility. Less manual friction.</p>
+                <p>
+                  It brings client records, missions, invoicing and payment
+                  follow-up into one place.
+                </p>
+                <p>
+                  A concrete example of how manual admin can be structured and
+                  easier to manage.
+                </p>
               </div>
 
               <div className="mt-10">

@@ -12,26 +12,26 @@ import { siteContent } from "@/lib/site-content";
 const caseStudyResults = [
   {
     title: "9.2/10 Customer Satisfaction",
-    description: "Immediate increase in internal rating.",
+    description: "Customer satisfaction rose after the redesign.",
   },
   {
     title: "+32% Execution Speed",
-    description: "Operational bottlenecks reduced.",
+    description: "Key bottlenecks were reduced.",
   },
   {
     title: "10h Saved / Week",
-    description: "Administrative time reduced.",
+    description: "Less time spent on repetitive admin.",
   },
   {
     title: "Live Project Tracking",
-    description: "Automated statuses without manual follow-up.",
+    description: "Progress became easier to track without constant follow-up.",
   },
 ] as const;
 
 const keplerTeaserPoints = [
   "Client → Mission → Expense → Invoice → Payment",
-  "Driver vs company expense tracking",
-  "Mission-level cost visibility",
+  "Separate tracking for driver and company expenses",
+  "Mission-level cost control",
 ] as const;
 
 export default function HomePage() {
@@ -56,7 +56,8 @@ export default function HomePage() {
                 Vesper Collection
               </p>
               <h2 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-black sm:text-5xl lg:text-6xl">
-                Turning fragmented operations into a clearer, more scalable system.
+                Turning a fragmented hospitality business into a more reliable,
+                easier-to-manage way of working.
               </h2>
             </div>
 
@@ -81,7 +82,7 @@ export default function HomePage() {
 
             <div className="mt-10 flex flex-col gap-6 border-t border-black/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
               <p className="max-w-2xl text-base leading-7 text-black/60">
-                Better results came from a cleaner system, not from adding more tools.
+                Better results came from tighter coordination — not more tools.
               </p>
 
               <TrackedLink
@@ -90,7 +91,7 @@ export default function HomePage() {
                 data={{ location: "case_study_section" }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                See how the system was built →
+                Read case study →
               </TrackedLink>
             </div>
           </Reveal>
@@ -105,8 +106,8 @@ export default function HomePage() {
                   Kepler Express Ops
                 </h2>
                 <p className="mt-4 text-base leading-7 text-muted sm:text-lg">
-                  A logistics operations system designed to replace Excel,
-                  calls, and manual tracking with one structured workflow.
+                  Replacing Excel, calls, and manual tracking with one
+                  connected logistics flow.
                 </p>
 
                 <div className="mt-6">
@@ -116,7 +117,7 @@ export default function HomePage() {
                     data={{ location: "kepler_teaser" }}
                     className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                   >
-                    View case study →
+                    Read case study →
                   </TrackedLink>
                 </div>
               </div>

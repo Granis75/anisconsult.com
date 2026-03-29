@@ -105,7 +105,8 @@ export function ContactSection() {
           Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted">
-          Email, subject and message.
+          Share a few details about your business and where manual work is
+          slowing things down.
         </p>
       </div>
 
@@ -158,7 +159,7 @@ export function ContactSection() {
 
           <div className="pt-2">
             <button type="submit" disabled={isLoading} className="premium-cta w-full sm:w-auto">
-              {isLoading ? "Sending..." : "Send"}
+              {isLoading ? "Sending..." : "Send message"}
             </button>
           </div>
         </form>
