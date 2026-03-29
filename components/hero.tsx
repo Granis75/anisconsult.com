@@ -24,7 +24,7 @@ const points = [
 
 export function Hero({
   onContactClick,
-  caseStudyHref = "/case-study/vesper",
+  caseStudyHref = "/work",
 }: HeroProps) {
   const contactCta = onContactClick ? (
     <button
@@ -85,7 +85,7 @@ export function Hero({
               href={caseStudyHref}
               className="inline-flex h-11 items-center justify-center rounded-full border border-neutral-200 bg-white px-6 text-sm font-semibold text-neutral-800 transition-all duration-200 hover:bg-neutral-50"
             >
-              View case studies
+              View work
             </Link>
           </div>
         </div>

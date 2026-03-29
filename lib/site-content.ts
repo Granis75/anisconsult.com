@@ -1,7 +1,7 @@
 export const siteContent = {
   brand: "AnisConsult",
   navigation: [
-    { label: "Case Studies", href: "/#case-study" },
+    { label: "Work", href: "/work" },
     { label: "MyBi", href: "/#mybi" },
     { label: "Method", href: "/#method" },
     { label: "Contact", href: "/#contact" },
@@ -18,8 +18,8 @@ export const siteContent = {
       "Improve visibility.",
     ],
     primaryCta: {
-      label: "View case studies",
-      href: "/case-study/vesper",
+      label: "View work",
+      href: "/work",
     },
     secondaryCta: {
       label: "Contact",
@@ -67,8 +67,8 @@ export const siteContent = {
       },
     ],
     cta: {
-      label: "View case studies →",
-      href: "/case-study/vesper",
+      label: "View work →",
+      href: "/work",
     },
   },
 } as const;
