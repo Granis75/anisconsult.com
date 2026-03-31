@@ -99,18 +99,30 @@ export function ContactSection() {
   };
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
-        <h2 className="text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
-          Contact
+        <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
+          Bring the real workflow.
         </h2>
-        <p className="mt-6 text-base leading-8 text-muted">
-          Share a few details about your business and where manual work is
-          slowing things down.
+        <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
+          If CRM, delivery, invoicing or follow-up feels too fragmented, send a
+          short note. I will reply with a practical next step.
         </p>
+
+        <div className="mt-8 grid gap-3">
+          {[
+            "CRM and delivery are disconnected.",
+            "Billing sits too far from execution.",
+            "Visibility still depends on manual follow-up.",
+          ].map((item) => (
+            <div key={item} className="border-t border-black/8 pt-3.5">
+              <p className="text-sm leading-7 text-ink/76">{item}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className="rounded-[24px] border border-line bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.03),0_10px_30px_rgba(15,23,42,0.04)] sm:p-8">
+      <div className="premium-card p-6 sm:p-8">
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <div className="space-y-2">
             <label className="text-sm font-medium text-ink" htmlFor="contact-email">
@@ -159,7 +171,7 @@ export function ContactSection() {
 
           <div className="pt-2">
             <button type="submit" disabled={isLoading} className="premium-cta w-full sm:w-auto">
-              {isLoading ? "Sending..." : "Send message"}
+              {isLoading ? "Sending..." : "Start the conversation"}
             </button>
           </div>
         </form>

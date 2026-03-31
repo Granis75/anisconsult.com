@@ -77,7 +77,7 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
               <SectionKicker label="Case Study" />
-              <h1 className="mt-6 max-w-5xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
                 Vesper Collection
               </h1>
 
@@ -191,7 +191,7 @@ export default function VesperCaseStudyPage() {
                   className="rounded-[2rem] border border-line bg-white p-7 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
                 >
                   <p className="text-sm font-medium text-muted">{item.label}</p>
-                  <p className="mt-4 text-3xl font-extrabold tracking-tighter2 text-ink">
+                  <p className="mt-4 font-display text-3xl font-semibold tracking-[-0.04em] text-ink">
                     {item.value}
                   </p>
                   {item.meta ? (

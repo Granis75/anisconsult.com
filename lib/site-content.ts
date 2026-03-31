@@ -3,71 +3,71 @@ export const siteContent = {
   navigation: [
     { label: "Work", href: "/work" },
     { label: "MyBi", href: "/#mybi" },
-    { label: "Method", href: "/#method" },
+    { label: "Capabilities", href: "/#method" },
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "Run your business with less manual work.",
+    title: "Structure messy operations into clear business systems.",
     subtitle:
-      "I help service businesses connect CRM, admin and billing, reduce repetition, and keep daily operations easier to manage.",
+      "I structure CRM, workflow, automation and internal tools for service businesses that need execution, billing and follow-up to stay readable.",
     description:
-      "I help service businesses connect CRM, admin and billing, reduce repetition, and keep daily operations easier to manage.",
+      "Less manual coordination. Better visibility. One operating logic people can actually use.",
     notes: [
-      "Use what you already have.",
-      "Reduce manual work.",
-      "Improve visibility.",
+      "CRM structure",
+      "Workflow logic",
+      "Automation with control",
     ],
     primaryCta: {
-      label: "View work",
-      href: "/work",
+      label: "Discuss your operations",
+      href: "/#contact",
     },
     secondaryCta: {
-      label: "Contact",
-      href: "/#contact",
+      label: "See selected work",
+      href: "/work",
     },
   },
   method: {
-    title: "Method",
-    subtitle: "A practical approach.",
+    title: "Capabilities",
+    subtitle: "Operational systems designed for clarity, control and daily use.",
+    intro:
+      "Not a stack of disconnected services. The work is to give the business clearer structure, better logic and better visibility.",
     steps: [
       {
-        step: "Step 1",
-        title: "Read the real activity",
+        step: "01",
+        title: "Read the real workflow",
         bullets: [
-          "Field work",
-          "Team habits",
-          "Bottlenecks and dependencies",
+          "Where requests enter and who owns what",
+          "How delivery, admin and billing actually move",
+          "Where follow-up depends on memory, workarounds or spreadsheets",
         ],
-        emphasis: [
-          "The documented process is rarely the one people actually follow.",
-          "Teams fill the gaps themselves.",
-          "Notes. Calls. Spreadsheets. Memory.",
-        ],
-        objective: "Understand how the business really runs before changing anything.",
+        objective:
+          "See the live operating chain before changing tools or adding automation.",
       },
       {
-        step: "Step 2",
-        title: "Design the right setup",
+        step: "02",
+        title: "Structure the operating model",
         bullets: [
-          "Map the flow",
-          "Simplify key steps",
-          "Define useful data",
+          "CRM stages, statuses and ownership rules",
+          "Workflow handoffs between request, delivery, invoicing and payment",
+          "Useful data points that support action instead of noise",
         ],
-        objective: "Make the work easier to handle, simpler to manage, and fit for daily use.",
+        objective:
+          "Create one clear system logic the team can use day to day.",
       },
       {
-        step: "Step 3",
-        title: "Put it in place",
+        step: "03",
+        title: "Implement the working system",
         bullets: [
-          "Existing tools or custom logic",
-          "Progressive rollout",
-          "Adoption in real conditions",
+          "Automation only where it removes real friction",
+          "Internal views, forms or control layers where needed",
+          "Progressive rollout in live operating conditions",
         ],
-        objective: "Deliver something usable now, with room to improve over time.",
+        objective:
+          "Ship a setup that is lighter to run now and easier to improve later.",
       },
     ],
     cta: {
-      label: "View work",
+      label: "View selected work",
       href: "/work",
     },
   },

@@ -1,11 +1,24 @@
 import type { Metadata } from "next";
+import { Inter, Inter_Tight } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
+
 export const metadata: Metadata = {
-  title: "anisconsult — Operations, CRM & Automation",
+  title: "AnisConsult — Business Systems, CRM & Automation",
   description:
-    "anisconsult — Systems for clearer operations, usable data and more reliable execution.",
+    "AnisConsult builds clearer business systems for service operations through CRM structure, workflow design, automation, and internal tools.",
 };
 
 export default function RootLayout({
@@ -15,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${inter.variable} ${interTight.variable}`}>
         {children}
         <Analytics />
       </body>

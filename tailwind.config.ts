@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0b1020",
-        muted: "#5f6b85",
-        line: "#e7ebf3",
-        surface: "#f7f9fc",
-        soft: "#f2f5fb",
+        ink: "#111111",
+        muted: "#60605c",
+        line: "#e7e4dc",
+        surface: "#f7f5ef",
+        soft: "#f4f2ec",
       },
       boxShadow: {
         soft: "0 10px 30px rgba(11,16,32,0.06)",
@@ -23,7 +23,8 @@ const config: Config = {
         tighter2: "-0.03em",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
       },
     },
   },

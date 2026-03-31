@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express Ops — Case Study | anisconsult",
+  title: "Kepler Express Ops — Case Study | AnisConsult",
   description:
     "A logistics case study about replacing manual coordination with a connected operational workflow.",
 };
@@ -58,7 +58,7 @@ export default function KeplerExpressCaseStudyPage() {
               <p className="mt-6 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                 Kepler Express Ops
               </p>
-              <h1 className="mt-4 max-w-4xl text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-[3.65rem]">
+              <h1 className="mt-4 max-w-4xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.65rem]">
                 From fragmented logistics operations to a structured system.
               </h1>
               <p className="mt-6 max-w-2xl text-xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-2xl">

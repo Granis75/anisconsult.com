@@ -6,8 +6,8 @@ type SectionKickerProps = {
 export function SectionKicker({ label, className = "" }: SectionKickerProps) {
   return (
     <div className={`inline-flex items-center gap-3 ${className}`.trim()}>
-      <span aria-hidden className="h-px w-5 bg-black/10" />
-      <span className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+      <span aria-hidden className="h-px w-6 bg-black/12" />
+      <span className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-black/48">
         {label}
       </span>
     </div>

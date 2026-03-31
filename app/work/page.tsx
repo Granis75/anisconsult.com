@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Selected Work | anisconsult",
+  title: "Selected Work | AnisConsult",
   description:
     "Selected client work focused on clearer operations, connected workflows, and better business visibility.",
 };
@@ -49,7 +49,7 @@ export default function WorkPage() {
           <div className="mx-auto max-w-7xl px-6 pb-16 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-4xl">
               <SectionKicker label="Work" />
-              <h1 className="mt-6 text-balance text-4xl font-extrabold leading-tight tracking-tighter2 text-ink sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
                 Selected work
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
@@ -76,7 +76,7 @@ export default function WorkPage() {
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                       Case Study
                     </p>
-                    <h2 className="mt-5 text-3xl font-bold tracking-tighter2 text-ink sm:text-4xl">
+                    <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {project.title}
                     </h2>
                     <p className="mt-5 text-base leading-8 text-muted sm:text-lg">

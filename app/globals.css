@@ -1,17 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #0b1020;
-    --ink: #0b1020;
-    --muted: #6b7280;
-    --line: rgba(15, 23, 42, 0.08);
-    --soft: #f7f9fc;
+    --background: #fbfbf9;
+    --foreground: #111111;
+    --ink: #111111;
+    --muted: #60605c;
+    --line: rgba(17, 17, 17, 0.08);
+    --soft: #f4f2ec;
   }
 
   * {
@@ -23,7 +21,7 @@
   }
 
   body {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: var(--font-sans), system-ui, sans-serif;
     color: var(--foreground);
     background: var(--background);
     min-height: 100vh;
@@ -84,42 +82,38 @@
 @layer components {
   .premium-card {
     border: 1px solid var(--line);
-    border-radius: 24px;
-    background: #ffffff;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.96);
     padding: 2rem;
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.04),
-      0 8px 24px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 2px rgba(17, 17, 17, 0.025);
     transition:
+      background-color 300ms ease,
       box-shadow 300ms ease,
       transform 300ms ease,
       border-color 300ms ease;
   }
 
   .premium-card:hover {
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.06),
-      0 12px 32px rgba(0, 0, 0, 0.06);
+    border-color: rgba(17, 17, 17, 0.12);
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.035);
   }
 
   .premium-soft-card {
     border: 1px solid var(--line);
-    border-radius: 24px;
+    border-radius: 28px;
     background: var(--soft);
     padding: 2rem;
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.04),
-      0 8px 24px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 2px rgba(17, 17, 17, 0.025);
     transition:
+      background-color 300ms ease,
       box-shadow 300ms ease,
       transform 300ms ease,
       border-color 300ms ease;
   }
 
   .premium-soft-card:hover {
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.06),
-      0 12px 32px rgba(0, 0, 0, 0.06);
+    border-color: rgba(17, 17, 17, 0.12);
+    box-shadow: 0 8px 20px rgba(17, 17, 17, 0.035);
   }
 
   .premium-cta {
@@ -127,12 +121,12 @@
     align-items: center;
     justify-content: center;
     border-radius: 9999px;
-    background: #000000;
-    padding: 0.875rem 1.75rem;
+    background: #111111;
+    padding: 0.875rem 1.6rem;
     color: #ffffff;
     font-size: 0.875rem;
     font-weight: 600;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 14px rgba(17, 17, 17, 0.07);
     transition:
       transform 200ms ease,
       opacity 200ms ease,
@@ -141,7 +135,7 @@
 
   .premium-cta:hover {
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 18px rgba(17, 17, 17, 0.1);
   }
 
   .premium-cta-outline {
@@ -150,8 +144,8 @@
     justify-content: center;
     border: 1px solid var(--line);
     border-radius: 9999px;
-    background: transparent;
-    padding: 0.875rem 1.75rem;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 0.875rem 1.6rem;
     color: var(--ink);
     font-size: 0.875rem;
     font-weight: 600;
@@ -164,16 +158,16 @@
 
   .premium-cta-outline:hover {
     transform: translateY(-1px);
-    border-color: rgba(15, 23, 42, 0.18);
+    border-color: rgba(17, 17, 17, 0.18);
     color: #000000;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 8px 18px rgba(17, 17, 17, 0.035);
   }
 
   .field-input {
     width: 100%;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(17, 17, 17, 0.08);
     border-radius: 18px;
-    background: rgb(250 250 250);
+    background: rgba(255, 255, 255, 0.92);
     padding: 0.875rem 1rem;
     color: var(--foreground);
     outline: none;
@@ -187,7 +181,7 @@
   }
 
   .field-input:focus {
-    border-color: #000000;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
+    border-color: #111111;
+    box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.03);
   }
 }

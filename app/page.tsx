@@ -9,29 +9,55 @@ import { SectionTitle } from "@/components/section-title";
 import { TrackedLink } from "@/components/tracked-link";
 import { siteContent } from "@/lib/site-content";
 
-const caseStudyResults = [
+const proofSignals = [
   {
-    title: "9.2/10 Customer Satisfaction",
-    description: "Customer satisfaction rose after the redesign.",
+    eyebrow: "Hospitality",
+    value: "7.6 → 9.2",
+    label: "review score",
+    description:
+      "Operations became more reliable after the flow and customer data were restructured.",
   },
   {
-    title: "+32% Execution Speed",
-    description: "Key bottlenecks were reduced.",
+    eyebrow: "Admin load",
+    value: "~10h / week",
+    label: "manual work removed",
+    description:
+      "Less repetitive coordination, less spreadsheet dependency, cleaner follow-up.",
   },
   {
-    title: "10h Saved / Week",
-    description: "Less time spent on repetitive admin.",
-  },
-  {
-    title: "Live Project Tracking",
-    description: "Progress became easier to track without constant follow-up.",
+    eyebrow: "Logistics flow",
+    value: "Client → Mission → Expense → Invoice → Payment",
+    label: "connected operating chain",
+    description:
+      "Execution, cost tracking and billing moved into one readable chain.",
   },
 ] as const;
 
-const keplerTeaserPoints = [
-  "Client → Mission → Expense → Invoice → Payment",
-  "Separate tracking for driver and company expenses",
-  "Mission-level cost control",
+const featuredCases = [
+  {
+    label: "Case Study",
+    title: "Vesper Collection",
+    description:
+      "Hospitality operations, CRM logic and internal tools aligned into one clearer model.",
+    highlights: [
+      "Better customer experience and more reliable daily execution",
+      "Less admin without adding unnecessary tooling",
+    ],
+    href: "/case-study/vesper",
+    location: "home_proof_vesper",
+  },
+  {
+    label: "Case Study",
+    title: "Kepler Express Ops",
+    description:
+      "Logistics execution, expenses and billing connected into one usable chain.",
+    highlights: [
+      "Mission-level cost visibility",
+      "Billing moved closer to live operational work",
+    ],
+    href: "/case-study/kepler-express",
+    location: "home_proof_kepler",
+  },
 ] as const;
 
 export default function HomePage() {
@@ -42,109 +68,107 @@ export default function HomePage() {
       <SiteHeader />
 
       <main id="home" className="bg-white text-ink antialiased">
-        <section className="relative overflow-hidden">
-          <Reveal>
-            <Hero />
-          </Reveal>
-        </section>
+        <Reveal>
+          <Hero />
+        </Reveal>
 
         <section id="case-study" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={40}>
-            <div className="max-w-3xl">
-              <SectionKicker label="Case Study" />
-              <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-black/40">
-                Vesper Collection
-              </p>
-              <h2 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.04em] text-black sm:text-5xl lg:text-6xl">
-                Turning a fragmented hospitality business into a more reliable,
-                easier-to-manage way of working.
-              </h2>
-            </div>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={40}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
+              <div className="max-w-3xl">
+                <SectionKicker label="Proof" />
+                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
+                  Selected work, reduced to the signals that matter.
+                </h2>
+              </div>
 
-            <div className="mt-12 max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-black/45">
-                Results
+              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                Short proof from live environments where messy operations were
+                turned into clearer systems with tighter handoffs and lighter admin.
               </p>
             </div>
 
-            <div className="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-              {caseStudyResults.map((item) => (
-                <div key={item.title} className="border-t border-black/10 pt-4">
-                  <h3 className="text-xl font-semibold tracking-tight text-neutral-950">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-neutral-500">
+            <div className="mt-12 grid gap-4 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,0.55fr)_minmax(0,0.55fr)]">
+              {proofSignals.map((item, index) => (
+                <article key={item.value} className="premium-card flex h-full flex-col lg:min-h-[18rem]">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                    {item.eyebrow}
+                  </p>
+                  <p
+                    className={`mt-6 font-display font-semibold tracking-[-0.05em] text-ink ${
+                      index === proofSignals.length - 1
+                        ? "text-[1.8rem] leading-[1.05] sm:text-[2.2rem]"
+                        : "text-[2.7rem] leading-none sm:text-[3.1rem]"
+                    }`}
+                  >
+                    {item.value}
+                  </p>
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-black/40">
+                    {item.label}
+                  </p>
+                  <p className="mt-4 max-w-md text-sm leading-7 text-muted">
                     {item.description}
                   </p>
-                </div>
+                </article>
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col gap-6 border-t border-black/10 pt-8 lg:flex-row lg:items-end lg:justify-between">
-              <p className="max-w-2xl text-base leading-7 text-black/60">
-                Better results came from tighter coordination — not more tools.
-              </p>
+            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+              {featuredCases.map((item) => (
+                <article key={item.title} className="premium-soft-card flex h-full flex-col">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                    {item.label}
+                  </p>
+                  <h3 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2.2rem]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-5 max-w-xl text-base leading-8 text-muted">
+                    {item.description}
+                  </p>
 
+                  <div className="mt-8 grid gap-3">
+                    {item.highlights.map((highlight) => (
+                      <div key={highlight} className="border-t border-black/8 pt-3.5">
+                        <p className="text-sm leading-7 text-ink/78">{highlight}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-auto pt-8">
+                    <TrackedLink
+                      href={item.href}
+                      event="case_study_cta_click"
+                      data={{ location: item.location }}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                    >
+                      Read case study
+                    </TrackedLink>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-10 flex justify-start border-t border-line pt-6">
               <TrackedLink
-                href="/case-study/vesper"
+                href="/work"
                 event="case_study_cta_click"
-                data={{ location: "case_study_section" }}
+                data={{ location: "home_proof_footer" }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Read case study
+                View selected work
               </TrackedLink>
             </div>
           </Reveal>
         </section>
 
-        <section className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:py-16" delayMs={50}>
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)] lg:items-center lg:gap-20">
-              <div className="max-w-3xl lg:pr-10">
-                <SectionKicker label="Case Study" />
-                <h2 className="mt-6 text-[2.85rem] font-semibold leading-[0.95] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.85rem]">
-                  Kepler Express Ops
-                </h2>
-                <p className="mt-6 max-w-[34rem] text-lg leading-8 text-muted sm:text-[1.35rem]">
-                  Replacing Excel, calls, and manual tracking with one
-                  connected logistics flow.
-                </p>
-
-                <div className="mt-10">
-                  <TrackedLink
-                    href="/case-study/kepler-express"
-                    event="case_study_cta_click"
-                    data={{ location: "kepler_teaser" }}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                  >
-                    Read case study
-                  </TrackedLink>
-                </div>
-              </div>
-
-              <div className="max-w-md lg:ml-auto lg:w-full">
-                <div className="border-t border-line pt-5">
-                  <div className="space-y-4">
-                    {keplerTeaserPoints.map((item, index) => (
-                      <div
-                        key={item}
-                        className={index === 0 ? "pt-1" : "border-t border-line pt-4"}
-                      >
-                        <p className="text-sm font-medium leading-6 text-ink/70">
-                          {item}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-        </section>
-
         <section id="method" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={60}>
-            <SectionTitle eyebrow={method.title} title={method.subtitle} />
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={60}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
+              <SectionTitle eyebrow={method.title} title={method.subtitle} />
+              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                {method.intro}
+              </p>
+            </div>
 
             <div className="mt-14 grid gap-6 lg:grid-cols-3">
               {method.steps.map((item) => (
@@ -152,8 +176,10 @@ export default function HomePage() {
                   key={item.step}
                   className="premium-soft-card flex h-full flex-col p-8 lg:p-9"
                 >
-                  <p className="text-sm font-semibold text-muted">{item.step}</p>
-                  <h3 className="mt-3 text-2xl font-bold tracking-[-0.02em] text-ink">
+                  <p className="text-sm font-semibold tracking-[0.14em] text-black/42">
+                    {item.step}
+                  </p>
+                  <h3 className="mt-4 font-display text-2xl font-semibold tracking-[-0.03em] text-ink sm:text-[2rem]">
                     {item.title}
                   </h3>
 
@@ -163,25 +189,11 @@ export default function HomePage() {
                     ))}
                   </ul>
 
-                  {"emphasis" in item ? (
-                    <div className="mt-8 rounded-[22px] border border-line bg-white px-5 py-5 shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
-                      <p className="text-sm font-semibold leading-7 text-ink">
-                        {item.emphasis[0]}
-                      </p>
-                      <p className="mt-3 text-sm font-medium leading-7 text-muted">
-                        {item.emphasis[1]}
-                      </p>
-                      <p className="mt-3 text-sm leading-7 text-muted">
-                        {item.emphasis[2]}
-                      </p>
-                    </div>
-                  ) : null}
-
-                  <div className="mt-auto pt-8">
-                    <div className="rounded-[22px] border border-line bg-white px-5 py-5">
-                      <p className="text-sm font-semibold text-ink">Objective</p>
-                      <p className="mt-3 text-sm leading-7 text-muted">{item.objective}</p>
-                    </div>
+                  <div className="mt-auto border-t border-black/8 pt-6">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-black/40">
+                      Outcome
+                    </p>
+                    <p className="mt-3 text-sm leading-7 text-ink/76">{item.objective}</p>
                   </div>
                 </article>
               ))}
@@ -205,7 +217,7 @@ export default function HomePage() {
         </Reveal>
 
         <section id="contact" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10" delayMs={100}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={100}>
             <ContactSection />
           </Reveal>
         </section>
