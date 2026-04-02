@@ -10,16 +10,16 @@ type HeroProps = {
 
 const focusAreas = [
   {
-    title: "CRM structure",
-    description: "Stages, ownership and data built for real follow-up.",
+    title: "Workflow structuring",
+    description: "Turn manual handoffs into a system people can actually follow.",
   },
   {
-    title: "Workflow logic",
-    description: "Clear handoffs between request, delivery, invoicing and payment.",
+    title: "Business systems",
+    description: "Connect CRM, invoicing, payments and reporting in one flow.",
   },
   {
-    title: "Automation with control",
-    description: "Useful automation without burying the business underneath it.",
+    title: "Implementation",
+    description: "Set up the system so it works in daily operations, not in theory.",
   },
 ] as const;
 
@@ -30,22 +30,22 @@ const visibilitySignals = ["Owner", "Status", "Due date", "Payment state"] as co
 export function Hero({ onContactClick }: HeroProps) {
   const { hero } = siteContent;
 
-  const primaryCta = onContactClick ? (
+  const secondaryCta = onContactClick ? (
     <button
       type="button"
       onClick={onContactClick}
-      className="premium-cta h-12 px-6"
+      className="premium-cta-outline h-12 px-6"
     >
-      {hero.primaryCta.label}
+      {hero.secondaryCta.label}
     </button>
   ) : (
     <TrackedLink
-      href={hero.primaryCta.href}
+      href={hero.secondaryCta.href}
       event="contact_cta_click"
-      data={{ location: "hero_primary" }}
-      className="premium-cta h-12 px-6"
+      data={{ location: "hero_secondary" }}
+      className="premium-cta-outline h-12 px-6"
     >
-      {hero.primaryCta.label}
+      {hero.secondaryCta.label}
     </TrackedLink>
   );
 
@@ -54,9 +54,9 @@ export function Hero({ onContactClick }: HeroProps) {
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
-            <SectionKicker label="Business Systems" />
+            <SectionKicker label="Product Operations" />
             <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
-              CRM · Workflows · Automation
+              {hero.subtitle}
             </p>
 
             <h1 className="text-balance mt-5 max-w-4xl font-display text-[3rem] font-semibold leading-[0.95] tracking-[-0.055em] text-ink sm:text-[4rem] lg:text-[5.1rem]">
@@ -64,25 +64,20 @@ export function Hero({ onContactClick }: HeroProps) {
             </h1>
 
             <p className="mt-7 max-w-3xl text-lg leading-8 text-neutral-600 sm:text-[1.35rem] sm:leading-9">
-              {hero.subtitle}
-            </p>
-
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-600 sm:text-[0.95rem]">
-              For service businesses where delivery, admin and billing still rely
-              on too many handoffs.
+              {hero.description}
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              {primaryCta}
-
               <TrackedLink
-                href={hero.secondaryCta.href}
+                href={hero.primaryCta.href}
                 event="case_study_cta_click"
-                data={{ location: "hero_secondary" }}
-                className="premium-cta-outline h-12 px-6"
+                data={{ location: "hero_primary" }}
+                className="premium-cta h-12 px-6"
               >
-                {hero.secondaryCta.label}
+                {hero.primaryCta.label}
               </TrackedLink>
+
+              {secondaryCta}
             </div>
 
             <div className="mt-14 border-t border-line pt-8">
@@ -114,10 +109,10 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Operating View
+                  System View
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  A usable system starts with one readable chain.
+                  Readable operations beat tool sprawl.
                 </h2>
               </div>
 
@@ -156,7 +151,7 @@ export function Hero({ onContactClick }: HeroProps) {
               </div>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                One chain, a few useful states, and billing tied to the work.
+                One readable chain. A few useful states. Clear control.
               </p>
             </div>
           </div>

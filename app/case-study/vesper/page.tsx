@@ -4,58 +4,54 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const sectionLinks = [
-  { label: "Context", href: "#context" },
+  { label: "Operating Environment", href: "#context" },
   { label: "Problem", href: "#problem" },
-  { label: "What Was Implemented", href: "#implementation" },
+  { label: "System Design", href: "#implementation" },
   { label: "Results", href: "#results" },
-  { label: "What Changed", href: "#change" },
+  { label: "Operational Impact", href: "#change" },
   { label: "Key Insight", href: "#insight" },
 ] as const;
 
 const problemItems = [
   "Disconnected tools (Excel, PMS, manual tracking)",
-  "Strong reliance on front-desk presence",
-  "Limited use of customer data",
-  "Repetitive administrative tasks",
-  "Lack of clear operational flow",
+  "High dependency on front-desk operations",
+  "No structured use of customer data",
+  "Repetitive administrative workload",
+  "Lack of end-to-end workflow consistency",
 ] as const;
 
 const implementationItems = [
-  "Structured end-to-end workflow (acquisition → booking → operations → reporting)",
+  "Defined an end-to-end operational workflow (acquisition → booking → operations → reporting)",
   "Introduced CRM logic (customer data, preferences, follow-ups)",
-  "Reduced front-desk dependency through access automation (RFID / Bluetooth)",
-  "Simplified payment and administrative processes",
-  "Built internal tools to support daily operations",
-  "Centralized data for better tracking and decision-making",
+  "Reduced front-desk dependency through automated access (RFID / Bluetooth)",
+  "Simplified payment and administrative flows",
+  "Built internal tools to support daily execution",
+  "Centralized data for operational and financial visibility",
 ] as const;
 
 const resultItems = [
   {
-    value: "9.2",
-    label: "review score",
-    meta: "from 7.6",
+    title: "9.2/10 Customer Satisfaction",
+    detail: "Immediate improvement from a 7.6 baseline",
   },
   {
-    value: "Top 30",
-    label: "ranking",
-    meta: "from ~450",
+    title: "Top 30 Ranking",
+    detail: "From ~450, driven by improved execution and consistency",
   },
   {
-    value: "~10h/week",
-    label: "saved on admin",
-    meta: "",
+    title: "10h Saved / Week",
+    detail: "Administrative workload significantly reduced",
   },
   {
-    value: "+50%",
-    label: "revenue from a new market",
-    meta: "",
+    title: "+50% Revenue from New Market",
+    detail: "New customer segment captured through improved positioning",
   },
 ] as const;
 
 const changeItems = [
-  "Less friction in daily execution",
-  "More autonomy across operations",
-  "Better visibility on performance",
+  "More predictable and structured daily operations",
+  "Reduced dependency on manual coordination",
+  "Improved visibility across performance and revenue",
   "More consistent customer experience",
 ] as const;
 
@@ -65,6 +61,7 @@ const flowSteps = [
   "CRM",
   "Access",
   "Operations",
+  "Reporting",
 ] as const;
 
 export default function VesperCaseStudyPage() {
@@ -82,8 +79,12 @@ export default function VesperCaseStudyPage() {
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Turning fragmented hospitality operations into a clearer, more
-                reliable system.
+                From fragmented operations to a structured operational system.
+              </p>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                A hospitality business relying on disconnected tools, manual
+                coordination and front-desk dependency was restructured into a
+                clear and consistent system.
               </p>
             </div>
           </div>
@@ -112,20 +113,20 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-6 lg:grid-cols-2">
               <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <SectionKicker label="Context" />
+                <SectionKicker label="Operating Environment" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  A hospitality business relying on fragmented tools, manual
-                  coordination and strong front-desk dependency.
+                  A multi-unit hospitality environment with fragmented workflows
+                  and limited operational visibility.
                 </p>
               </article>
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Operating reality
+                  System Gap
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Operations were difficult to manage, with limited visibility
-                  on performance and heavy administrative workload.
+                  Operations depended heavily on manual coordination, with no
+                  consistent system to manage execution or financial tracking.
                 </p>
               </article>
             </div>
@@ -137,8 +138,8 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-3xl">
               <SectionKicker label="Problem" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Disconnected tools, front-desk dependency and repetitive admin
-                were making the business harder to run.
+                Fragmented tools and manual processes created operational
+                friction and limited control over execution and performance.
               </p>
             </div>
 
@@ -158,10 +159,10 @@ export default function VesperCaseStudyPage() {
         <section id="implementation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <SectionKicker label="What Was Implemented" />
+              <SectionKicker label="System Design" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The work focused on flow, customer data, access, payments and
-                internal tools that supported daily execution.
+                Operations were restructured into a consistent system aligned
+                with workflow logic and data standardization.
               </p>
             </div>
 
@@ -187,16 +188,13 @@ export default function VesperCaseStudyPage() {
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {resultItems.map((item) => (
                 <article
-                  key={item.label}
+                  key={item.title}
                   className="rounded-[2rem] border border-line bg-white p-7 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]"
                 >
-                  <p className="text-sm font-medium text-muted">{item.label}</p>
-                  <p className="mt-4 font-display text-3xl font-semibold tracking-[-0.04em] text-ink">
-                    {item.value}
+                  <p className="font-display text-[1.8rem] font-semibold leading-[1.05] tracking-[-0.04em] text-ink">
+                    {item.title}
                   </p>
-                  {item.meta ? (
-                    <p className="mt-3 text-sm leading-7 text-muted">{item.meta}</p>
-                  ) : null}
+                  <p className="mt-4 text-sm leading-7 text-muted">{item.detail}</p>
                 </article>
               ))}
             </div>
@@ -207,10 +205,10 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-                <SectionKicker label="What Changed" />
+                <SectionKicker label="Operational Impact" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Operations became easier to run and less dependent on manual
-                  coordination.
+                  The system reduced operational friction and improved
+                  execution consistency.
                 </p>
               </article>
 
@@ -233,13 +231,17 @@ export default function VesperCaseStudyPage() {
             <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
               <SectionKicker label="Key Insight" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Better results came from structuring the system — not adding
+                Performance improved by structuring the system, not by adding
                 more tools.
+              </p>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                Consistency, visibility and control came from workflow design
+                and data alignment.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  System flow
+                  System Flow
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">

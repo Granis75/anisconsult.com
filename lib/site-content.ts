@@ -3,72 +3,71 @@ export const siteContent = {
   navigation: [
     { label: "Work", href: "/work" },
     { label: "MyBi", href: "/#mybi" },
-    { label: "Capabilities", href: "/#method" },
+    { label: "Systems", href: "/#method" },
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "Structure messy operations into clear business systems.",
-    subtitle:
-      "I structure CRM, workflow, automation and internal tools for service businesses that need execution, billing and follow-up to stay readable.",
+    title: "I structure business operations into scalable systems.",
+    subtitle: "Product Operations • Business Systems • Implementation",
     description:
-      "Less manual coordination. Better visibility. One operating logic people can actually use.",
+      "I translate real-world operations into clear, usable systems. From fragmented workflows (Excel, manual tracking, calls) to structured environments (CRM, invoicing, payments, dashboards).",
     notes: [
-      "CRM structure",
-      "Workflow logic",
-      "Automation with control",
+      "Workflow structuring",
+      "Business systems",
+      "Implementation",
     ],
     primaryCta: {
-      label: "Discuss your operations",
-      href: "/#contact",
+      label: "View Case Study",
+      href: "/#case-study",
     },
     secondaryCta: {
-      label: "See selected work",
-      href: "/work",
+      label: "Contact",
+      href: "/#contact",
     },
   },
   method: {
-    title: "Capabilities",
-    subtitle: "Operational systems designed for clarity, control and daily use.",
+    title: "Positioning",
+    subtitle: "Business systems. Not more tools.",
     intro:
-      "Not a stack of disconnected services. The work is to give the business clearer structure, better logic and better visibility.",
+      "I help structure operations into clear systems. The goal is not to add tools. The goal is to make work easier to manage, track and control.",
     steps: [
       {
         step: "01",
-        title: "Read the real workflow",
+        title: "Workflows",
         bullets: [
-          "Where requests enter and who owns what",
-          "How delivery, admin and billing actually move",
-          "Where follow-up depends on memory, workarounds or spreadsheets",
+          "Workflow structuring",
+          "Clear handoffs",
+          "Less manual tracking",
         ],
         objective:
-          "See the live operating chain before changing tools or adding automation.",
+          "Make daily operations easier to manage.",
       },
       {
         step: "02",
-        title: "Structure the operating model",
+        title: "Systems",
         bullets: [
-          "CRM stages, statuses and ownership rules",
-          "Workflow handoffs between request, delivery, invoicing and payment",
-          "Useful data points that support action instead of noise",
+          "CRM",
+          "Invoicing",
+          "Payments",
         ],
         objective:
-          "Create one clear system logic the team can use day to day.",
+          "Connect the operating chain into one readable system.",
       },
       {
         step: "03",
-        title: "Implement the working system",
+        title: "Control",
         bullets: [
-          "Automation only where it removes real friction",
-          "Internal views, forms or control layers where needed",
-          "Progressive rollout in live operating conditions",
+          "Reporting",
+          "Ownership",
+          "Visibility",
         ],
         objective:
-          "Ship a setup that is lighter to run now and easier to improve later.",
+          "Keep the business easier to track and control.",
       },
     ],
     cta: {
-      label: "View selected work",
-      href: "/work",
+      label: "View Case Study",
+      href: "/#case-study",
     },
   },
 } as const;

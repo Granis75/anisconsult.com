@@ -2,49 +2,29 @@ import { SectionKicker } from "@/components/section-kicker";
 
 const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
 
-const controlSignals = [
-  {
-    label: "Overdue invoices",
-    value: "3",
-  },
-  {
-    label: "Unpaid amount",
-    value: "EUR 1,450",
-  },
-  {
-    label: "Active mission",
-    value: "1",
-  },
-] as const;
-
-const proofPoints = [
-  "One connected chain from client record to payment follow-up.",
-  "Useful signals for mission status, invoice state and next action.",
-] as const;
-
 export function MyBiHomeSection() {
   return (
     <section id="mybi" className="border-t border-line bg-white">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-center lg:gap-16">
           <div className="max-w-2xl">
-            <SectionKicker label="MyBi" />
+            <SectionKicker label="Product" />
 
             <h2 className="text-balance mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.6rem]">
-              A product proof-point built around real service operations.
+              MyBi — Business Operating System
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              MyBi is a live business app that keeps client records, missions,
-              invoices and payment follow-up in one working chain.
+              A functional system designed to structure real business workflows.
             </p>
 
-            <div className="mt-8 grid gap-3">
-              {proofPoints.map((item) => (
-                <div key={item} className="border-t border-black/8 pt-3.5">
-                  <p className="max-w-xl text-sm leading-7 text-ink/76">{item}</p>
-                </div>
-              ))}
+            <div className="mt-8 border-t border-black/8 pt-6">
+              <p className="max-w-xl text-sm leading-7 text-ink">
+                Clear visibility on revenue, payments and execution.
+              </p>
+              <p className="mt-2 text-sm leading-7 text-neutral-600">
+                No complexity. Just control.
+              </p>
             </div>
 
             <div className="mt-10">
@@ -54,7 +34,7 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="premium-cta h-12 px-6"
               >
-                Open MyBi dashboard
+                Open MyBi
               </a>
             </div>
           </div>
@@ -63,10 +43,10 @@ export function MyBiHomeSection() {
             <div className="premium-card p-6 sm:p-8">
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Workflow Logic
+                  Business Operating System
                 </p>
                 <h3 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  The workflow reads instantly.
+                  Functional structure, kept minimal.
                 </h3>
               </div>
 
@@ -88,26 +68,20 @@ export function MyBiHomeSection() {
                 </div>
               </div>
 
-              <div className="mt-6 border-t border-line pt-6">
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Control signals
-                </p>
-                <div className="mt-4 grid gap-3">
-                  {controlSignals.map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center justify-between rounded-[18px] border border-black/8 bg-white px-3.5 py-2.5 sm:px-4 sm:py-3"
-                    >
-                      <span className="text-sm text-neutral-700">{item.label}</span>
-                      <span className="text-sm font-semibold text-ink">{item.value}</span>
-                    </div>
-                  ))}
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-[22px] border border-black/8 bg-white px-4 py-4">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
+                    Revenue
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-ink">Visible by mission and invoice.</p>
+                </div>
+                <div className="rounded-[22px] border border-black/8 bg-white px-4 py-4">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
+                    Payments
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-ink">Status stays readable without extra layers.</p>
                 </div>
               </div>
-
-              <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                Real workflow modeling, kept light enough for daily use.
-              </p>
             </div>
           </div>
         </div>

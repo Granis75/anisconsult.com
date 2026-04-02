@@ -102,18 +102,18 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Bring the real workflow.
+          Bring the workflow that needs structure.
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          If CRM, delivery, invoicing or follow-up feels too fragmented, send a
-          short note. I will reply with a practical next step.
+          If operations, CRM, invoicing or payment follow-up feel fragmented,
+          send a short note. I will reply with a practical next step.
         </p>
 
         <div className="mt-8 grid gap-3">
           {[
-            "CRM and delivery are disconnected.",
+            "Workflow structure is unclear.",
             "Billing sits too far from execution.",
-            "Visibility still depends on manual follow-up.",
+            "Visibility still depends on manual tracking.",
           ].map((item) => (
             <div key={item} className="border-t border-black/8 pt-3.5">
               <p className="text-sm leading-7 text-ink/76">{item}</p>

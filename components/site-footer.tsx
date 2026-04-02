@@ -5,7 +5,7 @@ export function SiteFooter() {
         <div className="font-display font-semibold tracking-[-0.03em] text-ink">
           AnisConsult
         </div>
-        <div>Business Systems · CRM · Automation</div>
+        <div>Business Systems · Product Operations · Workflow Structuring</div>
       </div>
     </footer>
   );
