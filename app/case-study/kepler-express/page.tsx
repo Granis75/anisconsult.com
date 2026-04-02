@@ -150,6 +150,28 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
               </div>
 
+              <div className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                  Live System
+                </p>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
+                  A functional version of the operational system is available
+                  below. It reflects the workflow logic and structure described
+                  in this case study.
+                </p>
+
+                <div className="mt-5">
+                  <a
+                    href="https://kepler-express.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
+                  >
+                    Open System
+                  </a>
+                </div>
+              </div>
+
               <section className="space-y-8">
                 <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
                   <SectionKicker label="Key Insight" />
