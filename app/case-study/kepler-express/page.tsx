@@ -155,9 +155,9 @@ export default function KeplerExpressCaseStudyPage() {
                   Live System
                 </p>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-                  A functional version of the operational system is available
-                  below. It reflects the workflow logic and structure described
-                  in this case study.
+                  A live version of the system is available below. It reflects
+                  the workflow structure, cost logic and operational flow
+                  described in this case study.
                 </p>
 
                 <div className="mt-5">
@@ -167,7 +167,7 @@ export default function KeplerExpressCaseStudyPage() {
                     rel="noreferrer"
                     className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                   >
-                    Open System
+                    Open Live System
                   </a>
                 </div>
               </div>
