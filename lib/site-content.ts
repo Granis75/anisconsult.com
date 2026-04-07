@@ -7,14 +7,14 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "I structure business operations into scalable systems.",
-    subtitle: "Product Operations • Business Systems • Implementation",
+    title: "I’m an Operations Manager who structures daily operations.",
+    subtitle: "Coordination • Follow-up • Reporting",
     description:
-      "I translate real-world operations into clear, usable systems. From fragmented workflows (Excel, manual tracking, calls) to structured environments (CRM, invoicing, payments, dashboards).",
+      "I organize workflows, follow-up and reporting so work stays clear, on time and easy to manage.",
     notes: [
-      "Workflow structuring",
-      "Business systems",
-      "Implementation",
+      "Daily coordination",
+      "Process follow-up",
+      "Reporting",
     ],
     primaryCta: {
       label: "View Case Study",

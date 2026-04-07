@@ -10,16 +10,16 @@ type HeroProps = {
 
 const focusAreas = [
   {
-    title: "Workflow structuring",
-    description: "Turn manual handoffs into a system people can actually follow.",
+    title: "Daily coordination",
+    description: "Keep tasks, handoffs and priorities clear across the team.",
   },
   {
-    title: "Business systems",
-    description: "Connect CRM, invoicing, payments and reporting in one flow.",
+    title: "Process follow-up",
+    description: "Track what is done, what is late and what needs action.",
   },
   {
-    title: "Implementation",
-    description: "Set up the system so it works in daily operations, not in theory.",
+    title: "Reporting",
+    description: "Make status, issues and progress visible without chasing updates.",
   },
 ] as const;
 
@@ -54,7 +54,7 @@ export function Hero({ onContactClick }: HeroProps) {
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
-            <SectionKicker label="Product Operations" />
+            <SectionKicker label="Operations Manager" />
             <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
               {hero.subtitle}
             </p>
@@ -109,16 +109,16 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  System View
+                  Operations View
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Readable operations beat tool sprawl.
+                  Clear operations beat scattered tools.
                 </h2>
               </div>
 
               <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  System chain
+                  Workflow chain
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {workflowSteps.map((item, index) => (
