@@ -35,23 +35,15 @@ const featuredCases = [
     label: "Case Study",
     title: "Vesper Collection",
     description:
-      "Operations were restructured into a consistent system for customer data, execution and follow-up.",
-    highlights: [
-      "CRM logic aligned with daily operations",
-      "Workflow structure made the service model easier to run",
-    ],
+      "Hospitality operations restructured into a clear operating system.",
     href: "/case-study/vesper",
     location: "home_proof_vesper",
   },
   {
     label: "Case Study",
-    title: "Kepler Express Ops",
+    title: "Ops Core — Operational System",
     description:
-      "Logistics execution, expenses and billing were restructured into one operational system.",
-    highlights: [
-      "Workflow standardization from mission to payment",
-      "Data logic connected execution, cost tracking and billing",
-    ],
+      "A system designed to structure daily operations based on real hospitality workflows.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
   },
@@ -78,10 +70,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Short proof from live environments where fragmented operations were
-                turned into usable systems. Operations were restructured into
-                consistent systems aligned with data logic and workflow
-                standardization.
+                Two examples of fragmented operations turned into clearer systems.
               </p>
             </div>
 
@@ -110,17 +99,9 @@ export default function HomePage() {
                   <h3 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2.2rem]">
                     {item.title}
                   </h3>
-                  <p className="mt-5 max-w-xl text-base leading-8 text-muted">
+                      <p className="mt-5 max-w-xl text-base leading-8 text-muted">
                     {item.description}
                   </p>
-
-                  <div className="mt-8 grid gap-3">
-                    {item.highlights.map((highlight) => (
-                      <div key={highlight} className="border-t border-black/8 pt-3.5">
-                        <p className="text-sm leading-7 text-ink/78">{highlight}</p>
-                      </div>
-                    ))}
-                  </div>
 
                   <div className="mt-auto pt-8">
                     <TrackedLink
@@ -153,20 +134,21 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={60}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Positioning" />
-                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Business systems. Not more tools.
-                </h2>
+                <SectionKicker label="About" />
               </div>
 
-              <div className="max-w-2xl">
+              <div className="max-w-2xl space-y-6">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I help structure operations into clear systems. The goal is not
-                  to add tools. The goal is to make work easier to manage, track
-                  and control.
+                  I work on operational environments where execution is fragmented and difficult to manage.
                 </p>
-                <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Workflows • CRM • Invoicing • Payments • Reporting
+                <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                  My focus is to structure workflows, connect data and make operations easier to run.
+                </p>
+                <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                  Background in hospitality and operations.
+                </p>
+                <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                  Now focused on business systems and workflow structuring.
                 </p>
               </div>
             </div>

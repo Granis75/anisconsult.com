@@ -1,6 +1,7 @@
 import { SectionKicker } from "@/components/section-kicker";
 
 const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
+const signalSteps = ["Incident", "Action", "Expense", "Impact"] as const;
 
 export function MyBiHomeSection() {
   return (
@@ -8,23 +9,26 @@ export function MyBiHomeSection() {
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-center lg:gap-16">
           <div className="max-w-2xl">
-            <SectionKicker label="Product" />
+            <SectionKicker label="Operational System" />
 
             <h2 className="text-balance mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.6rem]">
-              MyBi — Business Operating System
+              Ops Core — Operational System
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              A functional system designed to structure real business workflows.
+              A system designed to structure daily operations based on real hospitality workflows.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                Clear visibility on revenue, payments and execution.
+                The goal is not to add more tools. The goal is to make operations clear, consistent and controllable.
               </p>
-              <p className="mt-2 text-sm leading-7 text-neutral-600">
-                No complexity. Just control.
-              </p>
+              <ul className="mt-4 space-y-2 text-sm leading-7 text-neutral-600">
+                <li>Maintenance tracking</li>
+                <li>Operational tasks</li>
+                <li>Expense flow</li>
+                <li>Guest feedback signals</li>
+              </ul>
             </div>
 
             <div className="mt-10">
@@ -43,10 +47,10 @@ export function MyBiHomeSection() {
             <div className="premium-card p-6 sm:p-8">
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Business Operating System
+                  Operational System
                 </p>
                 <h3 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Functional structure, kept minimal.
+                  Two operating chains, kept clear.
                 </h3>
               </div>
 
@@ -68,18 +72,21 @@ export function MyBiHomeSection() {
                 </div>
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-[22px] border border-black/8 bg-white px-4 py-4">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                    Revenue
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-ink">Visible by mission and invoice.</p>
-                </div>
-                <div className="rounded-[22px] border border-black/8 bg-white px-4 py-4">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                    Payments
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-ink">Status stays readable without extra layers.</p>
+              <div className="mt-6 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
+                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
+                  Signal chain
+                </p>
+                <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                  {signalSteps.map((item, index) => (
+                    <div key={item} className="flex items-center gap-2.5">
+                      <span className="inline-flex items-center rounded-full border border-black/8 bg-white px-3.5 py-1.5 text-sm font-medium text-ink">
+                        {item}
+                      </span>
+                      {index < signalSteps.length - 1 ? (
+                        <span className="text-sm text-black/25">→</span>
+                      ) : null}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

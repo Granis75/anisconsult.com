@@ -13,57 +13,35 @@ export const metadata: Metadata = {
 const projects = [
   {
     title: "Vesper Collection",
-    subtitle: "Hospitality operations structured into a scalable system.",
+    subtitle: "Hospitality operations structured into one operating system.",
     description: [
-      "Fragmented tools (Excel, manual tracking, calls) were replaced by a structured operational system.",
-      "Workflows were redesigned to improve visibility, coordination and financial tracking.",
+      "Hospitality operations structured into one operating system.",
     ],
     highlights: [
-      {
-        title: "9.2/10 Customer Satisfaction",
-        detail: "Immediate improvement from a 7.6 baseline",
-      },
-      {
-        title: "Top 30 Ranking",
-        detail: "Significant improvement in market positioning",
-      },
-      {
-        title: "10h Saved / Week",
-        detail: "Reduction of manual administrative workload",
-      },
-      {
-        title: "+50% Revenue from New Market",
-        detail: "New customer segment successfully captured",
-      },
+      "Maintenance tracking",
+      "Operational tasks",
+      "Expense flow",
+      "Guest feedback signals",
     ],
     href: "/case-study/vesper",
     location: "work_page_vesper",
   },
   {
-    title: "Kepler Express Ops",
-    subtitle: "Logistics operations structured into a connected workflow.",
+    title: "Ops Core — Operational System",
+    subtitle: "Daily operations structured around real hospitality workflows.",
     description: [
-      "Manual coordination (Excel, calls) was replaced by a structured operational system.",
-      "End-to-end workflow implemented: Client → Mission → Expense → Invoice → Payment",
-      "Improved visibility across operations, costs and billing.",
+      "A system designed to structure daily operations based on real hospitality workflows.",
     ],
     highlights: [
-      {
-        title: "End-to-end workflow visibility",
-      },
-      {
-        title: "Mission-level cost tracking",
-      },
-      {
-        title: "Reduced manual coordination",
-      },
-      {
-        title: "Improved link between operations and billing",
-      },
+      "Maintenance tracking",
+      "Operational tasks",
+      "Expense flow",
+      "Guest feedback signals",
     ],
     href: "/case-study/kepler-express",
     location: "work_page_kepler",
   },
+
 ] as const;
 
 export default function WorkPage() {
@@ -83,8 +61,7 @@ export default function WorkPage() {
                 Real systems built from real operational constraints.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Two examples of how fragmented operations were structured into
-                clear, scalable and reliable systems.
+                Two systems built from real operating constraints.
               </p>
             </div>
           </div>

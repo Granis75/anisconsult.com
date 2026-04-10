@@ -21,12 +21,12 @@ const problemItems = [
 ] as const;
 
 const implementationItems = [
-  "Defined an end-to-end operational workflow (acquisition → booking → operations → reporting)",
-  "Introduced CRM logic (customer data, preferences, follow-ups)",
-  "Reduced front-desk dependency through automated access (RFID / Bluetooth)",
+  "Defined an end-to-end workflow from acquisition to reporting",
+  "Introduced CRM logic for customer data and follow-ups",
+  "Reduced front-desk dependency through automated access",
   "Simplified payment and administrative flows",
-  "Built internal tools to support daily execution",
-  "Centralized data for operational and financial visibility",
+  "Built internal tools for daily execution",
+  "Centralized operational and financial visibility",
 ] as const;
 
 const resultItems = [
@@ -49,10 +49,10 @@ const resultItems = [
 ] as const;
 
 const changeItems = [
-  "More predictable and structured daily operations",
-  "Reduced dependency on manual coordination",
-  "Improved visibility across performance and revenue",
-  "More consistent customer experience",
+  "Daily operations became more predictable",
+  "Less manual coordination",
+  "Better visibility on performance and revenue",
+  "More consistent guest experience",
 ] as const;
 
 const flowSteps = [
@@ -79,12 +79,10 @@ export default function VesperCaseStudyPage() {
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                From fragmented operations to a structured operational system.
+                A hospitality operation running on Excel, calls and disconnected tools was restructured into a clearer system.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                A hospitality business relying on disconnected tools, manual
-                coordination and front-desk dependency was restructured into a
-                clear and consistent system.
+                A multi-unit hospitality operation with fragmented workflows and limited visibility.
               </p>
             </div>
           </div>
@@ -115,8 +113,7 @@ export default function VesperCaseStudyPage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Operating Environment" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  A multi-unit hospitality environment with fragmented workflows
-                  and limited operational visibility.
+                  A multi-unit hospitality operation with fragmented workflows and limited visibility.
                 </p>
               </article>
 
@@ -125,8 +122,7 @@ export default function VesperCaseStudyPage() {
                   System Gap
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Operations depended heavily on manual coordination, with no
-                  consistent system to manage execution or financial tracking.
+                  Execution depended on manual coordination, with no clear system for tracking operations or costs.
                 </p>
               </article>
             </div>
@@ -138,8 +134,7 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-3xl">
               <SectionKicker label="Problem" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Fragmented tools and manual processes created operational
-                friction and limited control over execution and performance.
+                Fragmented tools and manual work created friction and reduced control.
               </p>
             </div>
 
@@ -161,8 +156,10 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-4xl">
               <SectionKicker label="System Design" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Operations were restructured into a consistent system aligned
-                with workflow logic and data standardization.
+                Operations were restructured around clearer workflows, cleaner data and daily visibility.
+              </p>
+              <p className="mt-6 text-base leading-8 text-ink sm:text-lg">
+                To support daily execution, an internal operational system was designed based on real workflows.
               </p>
             </div>
 
@@ -207,8 +204,7 @@ export default function VesperCaseStudyPage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
                 <SectionKicker label="Operational Impact" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  The system reduced operational friction and improved
-                  execution consistency.
+                  The system reduced friction and made daily execution more consistent.
                 </p>
               </article>
 
@@ -231,8 +227,7 @@ export default function VesperCaseStudyPage() {
             <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
               <SectionKicker label="Key Insight" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Performance improved by structuring the system, not by adding
-                more tools.
+                Control came from clearer workflows and aligned data.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
                 Consistency, visibility and control came from workflow design

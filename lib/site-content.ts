@@ -7,18 +7,19 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "I’m an Operations Manager who structures daily operations.",
-    subtitle: "Coordination • Follow-up • Reporting",
+    title: "I turn fragmented operations into structured systems.",
+    subtitle:
+      "From manual workflows (Excel, calls, scattered tools) to clear, reliable and trackable operations.",
     description:
       "I organize workflows, follow-up and reporting so work stays clear, on time and easy to manage.",
     notes: [
-      "Daily coordination",
-      "Process follow-up",
-      "Reporting",
+      "Workflow",
+      "Follow-up",
+      "Visibility",
     ],
     primaryCta: {
-      label: "View Case Study",
-      href: "/#case-study",
+      label: "View work",
+      href: "/work",
     },
     secondaryCta: {
       label: "Contact",

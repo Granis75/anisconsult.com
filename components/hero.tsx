@@ -10,16 +10,16 @@ type HeroProps = {
 
 const focusAreas = [
   {
-    title: "Daily coordination",
-    description: "Keep tasks, handoffs and priorities clear across the team.",
+    title: "Workflow",
+    description: "Turn manual handoffs into a readable operating flow.",
   },
   {
-    title: "Process follow-up",
-    description: "Track what is done, what is late and what needs action.",
+    title: "Follow-up",
+    description: "Track what is pending, late or waiting on action.",
   },
   {
-    title: "Reporting",
-    description: "Make status, issues and progress visible without chasing updates.",
+    title: "Visibility",
+    description: "Keep status, expenses and signals clear.",
   },
 ] as const;
 
@@ -54,7 +54,7 @@ export function Hero({ onContactClick }: HeroProps) {
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
-            <SectionKicker label="Operations Manager" />
+            <SectionKicker label="Business Systems / Operations" />
             <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
               {hero.subtitle}
             </p>
@@ -78,6 +78,12 @@ export function Hero({ onContactClick }: HeroProps) {
               </TrackedLink>
 
               {secondaryCta}
+            </div>
+
+            <div className="mt-5 flex flex-wrap gap-4 text-sm font-medium text-ink/80">
+              <span>3 overdue issues</span>
+              <span>€1,070 pending</span>
+              <span>3 guest complaints</span>
             </div>
 
             <div className="mt-14 border-t border-line pt-8">
@@ -109,10 +115,10 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Operations View
+                  Operational Signal
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Clear operations beat scattered tools.
+                  Clear operations come from a readable system.
                 </h2>
               </div>
 
@@ -151,7 +157,7 @@ export function Hero({ onContactClick }: HeroProps) {
               </div>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                One readable chain. A few useful states. Clear control.
+                One operating chain. A few useful signals. Clear control.
               </p>
             </div>
           </div>
