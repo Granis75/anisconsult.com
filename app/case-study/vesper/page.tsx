@@ -12,46 +12,46 @@ const sectionLinks = [
 ] as const;
 
 const problemItems = [
-  "Disconnected tools (Excel, PMS, manual tracking)",
-  "High dependency on front-desk operations",
-  "No structured use of customer data",
-  "Repetitive administrative workload",
-  "Lack of end-to-end workflow consistency",
+  "Guest information lived across Excel, PMS and messages",
+  "Front desk handled too many routine tasks",
+  "Payment and admin follow-up took too much manual work",
+  "Issues were hard to track from start to resolution",
+  "Managers had no clean view of daily execution",
 ] as const;
 
 const implementationItems = [
-  "Defined an end-to-end workflow from acquisition to reporting",
-  "Introduced CRM logic for customer data and follow-ups",
+  "Mapped the full chain from booking to stay to reporting",
+  "Grouped guest data, follow-up and preferences in one place",
   "Reduced front-desk dependency through automated access",
-  "Simplified payment and administrative flows",
-  "Built internal tools for daily execution",
-  "Centralized operational and financial visibility",
+  "Cleaned up payment and admin steps",
+  "Built internal views for daily follow-up",
+  "Made operations and revenue easier to read together",
 ] as const;
 
 const resultItems = [
   {
-    title: "9.2/10 Customer Satisfaction",
-    detail: "Immediate improvement from a 7.6 baseline",
+    title: "9.2/10 Guest Satisfaction",
+    detail: "Reached after follow-up, access and issue handling were cleaned up",
   },
   {
     title: "Top 30 Ranking",
-    detail: "From ~450, driven by improved execution and consistency",
+    detail: "Improved as execution became more consistent across stays",
   },
   {
     title: "10h Saved / Week",
-    detail: "Administrative workload significantly reduced",
+    detail: "Recovered from repetitive admin and manual follow-up",
   },
   {
     title: "+50% Revenue from New Market",
-    detail: "New customer segment captured through improved positioning",
+    detail: "New demand captured once the operation was easier to run",
   },
 ] as const;
 
 const changeItems = [
-  "Daily operations became more predictable",
-  "Less manual coordination",
-  "Better visibility on performance and revenue",
-  "More consistent guest experience",
+  "Guest issues were easier to track",
+  "Less dependency on front desk for routine tasks",
+  "Managers could see status and revenue earlier",
+  "The stay experience became more consistent",
 ] as const;
 
 const flowSteps = [
@@ -78,10 +78,10 @@ export default function VesperCaseStudyPage() {
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                A hospitality operation running on Excel, calls and disconnected tools was restructured into a clearer system.
+                Guest operations were running through Excel, calls and front-desk dependency.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                A multi-unit hospitality operation with fragmented workflows and limited visibility.
+                The work was to make stays, access, follow-up and reporting easier to run day to day.
               </p>
             </div>
           </div>
@@ -112,16 +112,16 @@ export default function VesperCaseStudyPage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  A multi-unit hospitality operation with fragmented workflows and limited visibility.
+                  Multi-unit short-stay operations with guest communication, access, issues and reporting spread across too many tools.
                 </p>
               </article>
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  System Gap
+                  Where It Broke
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Execution depended on manual coordination, with no clear system for tracking operations or costs.
+                  Too much depended on manual checks, front-desk coordination and scattered guest information.
                 </p>
               </article>
             </div>
@@ -133,7 +133,7 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-3xl">
               <SectionKicker label="Problem" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Fragmented tools and manual work created friction and reduced control.
+                The day-to-day work was hard to run cleanly because the basic flow was split across files, calls and people.
               </p>
             </div>
 
@@ -155,7 +155,7 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-4xl">
               <SectionKicker label="System" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Operations were restructured around clearer workflows, cleaner data and daily visibility.
+                The work was reorganized into one operating flow the team could actually follow.
               </p>
             </div>
 
@@ -198,9 +198,9 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-                <SectionKicker label="Impact" />
+                <SectionKicker label="What Changed" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  The system reduced friction and made daily execution more consistent.
+                  The team spent less time chasing information and more time running the work.
                 </p>
               </article>
 
@@ -223,14 +223,13 @@ export default function VesperCaseStudyPage() {
             <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
               <SectionKicker label="Insight" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Control came from clearer workflows and aligned data.
+                Most of the improvement came from removing manual follow-up and unclear handoffs.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Consistency, visibility and control came from workflow design
-                and data alignment.
+                The gains came from giving the team one working flow instead of separate files, calls and workarounds.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                To support daily execution, an internal operational system was modeled from those field constraints.
+                The setup came from real operating constraints, not a blank-sheet process map.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">

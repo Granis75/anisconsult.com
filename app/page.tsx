@@ -9,42 +9,42 @@ import { TrackedLink } from "@/components/tracked-link";
 
 const results = [
   {
-    title: "9.2/10 Guest Satisfaction",
+    title: "Guest satisfaction: 9.2/10",
     description:
-      "Improved from a 7.6 baseline.",
+      "Reached after follow-up, access and issue handling were cleaned up.",
   },
   {
-    title: "+32% Execution Speed",
+    title: "+32% faster execution",
     description:
-      "Daily bottlenecks were reduced.",
+      "Measured after fewer handoffs and less manual checking.",
   },
   {
-    title: "Operational Visibility",
+    title: "Clear daily visibility",
     description:
-      "Tracking became readable across the operation.",
+      "Issues, costs and status could be checked without calling around.",
   },
   {
-    title: "10h Saved / Week",
+    title: "10 hours saved each week",
     description:
-      "Administrative work was reduced.",
+      "Came from less repetitive admin and less manual follow-up.",
   },
 ] as const;
 
 const featuredCases = [
   {
-    label: "Case Study",
+    label: "Hospitality",
     title: "Vesper Collection",
     description:
-      "Operational transformation across hospitality execution, coordination and reporting.",
+      "Guest stays, access, follow-up and reporting stopped relying on Excel and front-desk coordination.",
     href: "/case-study/vesper",
     location: "home_proof_vesper",
     ctaLabel: "View case study",
   },
   {
-    label: "Case Study",
+    label: "Logistics",
     title: "Kepler Express",
     description:
-      "Operational system designed for logistics execution and tracking.",
+      "Mission updates, driver costs and invoicing were brought into one logistics workflow.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View case study",
@@ -55,19 +55,19 @@ const products = [
   {
     title: "Ops Core",
     description:
-      "Operational system designed to structure daily execution in hospitality environments.",
+      "Hospitality follow-up for issues, tasks, expenses and guest signals.",
     href: "https://ops-core-v.vercel.app/",
   },
   {
     title: "MyBi",
     description:
-      "Business system designed to structure freelance operations.",
+      "Client work, invoices and payments kept in one operating chain.",
     href: "https://mybi-business-app.vercel.app/",
   },
   {
     title: "Kepler Express",
     description:
-      "Operational system designed for logistics execution and tracking.",
+      "Logistics follow-up for missions, expenses and billing.",
     href: "https://kepler-express.vercel.app/",
   },
 ] as const;
@@ -88,12 +88,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Case Studies" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Case studies from live operational environments.
+                  Work done inside hospitality and logistics operations.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Vesper Collection and Kepler Express show how fragmented operations were turned into usable systems.
+                Two examples of day-to-day work that started in spreadsheets, calls and manual tracking.
               </p>
             </div>
 
@@ -157,14 +157,14 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={55}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Products" />
+                <SectionKicker label="Internal Tools" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Operational products built from real workflows.
+                  Simple tools built because the work needed them.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Ops Core, MyBi and Kepler Express separate product thinking from case-study proof.
+                Each one came out of real admin and follow-up work inside operations.
               </p>
             </div>
 
@@ -185,7 +185,7 @@ export default function HomePage() {
                       rel="noreferrer"
                       className="premium-cta-outline h-12 px-6"
                     >
-                      Open product
+                      Open tool
                     </a>
                   </div>
                 </article>
@@ -198,18 +198,18 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={60}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Method" />
+                <SectionKicker label="How I Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Start from the operation. Structure the execution. Keep follow-up trackable.
+                  The same problems show up in most operations.
                 </h2>
               </div>
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  The starting point is not the tool. It is what blocks execution in the day-to-day operation.
+                  Tasks sit in one sheet, costs in another, and updates happen by call or memory. The fix is to make the flow readable enough for the team to use every day.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Execution • Coordination • Expenses • Visibility • Follow-up
+                  Tasks • Issues • Expenses • Invoices • Payments
                 </p>
               </div>
             </div>

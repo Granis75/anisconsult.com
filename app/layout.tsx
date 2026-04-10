@@ -16,9 +16,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "AnisConsult — Product Operations, Business Systems & Implementation",
+  title: "Anis — Operations and Workflow",
   description:
-    "AnisConsult structures business operations into clear systems across product operations, business systems, and implementation.",
+    "Operations work across hospitality and logistics, with hands-on follow-up, invoicing, expenses and internal tools built from real needs.",
 };
 
 export default function RootLayout({

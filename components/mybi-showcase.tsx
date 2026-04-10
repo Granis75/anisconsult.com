@@ -61,26 +61,26 @@ const pipelineStages = ["Client", "Mission", "Invoice", "Payment"] as const;
 const populatedDashboard: DashboardSnapshot = {
   metrics: [
     {
-      label: "Total Revenue",
+      label: "Revenue Recorded",
       value: "€12,450",
-      note: "+2 invoices this week",
+      note: "2 invoices sent this week",
       icon: CircleDollarSign,
     },
     {
       label: "Unpaid Invoices",
       value: "€2,150",
-      note: "3 overdue invoices need attention",
+      note: "3 overdue invoices need follow-up",
       icon: FileText,
       tone: "alert",
     },
     {
       label: "Active Clients",
       value: "8",
-      note: "2 clients active this month",
+      note: "2 clients currently active",
       icon: Users,
     },
     {
-      label: "Missions in Progress",
+      label: "Open Missions",
       value: "4",
       note: "1 mission delayed",
       icon: Briefcase,
@@ -90,8 +90,8 @@ const populatedDashboard: DashboardSnapshot = {
   attention: {
     title: "3 invoices are overdue",
     amount: "€1,450 unpaid",
-    note: "Review the oldest unpaid invoices first to protect collections this week.",
-    action: "Review invoices",
+    note: "The oldest unpaid invoice should be checked first so collections do not slip further this week.",
+    action: "Open invoices",
   },
   activities: [
     {
@@ -125,9 +125,9 @@ const populatedDashboard: DashboardSnapshot = {
     },
   ],
   insight: {
-    title: "Cash flow is healthy, but 3 unpaid invoices are slowing collections.",
-    summary: "Most current activity is concentrated in 2 active clients.",
-    secondary: "No mission risk detected this week.",
+    title: "Collections are fine overall, but 3 unpaid invoices still need follow-up.",
+    summary: "Most current work sits with 2 active clients.",
+    secondary: "No major delivery risk flagged this week.",
   },
 };
 
@@ -147,7 +147,7 @@ export function MyBiShowcase({
                 Dashboard
               </h1>
               <p className="mt-4 text-lg leading-8 text-slate-600 sm:text-xl">
-                Your activity at a glance
+                Client work, invoicing and payments at a glance
               </p>
             </div>
 
@@ -156,7 +156,7 @@ export function MyBiShowcase({
               className="inline-flex h-12 items-center justify-center gap-2 rounded-[24px] bg-[#0066FF] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#0057d9]"
             >
               <Plus className="h-4 w-4" />
-              New invoice
+              Add invoice
             </button>
           </header>
 
@@ -240,7 +240,7 @@ function AttentionCard({ attention }: { attention: AttentionData }) {
         <div className="flex items-start justify-between gap-6">
           <div className="max-w-xl">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-orange-600">
-              Financial attention
+              Needs attention
             </p>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">
               {attention.title}
@@ -286,7 +286,7 @@ function RecentActivityCard({
             Recent activity
           </p>
           <h2 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-slate-950">
-            What is moving
+            What moved recently
           </h2>
         </div>
 
@@ -345,8 +345,7 @@ function WorkflowCard() {
         Client to payment
       </h2>
       <p className="mt-3 max-w-sm text-sm leading-6 text-slate-500">
-        A clear operational chain keeps activity, billing, and follow-up in the
-        same place.
+        Client work, billing and follow-up stay in the same place.
       </p>
 
       <div className="mt-8 space-y-3">
@@ -487,11 +486,10 @@ function EmptyDashboard() {
           No activity yet
         </p>
         <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">
-          Start by adding a client or creating your first invoice.
+          Start by adding a client or logging your first invoice.
         </h2>
         <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
-          Once activity starts, MyBi will show what needs attention, what is
-          moving, and where cash flow may slow down.
+          Once activity starts, MyBi shows what needs follow-up, what moved recently, and where payments may start to slip.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -500,7 +498,7 @@ function EmptyDashboard() {
             className="inline-flex h-12 items-center justify-center gap-2 rounded-[24px] bg-[#0066FF] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#0057d9]"
           >
             <Plus className="h-4 w-4" />
-            Create first invoice
+            Add first invoice
           </button>
           <button
             type="button"
@@ -548,8 +546,7 @@ function EmptyDashboard() {
           Ready when activity starts
         </h2>
         <p className="mt-3 text-sm leading-6 text-slate-500">
-          Your core chain stays the same from the first client to the first
-          payment.
+          The same flow stays in place from the first client to the first payment.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -579,9 +576,7 @@ function EmptyDashboard() {
               No data yet
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-              MyBi will start surfacing collection risk, concentration, and
-              follow-up priorities as soon as you record your first client,
-              mission, or invoice.
+              MyBi starts surfacing payment risk, client concentration and follow-up priorities as soon as the first client, mission or invoice is recorded.
             </p>
           </div>
         </div>

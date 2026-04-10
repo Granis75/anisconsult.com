@@ -1,17 +1,17 @@
 export const siteContent = {
-  brand: "AnisConsult",
+  brand: "Anis",
   navigation: [
     { label: "Work", href: "/work" },
     { label: "MyBi", href: "/#mybi" },
-    { label: "Systems", href: "/#method" },
+    { label: "How I Work", href: "/#method" },
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
     title:
-      "I turn fragmented operations into clear, trackable systems.",
+      "I have managed operations where the work lived in Excel, calls and manual follow-up.",
     subtitle: "Operations • Execution • Control",
     description:
-      "Less back-and-forth, less improvisation, less scattered follow-up. More visibility, more consistency, more control.",
+      "I cleaned up the day-to-day flow so tasks, issues, expenses and payments were easier to follow and less dependent on memory.",
     notes: [
       "Execution",
       "Follow-up",
@@ -28,46 +28,46 @@ export const siteContent = {
   },
   method: {
     title: "Positioning",
-    subtitle: "Business systems. Not more tools.",
+    subtitle: "How I work inside operations.",
     intro:
-      "I help structure operations into clear systems. The goal is not to add tools. The goal is to make work easier to manage, track and control.",
+      "The starting point is usually the same: spreadsheets, calls, manual checks and unclear ownership.",
     steps: [
       {
         step: "01",
-        title: "Workflows",
+        title: "Daily work",
         bullets: [
-          "Workflow structuring",
-          "Clear handoffs",
-          "Less manual tracking",
+          "Tasks",
+          "Handoffs",
+          "Follow-up",
         ],
         objective:
-          "Make daily operations easier to manage.",
+          "Make the work easier to run day to day.",
       },
       {
         step: "02",
-        title: "Systems",
+        title: "Money flow",
         bullets: [
-          "CRM",
+          "Costs",
           "Invoicing",
           "Payments",
         ],
         objective:
-          "Connect the operating chain into one readable system.",
+          "Keep expenses, invoices and payment status tied to the work.",
       },
       {
         step: "03",
-        title: "Control",
+        title: "Visibility",
         bullets: [
-          "Reporting",
+          "Status",
           "Ownership",
-          "Visibility",
+          "Reporting",
         ],
         objective:
-          "Keep the business easier to track and control.",
+          "Make open items and delays easier to see.",
       },
     ],
     cta: {
-      label: "View Case Study",
+      label: "View work",
       href: "/#case-study",
     },
   },

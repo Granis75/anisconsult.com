@@ -5,9 +5,9 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Operational Systems | AnisConsult",
+  title: "Work | Anis",
   description:
-    "Operational systems built from real operational constraints across product operations, business systems, and implementation.",
+    "Case studies from hospitality and logistics operations, based on real execution, follow-up, expenses and invoicing.",
 };
 
 const projects = [
@@ -15,13 +15,13 @@ const projects = [
     title: "Vesper Collection",
     subtitle: "Case study",
     description: [
-      "Operational transformation in hospitality across execution, coordination and follow-up.",
+      "Guest stays, access, follow-up and reporting stopped relying on Excel and front-desk coordination.",
     ],
     highlights: [
+      "Guest data and follow-up in one place",
       "Less front-desk dependency",
-      "Clearer daily coordination",
-      "Better operational visibility",
-      "Reduced administrative work",
+      "Clearer payment and reporting flow",
+      "Administrative time reduced",
     ],
     href: "/case-study/vesper",
     location: "work_page_vesper",
@@ -31,13 +31,13 @@ const projects = [
     title: "Kepler Express",
     subtitle: "Case study",
     description: [
-      "Operational system designed for logistics execution and tracking.",
+      "Mission updates, driver costs and invoicing were brought into one logistics workflow.",
     ],
     highlights: [
-      "Mission tracking",
-      "Expense visibility",
-      "Billing alignment",
-      "Better coordination",
+      "Mission and cost tracking linked",
+      "Billing tied to the work itself",
+      "Less phone-and-spreadsheet follow-up",
+      "Better daily coordination",
     ],
     href: "/case-study/kepler-express",
     location: "work_page_kepler",
@@ -59,10 +59,10 @@ export default function WorkPage() {
                 Case Studies
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Vesper Collection and Kepler Express show how fragmented operations were turned into usable systems.
+                Two operating environments I worked in directly: hospitality and logistics.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Two case studies built from real operational constraints.
+                Both started with scattered files, calls and day-to-day follow-up that was too manual.
               </p>
             </div>
           </div>

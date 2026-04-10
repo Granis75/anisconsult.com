@@ -10,7 +10,7 @@ export function SiteHeader() {
           className="font-display text-xl font-semibold tracking-[-0.04em] text-ink transition-opacity hover:opacity-80"
           aria-label="Back to home"
         >
-          AnisConsult
+          Anis
         </Link>
 
         <nav className="-mx-1 flex items-center gap-5 overflow-x-auto px-1 md:mx-0 md:gap-8 md:px-0">

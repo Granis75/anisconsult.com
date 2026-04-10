@@ -3,9 +3,9 @@ export function SiteFooter() {
     <footer className="border-t border-line bg-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-muted md:flex-row md:items-center md:justify-between lg:px-10">
         <div className="font-display font-semibold tracking-[-0.03em] text-ink">
-          AnisConsult
+          Anis
         </div>
-        <div>Business Systems · Operations · Workflow Structuring</div>
+        <div>Operations · Workflow · Internal Tools</div>
       </div>
     </footer>
   );

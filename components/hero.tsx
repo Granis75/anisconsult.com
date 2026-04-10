@@ -11,15 +11,15 @@ type HeroProps = {
 const focusAreas = [
   {
     title: "Execution",
-    description: "What needs to be done, by whom, and when.",
+    description: "The team knows what needs to be done, by whom, and when.",
   },
   {
     title: "Follow-up",
-    description: "Open items stay visible without constant chasing.",
+    description: "Open issues stay visible without calls and constant checking.",
   },
   {
-    title: "Control",
-    description: "Incidents, expenses and signals stay readable.",
+    title: "Costs",
+    description: "Expenses, invoices and payment status stay tied to the work.",
   },
 ] as const;
 
@@ -54,7 +54,7 @@ export function Hero({ onContactClick }: HeroProps) {
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
-            <SectionKicker label="Business Systems / Operations" />
+            <SectionKicker label="Operations / Workflow" />
             <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
               {hero.subtitle}
             </p>
@@ -113,16 +113,16 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Operations View
+                  Daily Reality
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  A clear system reduces daily friction.
+                  The operation stops depending on spreadsheets, calls and memory.
                 </h2>
               </div>
 
               <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Workflow chain
+                  Core flow
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {workflowSteps.map((item, index) => (
@@ -155,7 +155,7 @@ export function Hero({ onContactClick }: HeroProps) {
               </div>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                One clear chain. A few useful signals. Better control.
+                Owner, status, due date and payment stay readable.
               </p>
             </div>
           </div>

@@ -5,44 +5,44 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express — Case Study | AnisConsult",
+  title: "Kepler Express — Case Study | Anis",
   description:
-    "A logistics case study about structuring fragmented operations into a connected operational system.",
+    "A logistics case study about dispatch, expenses and invoicing brought into one workflow.",
 };
 
 const problemItems = [
-  "Excel, paper notes and calls used for daily coordination",
-  "No shared system for mission tracking",
-  "Expenses captured manually and often delayed",
-  "Billing disconnected from operations",
-  "No clear view of profitability per mission",
+  "Drivers and office staff relied on calls, paper notes and spreadsheets",
+  "There was no shared view of mission status",
+  "Expenses were logged late or missed",
+  "Invoices had to be rebuilt from scattered information",
+  "Margin per mission was hard to see",
 ] as const;
 
 const resultItems = [
   {
     title: "Reduced Manual Tracking",
-    detail: "Daily operations no longer depended on scattered tools",
+    detail: "Less dependence on calls, paper and separate files",
   },
   {
     title: "Mission-Level Cost Visibility",
-    detail: "Costs tracked directly within execution flow",
+    detail: "Costs were captured inside the day-to-day workflow",
   },
   {
     title: "Billing Aligned with Operations",
-    detail: "Invoices connected to mission and expense data",
+    detail: "Invoices were built from mission and expense data",
   },
   {
     title: "Improved Operational Coordination",
-    detail: "A single structured system replaced fragmented follow-up",
+    detail: "Dispatch and billing worked from the same information",
   },
 ] as const;
 
 const implementationItems = [
-  "Centralized workflows from intake to billing",
-  "Linked expenses directly to mission execution",
-  "Structured separation between driver advances and company costs",
-  "Introduced mission-level profitability logic",
-  "Enabled consistent tracking across operations and finance",
+  "Set one flow from client request to payment",
+  "Linked expenses to the mission instead of separate notes",
+  "Separated driver advances from company costs",
+  "Added mission-level margin tracking",
+  "Made daily operations and billing easier to reconcile",
 ] as const;
 
 const flowSteps = ["Client", "Mission", "Expense", "Invoice", "Payment"] as const;
@@ -61,13 +61,10 @@ export default function KeplerExpressCaseStudyPage() {
                 Kepler Express
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                From fragmented logistics operations to a structured
-                operational system.
+                Daily logistics work was being run through Excel, calls and paper notes.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                A small logistics company relying on Excel, calls and manual
-                coordination was restructured into a connected system aligned
-                with workflow and financial logic.
+                The job was to tie mission updates, expenses and billing together so the team could stop rebuilding everything by hand.
               </p>
             </div>
           </div>
@@ -79,7 +76,7 @@ export default function KeplerExpressCaseStudyPage() {
               <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
                 <SectionKicker label="Context" />
                 <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
-                  A logistics company relied on Excel, calls and manual coordination to manage execution, expenses and billing.
+                  Small transport operations with dispatch, driver costs and invoices handled separately.
                 </p>
               </section>
 
@@ -90,9 +87,7 @@ export default function KeplerExpressCaseStudyPage() {
                 >
                   <SectionKicker label="Problem" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    Operations relied on disconnected tools and manual
-                    coordination, creating limited visibility and poor control
-                    over execution and costs.
+                    The work was hard to follow because mission status, expenses and billing were disconnected.
                   </p>
 
                   <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
@@ -105,8 +100,7 @@ export default function KeplerExpressCaseStudyPage() {
                 <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
                   <SectionKicker label="System" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    A connected operational system was designed to structure
-                    workflows and align execution with financial tracking.
+                    The workflow was rebuilt so missions, expenses and invoicing moved together.
                   </p>
 
                   <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 sm:px-5">
@@ -161,12 +155,10 @@ export default function KeplerExpressCaseStudyPage() {
                 <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
                   <SectionKicker label="Insight" />
                   <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                    Operational clarity came from structuring the system, not
-                    from adding more tools.
+                    Once missions, expenses and invoices were tied together, coordination became much less reactive.
                   </p>
                   <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    Connecting workflows and financial data enabled better
-                    control, visibility and execution.
+                    The improvement came from cleaner follow-up and fewer manual reconciliations.
                   </p>
 
                   <div className="mt-6">
@@ -176,7 +168,7 @@ export default function KeplerExpressCaseStudyPage() {
                       rel="noreferrer"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      Open product
+                      Open tool
                     </a>
                   </div>
                 </div>
