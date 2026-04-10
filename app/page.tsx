@@ -9,45 +9,66 @@ import { TrackedLink } from "@/components/tracked-link";
 
 const results = [
   {
-    title: "Satisfaction client 9,2/10",
+    title: "9.2/10 Guest Satisfaction",
     description:
-      "Amélioration immédiate depuis une base à 7,6.",
+      "Improved from a 7.6 baseline.",
   },
   {
-    title: "+32% vitesse d'exécution",
+    title: "+32% Execution Speed",
     description:
-      "Les points de friction ont diminué.",
+      "Daily bottlenecks were reduced.",
   },
   {
-    title: "Visibilité opérationnelle",
+    title: "Operational Visibility",
     description:
-      "Le suivi est devenu lisible au quotidien.",
+      "Tracking became readable across the operation.",
   },
   {
-    title: "10h gagnées / semaine",
+    title: "10h Saved / Week",
     description:
-      "La charge administrative a été réduite.",
+      "Administrative work was reduced.",
   },
 ] as const;
 
 const featuredCases = [
   {
-    label: "Cas réel",
+    label: "Case Study",
     title: "Vesper Collection",
     description:
-      "Un cas terrain où l'exécution, le suivi et les données ont été réalignés.",
+      "Operational transformation across hospitality execution, coordination and reporting.",
     href: "/case-study/vesper",
     location: "home_proof_vesper",
-    ctaLabel: "Voir le cas",
+    ctaLabel: "View case study",
   },
   {
-    label: "Système",
-    title: "Ops Core — Système opérationnel",
+    label: "Case Study",
+    title: "Kepler Express",
     description:
-      "Un cadre interne pensé pour piloter l'exécution quotidienne à partir de contraintes terrain.",
-    href: "/#ops-core",
-    location: "home_proof_ops_core",
-    ctaLabel: "Voir le système",
+      "Operational system designed for logistics execution and tracking.",
+    href: "/case-study/kepler-express",
+    location: "home_proof_kepler",
+    ctaLabel: "View case study",
+  },
+] as const;
+
+const products = [
+  {
+    title: "Ops Core",
+    description:
+      "Operational system designed to structure daily execution in hospitality environments.",
+    href: "https://ops-core-v.vercel.app/",
+  },
+  {
+    title: "MyBi",
+    description:
+      "Business system designed to structure freelance operations.",
+    href: "https://mybi-business-app.vercel.app/",
+  },
+  {
+    title: "Kepler Express",
+    description:
+      "Operational system designed for logistics execution and tracking.",
+    href: "https://kepler-express.vercel.app/",
   },
 ] as const;
 
@@ -65,14 +86,14 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={40}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Vesper Collection" />
+                <SectionKicker label="Case Studies" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Une preuve terrain avant toute modélisation.
+                  Case studies from live operational environments.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Un cas terrain, un système interne, puis une preuve produit.
+                Vesper Collection and Kepler Express show how fragmented operations were turned into usable systems.
               </p>
             </div>
 
@@ -80,7 +101,7 @@ export default function HomePage() {
               {results.map((item) => (
                 <article key={item.title} className="premium-card flex h-full min-h-[15rem] flex-col bg-[#fbfaf7]">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/60">
-                    Résultats
+                    Results
                   </p>
                   <h3 className="mt-6 font-display text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-ink sm:text-[2.3rem]">
                     {item.title}
@@ -126,7 +147,7 @@ export default function HomePage() {
                 data={{ location: "home_proof_footer" }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Voir les projets
+                View all case studies
               </TrackedLink>
             </div>
           </Reveal>
@@ -134,46 +155,41 @@ export default function HomePage() {
 
         <section id="ops-core" className="border-t border-line bg-white">
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={55}>
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start lg:gap-16">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Ops Core" />
+                <SectionKicker label="Products" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Ops Core — Système opérationnel
+                  Operational products built from real workflows.
                 </h2>
-                <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  Un système conçu pour structurer l'exécution quotidienne à partir de contraintes réelles observées sur le terrain.
-                </p>
-                <p className="mt-5 text-sm leading-7 text-ink/78">
-                  Construit à partir de problématiques réelles en environnement hospitality.
-                </p>
-                <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Incident → Action → Dépense → Impact
-                </p>
-
-                <div className="mt-10">
-                  <TrackedLink
-                    href="/#mybi"
-                    event="case_study_cta_click"
-                    data={{ location: "ops_core" }}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                  >
-                    Voir le système
-                  </TrackedLink>
-                </div>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                {[
-                  "Suivi maintenance",
-                  "Coordination opérationnelle",
-                  "Flux de dépenses",
-                  "Signaux clients",
-                ].map((item) => (
-                  <article key={item} className="premium-soft-card">
-                    <p className="text-sm leading-7 text-ink/82">{item}</p>
-                  </article>
-                ))}
-              </div>
+              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                Ops Core, MyBi and Kepler Express separate product thinking from case-study proof.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+              {products.map((product) => (
+                <article key={product.title} className="premium-soft-card flex h-full flex-col">
+                  <h3 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
+                    {product.title}
+                  </h3>
+                  <p className="mt-5 max-w-xl text-base leading-8 text-muted">
+                    {product.description}
+                  </p>
+
+                  <div className="mt-auto pt-8">
+                    <a
+                      href={product.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="premium-cta-outline h-12 px-6"
+                    >
+                      Open product
+                    </a>
+                  </div>
+                </article>
+              ))}
             </div>
           </Reveal>
         </section>
@@ -182,18 +198,18 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={60}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Méthode" />
+                <SectionKicker label="Method" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Partir du terrain. Cadrer l’exécution. Rendre le suivi pilotable.
+                  Start from the operation. Structure the execution. Keep follow-up trackable.
                 </h2>
               </div>
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  Le point de départ n’est pas l’outil. Le point de départ, c’est ce qui bloque l’exécution au quotidien.
+                  The starting point is not the tool. It is what blocks execution in the day-to-day operation.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Terrain • Exécution • Coordination • Dépenses • Suivi
+                  Execution • Coordination • Expenses • Visibility • Follow-up
                 </p>
               </div>
             </div>
@@ -205,7 +221,7 @@ export default function HomePage() {
                 data={{ location: "method" }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Voir Vesper
+                View case studies
               </TrackedLink>
             </div>
           </Reveal>

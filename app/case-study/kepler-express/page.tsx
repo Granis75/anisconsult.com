@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express Ops — Case Study | AnisConsult",
+  title: "Kepler Express — Case Study | AnisConsult",
   description:
     "A logistics case study about structuring fragmented operations into a connected operational system.",
 };
@@ -58,7 +58,7 @@ export default function KeplerExpressCaseStudyPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Case Study" />
               <h1 className="mt-6 max-w-4xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.65rem]">
-                Kepler Express Ops
+                Kepler Express
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 From fragmented logistics operations to a structured
@@ -76,26 +76,11 @@ export default function KeplerExpressCaseStudyPage() {
         <section className="bg-surface">
           <div className="mx-auto max-w-6xl px-6 py-10 lg:px-10 lg:py-14">
             <div className="space-y-12 lg:space-y-16">
-              <section className="space-y-6">
-                <div className="max-w-3xl">
-                  <SectionKicker label="Results" />
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                  {resultItems.map((item) => (
-                    <article
-                      key={item.title}
-                      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-                    >
-                      <p className="text-sm font-semibold tracking-[-0.01em] text-ink">
-                        {item.title}
-                      </p>
-                      <p className="mt-3 text-sm leading-7 text-muted">
-                        {item.detail}
-                      </p>
-                    </article>
-                  ))}
-                </div>
+              <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
+                <SectionKicker label="Context" />
+                <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
+                  A logistics company relied on Excel, calls and manual coordination to manage execution, expenses and billing.
+                </p>
               </section>
 
               <div className="grid gap-6 pt-2 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-7">
@@ -118,7 +103,7 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
-                  <SectionKicker label="System Design" />
+                  <SectionKicker label="System" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
                     A connected operational system was designed to structure
                     workflows and align execution with financial tracking.
@@ -150,31 +135,31 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
               </div>
 
-              <div className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Live System
-                </p>
-                <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
-                  A live version of the system is available below. It reflects
-                  the workflow structure, cost logic and operational flow
-                  described in this case study.
-                </p>
-
-                <div className="mt-5">
-                  <a
-                    href="https://kepler-express.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
-                  >
-                    Open Live System
-                  </a>
+              <section className="space-y-6">
+                <div className="max-w-3xl">
+                  <SectionKicker label="Results" />
                 </div>
-              </div>
+
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                  {resultItems.map((item) => (
+                    <article
+                      key={item.title}
+                      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                    >
+                      <p className="text-sm font-semibold tracking-[-0.01em] text-ink">
+                        {item.title}
+                      </p>
+                      <p className="mt-3 text-sm leading-7 text-muted">
+                        {item.detail}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </section>
 
               <section className="space-y-8">
                 <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
-                  <SectionKicker label="Key Insight" />
+                  <SectionKicker label="Insight" />
                   <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                     Operational clarity came from structuring the system, not
                     from adding more tools.
@@ -183,6 +168,17 @@ export default function KeplerExpressCaseStudyPage() {
                     Connecting workflows and financial data enabled better
                     control, visibility and execution.
                   </p>
+
+                  <div className="mt-6">
+                    <a
+                      href="https://kepler-express.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
+                    >
+                      Open product
+                    </a>
+                  </div>
                 </div>
 
                 <div>

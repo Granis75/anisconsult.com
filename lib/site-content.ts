@@ -8,17 +8,17 @@ export const siteContent = {
   ],
   hero: {
     title:
-      "Je transforme des opérations dispersées en systèmes clairs et pilotables.",
-    subtitle: "Opérations • Exécution • Pilotage",
+      "I turn fragmented operations into clear, trackable systems.",
+    subtitle: "Operations • Execution • Control",
     description:
-      "Moins d’allers-retours, moins d’improvisation, moins de suivi dispersé. Plus de visibilité, plus de cohérence, plus de contrôle.",
+      "Less back-and-forth, less improvisation, less scattered follow-up. More visibility, more consistency, more control.",
     notes: [
-      "Exécution",
-      "Suivi",
-      "Contrôle",
+      "Execution",
+      "Follow-up",
+      "Control",
     ],
     primaryCta: {
-      label: "Voir le travail",
+      label: "View work",
       href: "/#case-study",
     },
     secondaryCta: {

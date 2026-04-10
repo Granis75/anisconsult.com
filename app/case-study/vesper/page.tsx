@@ -4,12 +4,11 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 const sectionLinks = [
-  { label: "Operating Environment", href: "#context" },
+  { label: "Context", href: "#context" },
   { label: "Problem", href: "#problem" },
-  { label: "System Design", href: "#implementation" },
+  { label: "System", href: "#implementation" },
   { label: "Results", href: "#results" },
-  { label: "Operational Impact", href: "#change" },
-  { label: "Key Insight", href: "#insight" },
+  { label: "Insight", href: "#insight" },
 ] as const;
 
 const problemItems = [
@@ -111,7 +110,7 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-6 lg:grid-cols-2">
               <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <SectionKicker label="Operating Environment" />
+                <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
                   A multi-unit hospitality operation with fragmented workflows and limited visibility.
                 </p>
@@ -154,7 +153,7 @@ export default function VesperCaseStudyPage() {
         <section id="implementation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <SectionKicker label="System Design" />
+              <SectionKicker label="System" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 Operations were restructured around clearer workflows, cleaner data and daily visibility.
               </p>
@@ -199,7 +198,7 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-                <SectionKicker label="Operational Impact" />
+                <SectionKicker label="Impact" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                   The system reduced friction and made daily execution more consistent.
                 </p>
@@ -222,7 +221,7 @@ export default function VesperCaseStudyPage() {
         <section id="insight" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
-              <SectionKicker label="Key Insight" />
+              <SectionKicker label="Insight" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 Control came from clearer workflows and aligned data.
               </p>
@@ -231,7 +230,7 @@ export default function VesperCaseStudyPage() {
                 and data alignment.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Pour soutenir l'exécution quotidienne, un système opérationnel interne a été modélisé à partir de ces contraintes terrain.
+                To support daily execution, an internal operational system was modeled from those field constraints.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">
@@ -255,10 +254,10 @@ export default function VesperCaseStudyPage() {
 
               <div className="mt-8">
                 <Link
-                  href="/"
+                  href="/work"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  Back to home
+                  View work
                 </Link>
               </div>
             </div>

@@ -10,22 +10,22 @@ type HeroProps = {
 
 const focusAreas = [
   {
-    title: "Exécution",
-    description: "Ce qui doit être fait, par qui, et quand.",
+    title: "Execution",
+    description: "What needs to be done, by whom, and when.",
   },
   {
-    title: "Suivi",
-    description: "Les points ouverts restent visibles sans relance permanente.",
+    title: "Follow-up",
+    description: "Open items stay visible without constant chasing.",
   },
   {
-    title: "Contrôle",
-    description: "Incidents, dépenses et signaux restent lisibles.",
+    title: "Control",
+    description: "Incidents, expenses and signals stay readable.",
   },
 ] as const;
 
-const workflowSteps = ["Client", "Mission", "Facture", "Paiement"] as const;
+const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
 
-const visibilitySignals = ["Responsable", "Statut", "Échéance", "Paiement"] as const;
+const visibilitySignals = ["Owner", "Status", "Due date", "Payment"] as const;
 
 export function Hero({ onContactClick }: HeroProps) {
   const { hero } = siteContent;
@@ -81,7 +81,7 @@ export function Hero({ onContactClick }: HeroProps) {
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
-              Incident → Action → Dépense → Impact
+              Incident → Action → Expense → Impact
             </p>
 
             <div className="mt-14 border-t border-line pt-8">
@@ -113,16 +113,16 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Vue opérationnelle
+                  Operations View
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Un bon système réduit les frictions du quotidien.
+                  A clear system reduces daily friction.
                 </h2>
               </div>
 
               <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Chaîne principale
+                  Workflow chain
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {workflowSteps.map((item, index) => (
@@ -140,7 +140,7 @@ export function Hero({ onContactClick }: HeroProps) {
 
               <div className="mt-6 border-t border-line pt-6">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Ce qui reste visible
+                  What stays visible
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {visibilitySignals.map((item) => (
@@ -155,7 +155,7 @@ export function Hero({ onContactClick }: HeroProps) {
               </div>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                Une chaîne simple. Quelques signaux utiles. Un meilleur pilotage.
+                One clear chain. A few useful signals. Better control.
               </p>
             </div>
           </div>

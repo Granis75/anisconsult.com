@@ -13,35 +13,35 @@ export const metadata: Metadata = {
 const projects = [
   {
     title: "Vesper Collection",
-    subtitle: "Cas terrain en environnement hospitality.",
+    subtitle: "Case study",
     description: [
-      "Exécution, suivi et données ont été réalignés à partir de contraintes réelles.",
+      "Operational transformation in hospitality across execution, coordination and follow-up.",
     ],
     highlights: [
-      "Moins de dépendance au front desk",
-      "Suivi quotidien plus cohérent",
-      "Meilleure visibilité opérationnelle",
-      "Charge administrative réduite",
+      "Less front-desk dependency",
+      "Clearer daily coordination",
+      "Better operational visibility",
+      "Reduced administrative work",
     ],
     href: "/case-study/vesper",
     location: "work_page_vesper",
-    ctaLabel: "Voir le cas",
+    ctaLabel: "View case study",
   },
   {
-    title: "Ops Core — Système opérationnel",
-    subtitle: "Exécution quotidienne structurée à partir de contraintes terrain.",
+    title: "Kepler Express",
+    subtitle: "Case study",
     description: [
-      "Un système interne conçu à partir de problématiques réelles observées en environnement hospitality.",
+      "Operational system designed for logistics execution and tracking.",
     ],
     highlights: [
-      "Suivi maintenance",
-      "Coordination opérationnelle",
-      "Flux de dépenses",
-      "Signaux clients",
+      "Mission tracking",
+      "Expense visibility",
+      "Billing alignment",
+      "Better coordination",
     ],
-    href: "/#ops-core",
-    location: "work_page_ops_core",
-    ctaLabel: "Voir le système",
+    href: "/case-study/kepler-express",
+    location: "work_page_kepler",
+    ctaLabel: "View case study",
   },
 ] as const;
 
@@ -56,13 +56,13 @@ export default function WorkPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Work" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Systèmes opérationnels
+                Case Studies
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Vesper en preuve terrain. Ops Core en modélisation opérationnelle.
+                Vesper Collection and Kepler Express show how fragmented operations were turned into usable systems.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Deux exemples construits à partir de contraintes réelles.
+                Two case studies built from real operational constraints.
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function WorkPage() {
                 <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
                   <div className="max-w-xl">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Référence
+                      Case Study
                     </p>
                     <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {project.title}
