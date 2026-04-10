@@ -158,9 +158,6 @@ export default function VesperCaseStudyPage() {
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 Operations were restructured around clearer workflows, cleaner data and daily visibility.
               </p>
-              <p className="mt-6 text-base leading-8 text-ink sm:text-lg">
-                To support daily execution, an internal operational system was designed based on real workflows.
-              </p>
             </div>
 
             <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -232,6 +229,9 @@ export default function VesperCaseStudyPage() {
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
                 Consistency, visibility and control came from workflow design
                 and data alignment.
+              </p>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                Pour soutenir l'exécution quotidienne, un système opérationnel interne a été modélisé à partir de ces contraintes terrain.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">

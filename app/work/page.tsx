@@ -13,35 +13,36 @@ export const metadata: Metadata = {
 const projects = [
   {
     title: "Vesper Collection",
-    subtitle: "Hospitality operations structured into one operating system.",
+    subtitle: "Cas terrain en environnement hospitality.",
     description: [
-      "Hospitality operations structured into one operating system.",
+      "Exécution, suivi et données ont été réalignés à partir de contraintes réelles.",
     ],
     highlights: [
-      "Maintenance tracking",
-      "Operational tasks",
-      "Expense flow",
-      "Guest feedback signals",
+      "Moins de dépendance au front desk",
+      "Suivi quotidien plus cohérent",
+      "Meilleure visibilité opérationnelle",
+      "Charge administrative réduite",
     ],
     href: "/case-study/vesper",
     location: "work_page_vesper",
+    ctaLabel: "Voir le cas",
   },
   {
-    title: "Ops Core — Operational System",
-    subtitle: "Daily operations structured around real hospitality workflows.",
+    title: "Ops Core — Système opérationnel",
+    subtitle: "Exécution quotidienne structurée à partir de contraintes terrain.",
     description: [
-      "A system designed to structure daily operations based on real hospitality workflows.",
+      "Un système interne conçu à partir de problématiques réelles observées en environnement hospitality.",
     ],
     highlights: [
-      "Maintenance tracking",
-      "Operational tasks",
-      "Expense flow",
-      "Guest feedback signals",
+      "Suivi maintenance",
+      "Coordination opérationnelle",
+      "Flux de dépenses",
+      "Signaux clients",
     ],
-    href: "/case-study/kepler-express",
-    location: "work_page_kepler",
+    href: "/#ops-core",
+    location: "work_page_ops_core",
+    ctaLabel: "Voir le système",
   },
-
 ] as const;
 
 export default function WorkPage() {
@@ -55,13 +56,13 @@ export default function WorkPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Work" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Operational Systems
+                Systèmes opérationnels
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Real systems built from real operational constraints.
+                Vesper en preuve terrain. Ops Core en modélisation opérationnelle.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Two systems built from real operating constraints.
+                Deux exemples construits à partir de contraintes réelles.
               </p>
             </div>
           </div>
@@ -77,7 +78,7 @@ export default function WorkPage() {
                 <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
                   <div className="max-w-xl">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Case Study
+                      Référence
                     </p>
                     <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {project.title}
@@ -104,22 +105,17 @@ export default function WorkPage() {
                         data={{ location: project.location }}
                         className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                       >
-                        View case study
+                        {project.ctaLabel}
                       </TrackedLink>
                     </div>
                   </div>
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     {project.highlights.map((item) => (
-                      <div key={item.title} className="border-t border-line pt-4">
+                      <div key={item} className="border-t border-line pt-4">
                         <p className="text-sm font-semibold leading-7 text-ink/90">
-                          {item.title}
+                          {item}
                         </p>
-                        {"detail" in item ? (
-                          <p className="mt-1 text-sm leading-7 text-muted">
-                            {item.detail}
-                          </p>
-                        ) : null}
                       </div>
                     ))}
                   </div>

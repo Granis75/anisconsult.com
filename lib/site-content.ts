@@ -7,19 +7,19 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "I turn fragmented operations into structured systems.",
-    subtitle:
-      "From manual workflows (Excel, calls, scattered tools) to clear, reliable and trackable operations.",
+    title:
+      "Je transforme des opérations dispersées en systèmes clairs et pilotables.",
+    subtitle: "Opérations • Exécution • Pilotage",
     description:
-      "I organize workflows, follow-up and reporting so work stays clear, on time and easy to manage.",
+      "Moins d’allers-retours, moins d’improvisation, moins de suivi dispersé. Plus de visibilité, plus de cohérence, plus de contrôle.",
     notes: [
-      "Workflow",
-      "Follow-up",
-      "Visibility",
+      "Exécution",
+      "Suivi",
+      "Contrôle",
     ],
     primaryCta: {
-      label: "View work",
-      href: "/work",
+      label: "Voir le travail",
+      href: "/#case-study",
     },
     secondaryCta: {
       label: "Contact",

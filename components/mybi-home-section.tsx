@@ -1,7 +1,7 @@
 import { SectionKicker } from "@/components/section-kicker";
+import { TrackedLink } from "@/components/tracked-link";
 
-const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
-const signalSteps = ["Incident", "Action", "Expense", "Impact"] as const;
+const workflowSteps = ["Client", "Mission", "Facture", "Paiement"] as const;
 
 export function MyBiHomeSection() {
   return (
@@ -9,26 +9,23 @@ export function MyBiHomeSection() {
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-center lg:gap-16">
           <div className="max-w-2xl">
-            <SectionKicker label="Operational System" />
+            <SectionKicker label="Preuve produit" />
 
             <h2 className="text-balance mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.6rem]">
-              Ops Core — Operational System
+              MyBi
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              A system designed to structure daily operations based on real hospitality workflows.
+              MyBi est un système que j'ai construit pour structurer une activité réelle.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                The goal is not to add more tools. The goal is to make operations clear, consistent and controllable.
+                Client → Mission → Facture → Paiement
               </p>
-              <ul className="mt-4 space-y-2 text-sm leading-7 text-neutral-600">
-                <li>Maintenance tracking</li>
-                <li>Operational tasks</li>
-                <li>Expense flow</li>
-                <li>Guest feedback signals</li>
-              </ul>
+              <p className="mt-2 text-sm leading-7 text-neutral-600">
+                Preuve produit construite à partir d'un usage réel.
+              </p>
             </div>
 
             <div className="mt-10">
@@ -38,8 +35,22 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="premium-cta h-12 px-6"
               >
-                Open MyBi
+                Ouvrir MyBi
               </a>
+            </div>
+
+            <div className="mt-6 border-t border-black/8 pt-4">
+              <p className="text-sm leading-7 text-neutral-600">
+                Autre système développé : Kepler Express (logistique opérationnelle).
+              </p>
+              <TrackedLink
+                href="/case-study/kepler-express"
+                event="case_study_cta_click"
+                data={{ location: "mybi_kepler" }}
+                className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+              >
+                Voir la démo
+              </TrackedLink>
             </div>
           </div>
 
@@ -47,16 +58,16 @@ export function MyBiHomeSection() {
             <div className="premium-card p-6 sm:p-8">
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Operational System
+                  Preuve produit
                 </p>
                 <h3 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Two operating chains, kept clear.
+                  Construit à partir d'une activité réelle.
                 </h3>
               </div>
 
               <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Core chain
+                  Chaîne principale
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {workflowSteps.map((item, index) => (
@@ -74,20 +85,11 @@ export function MyBiHomeSection() {
 
               <div className="mt-6 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Signal chain
+                  Valeur de preuve
                 </p>
-                <div className="mt-4 flex flex-wrap items-center gap-2.5">
-                  {signalSteps.map((item, index) => (
-                    <div key={item} className="flex items-center gap-2.5">
-                      <span className="inline-flex items-center rounded-full border border-black/8 bg-white px-3.5 py-1.5 text-sm font-medium text-ink">
-                        {item}
-                      </span>
-                      {index < signalSteps.length - 1 ? (
-                        <span className="text-sm text-black/25">→</span>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
+                <p className="mt-4 max-w-md text-sm leading-7 text-ink">
+                  Activité, facturation et paiement dans un même flux.
+                </p>
               </div>
             </div>
           </div>

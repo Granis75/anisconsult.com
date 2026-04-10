@@ -10,22 +10,22 @@ type HeroProps = {
 
 const focusAreas = [
   {
-    title: "Workflow",
-    description: "Turn manual handoffs into a readable operating flow.",
+    title: "Exécution",
+    description: "Ce qui doit être fait, par qui, et quand.",
   },
   {
-    title: "Follow-up",
-    description: "Track what is pending, late or waiting on action.",
+    title: "Suivi",
+    description: "Les points ouverts restent visibles sans relance permanente.",
   },
   {
-    title: "Visibility",
-    description: "Keep status, expenses and signals clear.",
+    title: "Contrôle",
+    description: "Incidents, dépenses et signaux restent lisibles.",
   },
 ] as const;
 
-const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
+const workflowSteps = ["Client", "Mission", "Facture", "Paiement"] as const;
 
-const visibilitySignals = ["Owner", "Status", "Due date", "Payment state"] as const;
+const visibilitySignals = ["Responsable", "Statut", "Échéance", "Paiement"] as const;
 
 export function Hero({ onContactClick }: HeroProps) {
   const { hero } = siteContent;
@@ -80,11 +80,9 @@ export function Hero({ onContactClick }: HeroProps) {
               {secondaryCta}
             </div>
 
-            <div className="mt-5 flex flex-wrap gap-4 text-sm font-medium text-ink/80">
-              <span>3 overdue issues</span>
-              <span>€1,070 pending</span>
-              <span>3 guest complaints</span>
-            </div>
+            <p className="mt-4 text-sm text-slate-500">
+              Incident → Action → Dépense → Impact
+            </p>
 
             <div className="mt-14 border-t border-line pt-8">
               <div className="grid gap-y-8 md:grid-cols-2 md:gap-x-8 xl:grid-cols-3 xl:gap-x-0">
@@ -115,16 +113,16 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Operational Signal
+                  Vue opérationnelle
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Clear operations come from a readable system.
+                  Un bon système réduit les frictions du quotidien.
                 </h2>
               </div>
 
               <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Workflow chain
+                  Chaîne principale
                 </p>
                 <div className="mt-4 flex flex-wrap items-center gap-2.5">
                   {workflowSteps.map((item, index) => (
@@ -142,7 +140,7 @@ export function Hero({ onContactClick }: HeroProps) {
 
               <div className="mt-6 border-t border-line pt-6">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  What stays visible
+                  Ce qui reste visible
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {visibilitySignals.map((item) => (
@@ -157,7 +155,7 @@ export function Hero({ onContactClick }: HeroProps) {
               </div>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                One operating chain. A few useful signals. Clear control.
+                Une chaîne simple. Quelques signaux utiles. Un meilleur pilotage.
               </p>
             </div>
           </div>
