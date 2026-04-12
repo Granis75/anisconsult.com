@@ -76,7 +76,7 @@ export default function KeplerExpressCaseStudyPage() {
               <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
                 <SectionKicker label="Context" />
                 <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
-                  Small transport operations with dispatch, driver costs and invoices handled separately.
+                  Small transport operations with dispatch, driver costs and invoices handled separately. Based on real logistics operations with manual coordination and tracking.
                 </p>
               </section>
 

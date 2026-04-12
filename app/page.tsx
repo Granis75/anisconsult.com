@@ -164,7 +164,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Each one came out of real admin and follow-up work inside operations.
+                Each one came out of real admin and follow-up work inside operations. Built from real operational workflows.
               </p>
             </div>
 
@@ -206,7 +206,7 @@ export default function HomePage() {
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  Tasks sit in one sheet, costs in another, and updates happen by call or memory. The fix is to make the flow readable enough for the team to use every day.
+                  Tasks sit in one sheet, costs in another, and updates happen by call or memory. The fix is to make the flow readable enough for the team to use every day. All systems and case studies are built from real operational environments.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
                   Tasks • Issues • Expenses • Invoices • Payments

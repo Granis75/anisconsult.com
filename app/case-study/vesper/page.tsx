@@ -112,7 +112,7 @@ export default function VesperCaseStudyPage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Multi-unit short-stay operations with guest communication, access, issues and reporting spread across too many tools.
+                  Multi-unit short-stay operations with guest communication, access, issues and reporting spread across too many tools. Based on real operational work in a multi-unit hospitality residence in Paris.
                 </p>
               </article>
 
