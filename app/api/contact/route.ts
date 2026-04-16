@@ -20,8 +20,23 @@ type ContactPayload = {
   message?: unknown;
 };
 
+type ValidatedContactPayload = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 function getStringValue(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
+}
+
+function getPayload(value: unknown): ContactPayload | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return null;
+  }
+
+  return value as ContactPayload;
 }
 
 function escapeHtml(value: string) {
@@ -71,7 +86,6 @@ function validatePayload(payload: ContactPayload) {
     return {
       ok: true as const,
       spam: true as const,
-      value: { company, name, email, subject, message },
     };
   }
 
@@ -97,17 +111,28 @@ function validatePayload(payload: ContactPayload) {
   return {
     ok: true as const,
     spam: false as const,
-    value: { company, name, email, subject, message },
+    value: { name, email, subject, message } satisfies ValidatedContactPayload,
   };
 }
 
 export async function POST(request: Request) {
-  let payload: ContactPayload;
+  let rawPayload: unknown;
 
   try {
-    payload = (await request.json()) as ContactPayload;
+    rawPayload = await request.json();
   } catch (error) {
     console.error("Contact route: invalid JSON payload", error);
+
+    return NextResponse.json(
+      { ok: false, error: "REQUEST_FAILED" },
+      { status: 400 }
+    );
+  }
+
+  const payload = getPayload(rawPayload);
+
+  if (!payload) {
+    console.error("Contact route: payload must be a JSON object");
 
     return NextResponse.json(
       { ok: false, error: "REQUEST_FAILED" },
@@ -128,12 +153,19 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
 
-  const resendApiKey = process.env.RESEND_API_KEY?.trim();
-  const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim();
-  const toEmail = process.env.CONTACT_TO_EMAIL?.trim();
+  const resendApiKey = process.env.RESEND_API_KEY?.trim() || "";
+  const fromEmail = process.env.CONTACT_FROM_EMAIL?.trim() || "";
+  const toEmail = process.env.CONTACT_TO_EMAIL?.trim() || "";
+  const missingConfig = [
+    !resendApiKey ? "RESEND_API_KEY" : null,
+    !fromEmail ? "CONTACT_FROM_EMAIL" : null,
+    !toEmail ? "CONTACT_TO_EMAIL" : null,
+  ].filter(Boolean);
 
-  if (!resendApiKey || !fromEmail || !toEmail) {
-    console.error("Contact route: missing Resend configuration");
+  if (missingConfig.length > 0) {
+    console.error("Contact route: missing Resend configuration", {
+      missing: missingConfig,
+    });
 
     return NextResponse.json(
       { ok: false, error: "RESEND_NOT_CONFIGURED" },
