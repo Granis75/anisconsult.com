@@ -7,10 +7,10 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "Operations and Workflow",
-    subtitle: "Structure • Execution • Control",
+    title: "One system for operations, follow-up, and invoicing.",
+    subtitle: "Structure • Execution • Visibility",
     description:
-      "I turn scattered tools, calls, and manual follow-up into one clear, structured workflow.",
+      "I turn scattered tasks, calls, and manual follow-up into one readable system.",
     notes: [
       "Structure",
       "Execution",

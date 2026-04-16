@@ -102,17 +102,16 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Operational Role
+          Where it matters
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          I work best when operations and invoicing are still disconnected.
+          Execution, tracking, and invoicing are not connected.
         </p>
 
         <div className="mt-8 grid gap-3">
           {[
-            "Status lives across multiple sheets.",
-            "Operations and finance are disconnected.",
-            "Follow-up depends on memory.",
+            "Invoices are not tied to the work.",
+            "Follow-up depends on manual tracking.",
           ].map((item) => (
             <div key={item} className="border-t border-black/8 pt-3.5">
               <p className="text-sm leading-7 text-ink/76">{item}</p>

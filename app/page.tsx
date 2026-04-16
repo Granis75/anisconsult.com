@@ -10,19 +10,19 @@ import { TrackedLink } from "@/components/tracked-link";
 const results = [
   {
     title: "9.2/10 Guest satisfaction",
-    description: "Reached by automating access and issue handling.",
+    description: "Automated access and issue handling.",
   },
   {
     title: "+50% revenue on a new segment",
-    description: "From clearer operations.",
+    description: "From a clearer operating flow.",
   },
   {
     title: "Total visibility",
-    description: "Status and costs in one place without follow-up.",
+    description: "Status and costs in one place.",
   },
   {
     title: "10 hours saved weekly",
-    description: "By removing manual tracking and repetitive admin.",
+    description: "Manual tracking and repetitive admin removed.",
   },
 ] as const;
 
@@ -48,12 +48,12 @@ const featuredCases = [
 const products = [
   {
     title: "Ops Core",
-    description: "Hospitality system for tasks, expenses, and guest signals.",
+    description: "Hospitality system for tasks, expenses, and guest issues.",
     href: "https://ops-core-v.vercel.app/",
   },
   {
     title: "MyBi",
-    description: "System linking client work to payment status.",
+    description: "Client work linked directly to invoicing and payment.",
     href: "https://mybi-business-app.vercel.app/",
   },
   {
@@ -79,20 +79,20 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Case Studies" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Systems built for hospitality and logistics.
+                  Operational systems for hospitality and logistics.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Started in spreadsheets, calls, and manual tracking.
+                Built from spreadsheets, calls, and manual follow-up.
               </p>
             </div>
 
             <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              {results.map((item) => (
+              {results.map((item, index) => (
                 <article key={item.title} className="premium-card flex h-full min-h-[15rem] flex-col bg-[#fbfaf7]">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/60">
-                    Results
+                    {index === 0 ? "Results" : ""}
                   </p>
                   <h3 className="mt-6 font-display text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-ink sm:text-[2.3rem]">
                     {item.title}
@@ -150,7 +150,7 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Internal Tools" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Tools built to remove operational friction.
+                  Tools built for day-to-day operations.
                 </h2>
               </div>
 
@@ -197,7 +197,7 @@ export default function HomePage() {
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I bring tasks, costs, and updates into one system used every day.
+                  I turn tasks, costs, and updates into one readable system used daily.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
                   Tasks • Issues • Expenses • Invoices • Payments

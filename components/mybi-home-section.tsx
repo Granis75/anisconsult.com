@@ -15,15 +15,15 @@ export function MyBiHomeSection() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              System linking client work to payment status.
+              Client work linked directly to invoicing and payment.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                Client work, invoices, and payments stay connected.
+                Invoices and payment stay tied to the work.
               </p>
               <p className="mt-2 text-sm leading-7 text-neutral-600">
-                Built from admin work that was spread across separate files.
+                Built from admin work spread across separate files.
               </p>
             </div>
 
@@ -60,7 +60,7 @@ export function MyBiHomeSection() {
                   Working Flow
                 </p>
                 <h3 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Client work linked to payment status.
+                  Client work linked to invoicing and payment.
                 </h3>
               </div>
 
@@ -87,7 +87,7 @@ export function MyBiHomeSection() {
                   What stays linked
                 </p>
                 <p className="mt-4 max-w-md text-sm leading-7 text-ink">
-                  Client work, invoices, and payment status stay connected.
+                  Client work, invoices, and payment stay connected.
                 </p>
               </div>
             </div>

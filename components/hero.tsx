@@ -15,11 +15,11 @@ const focusAreas = [
   },
   {
     title: "Follow-up",
-    description: "Open issues stay visible without constant check-ins.",
+    description: "Open issues stay visible without constant checking.",
   },
   {
     title: "Costs",
-    description: "Expenses and invoices stay tied to the work done.",
+    description: "Expenses and invoices stay tied to the work.",
   },
 ] as const;
 
@@ -54,7 +54,7 @@ export function Hero({ onContactClick }: HeroProps) {
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
-            <SectionKicker label="Operations / Workflow" />
+            <SectionKicker label="" />
             <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
               {hero.subtitle}
             </p>
@@ -113,10 +113,10 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Operations
+                  Visibility
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  No more relying on memory or scattered files.
+                  One clear view of the operation.
                 </h2>
               </div>
 
@@ -153,10 +153,6 @@ export function Hero({ onContactClick }: HeroProps) {
                   ))}
                 </div>
               </div>
-
-              <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                Owner, status, due date and payment stay visible.
-              </p>
             </div>
           </div>
         </div>
