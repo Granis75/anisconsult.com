@@ -197,7 +197,7 @@ export default function HomePage() {
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I turn tasks, costs, and updates into one readable system used daily.
+                  I bring tasks, costs, and updates into one clear flow.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
                   Tasks • Issues • Expenses • Invoices • Payments
