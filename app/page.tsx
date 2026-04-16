@@ -9,24 +9,20 @@ import { TrackedLink } from "@/components/tracked-link";
 
 const results = [
   {
-    title: "Guest satisfaction: 9.2/10",
-    description:
-      "Reached after follow-up, access and issue handling were cleaned up.",
+    title: "9.2/10 Guest satisfaction",
+    description: "Reached by automating access and issue handling.",
   },
   {
-    title: "+32% faster execution",
-    description:
-      "Measured after fewer handoffs and less manual checking.",
+    title: "+50% revenue on a new segment",
+    description: "From clearer operations.",
   },
   {
-    title: "Clear daily visibility",
-    description:
-      "Issues, costs and status could be checked without calling around.",
+    title: "Total visibility",
+    description: "Status and costs in one place without follow-up.",
   },
   {
-    title: "10 hours saved each week",
-    description:
-      "Came from less repetitive admin and less manual follow-up.",
+    title: "10 hours saved weekly",
+    description: "By removing manual tracking and repetitive admin.",
   },
 ] as const;
 
@@ -34,8 +30,7 @@ const featuredCases = [
   {
     label: "Hospitality",
     title: "Vesper Collection",
-    description:
-      "Guest stays, access, follow-up and reporting stopped relying on Excel and front-desk coordination.",
+    description: "Excel replaced with one structured system and centralized tracking.",
     href: "/case-study/vesper",
     location: "home_proof_vesper",
     ctaLabel: "View case study",
@@ -43,8 +38,7 @@ const featuredCases = [
   {
     label: "Logistics",
     title: "Kepler Express",
-    description:
-      "Mission updates, driver costs and invoicing were brought into one logistics workflow.",
+    description: "Mission tracking and driver billing brought into one workflow.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View case study",
@@ -54,20 +48,17 @@ const featuredCases = [
 const products = [
   {
     title: "Ops Core",
-    description:
-      "Hospitality follow-up for issues, tasks, expenses and guest signals.",
+    description: "Hospitality system for tasks, expenses, and guest signals.",
     href: "https://ops-core-v.vercel.app/",
   },
   {
     title: "MyBi",
-    description:
-      "Client work, invoices and payments kept in one operating chain.",
+    description: "System linking client work to payment status.",
     href: "https://mybi-business-app.vercel.app/",
   },
   {
     title: "Kepler Express",
-    description:
-      "Logistics follow-up for missions, expenses and billing.",
+    description: "System for mission tracking and billing.",
     href: "https://kepler-express.vercel.app/",
   },
 ] as const;
@@ -88,12 +79,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Case Studies" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Work done inside hospitality and logistics operations.
+                  Systems built for hospitality and logistics.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Two examples of day-to-day work that started in spreadsheets, calls and manual tracking.
+                Started in spreadsheets, calls, and manual tracking.
               </p>
             </div>
 
@@ -159,12 +150,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Internal Tools" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Simple tools built because the work needed them.
+                  Tools built to remove operational friction.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Each one came out of real admin and follow-up work inside operations. Built from real operational workflows.
+                Built from day-to-day operations work.
               </p>
             </div>
 
@@ -200,13 +191,13 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="How I Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  The same problems show up in most operations.
+                  Fragmented data creates overhead.
                 </h2>
               </div>
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  Tasks sit in one sheet, costs in another, and updates happen by call or memory. The fix is to make the flow readable enough for the team to use every day. All systems and case studies are built from real operational environments.
+                  I bring tasks, costs, and updates into one system used every day.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
                   Tasks • Issues • Expenses • Invoices • Payments

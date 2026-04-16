@@ -102,17 +102,17 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Open to in-house operations roles where the day-to-day work still needs cleaning up.
+          Operational Role
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          I am looking for a role where spreadsheets, calls and manual follow-up are still slowing the team down, and where that work needs to be cleaned up from the inside.
+          I work best when operations and invoicing are still disconnected.
         </p>
 
         <div className="mt-8 grid gap-3">
           {[
-            "Tasks and status still live across sheets and calls.",
-            "Operations and invoicing are handled separately.",
-            "Too much follow-up still depends on memory.",
+            "Status lives across multiple sheets.",
+            "Operations and finance are disconnected.",
+            "Follow-up depends on memory.",
           ].map((item) => (
             <div key={item} className="border-t border-black/8 pt-3.5">
               <p className="text-sm leading-7 text-ink/76">{item}</p>

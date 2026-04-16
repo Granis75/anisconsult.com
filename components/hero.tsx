@@ -11,15 +11,15 @@ type HeroProps = {
 const focusAreas = [
   {
     title: "Execution",
-    description: "The team knows what needs to be done, by whom, and when.",
+    description: "The team knows what to do, who does it, and when.",
   },
   {
     title: "Follow-up",
-    description: "Open issues stay visible without calls and constant checking.",
+    description: "Open issues stay visible without constant check-ins.",
   },
   {
     title: "Costs",
-    description: "Expenses, invoices and payment status stay tied to the work.",
+    description: "Expenses and invoices stay tied to the work done.",
   },
 ] as const;
 
@@ -113,10 +113,10 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Daily Reality
+                  Operations
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  The operation stops depending on spreadsheets, calls and memory.
+                  No more relying on memory or scattered files.
                 </h2>
               </div>
 
@@ -155,7 +155,7 @@ export function Hero({ onContactClick }: HeroProps) {
               </div>
 
               <p className="mt-6 max-w-md text-sm leading-7 text-neutral-600">
-                Owner, status, due date and payment stay readable.
+                Owner, status, due date and payment stay visible.
               </p>
             </div>
           </div>

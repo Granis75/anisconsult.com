@@ -7,15 +7,15 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title:
-      "I have managed operations where the work lived in Excel, calls and manual follow-up.",
-    subtitle: "Operations • Execution • Control",
+    title: "Operations and Workflow",
+    subtitle: "Structure • Execution • Control",
     description:
-      "I cleaned up the day-to-day flow so tasks, issues, expenses and payments were easier to follow and less dependent on memory.",
+      "I turn scattered tools, calls, and manual follow-up into one clear, structured workflow.",
     notes: [
+      "Structure",
       "Execution",
       "Follow-up",
-      "Control",
+      "Costs",
     ],
     primaryCta: {
       label: "View work",

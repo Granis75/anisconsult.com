@@ -1,6 +1,6 @@
 import { SectionKicker } from "@/components/section-kicker";
 
-const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
+const workflowSteps = ["Client work", "Invoices", "Payments"] as const;
 
 export function MyBiHomeSection() {
   return (
@@ -15,15 +15,15 @@ export function MyBiHomeSection() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              Built to keep client work, invoices and payments in one place.
+              System linking client work to payment status.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                Client → Mission → Invoice → Payment
+                Client work, invoices, and payments stay connected.
               </p>
               <p className="mt-2 text-sm leading-7 text-neutral-600">
-                It came from real admin work that was too easy to lose across separate files.
+                Built from admin work that was spread across separate files.
               </p>
             </div>
 
@@ -40,7 +40,7 @@ export function MyBiHomeSection() {
 
             <div className="mt-6 border-t border-black/8 pt-4">
               <p className="text-sm leading-7 text-neutral-600">
-                Kepler Express came from the same idea in logistics: missions, costs and billing in one place.
+                Kepler Express applies the same logic to missions, costs, and billing.
               </p>
               <a
                 href="https://kepler-express.vercel.app/"
@@ -48,7 +48,7 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Open live tool
+                Open tool
               </a>
             </div>
           </div>
@@ -60,7 +60,7 @@ export function MyBiHomeSection() {
                   Working Flow
                 </p>
                 <h3 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Client work to payment in one place.
+                  Client work linked to payment status.
                 </h3>
               </div>
 
@@ -84,10 +84,10 @@ export function MyBiHomeSection() {
 
               <div className="mt-6 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  What stays tied together
+                  What stays linked
                 </p>
                 <p className="mt-4 max-w-md text-sm leading-7 text-ink">
-                  Mission details, invoices and payment status stay connected.
+                  Client work, invoices, and payment status stay connected.
                 </p>
               </div>
             </div>
