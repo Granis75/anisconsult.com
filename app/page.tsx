@@ -50,6 +50,14 @@ const featuredCases = [
     location: "home_proof_kepler",
     ctaLabel: "View Case Study",
   },
+  {
+    label: "Retail",
+    title: "Retail Efficiency Model",
+    description: "Workflow redesign for a 520k€ convenience retail operation.",
+    href: "/work/retail-efficiency-model",
+    location: "home_proof_retail_efficiency_model",
+    ctaLabel: "View Case Study",
+  },
 ] as const;
 
 const products = [
@@ -84,14 +92,14 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={40}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Case Studies" />
+                <SectionKicker label="Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Systems built from real operational environments.
+                  Case Studies
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Hospitality, logistics and service workflows.
+                Operational systems built from real business environments. Hospitality, logistics and retail workflows.
               </p>
             </div>
 
@@ -111,7 +119,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {featuredCases.map((item) => (
                 <article key={item.title} className="premium-soft-card flex h-full flex-col">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
