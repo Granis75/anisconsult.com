@@ -7,7 +7,7 @@ import { TrackedLink } from "@/components/tracked-link";
 export const metadata: Metadata = {
   title: "Work | Anis",
   description:
-    "Case studies from hospitality and logistics operations, based on real execution, follow-up, expenses and invoicing.",
+    "Case studies across hospitality, logistics and urban retail operations, focused on workflow, visibility and systems design.",
 };
 
 const projects = [
@@ -25,7 +25,7 @@ const projects = [
     ],
     href: "/case-study/vesper",
     location: "work_page_vesper",
-    ctaLabel: "View case study",
+    ctaLabel: "View Case Study",
   },
   {
     title: "Kepler Express",
@@ -41,7 +41,23 @@ const projects = [
     ],
     href: "/case-study/kepler-express",
     location: "work_page_kepler",
-    ctaLabel: "View case study",
+    ctaLabel: "View Case Study",
+  },
+  {
+    title: "Retail Efficiency Model",
+    subtitle: "Modeled case study",
+    description: [
+      "Workflow redesign for a 520k€ convenience retail operation.",
+    ],
+    highlights: [
+      "Hybrid checkout and labor flow redesign",
+      "Revenue, staffing and waste made visible",
+      "Store routines rebuilt around clear ownership",
+      "Owner dependency reduced through systems design",
+    ],
+    href: "/work/retail-efficiency-model",
+    location: "work_page_retail_efficiency_model",
+    ctaLabel: "View Case Study",
   },
 ] as const;
 
@@ -59,10 +75,10 @@ export default function WorkPage() {
                 Case Studies
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Two operating environments I worked in directly: hospitality and logistics.
+                Direct operational work in hospitality and logistics, plus one modeled urban retail redesign.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Both started with scattered files, calls and day-to-day follow-up that was too manual.
+                Each study shows how clearer systems reduce manual overhead, improve visibility and make execution easier to run.
               </p>
             </div>
           </div>
