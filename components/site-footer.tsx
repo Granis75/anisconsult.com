@@ -5,7 +5,7 @@ export function SiteFooter() {
         <div className="font-display font-semibold tracking-[-0.03em] text-ink">
           Anis
         </div>
-        <div>Operations · Workflow · Internal Tools</div>
+        <div>Operations · Workflow · Internal Systems</div>
       </div>
     </footer>
   );

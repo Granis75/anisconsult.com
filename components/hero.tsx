@@ -11,7 +11,7 @@ type HeroProps = {
 const focusAreas = [
   {
     title: "Execution",
-    description: "The team knows what to do, who does it, and when.",
+    description: "The team knows what to do, who owns it, and when.",
   },
   {
     title: "Follow-up",
@@ -19,7 +19,7 @@ const focusAreas = [
   },
   {
     title: "Costs",
-    description: "Expenses and invoices stay tied to the work.",
+    description: "Expenses and invoices stay linked to the work.",
   },
 ] as const;
 
@@ -116,7 +116,7 @@ export function Hero({ onContactClick }: HeroProps) {
                   Visibility
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  One clear view of the operation.
+                  One clear view of daily operations.
                 </h2>
               </div>
 
@@ -140,7 +140,7 @@ export function Hero({ onContactClick }: HeroProps) {
 
               <div className="mt-6 border-t border-line pt-6">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  What stays visible
+                  Supporting line
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {visibilitySignals.map((item) => (

@@ -7,10 +7,10 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "One system for operations, follow-up, and invoicing.",
+    title: "I help businesses turn scattered operations into clear, trackable systems.",
     subtitle: "Structure • Execution • Visibility",
     description:
-      "I turn scattered tasks, calls, and manual follow-up into one readable system.",
+      "Workflows, follow-up, invoicing and execution aligned in one readable flow.",
     notes: [
       "Structure",
       "Execution",
@@ -18,7 +18,7 @@ export const siteContent = {
       "Costs",
     ],
     primaryCta: {
-      label: "View work",
+      label: "View Work",
       href: "/#case-study",
     },
     secondaryCta: {

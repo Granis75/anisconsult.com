@@ -102,16 +102,16 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Where it matters
+          Let&apos;s make operations readable.
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          Execution, tracking, and invoicing are not connected.
+          When execution, follow-up and invoicing live in separate places, visibility slips.
         </p>
 
         <div className="mt-8 grid gap-3">
           {[
-            "Invoices are not tied to the work.",
-            "Follow-up depends on manual tracking.",
+            "Open work lacks clear ownership.",
+            "Costs and invoices drift away from the work.",
           ].map((item) => (
             <div key={item} className="border-t border-black/8 pt-3.5">
               <p className="text-sm leading-7 text-ink/76">{item}</p>

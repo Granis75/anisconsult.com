@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ContactSection } from "@/components/contact-section";
 import { Hero } from "@/components/hero";
 import { MyBiHomeSection } from "@/components/mybi-home-section";
@@ -7,6 +8,12 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
+export const metadata: Metadata = {
+  title: "Operations Consultant Paris | Workflow Systems & Business Systems | Anis",
+  description:
+    "Operations consultant in Paris helping businesses improve workflow systems, business systems and process visibility across execution, invoicing and follow-up.",
+};
+
 const results = [
   {
     title: "9.2/10 Guest satisfaction",
@@ -14,15 +21,15 @@ const results = [
   },
   {
     title: "+50% revenue on a new segment",
-    description: "From a clearer operating flow.",
+    description: "Driven by a clearer operating flow.",
   },
   {
     title: "Total visibility",
-    description: "Status and costs in one place.",
+    description: "Status, ownership and costs in one place.",
   },
   {
     title: "10 hours saved weekly",
-    description: "Manual tracking and repetitive admin removed.",
+    description: "Manual tracking and repetitive admin reduced.",
   },
 ] as const;
 
@@ -30,35 +37,35 @@ const featuredCases = [
   {
     label: "Hospitality",
     title: "Vesper Collection",
-    description: "Excel replaced with one structured system and centralized tracking.",
+    description: "Excel replaced with one structured workflow and centralized follow-up.",
     href: "/case-study/vesper",
     location: "home_proof_vesper",
-    ctaLabel: "View case study",
+    ctaLabel: "View Case Study",
   },
   {
     label: "Logistics",
     title: "Kepler Express",
-    description: "Mission tracking and driver billing brought into one workflow.",
+    description: "Mission tracking, expenses and billing connected in one clear system.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
-    ctaLabel: "View case study",
+    ctaLabel: "View Case Study",
   },
 ] as const;
 
 const products = [
   {
     title: "Ops Core",
-    description: "Hospitality system for tasks, expenses, and guest issues.",
+    description: "Tasks, incidents, expenses and execution visibility for hospitality environments.",
     href: "https://ops-core-v.vercel.app/",
   },
   {
     title: "MyBi",
-    description: "Client work linked directly to invoicing and payment.",
+    description: "Client work connected directly to invoicing and payment.",
     href: "https://mybi-business-app.vercel.app/",
   },
   {
     title: "Kepler Express",
-    description: "System for mission tracking and billing.",
+    description: "Mission workflow, cost tracking and billing system.",
     href: "https://kepler-express.vercel.app/",
   },
 ] as const;
@@ -79,12 +86,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Case Studies" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Operational systems for hospitality and logistics.
+                  Systems built from real operational environments.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built from spreadsheets, calls, and manual follow-up.
+                Hospitality, logistics and service workflows.
               </p>
             </div>
 
@@ -150,12 +157,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Internal Tools" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Tools built for day-to-day operations.
+                  Tools built from day-to-day operational realities.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built from day-to-day operations work.
+                Built for hospitality, client work and mission workflows.
               </p>
             </div>
 
@@ -191,13 +198,13 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="How I Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Fragmented data creates overhead.
+                  Fragmented data creates friction.
                 </h2>
               </div>
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I bring tasks, costs, and updates into one clear flow.
+                  I bring tasks, costs and updates into one clear operational flow.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
                   Tasks • Issues • Expenses • Invoices • Payments

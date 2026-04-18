@@ -15,15 +15,15 @@ export function MyBiHomeSection() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              Client work linked directly to invoicing and payment.
+              Client work connected directly to invoicing and payment.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                Invoices and payment stay tied to the work.
+                Work, invoices and payment stay aligned in one readable flow.
               </p>
               <p className="mt-2 text-sm leading-7 text-neutral-600">
-                Built from admin work spread across separate files.
+                Built for service workflows where follow-up and billing need to stay connected.
               </p>
             </div>
 
@@ -40,7 +40,7 @@ export function MyBiHomeSection() {
 
             <div className="mt-6 border-t border-black/8 pt-4">
               <p className="text-sm leading-7 text-neutral-600">
-                Kepler Express applies the same logic to missions, costs, and billing.
+                Kepler Express applies the same logic to mission workflow, cost tracking and billing.
               </p>
               <a
                 href="https://kepler-express.vercel.app/"
@@ -48,7 +48,7 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Open tool
+                Open Kepler Express
               </a>
             </div>
           </div>
@@ -57,10 +57,10 @@ export function MyBiHomeSection() {
             <div className="premium-card p-6 sm:p-8">
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Working Flow
+                  Linked Flow
                 </p>
                 <h3 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Client work linked to invoicing and payment.
+                  Work, invoices and payment aligned.
                 </h3>
               </div>
 
@@ -87,7 +87,7 @@ export function MyBiHomeSection() {
                   What stays linked
                 </p>
                 <p className="mt-4 max-w-md text-sm leading-7 text-ink">
-                  Client work, invoices, and payment stay connected.
+                  Client work, invoice status and payment stay connected.
                 </p>
               </div>
             </div>
