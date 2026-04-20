@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Retail Efficiency Model | Retail Operations Proof Study | Anis",
+  title: "Retail Operations Proof | Conceptual Business Case Study | Anis",
   description:
-    "Retail operations proof study showing how staffing, waste visibility and reporting structure can improve execution in an urban convenience format.",
+    "Conceptual retail operations business case study showing how staffing, waste visibility and reporting structure can improve execution in an urban convenience format.",
 };
 
 const sectionLinks = [
@@ -102,7 +102,7 @@ export default function RetailEfficiencyModelPage() {
           <div className="mx-auto max-w-7xl px-6 pb-16 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-start lg:gap-16">
               <div className="max-w-4xl">
-                <SectionKicker label="Retail Efficiency Model" />
+                <SectionKicker label="Retail Operations Proof" />
                 <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
                   Urban Retail • Workflow Design • Operational Efficiency
                 </p>
@@ -111,9 +111,9 @@ export default function RetailEfficiencyModelPage() {
                   Profitable Operation
                 </h1>
                 <p className="mt-7 max-w-3xl text-lg leading-8 text-muted sm:text-[1.2rem] sm:leading-9">
-                  A modeled case study showing how workflow redesign, automation
-                  and operational visibility can transform a founder-dependent
-                  retail business.
+                  A conceptual business case study showing how workflow redesign,
+                  automation and operational visibility can transform a
+                  founder-dependent retail business.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -123,6 +123,22 @@ export default function RetailEfficiencyModelPage() {
                   <Link href="/work" className="premium-cta-outline h-12 px-6">
                     View Work
                   </Link>
+                </div>
+
+                <div className="mt-8 max-w-2xl border-t border-line pt-6">
+                  <p className="text-sm leading-7 text-ink/78">
+                    Supported by StorePilot operational dashboard
+                  </p>
+                  <div className="mt-4">
+                    <a
+                      href="https://storepilot-delta.vercel.app/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="premium-cta-outline h-12 px-6"
+                    >
+                      View StorePilot Demo
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -150,7 +166,7 @@ export default function RetailEfficiencyModelPage() {
                         Format
                       </p>
                       <p className="mt-2 text-sm leading-7 text-ink">
-                        Modeled case study
+                        Conceptual business case study
                       </p>
                     </div>
                     <div className="border-t border-black/8 pt-4">

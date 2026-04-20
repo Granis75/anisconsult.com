@@ -54,31 +54,43 @@ const featuredCases = [
   },
   {
     label: "Retail Proof",
-    title: "StorePilot",
+    title: "Retail Operations Proof",
     description:
-      "Operational dashboard built to solve common multi-site retail execution problems.",
-    href: "https://storepilot-delta.vercel.app/",
-    location: "home_proof_storepilot",
-    ctaLabel: "View Demo",
-    external: true,
+      "Conceptual business case study for a clearer, more profitable convenience retail operation.",
+    href: "/work/retail-efficiency-model",
+    location: "home_proof_retail_operations_proof",
+    ctaLabel: "View Case Study",
+    supportNote: "Supported by StorePilot operational dashboard",
+    supportHref: "https://storepilot-delta.vercel.app/",
+    supportCtaLabel: "View StorePilot Demo",
   },
 ] as const;
 
 const products = [
   {
+    title: "StorePilot",
+    description:
+      "Retail operations dashboard supporting KPI visibility, incidents, checklist execution and daily store control.",
+    href: "https://storepilot-delta.vercel.app/",
+    ctaLabel: "View Demo",
+  },
+  {
     title: "Ops Core",
     description: "Tasks, incidents, expenses and execution visibility for hospitality environments.",
     href: "https://ops-core-v.vercel.app/",
+    ctaLabel: "Open tool",
   },
   {
     title: "MyBi",
     description: "Client work connected directly to invoicing and payment.",
     href: "https://mybi-business-app.vercel.app/",
+    ctaLabel: "Open tool",
   },
   {
     title: "Kepler Express",
     description: "Mission workflow, cost tracking and billing aligned.",
     href: "https://kepler-express.vercel.app/",
+    ctaLabel: "Open tool",
   },
 ] as const;
 
@@ -103,7 +115,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Real operational work across hospitality and logistics, plus a retail operations proof project.
+                Real operational work across hospitality and logistics, plus a retail operations proof case study.
               </p>
             </div>
 
@@ -136,26 +148,32 @@ export default function HomePage() {
                     {item.description}
                   </p>
 
-                  <div className="mt-auto pt-8">
-                    {"external" in item && item.external ? (
+                  {"supportNote" in item ? (
+                    <div className="mt-6 border-t border-line pt-5">
+                      <p className="text-sm leading-7 text-ink/78">{item.supportNote}</p>
+                    </div>
+                  ) : null}
+
+                  <div className="mt-auto flex flex-col gap-3 pt-8">
+                    <TrackedLink
+                      href={item.href}
+                      event="case_study_cta_click"
+                      data={{ location: item.location }}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                    >
+                      {item.ctaLabel}
+                    </TrackedLink>
+
+                    {"supportHref" in item ? (
                       <a
-                        href={item.href}
+                        href={item.supportHref}
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                       >
-                        {item.ctaLabel}
+                        {item.supportCtaLabel}
                       </a>
-                    ) : (
-                      <TrackedLink
-                        href={item.href}
-                        event="case_study_cta_click"
-                        data={{ location: item.location }}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                      >
-                        {item.ctaLabel}
-                      </TrackedLink>
-                    )}
+                    ) : null}
                   </div>
                 </article>
               ))}
@@ -185,11 +203,11 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built for hospitality, service operations and mission workflows.
+                Built for retail operations, hospitality, service workflows and mission follow-up.
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {products.map((product) => (
                 <article key={product.title} className="premium-soft-card flex h-full flex-col">
                   <h3 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
@@ -206,7 +224,7 @@ export default function HomePage() {
                       rel="noreferrer"
                       className="premium-cta-outline h-12 px-6"
                     >
-                      Open tool
+                      {product.ctaLabel}
                     </a>
                   </div>
                 </article>

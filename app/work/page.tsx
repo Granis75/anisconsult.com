@@ -46,23 +46,24 @@ const projects = [
     ctaLabel: "View Case Study",
   },
   {
-    kicker: "Proof Project",
-    title: "StorePilot",
-    subtitle: "Retail Operations Proof Project",
+    kicker: "Case Study",
+    title: "Retail Operations Proof",
+    subtitle: "Conceptual Business Case Study",
     description: [
-      "Operational dashboard built to solve common multi-site retail execution problems.",
+      "Conceptual business case study for a clearer, more profitable convenience retail operation.",
     ],
     highlights: [
-      "KPI visibility",
-      "Incident escalation",
-      "Checklist execution",
-      "Waste / staffing visibility",
-      "Cleaner reporting",
+      "Hybrid checkout and labor flow redesign",
+      "Revenue, staffing and waste made visible",
+      "Store routines rebuilt around clear ownership",
+      "Founder dependency reduced through clearer operating structure",
     ],
-    href: "https://storepilot-delta.vercel.app/",
-    location: "work_page_storepilot",
-    ctaLabel: "View Demo",
-    external: true,
+    href: "/work/retail-efficiency-model",
+    location: "work_page_retail_operations_proof",
+    ctaLabel: "View Case Study",
+    supportNote: "Supported by StorePilot operational dashboard",
+    supportHref: "https://storepilot-delta.vercel.app/",
+    supportCtaLabel: "View StorePilot Demo",
   },
 ] as const;
 
@@ -85,7 +86,7 @@ export default function WorkPage() {
                 Built under real constraints, measured by real outcomes.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                StorePilot extends that proof into retail operations through a dashboard built around real execution questions.
+                The retail proof case study is supported by StorePilot, an operational dashboard built around real execution questions.
               </p>
             </div>
           </div>
@@ -121,26 +122,32 @@ export default function WorkPage() {
                       ))}
                     </div>
 
-                    <div className="mt-8">
-                      {"external" in project && project.external ? (
+                    {"supportNote" in project ? (
+                      <div className="mt-6 border-t border-line pt-5">
+                        <p className="text-sm leading-7 text-ink/78">{project.supportNote}</p>
+                      </div>
+                    ) : null}
+
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                      <TrackedLink
+                        href={project.href}
+                        event="case_study_cta_click"
+                        data={{ location: project.location }}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                      >
+                        {project.ctaLabel}
+                      </TrackedLink>
+
+                      {"supportHref" in project ? (
                         <a
-                          href={project.href}
+                          href={project.supportHref}
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
                         >
-                          {project.ctaLabel}
+                          {project.supportCtaLabel}
                         </a>
-                      ) : (
-                        <TrackedLink
-                          href={project.href}
-                          event="case_study_cta_click"
-                          data={{ location: project.location }}
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                        >
-                          {project.ctaLabel}
-                        </TrackedLink>
-                      )}
+                      ) : null}
                     </div>
                   </div>
 
