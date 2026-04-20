@@ -57,7 +57,7 @@ const featuredCases = [
     title: "Retail Operations Proof",
     description:
       "Conceptual business case study for a clearer, more profitable convenience retail operation.",
-    href: "/work/retail-efficiency-model",
+    href: "/work/northline-convenience",
     location: "home_proof_retail_operations_proof",
     ctaLabel: "View Case Study",
     supportNote: "Supported by StorePilot operational dashboard",
