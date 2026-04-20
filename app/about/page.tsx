@@ -7,29 +7,29 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "About | Operations & Internal Tools Coordinator | Anis",
   description:
-    "Hands-on operations experience across hospitality, logistics and retail proof work, with an operator's approach to coordination, reporting and internal tools.",
+    "Hands-on operational work across hospitality and logistics, with retail proof and internal tools shaped by execution.",
 };
 
 const focusItems = [
   {
-    title: "Operations coordination",
-    detail: "Day-to-day follow-up, ownership and execution kept clear.",
+    title: "Execution",
+    detail: "Ownership, handoffs and follow-up stay clear.",
   },
   {
     title: "Internal tools",
-    detail: "Dashboards and workflows shaped around what teams actually need to run.",
+    detail: "Built to support the work, not sit beside it.",
   },
   {
-    title: "Reporting structure",
-    detail: "Visibility built around incidents, checklists, costs and outcomes.",
+    title: "Reporting",
+    detail: "Status, incidents and money stay readable.",
   },
 ] as const;
 
 const backgroundItems = [
-  "Hospitality operations",
-  "Logistics coordination",
-  "Retail execution proof work",
-  "Workflow and reporting structure",
+  "Hospitality",
+  "Logistics",
+  "Retail proof work",
+  "Workflow control",
 ] as const;
 
 export default function AboutPage() {
@@ -46,16 +46,16 @@ export default function AboutPage() {
                 Operations & Internal Tools Coordinator
               </p>
               <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                I work where coordination, structure and internal tools meet.
+                I work inside the operation.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Hands-on operational work first. Tooling shaped around the workflow after that.
+                Execution first. Structure second. Tools where they matter.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                My background is in hands-on operations across hospitality and logistics, with proof work in retail execution.
+                My work starts in the day-to-day: follow-up, handoffs, reporting, incidents and admin.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                I approach tooling from the workflow side, not as a developer, but as an operator who knows what the workflow needs.
+                I approach tooling from inside the workflow, not as a developer, but as an operator who knows what the workflow needs.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -77,10 +77,10 @@ export default function AboutPage() {
                 <SectionKicker label="How I Work" />
                 <div className="mt-6 grid gap-5">
                   <p className="text-base leading-8 text-ink sm:text-lg">
-                    I focus on keeping operations cleaner, clearer and easier to follow day to day.
+                    I focus on ownership, control and clean follow-through.
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
-                    That usually means better coordination, lighter admin, more readable reporting and tools that support the work instead of getting in its way.
+                    That usually means tighter coordination, lighter admin and reporting people can trust.
                   </p>
                 </div>
               </article>

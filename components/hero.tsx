@@ -10,16 +10,16 @@ type HeroProps = {
 
 const focusAreas = [
   {
-    title: "Execution",
-    description: "The team knows what to do, who owns it, and when.",
+    title: "Ownership",
+    description: "The work stays assigned, visible and moving.",
   },
   {
-    title: "Follow-up",
-    description: "Open issues stay visible without constant checking.",
+    title: "Follow-through",
+    description: "Open items stay visible until they close.",
   },
   {
     title: "Costs",
-    description: "Expenses and invoices stay linked to the work.",
+    description: "Costs and billing stay tied to execution.",
   },
 ] as const;
 
@@ -81,7 +81,7 @@ export function Hero({ onContactClick }: HeroProps) {
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
-              Incident → Action → Expense → Impact
+              Owner → Action → Cost → Outcome
             </p>
 
             <div className="mt-14 border-t border-line pt-8">
@@ -116,7 +116,7 @@ export function Hero({ onContactClick }: HeroProps) {
                   Visibility
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  One clear view of daily operations.
+                  One working view of daily operations.
                 </h2>
               </div>
 

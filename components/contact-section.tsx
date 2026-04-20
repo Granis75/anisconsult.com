@@ -102,16 +102,16 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Let&apos;s make operations run cleaner.
+          Need tighter operational control?
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          When execution, follow-up and reporting live in separate places, clarity slips.
+          I work on ownership, follow-up, reporting and the tools behind them.
         </p>
 
         <div className="mt-8 grid gap-3">
           {[
-            "Open work lacks clear ownership.",
-            "Admin and reporting drift away from day-to-day execution.",
+            "Ownership is blurred.",
+            "Admin, incidents and reporting sit in different places.",
           ].map((item) => (
             <div key={item} className="border-t border-black/8 pt-3.5">
               <p className="text-sm leading-7 text-ink/76">{item}</p>
@@ -169,7 +169,7 @@ export function ContactSection() {
 
           <div className="pt-2">
             <button type="submit" disabled={isLoading} className="premium-cta w-full sm:w-auto">
-              {isLoading ? "Sending..." : "Send message"}
+              {isLoading ? "Sending..." : "Start conversation"}
             </button>
           </div>
         </form>

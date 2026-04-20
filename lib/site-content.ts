@@ -7,16 +7,15 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title:
-      "I help operations run cleaner — through coordination, structure and the right tools.",
-    subtitle: "Operations & Internal Tools Coordinator",
+    title: "I make operations easier to run, measure and trust.",
+    subtitle: "Real operations • Internal tools • Execution",
     description:
-      "Operations coordination, internal tools and reporting structure shaped by real work on the ground.",
+      "Hands-on work across hospitality, logistics and retail. Structure, reporting and follow-through built into the day-to-day.",
     notes: [
-      "Coordination",
-      "Structure",
-      "Follow-up",
-      "Visibility",
+      "Ownership",
+      "Execution",
+      "Reporting",
+      "Control",
     ],
     primaryCta: {
       label: "View Work",

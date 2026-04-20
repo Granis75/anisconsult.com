@@ -15,15 +15,15 @@ export function MyBiHomeSection() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              Client work connected directly to invoicing and payment.
+              Client work, invoicing and payments kept in one operating line.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                Work, invoices and payment stay aligned in one readable flow.
+                Work, invoices and payment stay aligned.
               </p>
               <p className="mt-2 text-sm leading-7 text-neutral-600">
-                Built for service workflows where follow-up and billing need to stay connected.
+                Built for service workflows where follow-up and billing need to move together.
               </p>
             </div>
 
@@ -40,7 +40,7 @@ export function MyBiHomeSection() {
 
             <div className="mt-6 border-t border-black/8 pt-4">
               <p className="text-sm leading-7 text-neutral-600">
-                Kepler Express applies the same logic to mission workflow, cost tracking and billing.
+                Kepler Express applies the same logic to mission follow-up, cost capture and billing.
               </p>
               <a
                 href="https://kepler-express.vercel.app/"

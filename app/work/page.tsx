@@ -7,7 +7,7 @@ import { TrackedLink } from "@/components/tracked-link";
 export const metadata: Metadata = {
   title: "Work | Operations & Internal Tools | Anis",
   description:
-    "Case studies and proof projects across hospitality, logistics and retail operations, focused on coordination, reporting and internal tools.",
+    "Real operational work across hospitality and logistics, plus retail proof shaped by execution, reporting and internal tools.",
 };
 
 const projects = [
@@ -16,13 +16,13 @@ const projects = [
     title: "Résidence Cadet",
     subtitle: "Hospitality Operations",
     description: [
-      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
+      "Guest operations, access and reporting brought into one working structure.",
     ],
     highlights: [
-      "Improved guest satisfaction",
-      "Stronger platform visibility",
-      "New revenue segment growth",
-      "~10h/week admin workload reduced",
+      "Guest satisfaction improved",
+      "Platform visibility strengthened",
+      "New revenue line opened",
+      "~10h/week admin reduced",
     ],
     href: "/case-study/vesper",
     location: "work_page_residence_cadet",
@@ -33,13 +33,13 @@ const projects = [
     title: "Kepler Express",
     subtitle: "Logistics Operations",
     description: [
-      "Mission follow-up, driver costs and invoicing were connected inside one clearer logistics workflow.",
+      "Mission follow-up, cost capture and invoicing tied to the same workflow.",
     ],
     highlights: [
-      "Mission updates and cost tracking linked",
-      "Billing connected to executed work",
-      "Less manual follow-up across calls and files",
-      "Better coordination between dispatch and billing",
+      "Mission and cost capture aligned",
+      "Billing matched to executed work",
+      "Less manual follow-up",
+      "Better dispatch-billing coordination",
     ],
     href: "/case-study/kepler-express",
     location: "work_page_kepler",
@@ -48,15 +48,15 @@ const projects = [
   {
     kicker: "Case Study",
     title: "Retail Operations Proof",
-    subtitle: "Conceptual Business Case Study",
+    subtitle: "Retail Proof Case Study",
     description: [
-      "Conceptual business case study for a clearer, more profitable convenience retail operation.",
+      "Business case for tighter store execution, better visibility and less owner dependency.",
     ],
     highlights: [
       "Hybrid checkout and labor flow redesign",
       "Revenue, staffing and waste made visible",
       "Store routines rebuilt around clear ownership",
-      "Founder dependency reduced through clearer operating structure",
+      "Owner dependency reduced through stronger operating structure",
     ],
     href: "/work/retail-efficiency-model",
     location: "work_page_retail_operations_proof",
@@ -81,12 +81,12 @@ export default function WorkPage() {
                 Work
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Real operational work across hospitality and logistics.
+                Operational work in hospitality and logistics.
                 <br className="hidden sm:block" />
-                Built under real constraints, measured by real outcomes.
+                Retail proof built from the same execution logic.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The retail proof case study is supported by StorePilot, an operational dashboard built around real execution questions.
+                Each case shows where control improved: follow-up, visibility, admin load and execution.
               </p>
             </div>
           </div>

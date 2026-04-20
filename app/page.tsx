@@ -11,25 +11,25 @@ import { TrackedLink } from "@/components/tracked-link";
 export const metadata: Metadata = {
   title: "Operations & Internal Tools Coordinator | Anis",
   description:
-    "Operations coordination, workflow structure and internal tools shaped by real work across hospitality, logistics and retail environments.",
+    "Real operational work, internal tools and execution proof across hospitality, logistics and retail environments.",
 };
 
 const results = [
   {
     title: "Improved guest satisfaction",
-    description: "Guest follow-up, access and issue handling became easier to run consistently.",
+    description: "Guest follow-up, access and issue handling tightened.",
   },
   {
     title: "Stronger platform visibility",
-    description: "Listing quality and operational consistency became easier to maintain.",
+    description: "Listing quality became easier to maintain.",
   },
   {
     title: "New revenue segment growth",
-    description: "A clearer operating flow supported expansion into a new segment.",
+    description: "A stronger operating model opened a new revenue line.",
   },
   {
     title: "~10h/week admin reduced",
-    description: "Routine follow-up and repetitive admin took less manual time.",
+    description: "Routine admin dropped by roughly ten hours a week.",
   },
 ] as const;
 
@@ -38,7 +38,7 @@ const featuredCases = [
     label: "Hospitality",
     title: "Résidence Cadet",
     description:
-      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
+      "Guest operations, access and reporting brought into one working structure.",
     href: "/case-study/vesper",
     location: "home_proof_residence_cadet",
     ctaLabel: "View Case Study",
@@ -47,7 +47,7 @@ const featuredCases = [
     label: "Logistics",
     title: "Kepler Express",
     description:
-      "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
+      "Mission follow-up, cost capture and billing tied to the same workflow.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View Case Study",
@@ -56,7 +56,7 @@ const featuredCases = [
     label: "Retail Proof",
     title: "Retail Operations Proof",
     description:
-      "Conceptual business case study for a clearer, more profitable convenience retail operation.",
+      "Business case for tighter store execution, better visibility and less owner dependency.",
     href: "/work/retail-efficiency-model",
     location: "home_proof_retail_operations_proof",
     ctaLabel: "View Case Study",
@@ -70,25 +70,25 @@ const products = [
   {
     title: "StorePilot",
     description:
-      "Retail operations dashboard supporting KPI visibility, incidents, checklist execution and daily store control.",
+      "Retail operations dashboard for KPI visibility, incidents, checklist execution and daily store control.",
     href: "https://storepilot-delta.vercel.app/",
     ctaLabel: "View Demo",
   },
   {
     title: "Ops Core",
-    description: "Tasks, incidents, expenses and execution visibility for hospitality environments.",
+    description: "Hospitality operations dashboard for tasks, incidents, expenses and daily control.",
     href: "https://ops-core-v.vercel.app/",
     ctaLabel: "Open tool",
   },
   {
     title: "MyBi",
-    description: "Client work connected directly to invoicing and payment.",
+    description: "Client work, invoices and payments kept in the same operating line.",
     href: "https://mybi-business-app.vercel.app/",
     ctaLabel: "Open tool",
   },
   {
     title: "Kepler Express",
-    description: "Mission workflow, cost tracking and billing aligned.",
+    description: "Mission follow-up, trip costs and billing kept aligned.",
     href: "https://kepler-express.vercel.app/",
     ctaLabel: "Open tool",
   },
@@ -115,7 +115,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Real operational work across hospitality and logistics, plus a retail operations proof case study.
+                Operational work in hospitality and logistics. Retail proof built from the same execution logic.
               </p>
             </div>
 
@@ -203,7 +203,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built for retail operations, hospitality, service workflows and mission follow-up.
+                Built from live operational needs. Used to keep control close to the work.
               </p>
             </div>
 
@@ -239,16 +239,16 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="How I Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Fragmented data creates friction.
+                  Operations slip when ownership is blurred.
                 </h2>
               </div>
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I bring coordination, reporting and follow-up into one clearer operational flow.
+                  I bring follow-up, reporting and control back into the work.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Coordination • Incidents • Reporting • Checklists • Payments
+                  Ownership • Incidents • Reporting • Checklists • Payments
                 </p>
               </div>
             </div>
