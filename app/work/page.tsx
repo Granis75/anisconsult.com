@@ -71,29 +71,29 @@ export default function WorkPage() {
                 className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10"
               >
                 <div className="flex flex-col gap-6">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                     {project.category}
-                    </p>
+                  </p>
                   <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
-                      {project.title}
-                    </h2>
+                    {project.title}
+                  </h2>
                   <p className="text-base leading-8 text-muted sm:text-lg">
                     {project.description}
-                    </p>
+                  </p>
                   <p className="text-sm text-muted/70">
                     {project.support}
                   </p>
                   <div>
                     <TrackedLink
                       href={project.href}
-                        event="case_study_cta_click"
-                        data={{ location: project.location }}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                      >
-                        {project.ctaLabel}
-                      </TrackedLink>
-                    </div>
+                      event="case_study_cta_click"
+                      data={{ location: project.location }}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                    >
+                      {project.ctaLabel}
+                    </TrackedLink>
                   </div>
+                </div>
               </article>
             ))}
           </div>
