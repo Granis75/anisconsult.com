@@ -12,53 +12,29 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    kicker: "Case Study",
+    category: "Hospitality Operations",
     title: "Résidence Cadet",
-    subtitle: "Hospitality Operations",
-    description: [
-      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
-    ],
-    highlights: [
-      "Guest satisfaction improved",
-      "Platform visibility strengthened",
-      "New revenue line opened",
-      "~10h/week admin reduced",
-    ],
+    description: "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
+    support: "Supported by Ops Core execution system",
     href: "/case-study/vesper",
     location: "work_page_residence_cadet",
     ctaLabel: "View Case Study",
   },
   {
-    kicker: "Case Study",
+    category: "Logistics Operations",
     title: "Kepler Express",
-    subtitle: "Logistics Operations",
-    description: [
-      "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
-    ],
-    highlights: [
-      "Mission and cost capture aligned",
-      "Billing matched to executed work",
-      "Less manual follow-up",
-      "Better dispatch-billing coordination",
-    ],
+    description: "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
+    support: "Supported by Kepler workflow system",
     href: "/case-study/kepler-express",
     location: "work_page_kepler",
     ctaLabel: "View Case Study",
   },
   {
-    kicker: "Case Study",
-    title: "Retail Operations Proof",
-    subtitle: "Conceptual Business Case Study",
-    description: [
-      "Conceptual business case study supported by StorePilot dashboard.",
-    ],
-    highlights: [
-      "Hybrid checkout and labor flow redesign",
-      "Revenue, staffing and waste made visible",
-      "Store routines rebuilt around clear ownership",
-      "Owner dependency reduced through stronger operating structure",
-    ],
-    href: "/work/retail-efficiency-model",
+    category: "Retail",
+    title: "Northline Convenience",
+    description: "Workflow redesign, margin visibility and daily execution systems for a clearer, more profitable convenience retail operation.",
+    support: "Supported by StorePilot retail dashboard",
+    href: "/work/northline-convenience",
     location: "work_page_retail_operations_proof",
     ctaLabel: "View Case Study",
   },
@@ -94,32 +70,22 @@ export default function WorkPage() {
                 key={project.title}
                 className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10"
               >
-                <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
-                  <div className="max-w-xl">
+                <div className="flex flex-col gap-6">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      {project.kicker}
+                    {project.category}
                     </p>
-                    <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
+                  <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {project.title}
                     </h2>
-                    <p className="mt-3 text-sm font-semibold uppercase tracking-[0.14em] text-ink/68">
-                      {project.subtitle}
+                  <p className="text-base leading-8 text-muted sm:text-lg">
+                    {project.description}
                     </p>
-
-                    <div className="mt-5 grid gap-4">
-                      {project.description.map((paragraph) => (
-                        <p
-                          key={paragraph}
-                          className="text-base leading-8 text-muted sm:text-lg"
-                        >
-                          {paragraph}
-                        </p>
-                      ))}
-                    </div>
-
-                    <div className="mt-8">
-                      <TrackedLink
-                        href={project.href}
+                  <p className="text-sm text-muted/70">
+                    {project.support}
+                  </p>
+                  <div>
+                    <TrackedLink
+                      href={project.href}
                         event="case_study_cta_click"
                         data={{ location: project.location }}
                         className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
@@ -128,17 +94,6 @@ export default function WorkPage() {
                       </TrackedLink>
                     </div>
                   </div>
-
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    {project.highlights.map((item) => (
-                      <div key={item} className="border-t border-line pt-4">
-                        <p className="text-sm font-semibold leading-7 text-ink/90">
-                          {item}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </article>
             ))}
           </div>
@@ -149,3 +104,4 @@ export default function WorkPage() {
     </>
   );
 }
+
