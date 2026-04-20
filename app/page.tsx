@@ -9,54 +9,58 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Operations Consultant Paris | Workflow Systems & Business Systems | Anis",
+  title: "Operations & Internal Tools Coordinator | Anis",
   description:
-    "Operations consultant in Paris helping businesses improve workflow systems, business systems and process visibility across execution, invoicing and follow-up.",
+    "Operations coordination, workflow structure and internal tools shaped by real work across hospitality, logistics and retail environments.",
 };
 
 const results = [
   {
-    title: "9.2/10 Guest satisfaction",
-    description: "Automated access and issue handling.",
+    title: "Improved guest satisfaction",
+    description: "Guest follow-up, access and issue handling became easier to run consistently.",
   },
   {
-    title: "+50% revenue on a new segment",
-    description: "Driven by a clearer operating flow.",
+    title: "Stronger platform visibility",
+    description: "Listing quality and operational consistency became easier to maintain.",
   },
   {
-    title: "Total visibility",
-    description: "Status, ownership and costs in one place.",
+    title: "New revenue segment growth",
+    description: "A clearer operating flow supported expansion into a new segment.",
   },
   {
-    title: "10 hours saved weekly",
-    description: "Manual tracking and repetitive admin reduced.",
+    title: "~10h/week admin reduced",
+    description: "Routine follow-up and repetitive admin took less manual time.",
   },
 ] as const;
 
 const featuredCases = [
   {
     label: "Hospitality",
-    title: "Vesper Collection",
-    description: "Excel replaced with one structured workflow and centralized follow-up.",
+    title: "Résidence Cadet",
+    description:
+      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
     href: "/case-study/vesper",
-    location: "home_proof_vesper",
+    location: "home_proof_residence_cadet",
     ctaLabel: "View Case Study",
   },
   {
     label: "Logistics",
     title: "Kepler Express",
-    description: "Mission tracking, expenses and billing connected in one clear system.",
+    description:
+      "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View Case Study",
   },
   {
-    label: "Retail",
-    title: "Retail Efficiency Model",
-    description: "Workflow redesign for a 520k€ convenience retail operation.",
-    href: "/work/retail-efficiency-model",
-    location: "home_proof_retail_efficiency_model",
-    ctaLabel: "View Case Study",
+    label: "Retail Proof",
+    title: "StorePilot",
+    description:
+      "Operational dashboard built to solve common multi-site retail execution problems.",
+    href: "https://storepilot-delta.vercel.app/",
+    location: "home_proof_storepilot",
+    ctaLabel: "View Demo",
+    external: true,
   },
 ] as const;
 
@@ -73,7 +77,7 @@ const products = [
   },
   {
     title: "Kepler Express",
-    description: "Mission workflow, cost tracking and billing system.",
+    description: "Mission workflow, cost tracking and billing aligned.",
     href: "https://kepler-express.vercel.app/",
   },
 ] as const;
@@ -94,12 +98,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Case Studies
+                  Selected Work
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Operational systems built from real business environments. Hospitality, logistics and retail workflows.
+                Real operational work across hospitality and logistics, plus a retail operations proof project.
               </p>
             </div>
 
@@ -133,14 +137,25 @@ export default function HomePage() {
                   </p>
 
                   <div className="mt-auto pt-8">
-                    <TrackedLink
-                      href={item.href}
-                      event="case_study_cta_click"
-                      data={{ location: item.location }}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                    >
-                      {item.ctaLabel}
-                    </TrackedLink>
+                    {"external" in item && item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                      >
+                        {item.ctaLabel}
+                      </a>
+                    ) : (
+                      <TrackedLink
+                        href={item.href}
+                        event="case_study_cta_click"
+                        data={{ location: item.location }}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                      >
+                        {item.ctaLabel}
+                      </TrackedLink>
+                    )}
                   </div>
                 </article>
               ))}
@@ -153,7 +168,7 @@ export default function HomePage() {
                 data={{ location: "home_proof_footer" }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                View all case studies
+                View all work
               </TrackedLink>
             </div>
           </Reveal>
@@ -170,7 +185,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built for hospitality, client work and mission workflows.
+                Built for hospitality, service operations and mission workflows.
               </p>
             </div>
 
@@ -212,10 +227,10 @@ export default function HomePage() {
 
               <div className="max-w-2xl">
                 <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I bring tasks, costs and updates into one clear operational flow.
+                  I bring coordination, reporting and follow-up into one clearer operational flow.
                 </p>
                 <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Tasks • Issues • Expenses • Invoices • Payments
+                  Coordination • Incidents • Reporting • Checklists • Payments
                 </p>
               </div>
             </div>

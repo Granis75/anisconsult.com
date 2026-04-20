@@ -1,12 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
+export const metadata: Metadata = {
+  title: "Résidence Cadet Case Study | Hospitality Operations | Anis",
+  description:
+    "Hospitality operations case study covering guest follow-up, access, reporting and lighter admin workload at Résidence Cadet in Paris.",
+};
+
 const sectionLinks = [
   { label: "Context", href: "#context" },
   { label: "Problem", href: "#problem" },
-  { label: "System", href: "#implementation" },
+  { label: "Workflow", href: "#implementation" },
   { label: "Results", href: "#results" },
   { label: "Insight", href: "#insight" },
 ] as const;
@@ -30,20 +37,20 @@ const implementationItems = [
 
 const resultItems = [
   {
-    title: "9.2/10 Guest Satisfaction",
-    detail: "Reached after follow-up, access and issue handling were cleaned up",
+    title: "Improved Guest Satisfaction",
+    detail: "Guest follow-up, access and issue handling became easier to manage consistently",
   },
   {
-    title: "Top 30 Ranking",
-    detail: "Improved as execution became more consistent across stays",
+    title: "Stronger Platform Visibility",
+    detail: "Listing quality and operational consistency were easier to maintain",
   },
   {
-    title: "10h Saved / Week",
-    detail: "Recovered from repetitive admin and manual follow-up",
+    title: "~10h/week Admin Workload Reduced",
+    detail: "Routine admin and manual follow-up took significantly less weekly time",
   },
   {
-    title: "+50% Revenue from New Market",
-    detail: "New demand captured once the operation was easier to run",
+    title: "New Revenue Segment Growth",
+    detail: "A clearer operating flow supported expansion into a new segment",
   },
 ] as const;
 
@@ -74,7 +81,7 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-5xl">
               <SectionKicker label="Case Study" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Vesper Collection
+                Résidence Cadet
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
@@ -112,7 +119,7 @@ export default function VesperCaseStudyPage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Multi-unit short-stay operations with guest communication, access, issues and reporting spread across too many tools. Based on real operational work in a multi-unit hospitality residence in Paris.
+                  Multi-unit short-stay operations with guest communication, access, issues and reporting spread across too many tools. Based on real operational work at Résidence Cadet in Paris.
                 </p>
               </article>
 
@@ -153,7 +160,7 @@ export default function VesperCaseStudyPage() {
         <section id="implementation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <SectionKicker label="System" />
+              <SectionKicker label="Workflow" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 The work was reorganized into one operating flow the team could actually follow.
               </p>
@@ -234,7 +241,7 @@ export default function VesperCaseStudyPage() {
 
               <div className="mt-10 border-t border-line pt-6">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  System Flow
+                  Operating Flow
                 </p>
 
                 <div className="mt-5 flex flex-wrap items-center gap-3">

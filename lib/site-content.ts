@@ -2,20 +2,21 @@ export const siteContent = {
   brand: "Anis",
   navigation: [
     { label: "Work", href: "/work" },
-    { label: "MyBi", href: "/#mybi" },
-    { label: "How I Work", href: "/#method" },
+    { label: "About", href: "/about" },
+    { label: "Internal Tools", href: "/#ops-core" },
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "I help businesses turn scattered operations into clear, trackable systems.",
-    subtitle: "Structure • Execution • Visibility",
+    title:
+      "I help operations run cleaner — through coordination, structure and the right tools.",
+    subtitle: "Operations & Internal Tools Coordinator",
     description:
-      "Workflows, follow-up, invoicing and execution aligned in one readable flow.",
+      "Operations coordination, internal tools and reporting structure shaped by real work on the ground.",
     notes: [
+      "Coordination",
       "Structure",
-      "Execution",
       "Follow-up",
-      "Costs",
+      "Visibility",
     ],
     primaryCta: {
       label: "View Work",
@@ -30,7 +31,7 @@ export const siteContent = {
     title: "Positioning",
     subtitle: "How I work inside operations.",
     intro:
-      "The starting point is usually the same: spreadsheets, calls, manual checks and unclear ownership.",
+      "The starting point is usually the same: spreadsheets, messages, manual checks and unclear ownership.",
     steps: [
       {
         step: "01",

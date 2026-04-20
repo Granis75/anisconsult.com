@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express — Case Study | Anis",
+  title: "Kepler Express Case Study | Logistics Operations | Anis",
   description:
-    "A logistics case study about dispatch, expenses and invoicing brought into one workflow.",
+    "Logistics operations case study covering dispatch follow-up, mission costs and invoicing brought into one clearer workflow.",
 };
 
 const problemItems = [
@@ -20,29 +20,29 @@ const problemItems = [
 
 const resultItems = [
   {
-    title: "Reduced Manual Tracking",
-    detail: "Less dependence on calls, paper and separate files",
+    title: "Cleaner Daily Follow-Up",
+    detail: "Less dependence on calls, paper notes and spreadsheet backtracking",
   },
   {
     title: "Mission-Level Cost Visibility",
-    detail: "Costs were captured inside the day-to-day workflow",
+    detail: "Mission costs were captured inside the day-to-day workflow",
   },
   {
-    title: "Billing Aligned with Operations",
-    detail: "Invoices were built from mission and expense data",
+    title: "Billing Matched to Executed Work",
+    detail: "Invoices were prepared from the same mission and expense data used in operations",
   },
   {
-    title: "Improved Operational Coordination",
-    detail: "Dispatch and billing worked from the same information",
+    title: "Stronger Dispatch-Billing Coordination",
+    detail: "Dispatch and billing worked from the same operational picture",
   },
 ] as const;
 
 const implementationItems = [
-  "Set one flow from client request to payment",
-  "Linked expenses to the mission instead of separate notes",
-  "Separated driver advances from company costs",
-  "Added mission-level margin tracking",
-  "Made daily operations and billing easier to reconcile",
+  "Set a single flow from client request to payment",
+  "Captured driver and trip costs inside the mission workflow",
+  "Separated advances, company expenses and billable items",
+  "Made mission margin easier to review",
+  "Reduced manual handoffs between operations and billing",
 ] as const;
 
 const flowSteps = ["Client", "Mission", "Expense", "Invoice", "Payment"] as const;
@@ -61,10 +61,10 @@ export default function KeplerExpressCaseStudyPage() {
                 Kepler Express
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Daily logistics work was being run through Excel, calls and paper notes.
+                Daily logistics work was spread across calls, notes and separate files.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The job was to tie mission updates, expenses and billing together so the team could stop rebuilding everything by hand.
+                The work was to connect mission follow-up, expense capture and billing so the team could coordinate from one clearer flow.
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function KeplerExpressCaseStudyPage() {
               <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
                 <SectionKicker label="Context" />
                 <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
-                  Small transport operations with dispatch, driver costs and invoices handled separately. Based on real logistics operations with manual coordination and tracking.
+                  Small transport operations with dispatch, driver costs and invoices handled separately. Based on real logistics work with heavy manual coordination and follow-up.
                 </p>
               </section>
 
@@ -87,7 +87,7 @@ export default function KeplerExpressCaseStudyPage() {
                 >
                   <SectionKicker label="Problem" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    The work was hard to follow because mission status, expenses and billing were disconnected.
+                    Mission status, expenses and billing were being managed in different places, which slowed coordination and hid margin.
                   </p>
 
                   <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
@@ -98,14 +98,14 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
-                  <SectionKicker label="System" />
+                  <SectionKicker label="Workflow" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    The workflow was rebuilt so missions, expenses and invoicing moved together.
+                    The workflow was rebuilt so missions, expenses and invoicing moved together from start to finish.
                   </p>
 
                   <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 sm:px-5">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      System Flow
+                      Operating Flow
                     </p>
                     <div className="mt-4 flex flex-wrap items-center gap-2.5">
                       {flowSteps.map((item, index) => (
@@ -155,10 +155,10 @@ export default function KeplerExpressCaseStudyPage() {
                 <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
                   <SectionKicker label="Insight" />
                   <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                    Once missions, expenses and invoices were tied together, coordination became much less reactive.
+                    Once mission updates, costs and invoices moved together, coordination became much less reactive.
                   </p>
                   <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    The improvement came from cleaner follow-up and fewer manual reconciliations.
+                    The improvement came from cleaner follow-up and fewer manual reconciliations between dispatch and billing.
                   </p>
 
                   <div className="mt-6">

@@ -5,59 +5,64 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Work | Anis",
+  title: "Work | Operations & Internal Tools | Anis",
   description:
-    "Case studies across hospitality, logistics and urban retail operations, focused on workflow, visibility and systems design.",
+    "Case studies and proof projects across hospitality, logistics and retail operations, focused on coordination, reporting and internal tools.",
 };
 
 const projects = [
   {
-    title: "Vesper Collection",
-    subtitle: "Case study",
+    kicker: "Case Study",
+    title: "Résidence Cadet",
+    subtitle: "Hospitality Operations",
     description: [
-      "Guest stays, access, follow-up and reporting stopped relying on Excel and front-desk coordination.",
+      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
     ],
     highlights: [
-      "Guest data and follow-up in one place",
-      "Less front-desk dependency",
-      "Clearer payment and reporting flow",
-      "Administrative time reduced",
+      "Improved guest satisfaction",
+      "Stronger platform visibility",
+      "New revenue segment growth",
+      "~10h/week admin workload reduced",
     ],
     href: "/case-study/vesper",
-    location: "work_page_vesper",
+    location: "work_page_residence_cadet",
     ctaLabel: "View Case Study",
   },
   {
+    kicker: "Case Study",
     title: "Kepler Express",
-    subtitle: "Case study",
+    subtitle: "Logistics Operations",
     description: [
-      "Mission updates, driver costs and invoicing were brought into one logistics workflow.",
+      "Mission follow-up, driver costs and invoicing were connected inside one clearer logistics workflow.",
     ],
     highlights: [
-      "Mission and cost tracking linked",
-      "Billing tied to the work itself",
-      "Less phone-and-spreadsheet follow-up",
-      "Better daily coordination",
+      "Mission updates and cost tracking linked",
+      "Billing connected to executed work",
+      "Less manual follow-up across calls and files",
+      "Better coordination between dispatch and billing",
     ],
     href: "/case-study/kepler-express",
     location: "work_page_kepler",
     ctaLabel: "View Case Study",
   },
   {
-    title: "Retail Efficiency Model",
-    subtitle: "Modeled case study",
+    kicker: "Proof Project",
+    title: "StorePilot",
+    subtitle: "Retail Operations Proof Project",
     description: [
-      "Workflow redesign for a 520k€ convenience retail operation.",
+      "Operational dashboard built to solve common multi-site retail execution problems.",
     ],
     highlights: [
-      "Hybrid checkout and labor flow redesign",
-      "Revenue, staffing and waste made visible",
-      "Store routines rebuilt around clear ownership",
-      "Owner dependency reduced through systems design",
+      "KPI visibility",
+      "Incident escalation",
+      "Checklist execution",
+      "Waste / staffing visibility",
+      "Cleaner reporting",
     ],
-    href: "/work/retail-efficiency-model",
-    location: "work_page_retail_efficiency_model",
-    ctaLabel: "View Case Study",
+    href: "https://storepilot-delta.vercel.app/",
+    location: "work_page_storepilot",
+    ctaLabel: "View Demo",
+    external: true,
   },
 ] as const;
 
@@ -72,13 +77,15 @@ export default function WorkPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Work" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Case Studies
+                Work
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Direct operational work in hospitality and logistics, plus one modeled urban retail redesign.
+                Real operational work across hospitality and logistics.
+                <br className="hidden sm:block" />
+                Built under real constraints, measured by real outcomes.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Each study shows how clearer systems reduce manual overhead, improve visibility and make execution easier to run.
+                StorePilot extends that proof into retail operations through a dashboard built around real execution questions.
               </p>
             </div>
           </div>
@@ -94,7 +101,7 @@ export default function WorkPage() {
                 <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
                   <div className="max-w-xl">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Case Study
+                      {project.kicker}
                     </p>
                     <h2 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {project.title}
@@ -115,14 +122,25 @@ export default function WorkPage() {
                     </div>
 
                     <div className="mt-8">
-                      <TrackedLink
-                        href={project.href}
-                        event="case_study_cta_click"
-                        data={{ location: project.location }}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                      >
-                        {project.ctaLabel}
-                      </TrackedLink>
+                      {"external" in project && project.external ? (
+                        <a
+                          href={project.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                        >
+                          {project.ctaLabel}
+                        </a>
+                      ) : (
+                        <TrackedLink
+                          href={project.href}
+                          event="case_study_cta_click"
+                          data={{ location: project.location }}
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                        >
+                          {project.ctaLabel}
+                        </TrackedLink>
+                      )}
                     </div>
                   </div>
 

@@ -16,9 +16,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Anis — Operations and Workflow",
+  title: "Anis | Operations & Internal Tools Coordinator",
   description:
-    "Operations work across hospitality and logistics, with hands-on follow-up, invoicing, expenses and internal tools built from real needs.",
+    "Operations coordination, workflow structure and internal tools shaped by real work across hospitality, logistics and retail environments.",
 };
 
 export default function RootLayout({

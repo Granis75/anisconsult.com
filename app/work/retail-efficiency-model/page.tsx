@@ -5,15 +5,15 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Retail Efficiency Model | AnisConsult",
+  title: "Retail Efficiency Model | Retail Operations Proof Study | Anis",
   description:
-    "Operational redesign case study showing how systems thinking can improve profitability, staffing efficiency and visibility in urban retail.",
+    "Retail operations proof study showing how staffing, waste visibility and reporting structure can improve execution in an urban convenience format.",
 };
 
 const sectionLinks = [
   { label: "Context", href: "#context" },
   { label: "Frictions", href: "#frictions" },
-  { label: "System Design", href: "#system-design" },
+  { label: "Operational Design", href: "#system-design" },
   { label: "Workflow", href: "#workflow-improvements" },
   { label: "Visibility", href: "#visibility-layer" },
   { label: "Outcomes", href: "#kpi-results" },
@@ -104,7 +104,7 @@ export default function RetailEfficiencyModelPage() {
               <div className="max-w-4xl">
                 <SectionKicker label="Retail Efficiency Model" />
                 <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
-                  Urban Retail • Systems Design • Operational Efficiency
+                  Urban Retail • Workflow Design • Operational Efficiency
                 </p>
                 <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[4.3rem]">
                   Re-engineering a 520k€ Convenience Store Into a Clearer, More
@@ -132,8 +132,8 @@ export default function RetailEfficiencyModelPage() {
                     Study Frame
                   </p>
                   <h2 className="mt-5 font-display text-balance text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                    Re-engineering a 520k€ Urban Convenience Store Through Systems
-                    Design
+                    Re-engineering a 520k€ Urban Convenience Store Through
+                    Operational Redesign
                   </h2>
 
                   <div className="mt-8 space-y-4 border-t border-line pt-6">
@@ -142,7 +142,7 @@ export default function RetailEfficiencyModelPage() {
                         Category
                       </p>
                       <p className="mt-2 text-sm leading-7 text-ink">
-                        Urban Retail / Operational Redesign / Systems Thinking
+                        Urban Retail / Operational Redesign / Workflow Clarity
                       </p>
                     </div>
                     <div className="border-t border-black/8 pt-4">
@@ -204,7 +204,7 @@ export default function RetailEfficiencyModelPage() {
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
                     The objective was to redesign the operating model into a
-                    calmer, more scalable and more profitable system.
+                    calmer, more scalable and more profitable operation.
                   </p>
                 </div>
               </article>
@@ -250,10 +250,10 @@ export default function RetailEfficiencyModelPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-14">
               <div className="max-w-2xl">
-                <SectionKicker label="System Design" />
+                <SectionKicker label="Operational Design" />
                 <p className="mt-6 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                   The redesign focused on decoupling labor from revenue and
-                  replacing manual habits with structured flows.
+                  replacing manual habits with clearer operating flows.
                 </p>
               </div>
 
@@ -348,15 +348,15 @@ export default function RetailEfficiencyModelPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <article className="premium-soft-card p-8 lg:p-10">
               <SectionKicker label="Final Perspective" />
-              <p className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Complexity is the enemy of scale.
-              </p>
-              <div className="mt-6 grid gap-5">
-                <p className="max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                  By treating the store as an operating system rather than a list
-                  of tasks, the environment becomes calmer, clearer and easier to
-                  grow.
+                <p className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
+                  Complexity is the enemy of scale.
                 </p>
+                <div className="mt-6 grid gap-5">
+                  <p className="max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                  By treating the store as a coordinated operation rather than a
+                  list of tasks, the environment becomes calmer, clearer and
+                  easier to grow.
+                  </p>
                 <p className="max-w-3xl text-base leading-8 text-muted sm:text-lg">
                   Automation does not remove the human element. It frees people to
                   focus on service, quality and customer experience.
@@ -375,8 +375,8 @@ export default function RetailEfficiencyModelPage() {
                   Need clearer operations?
                 </h2>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                  I help businesses structure messy workflows into readable
-                  systems.
+                  I help operations run cleaner through coordination, structure
+                  and the right tools.
                 </p>
               </div>
 
