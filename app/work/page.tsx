@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    category: "Hospitality Operations",
+    category: "Hospitality",
     title: "Résidence Cadet",
     description: "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
     support: "Supported by Ops Core execution system",
@@ -21,7 +21,7 @@ const projects = [
     ctaLabel: "View Case Study",
   },
   {
-    category: "Logistics Operations",
+    category: "Logistics",
     title: "Kepler Express",
     description: "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
     support: "Supported by Kepler workflow system",

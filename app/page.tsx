@@ -42,6 +42,7 @@ const featuredCases = [
     href: "/case-study/vesper",
     location: "home_proof_residence_cadet",
     ctaLabel: "View Case Study",
+    supportNote: "Supported by Ops Core execution system",
   },
   {
     label: "Logistics",
@@ -51,16 +52,17 @@ const featuredCases = [
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View Case Study",
+    supportNote: "Supported by Kepler workflow system",
   },
   {
-    label: "Retail Proof",
-    title: "Retail Operations Proof",
+    label: "Retail",
+    title: "Northline Convenience",
     description:
-      "Conceptual business case study for a clearer, more profitable convenience retail operation.",
+      "Workflow redesign, margin visibility and daily execution systems for a clearer, more profitable convenience retail operation.",
     href: "/work/northline-convenience",
     location: "home_proof_retail_operations_proof",
     ctaLabel: "View Case Study",
-    supportNote: "Supported by StorePilot operational dashboard",
+    supportNote: "Supported by StorePilot retail dashboard",
   },
 ] as const;
 
