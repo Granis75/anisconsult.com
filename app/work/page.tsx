@@ -16,7 +16,7 @@ const projects = [
     title: "Résidence Cadet",
     subtitle: "Hospitality Operations",
     description: [
-      "Guest operations, access and reporting brought into one working structure.",
+      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
     ],
     highlights: [
       "Guest satisfaction improved",
@@ -33,7 +33,7 @@ const projects = [
     title: "Kepler Express",
     subtitle: "Logistics Operations",
     description: [
-      "Mission follow-up, cost capture and invoicing tied to the same workflow.",
+      "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
     ],
     highlights: [
       "Mission and cost capture aligned",
@@ -48,9 +48,9 @@ const projects = [
   {
     kicker: "Case Study",
     title: "Retail Operations Proof",
-    subtitle: "Retail Proof Case Study",
+    subtitle: "Conceptual Business Case Study",
     description: [
-      "Business case for tighter store execution, better visibility and less owner dependency.",
+      "Conceptual business case study supported by StorePilot dashboard.",
     ],
     highlights: [
       "Hybrid checkout and labor flow redesign",
@@ -61,9 +61,6 @@ const projects = [
     href: "/work/retail-efficiency-model",
     location: "work_page_retail_operations_proof",
     ctaLabel: "View Case Study",
-    supportNote: "Supported by StorePilot operational dashboard",
-    supportHref: "https://storepilot-delta.vercel.app/",
-    supportCtaLabel: "View StorePilot Demo",
   },
 ] as const;
 
@@ -78,15 +75,13 @@ export default function WorkPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Work" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Work
+                Proof, not promises.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Operational work in hospitality and logistics.
-                <br className="hidden sm:block" />
-                Retail proof built from the same execution logic.
+                Real operational work shaped inside hospitality, logistics and retail environments.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Each case shows where control improved: follow-up, visibility, admin load and execution.
+                Each case shows what changed in the work itself.
               </p>
             </div>
           </div>
@@ -122,13 +117,7 @@ export default function WorkPage() {
                       ))}
                     </div>
 
-                    {"supportNote" in project ? (
-                      <div className="mt-6 border-t border-line pt-5">
-                        <p className="text-sm leading-7 text-ink/78">{project.supportNote}</p>
-                      </div>
-                    ) : null}
-
-                    <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                    <div className="mt-8">
                       <TrackedLink
                         href={project.href}
                         event="case_study_cta_click"
@@ -137,17 +126,6 @@ export default function WorkPage() {
                       >
                         {project.ctaLabel}
                       </TrackedLink>
-
-                      {"supportHref" in project ? (
-                        <a
-                          href={project.supportHref}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                        >
-                          {project.supportCtaLabel}
-                        </a>
-                      ) : null}
                     </div>
                   </div>
 

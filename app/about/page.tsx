@@ -7,29 +7,29 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "About | Operations & Internal Tools Coordinator | Anis",
   description:
-    "Hands-on operational work across hospitality and logistics, with retail proof and internal tools shaped by execution.",
+    "Operations perspective built inside real environments where execution matters, friction repeats and clearer systems improve the work.",
 };
 
 const focusItems = [
   {
+    title: "Systems",
+    detail: "Built to remove recurring friction.",
+  },
+  {
+    title: "Ownership",
+    detail: "Clearer responsibility keeps work moving.",
+  },
+  {
     title: "Execution",
-    detail: "Ownership, handoffs and follow-up stay clear.",
-  },
-  {
-    title: "Internal tools",
-    detail: "Built to support the work, not sit beside it.",
-  },
-  {
-    title: "Reporting",
-    detail: "Status, incidents and money stay readable.",
+    detail: "The work should move properly every day.",
   },
 ] as const;
 
 const backgroundItems = [
-  "Hospitality",
-  "Logistics",
-  "Retail proof work",
-  "Workflow control",
+  "Guests waiting",
+  "Vehicles moving",
+  "Incidents happening",
+  "Money flowing",
 ] as const;
 
 export default function AboutPage() {
@@ -46,16 +46,16 @@ export default function AboutPage() {
                 Operations & Internal Tools Coordinator
               </p>
               <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                I work inside the operation.
+                I come from operations first.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Execution first. Structure second. Tools where they matter.
+                My perspective was built inside environments where execution matters daily: guests waiting, vehicles moving, incidents happening, money flowing.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                My work starts in the day-to-day: follow-up, handoffs, reporting, incidents and admin.
+                Tools came later — as a way to remove recurring friction.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                I approach tooling from inside the workflow, not as a developer, but as an operator who knows what the workflow needs.
+                Today I focus on cleaner systems, clearer ownership and work that moves properly.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -63,7 +63,7 @@ export default function AboutPage() {
                   View Work
                 </Link>
                 <Link href="/#contact" className="premium-cta-outline h-12 px-6">
-                  Contact
+                  Connect
                 </Link>
               </div>
             </div>
@@ -77,10 +77,10 @@ export default function AboutPage() {
                 <SectionKicker label="How I Work" />
                 <div className="mt-6 grid gap-5">
                   <p className="text-base leading-8 text-ink sm:text-lg">
-                    I focus on ownership, control and clean follow-through.
+                    Cleaner systems.
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
-                    That usually means tighter coordination, lighter admin and reporting people can trust.
+                    Clearer ownership. Better execution.
                   </p>
                 </div>
               </article>

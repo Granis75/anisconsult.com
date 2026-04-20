@@ -34,7 +34,7 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="premium-cta h-12 px-6"
               >
-                Open tool
+                Explore
               </a>
             </div>
 
@@ -48,7 +48,7 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
               >
-                Open Kepler Express
+                Explore Kepler Express
               </a>
             </div>
           </div>

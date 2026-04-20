@@ -7,10 +7,10 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "I make operations easier to run, measure and trust.",
-    subtitle: "Real operations • Internal tools • Execution",
+    title: "I make operations clearer, cleaner and easier to run.",
+    subtitle: "Operations & Internal Tools Coordinator",
     description:
-      "Hands-on work across hospitality, logistics and retail. Structure, reporting and follow-through built into the day-to-day.",
+      "Built from real operational environments where priorities move fast, tools break down and visibility matters.",
     notes: [
       "Ownership",
       "Execution",
@@ -22,7 +22,7 @@ export const siteContent = {
       href: "/#case-study",
     },
     secondaryCta: {
-      label: "Contact",
+      label: "Connect",
       href: "/#contact",
     },
   },

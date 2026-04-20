@@ -9,9 +9,9 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Operations & Internal Tools Coordinator | Anis",
+  title: "Anis Allouache — Operations & Internal Tools Coordinator | Paris",
   description:
-    "Real operational work, internal tools and execution proof across hospitality, logistics and retail environments.",
+    "Operations specialist focused on clearer systems, cleaner workflows and practical execution across hospitality, logistics and retail environments.",
 };
 
 const results = [
@@ -38,7 +38,7 @@ const featuredCases = [
     label: "Hospitality",
     title: "Résidence Cadet",
     description:
-      "Guest operations, access and reporting brought into one working structure.",
+      "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
     href: "/case-study/vesper",
     location: "home_proof_residence_cadet",
     ctaLabel: "View Case Study",
@@ -47,7 +47,7 @@ const featuredCases = [
     label: "Logistics",
     title: "Kepler Express",
     description:
-      "Mission follow-up, cost capture and billing tied to the same workflow.",
+      "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View Case Study",
@@ -56,13 +56,11 @@ const featuredCases = [
     label: "Retail Proof",
     title: "Retail Operations Proof",
     description:
-      "Business case for tighter store execution, better visibility and less owner dependency.",
+      "Conceptual business case study for a clearer, more profitable convenience retail operation.",
     href: "/work/retail-efficiency-model",
     location: "home_proof_retail_operations_proof",
     ctaLabel: "View Case Study",
     supportNote: "Supported by StorePilot operational dashboard",
-    supportHref: "https://storepilot-delta.vercel.app/",
-    supportCtaLabel: "View StorePilot Demo",
   },
 ] as const;
 
@@ -72,25 +70,25 @@ const products = [
     description:
       "Retail operations dashboard for KPI visibility, incidents, checklist execution and daily store control.",
     href: "https://storepilot-delta.vercel.app/",
-    ctaLabel: "View Demo",
+    ctaLabel: "Explore",
   },
   {
     title: "Ops Core",
     description: "Hospitality operations dashboard for tasks, incidents, expenses and daily control.",
     href: "https://ops-core-v.vercel.app/",
-    ctaLabel: "Open tool",
+    ctaLabel: "Explore",
   },
   {
     title: "MyBi",
     description: "Client work, invoices and payments kept in the same operating line.",
     href: "https://mybi-business-app.vercel.app/",
-    ctaLabel: "Open tool",
+    ctaLabel: "Explore",
   },
   {
     title: "Kepler Express",
     description: "Mission follow-up, trip costs and billing kept aligned.",
     href: "https://kepler-express.vercel.app/",
-    ctaLabel: "Open tool",
+    ctaLabel: "Explore",
   },
 ] as const;
 
@@ -115,7 +113,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Operational work in hospitality and logistics. Retail proof built from the same execution logic.
+                Real operational work across hospitality and logistics, plus a retail operations proof case study.
               </p>
             </div>
 
@@ -154,7 +152,7 @@ export default function HomePage() {
                     </div>
                   ) : null}
 
-                  <div className="mt-auto flex flex-col gap-3 pt-8">
+                  <div className="mt-auto pt-8">
                     <TrackedLink
                       href={item.href}
                       event="case_study_cta_click"
@@ -163,17 +161,6 @@ export default function HomePage() {
                     >
                       {item.ctaLabel}
                     </TrackedLink>
-
-                    {"supportHref" in item ? (
-                      <a
-                        href={item.supportHref}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                      >
-                        {item.supportCtaLabel}
-                      </a>
-                    ) : null}
                   </div>
                 </article>
               ))}
@@ -198,12 +185,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Internal Tools" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Tools built from day-to-day operational realities.
+                  Tools shaped by real friction.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built from live operational needs. Used to keep control close to the work.
+                Built to solve recurring coordination, reporting and workflow problems.
               </p>
             </div>
 
