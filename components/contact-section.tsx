@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import { TrackedLink } from "@/components/tracked-link";
+import { directEmailHref, bookingHref } from "@/lib/site-content";
 import { track } from "@/lib/track";
 
 type ContactFormState = {
@@ -102,22 +104,30 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Connect.
+          Got something broken?
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          For thoughtful conversations around operations, systems or execution.
+          Tell me what&apos;s slowing operations down. In 15 minutes I&apos;ll tell
+          you if I can help - and how.
         </p>
 
-        <div className="mt-8 grid gap-3">
-          {[
-            "Operations.",
-            "Systems.",
-            "Execution.",
-          ].map((item) => (
-            <div key={item} className="border-t border-black/8 pt-3.5">
-              <p className="text-sm leading-7 text-ink/76">{item}</p>
-            </div>
-          ))}
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <TrackedLink
+            href={bookingHref}
+            event="contact_cta_click"
+            data={{ location: "contact_primary" }}
+            className="premium-cta h-12 px-6"
+          >
+            Book a 15-min Call
+          </TrackedLink>
+
+          <a
+            href={directEmailHref}
+            onClick={() => track("contact_cta_click", { location: "contact_email" })}
+            className="premium-cta-outline h-12 px-6"
+          >
+            Email me directly
+          </a>
         </div>
       </div>
 
@@ -170,7 +180,7 @@ export function ContactSection() {
 
           <div className="pt-2">
             <button type="submit" disabled={isLoading} className="premium-cta w-full sm:w-auto">
-              {isLoading ? "Sending..." : "Connect"}
+              {isLoading ? "Sending..." : "Send message"}
             </button>
           </div>
         </form>

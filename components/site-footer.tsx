@@ -5,7 +5,7 @@ export function SiteFooter() {
         <div className="font-display font-semibold tracking-[-0.03em] text-ink">
           Anis Allouache
         </div>
-        <div>Operations • Structure • Execution</div>
+        <div>Operations • Systems • Execution</div>
       </div>
     </footer>
   );

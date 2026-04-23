@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "About | Operations & Internal Tools Coordinator | Anis",
+  title: "About | Operations Systems Specialist | Anis",
   description:
     "Operations perspective built inside real environments where execution matters, friction repeats and clearer systems improve the work.",
 };
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <div className="max-w-5xl">
               <SectionKicker label="About" />
               <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
-                Operations & Internal Tools Coordinator
+                Operations Systems Specialist
               </p>
               <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
                 I come from operations first.

@@ -1,35 +1,53 @@
 import type { Metadata } from "next";
 import { ContactSection } from "@/components/contact-section";
 import { Hero } from "@/components/hero";
-import { MyBiHomeSection } from "@/components/mybi-home-section";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
+import { bookingHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Anis Allouache — Operations & Internal Tools Coordinator | Paris",
+  title: "Anis Allouache — Operations Systems Specialist",
   description:
-    "Operations specialist focused on clearer systems, cleaner workflows and practical execution across hospitality, logistics and retail environments.",
+    "I help companies fix messy operations, reduce manual work, and build internal systems teams actually use.",
 };
+
+const services = [
+  {
+    title: "Ops Audit",
+    description: "Find friction, wasted time, unclear ownership, and broken workflows.",
+    support: "Best for teams that know something is off but need clarity first.",
+  },
+  {
+    title: "Systems Setup",
+    description: "CRM, dashboards, trackers, workflow automation, and lightweight internal tools.",
+    support: "Best for teams that need a simple system built and shipped fast.",
+  },
+  {
+    title: "Ongoing Support",
+    description: "Continuous improvement, sharper workflows, and cleaner operational visibility.",
+    support: "Best for teams that want ongoing support as operations evolve.",
+  },
+] as const;
 
 const results = [
   {
-    title: "Improved guest satisfaction",
-    description: "Guest follow-up, access and issue handling tightened.",
+    title: "7.6 → 9.2 / 10",
+    description: "Guest satisfaction raised from 7.6 to 9.2 / 10.",
   },
   {
-    title: "Stronger platform visibility",
-    description: "Listing quality became easier to maintain.",
+    title: "Top 30 of ~450",
+    description: "Ranked in the top 30 of ~450 competitors on the main platform.",
   },
   {
-    title: "New revenue segment growth",
-    description: "A stronger operating model opened a new revenue line.",
+    title: "+50% revenue",
+    description: "+50% revenue in a new operating segment.",
   },
   {
-    title: "~10h/week admin reduced",
-    description: "Routine admin dropped by roughly ten hours a week.",
+    title: "~10h/week saved",
+    description: "~10 hours per week saved on admin work.",
   },
 ] as const;
 
@@ -60,7 +78,7 @@ const featuredCases = [
     description:
       "Workflow redesign, margin visibility and daily execution systems for a clearer, more profitable convenience retail operation.",
     href: "/work/northline-convenience",
-    location: "home_proof_retail_operations_proof",
+    location: "home_proof_northline",
     ctaLabel: "View Case Study",
     supportNote: "Supported by StorePilot retail dashboard",
   },
@@ -70,28 +88,35 @@ const products = [
   {
     title: "StorePilot",
     description:
-      "Retail operations dashboard for KPI visibility, incidents, checklist execution and daily store control.",
+      "Retail dashboard for margin visibility, incidents, checklist execution and daily store control.",
     href: "https://storepilot-delta.vercel.app/",
     ctaLabel: "Explore",
   },
   {
     title: "Ops Core",
-    description: "Hospitality operations dashboard for tasks, incidents, expenses and daily control.",
+    description: "Hospitality dashboard for tasks, incidents, expenses and daily operating control.",
     href: "https://ops-core-v.vercel.app/",
     ctaLabel: "Explore",
   },
   {
     title: "MyBi",
-    description: "Client work, invoices and payments kept in the same operating line.",
+    description: "Client work, invoicing and payment status kept in one operating line.",
     href: "https://mybi-business-app.vercel.app/",
     ctaLabel: "Explore",
   },
   {
     title: "Kepler Express",
-    description: "Mission follow-up, trip costs and billing kept aligned.",
+    description: "Mission follow-up, cost capture and billing kept aligned.",
     href: "https://kepler-express.vercel.app/",
     ctaLabel: "Explore",
   },
+] as const;
+
+const whoIWorkWith = [
+  "Founders and lean teams overwhelmed by manual operations.",
+  "Hospitality operators running properties, residences, or small chains.",
+  "Retail and service businesses with messy back-office workflows.",
+  "International teams working across English, French, or Arabic.",
 ] as const;
 
 export default function HomePage() {
@@ -104,7 +129,60 @@ export default function HomePage() {
           <Hero />
         </Reveal>
 
-        <section id="case-study" className="border-t border-line bg-white">
+        <section
+          id="services"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={32}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
+              <div className="max-w-3xl">
+                <SectionKicker label="Services" />
+                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
+                  Three ways I help.
+                </h2>
+              </div>
+
+              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                Clear entry points for teams that need clarity, a system, or ongoing operational support.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {services.map((service) => (
+                <article key={service.title} className="premium-soft-card flex h-full flex-col">
+                  <h3 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-5 text-base leading-8 text-muted">{service.description}</p>
+                  <div className="mt-auto border-t border-line pt-5">
+                    <p className="text-sm leading-7 text-ink/78">{service.support}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-col gap-5 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-2xl text-sm leading-7 text-ink/78">
+                Not sure which one you need? Tell me what&apos;s broken - I&apos;ll point
+                you in the right direction.
+              </p>
+
+              <TrackedLink
+                href={bookingHref}
+                event="contact_cta_click"
+                data={{ location: "services_footer" }}
+                className="premium-cta h-12 px-6"
+              >
+                Book a 15-min Call
+              </TrackedLink>
+            </div>
+          </Reveal>
+        </section>
+
+        <section
+          id="case-study"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={40}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
@@ -115,7 +193,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Real operational work across hospitality and logistics, plus a retail operations proof case study.
+                Concrete outcomes from live operational work across hospitality, logistics and retail.
               </p>
             </div>
 
@@ -123,7 +201,7 @@ export default function HomePage() {
               {results.map((item, index) => (
                 <article key={item.title} className="premium-card flex h-full min-h-[15rem] flex-col bg-[#fbfaf7]">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-ink/60">
-                    {index === 0 ? "Results" : ""}
+                    {index === 0 ? "Proof" : ""}
                   </p>
                   <h3 className="mt-6 font-display text-[2rem] font-semibold leading-[1.02] tracking-[-0.05em] text-ink sm:text-[2.3rem]">
                     {item.title}
@@ -148,11 +226,9 @@ export default function HomePage() {
                     {item.description}
                   </p>
 
-                  {"supportNote" in item ? (
-                    <div className="mt-6 border-t border-line pt-5">
-                      <p className="text-sm leading-7 text-ink/78">{item.supportNote}</p>
-                    </div>
-                  ) : null}
+                  <div className="mt-6 border-t border-line pt-5">
+                    <p className="text-sm leading-7 text-ink/78">{item.supportNote}</p>
+                  </div>
 
                   <div className="mt-auto pt-8">
                     <TrackedLink
@@ -181,18 +257,21 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        <section id="ops-core" className="border-t border-line bg-white">
+        <section
+          id="ops-core"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={55}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Internal Tools" />
+                <SectionKicker label="Systems" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Tools shaped by real friction.
+                  Internal systems built around the work.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Built to solve recurring coordination, reporting and workflow problems.
+                Lightweight tools shaped by recurring follow-up, reporting and visibility problems.
               </p>
             </div>
 
@@ -222,45 +301,35 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        <section id="method" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={60}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
-              <div className="max-w-3xl">
-                <SectionKicker label="How I Work" />
-                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Operations slip when ownership is blurred.
-                </h2>
-              </div>
-
-              <div className="max-w-2xl">
-                <p className="text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                  I bring follow-up, reporting and control back into the work.
-                </p>
-                <p className="mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-ink/70">
-                  Ownership • Incidents • Reporting • Checklists • Payments
-                </p>
-              </div>
+        <section
+          id="who-i-work-with"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={70}>
+            <div className="max-w-3xl">
+              <SectionKicker label="Who I work with" />
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-muted sm:text-[1.2rem]">
+                People and teams I help best.
+              </p>
             </div>
 
-            <div className="mt-12 flex justify-start border-t border-line pt-6">
-              <TrackedLink
-                href="/#case-study"
-                event="case_study_cta_click"
-                data={{ location: "method" }}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-              >
-                View case studies
-              </TrackedLink>
+            <div className="mt-10 max-w-4xl">
+              {whoIWorkWith.map((line) => (
+                <div key={line} className="border-t border-line py-4">
+                  <p className="text-base leading-8 text-ink/82 sm:text-lg">
+                    {line}
+                  </p>
+                </div>
+              ))}
             </div>
           </Reveal>
         </section>
 
-        <Reveal delayMs={80}>
-          <MyBiHomeSection />
-        </Reveal>
-
-        <section id="contact" className="border-t border-line bg-white">
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={100}>
+        <section
+          id="contact"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={80}>
             <ContactSection />
           </Reveal>
         </section>

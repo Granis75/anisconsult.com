@@ -16,9 +16,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "Anis Allouache — Operations & Internal Tools Coordinator | Paris",
+  title: "Anis Allouache — Operations Systems Specialist",
   description:
-    "Operations specialist focused on clearer systems, cleaner workflows and practical execution across hospitality, logistics and retail environments.",
+    "I help companies fix messy operations, reduce manual work, and build internal systems teams actually use.",
 };
 
 export default function RootLayout({

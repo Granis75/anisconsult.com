@@ -1,61 +1,36 @@
 "use client";
 
-import { SectionKicker } from "@/components/section-kicker";
 import { TrackedLink } from "@/components/tracked-link";
 import { siteContent } from "@/lib/site-content";
 
-type HeroProps = {
-  onContactClick?: () => void;
-};
-
 const focusAreas = [
   {
-    title: "Ownership",
-    description: "The work stays assigned, visible and moving.",
+    title: "Clarity",
+    description: "Ownership, blockers and next steps stay visible.",
   },
   {
-    title: "Follow-through",
-    description: "Open items stay visible until they close.",
+    title: "Less manual work",
+    description: "Follow-up and reporting move out of scattered tools.",
   },
   {
-    title: "Costs",
-    description: "Costs and billing stay tied to execution.",
+    title: "Adoption",
+    description: "The system stays simple enough for the team to use.",
   },
 ] as const;
 
-const workflowSteps = ["Client", "Mission", "Invoice", "Payment"] as const;
+const workflowSteps = ["Request", "Owner", "Action", "Outcome"] as const;
 
-const visibilitySignals = ["Owner", "Status", "Due date", "Payment"] as const;
+const visibilitySignals = ["Status", "Due date", "Priority", "Blocker"] as const;
 
-export function Hero({ onContactClick }: HeroProps) {
+export function Hero() {
   const { hero } = siteContent;
-
-  const secondaryCta = onContactClick ? (
-    <button
-      type="button"
-      onClick={onContactClick}
-      className="premium-cta-outline h-12 px-6"
-    >
-      {hero.secondaryCta.label}
-    </button>
-  ) : (
-    <TrackedLink
-      href={hero.secondaryCta.href}
-      event="contact_cta_click"
-      data={{ location: "hero_secondary" }}
-      className="premium-cta-outline h-12 px-6"
-    >
-      {hero.secondaryCta.label}
-    </TrackedLink>
-  );
 
   return (
     <section className="relative border-b border-line bg-white">
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
-            <SectionKicker label="" />
-            <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-black/42">
               {hero.subtitle}
             </p>
 
@@ -70,18 +45,25 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <TrackedLink
                 href={hero.primaryCta.href}
-                event="case_study_cta_click"
+                event="contact_cta_click"
                 data={{ location: "hero_primary" }}
                 className="premium-cta h-12 px-6"
               >
                 {hero.primaryCta.label}
               </TrackedLink>
 
-              {secondaryCta}
+              <TrackedLink
+                href={hero.secondaryCta.href}
+                event="case_study_cta_click"
+                data={{ location: "hero_secondary" }}
+                className="premium-cta-outline h-12 px-6"
+              >
+                {hero.secondaryCta.label}
+              </TrackedLink>
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
-              Owner → Action → Cost → Outcome
+              Owner - Action - Follow-up - Outcome
             </p>
 
             <div className="mt-14 border-t border-line pt-8">
@@ -113,7 +95,7 @@ export function Hero({ onContactClick }: HeroProps) {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Visibility
+                  Systems View
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
                   One working view of daily operations.
@@ -140,7 +122,7 @@ export function Hero({ onContactClick }: HeroProps) {
 
               <div className="mt-6 border-t border-line pt-6">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Supporting line
+                  What stays visible
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {visibilitySignals.map((item) => (
