@@ -1,6 +1,6 @@
 export const bookingHref = "https://cal.com/a-a-eqld1k/ops-call";
 
-export const directEmailHref = "mailto:anisallouache@gmail.com";
+export const directEmailHref = "mailto:hello@anisconsult.com";
 
 export const siteContent = {
   brand: "Anis",
