@@ -1,5 +1,4 @@
-export const bookingHref =
-  process.env.NEXT_PUBLIC_BOOKING_URL?.trim() || "/#contact";
+export const bookingHref = "https://cal.com/a-a-eqld1k/ops-call";
 
 export const directEmailHref = "mailto:anisallouache@gmail.com";
 
