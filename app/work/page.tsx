@@ -5,9 +5,9 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Work | Operations & Internal Tools | Anis",
+  title: "Work | Operations Systems Specialist | Anis",
   description:
-    "Real operational work across hospitality and logistics, plus retail proof shaped by execution, reporting and internal tools.",
+    "Operational case studies across hospitality, logistics and retail, showing clearer systems, less manual work and better execution.",
 };
 
 const projects = [
@@ -35,7 +35,7 @@ const projects = [
     description: "Workflow redesign, margin visibility and daily execution systems for a clearer, more profitable convenience retail operation.",
     support: "Supported by StorePilot retail dashboard",
     href: "/work/northline-convenience",
-    location: "work_page_retail_operations_proof",
+    location: "work_page_northline",
     ctaLabel: "View Case Study",
   },
 ] as const;
@@ -104,4 +104,3 @@ export default function WorkPage() {
     </>
   );
 }
-

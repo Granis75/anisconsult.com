@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Northline Convenience | Retail Operations Proof",
+  title: "Northline Convenience Case Study | Retail Operations | Anis",
   description:
-    "Retail workflow redesign, margin systems and operational visibility case study by Anis Allouache.",
+    "Retail workflow redesign, margin visibility and daily execution systems case study by Anis Allouache.",
 };
 
 const sectionLinks = [
@@ -113,7 +113,7 @@ export default function NorthlineConveniencePage() {
           <div className="mx-auto max-w-7xl px-6 pb-16 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-start lg:gap-16">
               <div className="max-w-4xl">
-                <SectionKicker label="Retail Operations Proof" />
+                <SectionKicker label="Retail" />
                 <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[4.3rem]">
                   Re-engineering a Founder-Dependent Urban Convenience Store into a Scalable Profit Engine
                 </h1>

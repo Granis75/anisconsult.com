@@ -17,7 +17,7 @@ const allowedOrigins = (process.env.CONTACT_ALLOWED_ORIGIN || "")
 
 const fromEmail =
   process.env.CONTACT_FROM_EMAIL || "AnisConsult <onboarding@resend.dev>";
-const toEmail = process.env.CONTACT_TO_EMAIL || "anis.contactme@gmail.com";
+const toEmail = process.env.CONTACT_TO_EMAIL || "hello@anisconsult.com";
 
 type ContactPayload = {
   email?: string;

@@ -1,4 +1,4 @@
-export const bookingHref = "https://cal.com/a-a-eqld1k/ops-call";
+export const bookingHref = "https://cal.com/anisconsult/ops-call";
 
 export const directEmailHref = "mailto:hello@anisconsult.com";
 
