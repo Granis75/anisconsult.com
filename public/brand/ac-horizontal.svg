@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 600" role="img" aria-label="AnisConsult horizontal lockup">
+  <title>AnisConsult — Horizontal Lockup</title>
+  <style>
+    .wm { font-family: 'Söhne', 'Neue Haas Grotesk Display Pro', 'GT America', 'Helvetica Neue', 'Inter', 'Arial', sans-serif; font-weight: 300; letter-spacing: 0.14em; fill: #0D0D0D; }
+    .tg { font-family: 'Söhne', 'Neue Haas Grotesk Display Pro', 'GT America', 'Helvetica Neue', 'Inter', 'Arial', sans-serif; font-weight: 400; letter-spacing: 0.32em; fill: #1A1A1A; }
+  </style>
+
+  <!-- Monogram, scaled to 420px, placed left -->
+  <g transform="translate(120, 90) scale(0.42)">
+    <g fill="none" stroke="#0D0D0D" stroke-width="56" stroke-linecap="butt" stroke-linejoin="miter">
+      <line x1="60"  y1="820" x2="250" y2="180"/>
+      <line x1="250" y1="180" x2="440" y2="820"/>
+      <line x1="140" y1="560" x2="360" y2="560"/>
+      <path d="M 1022.1 316.5 A 320 320 0 1 0 1022.1 683.5"/>
+    </g>
+  </g>
+
+  <!-- Wordmark + tagline -->
+  <text class="wm" x="640" y="310" font-size="180">ANISCONSULT</text>
+  <text class="tg" x="642" y="400" font-size="44">OPERATIONS SYSTEMS SPECIALIST</text>
+</svg>

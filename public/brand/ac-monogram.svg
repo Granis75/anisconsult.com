@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-label="AnisConsult AC monogram">
+  <title>AnisConsult — AC Monogram</title>
+  <desc>Minimalist geometric monogram. A: two diagonals + inset crossbar. C: open arc, unified stroke weight.</desc>
+  <g fill="none" stroke="#0D0D0D" stroke-width="56" stroke-linecap="butt" stroke-linejoin="miter">
+    <line x1="60"  y1="820" x2="250" y2="180"/>
+    <line x1="250" y1="180" x2="440" y2="820"/>
+    <line x1="140" y1="560" x2="360" y2="560"/>
+    <path d="M 1022.1 316.5 A 320 320 0 1 0 1022.1 683.5"/>
+  </g>
+</svg>

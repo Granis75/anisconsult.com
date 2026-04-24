@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Northline Convenience Case Study | Retail Operations | Anis",
+  title: "Northline Convenience Case Study | Retail Operations | AnisConsult",
   description:
     "Retail workflow redesign, margin visibility and daily execution systems case study by Anis Allouache.",
 };

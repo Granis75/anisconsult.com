@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "About | Operations Systems Specialist | Anis",
+  title: "About | Operations Systems Specialist | AnisConsult",
   description:
     "Operations perspective built inside real environments where execution matters, friction repeats and clearer systems improve the work.",
 };

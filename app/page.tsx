@@ -9,9 +9,8 @@ import { TrackedLink } from "@/components/tracked-link";
 import { bookingHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Anis Allouache — Operations Systems Specialist",
-  description:
-    "I help companies fix messy operations, reduce manual work, and build internal systems teams actually use.",
+  title: "AnisConsult — Operations Systems Specialist",
+  description: "Fix messy operations. Reduce manual work. Build systems teams actually use.",
 };
 
 const services = [

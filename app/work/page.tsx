@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Work | Operations Systems Specialist | Anis",
+  title: "Work | Operations Systems Specialist | AnisConsult",
   description:
     "Operational case studies across hospitality, logistics and retail, showing clearer systems, less manual work and better execution.",
 };
