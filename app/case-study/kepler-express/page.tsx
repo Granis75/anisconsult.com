@@ -163,7 +163,7 @@ export default function KeplerExpressCaseStudyPage() {
 
                   <div className="mt-6">
                     <a
-                      href="https://kepler-express.vercel.app/"
+                      href="https://kepler.anisconsult.com"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"

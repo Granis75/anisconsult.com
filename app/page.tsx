@@ -88,25 +88,25 @@ const products = [
     title: "StorePilot",
     description:
       "Retail dashboard for margin visibility, incidents, checklist execution and daily store control.",
-    href: "https://storepilot-delta.vercel.app/",
+    href: "https://storepilot.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
     title: "Ops Core",
     description: "Hospitality dashboard for tasks, incidents, expenses and daily operating control.",
-    href: "https://ops-core-v.vercel.app/",
+    href: "https://opscore.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
     title: "MyBi",
     description: "Client work, invoicing and payment status kept in one operating line.",
-    href: "https://mybi-business-app.vercel.app/",
+    href: "https://mybi.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
     title: "Kepler Express",
     description: "Mission follow-up, cost capture and billing kept aligned.",
-    href: "https://kepler-express.vercel.app/",
+    href: "https://kepler.anisconsult.com",
     ctaLabel: "Explore",
   },
 ] as const;

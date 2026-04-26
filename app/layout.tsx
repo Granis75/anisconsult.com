@@ -17,22 +17,26 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "AnisConsult — Operations Systems Specialist",
-  description: "Fix messy operations. Reduce manual work. Build systems teams actually use.",
+  title: "AnisConsult — Operations Systems Specialist for B2B Teams",
+  description: "Fix messy operations, reduce manual work, and build internal systems teams actually use. Operations support for founders and lean teams.",
   icons: {
-    icon: "/brand/favicon-32x32.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/brand/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
     apple: "/brand/apple-touch-icon.png",
     other: [
       {
         rel: "icon",
-        url: "/brand/android-chrome-512x512.png",
+        type: "image/png",
         sizes: "512x512",
+        url: "/brand/android-chrome-512x512.png",
       },
     ],
   },
   openGraph: {
     title: "AnisConsult — Operations Systems Specialist",
-    description: "Fix messy operations. Reduce manual work. Build systems teams actually use.",
+    description: "Fix messy operations, reduce manual work, and build internal systems teams actually use.",
     images: [
       {
         url: "/brand/og-image.jpg",
@@ -45,7 +49,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AnisConsult — Operations Systems Specialist",
-    description: "Fix messy operations. Reduce manual work. Build systems teams actually use.",
+    description: "Fix messy operations, reduce manual work, and build internal systems teams actually use.",
     images: ["/brand/og-image.jpg"],
   },
 };

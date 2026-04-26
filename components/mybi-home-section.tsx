@@ -29,7 +29,7 @@ export function MyBiHomeSection() {
 
             <div className="mt-10">
               <a
-                href="https://mybi-business-app.vercel.app/"
+                href="https://mybi.anisconsult.com"
                 target="_blank"
                 rel="noreferrer"
                 className="premium-cta h-12 px-6"
@@ -43,7 +43,7 @@ export function MyBiHomeSection() {
                 Kepler Express applies the same logic to mission follow-up, cost capture and billing.
               </p>
               <a
-                href="https://kepler-express.vercel.app/"
+                href="https://kepler.anisconsult.com"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"

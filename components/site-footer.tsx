@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { directEmailHref } from "@/lib/site-content";
 
@@ -12,7 +11,7 @@ export function SiteFooter() {
             aria-label="Back to home"
             className="inline-flex items-center transition-opacity hover:opacity-80"
           >
-            <Image
+            <img
               src="/brand/ac-horizontal.svg"
               alt="AnisConsult"
               width={240}
