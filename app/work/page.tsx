@@ -10,7 +10,19 @@ export const metadata: Metadata = {
     "Operational case studies across hospitality, logistics and retail, showing clearer systems, less manual work and better execution.",
 };
 
-const projects = [
+type Project = {
+  category: string;
+  title: string;
+  description: string;
+  support: string;
+  href: string;
+  location: string;
+  ctaLabel: string;
+  secondCtaLabel?: string;
+  secondCtaHref?: string;
+};
+
+const projects: Project[] = [
   {
     category: "Hospitality",
     title: "Résidence Cadet",
@@ -38,7 +50,18 @@ const projects = [
     location: "work_page_northline",
     ctaLabel: "View Case Study",
   },
-] as const;
+  {
+    category: "Hospitality SaaS / PMS Prototype",
+    title: "StayOps Core — Core PMS Prototype",
+    description: "A functional PMS prototype for boutique hotels and serviced apartments, designed around reservations, rooms, billing and daily front-desk clarity.",
+    support: "Prototype · Not production software",
+    href: "/case-study/stayops-core",
+    location: "work_page_stayops",
+    ctaLabel: "View Case Study",
+    secondCtaLabel: "View Live Prototype",
+    secondCtaHref: "https://stayops.anisconsult.com",
+  },
+];
 
 export default function WorkPage() {
   return (
@@ -83,7 +106,7 @@ export default function WorkPage() {
                   <p className="text-sm text-muted/70">
                     {project.support}
                   </p>
-                  <div>
+                  <div className="flex flex-wrap items-center gap-4">
                     <TrackedLink
                       href={project.href}
                       event="case_study_cta_click"
@@ -92,6 +115,16 @@ export default function WorkPage() {
                     >
                       {project.ctaLabel}
                     </TrackedLink>
+                    {project.secondCtaHref && project.secondCtaLabel && (
+                      <a
+                        href={project.secondCtaHref}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
+                      >
+                        {project.secondCtaLabel}
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
