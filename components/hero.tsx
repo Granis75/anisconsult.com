@@ -1,6 +1,7 @@
 "use client";
 
 import { TrackedLink } from "@/components/tracked-link";
+import { ProofBar } from "@/components/proof-bar";
 import { siteContent } from "@/lib/site-content";
 
 const focusAreas = [
@@ -139,6 +140,8 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      <ProofBar />
     </section>
   );
 }
