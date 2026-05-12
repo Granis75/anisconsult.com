@@ -104,11 +104,11 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Got something broken?
+          Got a workflow that keeps breaking?
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          Tell me what&apos;s slowing operations down. In 15 minutes I&apos;ll tell
-          you if I can help - and how.
+          Tell me what is slowing the team down. In 15 minutes, I&apos;ll tell you
+          if I can help - and what I would fix first.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">

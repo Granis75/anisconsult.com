@@ -3,19 +3,19 @@
 import { SectionKicker } from "@/components/section-kicker";
 
 const beforePoints = [
-  "scattered emails, chats and sheets",
+  "scattered emails, chats and spreadsheets",
   "unclear ownership",
-  "manual reporting",
-  "lost follow-ups",
+  "late or lost follow-up",
+  "reporting rebuilt manually",
   "decisions made from memory",
 ] as const;
 
 const afterPoints = [
   "one operating view",
   "visible owners and blockers",
-  "clean status tracking",
-  "faster reporting",
-  "systems simple enough for the team to use",
+  "clean next steps",
+  "repeatable reporting",
+  "decisions based on operational facts",
 ] as const;
 
 export function BeforeAfterSection() {
@@ -25,7 +25,7 @@ export function BeforeAfterSection() {
         <div className="mb-14 max-w-3xl">
           <SectionKicker label="Transformation" />
           <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-            From chaos to clarity.
+            From scattered work to operational control.
           </h2>
         </div>
 

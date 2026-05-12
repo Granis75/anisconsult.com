@@ -1,9 +1,9 @@
 "use client";
 
 const proofPoints = [
-  "7.6 → 9.2 / 10 guest satisfaction",
-  "Top 30 of ~450 platform ranking",
-  "+50% revenue in a new operating segment",
+  "7.6 → 9.2 guest satisfaction",
+  "Top 30 of ~450",
+  "+50% revenue segment",
   "~10h/week saved on admin work",
 ] as const;
 

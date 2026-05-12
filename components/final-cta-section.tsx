@@ -12,7 +12,7 @@ export function FinalCTASection() {
             Got a workflow that keeps breaking?
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted sm:text-xl">
-            Tell me what is slowing the team down. In 15 minutes, I'll tell you if I can help — and what I would fix first.
+            Tell me what is slowing operations down. In 15 minutes, I&apos;ll tell you if I can help and where I would start.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">

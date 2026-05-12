@@ -6,22 +6,22 @@ import { siteContent } from "@/lib/site-content";
 
 const focusAreas = [
   {
-    title: "Clarity",
-    description: "Ownership, blockers and next steps stay visible.",
+    title: "Make ownership visible",
+    description: "Every request has a responsible person and a next step.",
   },
   {
-    title: "Less manual work",
-    description: "Follow-up and reporting move out of scattered tools.",
+    title: "Reduce manual follow-up",
+    description: "The work stops living across chats, sheets and memory.",
   },
   {
-    title: "Adoption",
-    description: "The system stays simple enough for the team to use.",
+    title: "Keep it usable",
+    description: "Systems are built around how the team already works.",
   },
 ] as const;
 
-const workflowSteps = ["Request", "Owner", "Action", "Outcome"] as const;
+const messySignals = ["Scattered tools", "Manual follow-up", "Unclear owners"] as const;
 
-const visibilitySignals = ["Status", "Due date", "Priority", "Blocker"] as const;
+const systemSignals = ["Owner", "Status", "Next action", "Outcome"] as const;
 
 export function Hero() {
   const { hero } = siteContent;
@@ -29,7 +29,7 @@ export function Hero() {
   return (
     <section className="relative border-b border-line bg-white">
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start lg:gap-16">
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.04fr)_minmax(320px,0.96fr)] lg:items-start lg:gap-16">
           <div className="max-w-4xl">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-black/42">
               {hero.subtitle}
@@ -96,45 +96,50 @@ export function Hero() {
             <div className="premium-card overflow-hidden p-6 sm:p-8">
               <div className="max-w-sm">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  Systems View
+                  Operating logic
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  One working view of daily operations.
+                  Turn loose work into a usable system.
                 </h2>
               </div>
 
-              <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] px-5 py-5">
+              <div className="mt-8 rounded-[24px] border border-black/8 bg-[#f8f7f3] p-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  Core flow
+                  Before
                 </p>
-                <div className="mt-4 flex flex-wrap items-center gap-2.5">
-                  {workflowSteps.map((item, index) => (
-                    <div key={item} className="flex items-center gap-2.5">
-                      <span className="inline-flex items-center rounded-full border border-black/8 bg-white px-3.5 py-1.5 text-sm font-medium text-ink">
-                        {item}
-                      </span>
-                      {index < workflowSteps.length - 1 ? (
-                        <span className="text-sm text-black/25">→</span>
-                      ) : null}
+                <div className="mt-4 grid gap-2">
+                  {messySignals.map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center justify-between rounded-2xl border border-black/8 bg-white/78 px-4 py-3 text-sm text-ink/68"
+                    >
+                      <span>{item}</span>
+                      <span className="h-1.5 w-1.5 rounded-full bg-ink/22" />
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-6 border-t border-line pt-6">
+              <div className="mt-4 rounded-[24px] border border-black/8 bg-white p-5">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-black/40">
-                  What stays visible
+                  After
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {visibilitySignals.map((item) => (
-                    <span
+                <div className="mt-4 grid grid-cols-2 gap-2">
+                  {systemSignals.map((item) => (
+                    <div
                       key={item}
-                      className="inline-flex items-center rounded-full border border-black/8 bg-white px-3.5 py-1.5 text-sm text-neutral-700"
+                      className="rounded-2xl border border-black/8 bg-[#fbfaf7] px-4 py-3"
                     >
-                      {item}
-                    </span>
+                      <p className="text-sm font-medium text-ink">{item}</p>
+                    </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="mt-6 border-t border-line pt-5">
+                <p className="text-sm leading-6 text-ink/70">
+                  A simple operating layer for deciding what matters, who owns it and what happens next.
+                </p>
               </div>
             </div>
           </div>

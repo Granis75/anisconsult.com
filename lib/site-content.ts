@@ -11,10 +11,10 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "Fix messy operations. Make work visible.",
+    title: "Fix messy operations. Build systems teams actually use.",
     subtitle: "Operations systems for service businesses",
     description:
-      "Practical systems for service teams drowning in scattered tools, manual follow-up and unclear ownership.",
+      "For service teams stuck in scattered tools, manual follow-up and work that nobody can see clearly enough to control.",
     primaryCta: {
       label: "Book a 15-min Call",
       href: bookingHref,

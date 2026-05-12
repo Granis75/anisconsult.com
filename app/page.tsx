@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { BeforeAfterSection } from "@/components/before-after-section";
 import { ContactSection } from "@/components/contact-section";
-import { FinalCTASection } from "@/components/final-cta-section";
 import { Hero } from "@/components/hero";
+import { OperatingViewSection } from "@/components/operating-view-section";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
@@ -13,26 +13,27 @@ import { bookingHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "AnisConsult — Operations, Workflow Systems & Business Tools",
-  description: "Back-office operations, workflow systems and business tools for service-based businesses. Structured, clear, built around real operational problems.",
+  description:
+    "Operations systems for service businesses with scattered tools, manual follow-up and unclear ownership. Clearer workflows, reporting and internal tools.",
 };
 
 const services = [
   {
     title: "Ops Audit",
-    fixes: "Messy handoffs, unclear ownership, duplicated admin and workflows nobody fully trusts.",
-    bestFor: "Teams that know something is off but need clarity first.",
+    fixes: "Messy handoffs, unclear ownership and duplicated admin.",
+    bestFor: "When the team feels the friction but the root cause is not clear.",
     outcome: "A clear operating map with the first fixes prioritized.",
   },
   {
     title: "Systems Setup",
-    fixes: "Scattered trackers, manual follow-up, reporting gaps and internal tools that never quite fit.",
-    bestFor: "Teams that need a simple system built and shipped fast.",
+    fixes: "Scattered trackers, manual follow-up and reporting gaps.",
+    bestFor: "When the workflow is known, but the system around it is missing.",
     outcome: "A working system the team can use in weeks, not months.",
   },
   {
     title: "Ongoing Support",
-    fixes: "Systems that drift, dashboards that go stale and operational details that keep changing.",
-    bestFor: "Teams that want ongoing support as operations evolve.",
+    fixes: "Systems that drift, dashboards that go stale and changing operations.",
+    bestFor: "When operations keep evolving and the system needs to stay useful.",
     outcome: "Cleaner weekly visibility and systems that keep improving with the business.",
   },
 ] as const;
@@ -73,35 +74,54 @@ const featuredCases = [
 const products = [
   {
     title: "StorePilot",
-    problem: "Retail operations scattered across inventory, tasks, costs and daily execution.",
-    audience: "Retail operators and convenience store managers.",
-    workflow: "Makes stock levels, task completion, and margin visibility transparent.",
+    problem: "Daily retail control across tasks, stock, costs and execution.",
+    audience: "Retail and convenience store operations.",
+    workflow: "Makes stock levels, task completion and margin visibility easier to control.",
     href: "https://storepilot.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
     title: "Ops Core",
-    problem: "Operational tasks, incidents, follow-up, and reporting lacked structure.",
-    audience: "Operations teams in hospitality and service businesses.",
+    problem: "Tasks, incidents, follow-up and reporting without one operating line.",
+    audience: "Hospitality and service operations teams.",
     workflow: "Makes task ownership, blockers, and status tracking visible.",
     href: "https://opscore.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
     title: "MyBi",
-    problem: "Freelancers and small operators struggled with client, project, and revenue visibility.",
+    problem: "Client work, project progress, invoicing and revenue visibility.",
     audience: "Freelancers and small business operators.",
-    workflow: "Makes client relationships, project status, and revenue tracking clear.",
+    workflow: "Makes client relationships, project status and payment follow-up clear.",
     href: "https://mybi.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
     title: "Kepler Express",
-    problem: "Logistics missions, expenses, invoicing, and payments were disconnected.",
+    problem: "Missions, driver costs, invoicing and payments moving separately.",
     audience: "Logistics and delivery operations teams.",
-    workflow: "Makes mission status, costs, and billing workflows transparent.",
+    workflow: "Makes mission status, cost capture and billing workflows visible.",
     href: "https://kepler.anisconsult.com",
     ctaLabel: "Explore",
+  },
+] as const;
+
+const audienceFit = [
+  {
+    title: "Founders and lean teams",
+    description: "When operations depend too much on memory, urgency and manual follow-up.",
+  },
+  {
+    title: "Hospitality operators",
+    description: "For guest follow-up, access, issues, payments and reporting that need one clearer flow.",
+  },
+  {
+    title: "Retail and service businesses",
+    description: "For teams managing daily execution, admin work, margins and recurring operational tasks.",
+  },
+  {
+    title: "International teams",
+    description: "For English, French or Arabic environments where simple structure matters across contexts.",
   },
 ] as const;
 
@@ -114,6 +134,8 @@ export default function HomePage() {
         <Reveal>
           <Hero />
         </Reveal>
+
+        <OperatingViewSection />
 
         <ValueSection />
 
@@ -128,12 +150,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Services" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Three ways I help.
+                  Choose the right entry point.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Clear entry points for teams that need clarity, a system, or ongoing operational support.
+                Start with diagnosis, build the system, or keep improving the operating layer as the business changes.
               </p>
             </div>
 
@@ -196,12 +218,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Work" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Selected Work
+                  Proof of execution.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Concrete outcomes from live operational work across hospitality, logistics and retail.
+                Selected operational work across hospitality, logistics and retail, with real systems and measurable results.
               </p>
             </div>
 
@@ -271,12 +293,12 @@ export default function HomePage() {
               <div className="max-w-3xl">
                 <SectionKicker label="Systems" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Internal systems built from real operational problems.
+                  Internal systems built around recurring operational problems.
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Lightweight tools shaped by recurring follow-up, reporting and visibility problems.
+                AnisConsult does not only advise. It models, structures and builds practical systems around repeated operating pain.
               </p>
             </div>
 
@@ -323,7 +345,32 @@ export default function HomePage() {
           </Reveal>
         </section>
 
-        <FinalCTASection />
+        <section
+          id="who-i-work-with"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={70}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
+              <div className="max-w-3xl">
+                <SectionKicker label="Fit" />
+                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
+                  Built for operators who need clarity, not theater.
+                </h2>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {audienceFit.map((item) => (
+                  <article key={item.title} className="rounded-[24px] border border-line bg-[#fbfaf7] p-5">
+                    <h3 className="text-base font-semibold tracking-[-0.02em] text-ink">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-muted">{item.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </section>
 
         <section
           id="contact"
