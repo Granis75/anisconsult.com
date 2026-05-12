@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Northline Convenience Case Study | Retail Operations | AnisConsult",
+  title: "Northline Convenience Concept Case Study | Retail Systems | AnisConsult",
   description:
-    "Retail workflow redesign, margin visibility and daily execution systems case study by Anis Allouache.",
+    "Conceptual retail systems study exploring workflow redesign, margin visibility and daily execution logic by Anis Allouache.",
 };
 
 const sectionLinks = [
@@ -21,10 +21,10 @@ const sectionLinks = [
 ] as const;
 
 const businessContext = [
-  { label: "Store Format", value: "65m² urban convenience store" },
-  { label: "Market", value: "Dense residential / commuter zone" },
-  { label: "Revenue Baseline", value: "€520k annual turnover" },
-  { label: "Team", value: "Founder + 2 staff + part-time support" },
+  { label: "Study Type", value: "Concept scenario" },
+  { label: "Store Format", value: "65m² urban convenience store model" },
+  { label: "Market", value: "Dense residential / commuter zone model" },
+  { label: "Team", value: "Founder + 2 staff + part-time support model" },
   { label: "Challenge", value: "High traffic but weak operational leverage" },
 ] as const;
 
@@ -113,12 +113,17 @@ export default function NorthlineConveniencePage() {
           <div className="mx-auto max-w-7xl px-6 pb-16 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-start lg:gap-16">
               <div className="max-w-4xl">
-                <SectionKicker label="Retail" />
+                <div className="flex flex-wrap items-center gap-3">
+                  <SectionKicker label="Retail" />
+                  <span className="rounded-full border border-black/8 bg-[#f4f2ec] px-3 py-1 text-xs font-medium text-ink/70">
+                    Concept Case Study
+                  </span>
+                </div>
                 <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[4.3rem]">
-                  Re-engineering a Founder-Dependent Urban Convenience Store into a Scalable Profit Engine
+                  Modeling a clearer operating system for a founder-dependent urban convenience store
                 </h1>
                 <p className="mt-7 max-w-3xl text-lg leading-8 text-muted sm:text-[1.2rem] sm:leading-9">
-                  A conceptual business case study showing how workflow redesign, automation and operational visibility can improve profitability, reduce owner dependency and simplify daily retail execution.
+                  A conceptual business case study showing how workflow redesign, automation and operating visibility could improve profitability, reduce owner dependency and simplify daily retail execution.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -126,7 +131,7 @@ export default function NorthlineConveniencePage() {
                     Back to Work
                   </Link>
                   <Link href="/#contact" className="premium-cta h-12 px-6">
-                    Contact
+                    Discuss a real workflow
                   </Link>
                 </div>
               </div>
@@ -153,7 +158,7 @@ export default function NorthlineConveniencePage() {
                         Format
                       </p>
                       <p className="mt-2 text-sm leading-7 text-ink">
-                        Conceptual business case study
+                        Concept Case Study
                       </p>
                     </div>
                     <div className="border-t border-black/8 pt-4">
@@ -197,7 +202,7 @@ export default function NorthlineConveniencePage() {
                 Independent retail stores often generate revenue but lose profit through friction, weak routines, invisible waste and founder dependency.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                This study models a clearer operating system.
+                This study models a clearer operating system. It is not presented as a delivered client engagement.
               </p>
             </article>
           </div>
@@ -325,7 +330,7 @@ export default function NorthlineConveniencePage() {
             <div className="max-w-3xl">
               <SectionKicker label="Modeled Outcomes" />
               <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                Modeled estimates based on operational redesign assumptions.
+                These figures are modeled estimates used to test the operating logic of the concept, not reported client results.
               </p>
             </div>
 
@@ -377,7 +382,7 @@ export default function NorthlineConveniencePage() {
                   They fail from invisible leakage, dependency and poor execution systems.
                 </p>
                 <p className="max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                  When operations become structured, margin follows.
+                  In this scenario, clearer operating logic makes the margin levers easier to see and control.
                 </p>
               </div>
             </article>
@@ -398,10 +403,10 @@ export default function NorthlineConveniencePage() {
                 <div className="mt-8 border-t border-line pt-8">
                   <SectionKicker label="Contact" />
                   <h2 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.4rem]">
-                    Need clearer operations?
+                    Want to test a real workflow?
                   </h2>
                   <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    I help operations run cleaner through coordination, structure and the right tools.
+                    This concept shows the kind of operating logic I can model before a real system is built.
                   </p>
                 </div>
               </div>

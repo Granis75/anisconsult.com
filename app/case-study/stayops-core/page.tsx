@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "StayOps Core — PMS Prototype | AnisConsult",
+  title: "StayOps Core — PMS in Active Development | AnisConsult",
   description:
-    "StayOps Core is a functional PMS prototype for boutique hotels and serviced apartments — reservations, room assignment, billing, housekeeping readiness and invoice preview in one clear workspace.",
+    "StayOps Core is a focused PMS product in active development for boutique hotels and serviced apartments, built around reservations, rooms, balances, housekeeping, incidents and front-desk clarity.",
 };
 
 const sectionLinks = [
@@ -57,7 +57,7 @@ const featureAreas = [
   },
   {
     title: "Integration readiness",
-    detail: "Prepared for Supabase, Stripe and webhook-based integrations.",
+    detail: "Planned integration surfaces for database, payment and workflow connections as the product matures.",
   },
 ] as const;
 
@@ -65,8 +65,8 @@ const stackItems = [
   { label: "Framework", value: "Next.js (App Router)" },
   { label: "Language", value: "TypeScript" },
   { label: "Styling", value: "Tailwind CSS" },
-  { label: "Data layer", value: "localStorage mock store" },
-  { label: "Integration-ready", value: "Supabase · Stripe · Webhooks" },
+  { label: "Demo mode", value: "Read-only public demo workspace" },
+  { label: "Planned surfaces", value: "Database · Payments · Webhooks" },
 ] as const;
 
 const flowSteps = [
@@ -82,13 +82,13 @@ const flowSteps = [
 const distinctionItems = [
   {
     name: "StayOps Core",
-    role: "PMS Prototype",
+    role: "PMS in active development",
     covers: "Reservations, room assignment, check-in / checkout, billing, invoicing and front-desk clarity.",
   },
   {
     name: "Ops Core",
-    role: "Operations Layer",
-    covers: "Incidents, vendor management, maintenance, expenses and daily execution follow-up.",
+    role: "Operational Management System",
+    covers: "Tasks, incidents, follow-up, reporting and internal workflows for service-based businesses.",
   },
 ] as const;
 
@@ -101,19 +101,19 @@ export default function StayOpsCasePage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <SectionKicker label="PMS Prototype" />
+              <SectionKicker label="PMS in active development" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
                 StayOps Core
               </h1>
               <p className="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                Hospitality SaaS / PMS Prototype / Product Design
+                Hospitality / PMS / Serviced Residences & Boutique Hotels
               </p>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                A functional PMS prototype for boutique hotels and serviced apartments, designed around reservations, rooms, billing and daily front-desk clarity.
+                Focused PMS product for boutique hotels and serviced apartments, currently in active development around reservations, rooms, balances, housekeeping, incidents and front-desk clarity.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Built from real front-desk and operations experience. StayOps Core demonstrates how a small hospitality team can manage arrivals, departures, room assignment, guest balances, housekeeping readiness and billing from one clear workspace.
+                Built from real front-desk and operating experience. StayOps Core gives a small hospitality team one clear workspace for arrivals, departures, room assignment, guest balances, housekeeping readiness and daily blockers.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -123,7 +123,7 @@ export default function StayOpsCasePage() {
                   rel="noreferrer"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  View Live Prototype
+                  Open StayOps
                 </a>
                 <Link
                   href="/work"
@@ -161,7 +161,7 @@ export default function StayOpsCasePage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Hospitality operations experience reveals a consistent gap: small teams are caught between PMS tools that are too complex to adapt and modern products that are too rigid to extend. StayOps Core is a prototype built to show what the operational PMS core could look like when clarity comes first.
+                  Hospitality operating experience reveals a consistent gap: small teams are caught between PMS tools that are too complex to adapt and modern products that are too rigid to extend. StayOps Core is a focused PMS product in active development, designed for boutique hotels and serviced apartments where the full reservation-to-reporting flow needs to work simply and reliably.
                 </p>
               </article>
 
@@ -170,7 +170,7 @@ export default function StayOpsCasePage() {
                   What it demonstrates
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
-                  A complete reservation-to-invoice workflow — from arrival to checkout — in one clear front-desk workspace. Reservation management, room status, guest billing and housekeeping readiness are connected rather than scattered.
+                  An evolving reservation-to-invoice workflow — from arrival to checkout — in one clear front-desk workspace. Reservation management, room status, guest balances and housekeeping readiness are connected rather than scattered.
                 </p>
               </article>
             </div>
@@ -245,7 +245,7 @@ export default function StayOpsCasePage() {
             <div className="max-w-3xl">
               <SectionKicker label="Stack" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Built lean. Integration-ready.
+                Built lean. Demo-ready.
               </p>
             </div>
 
@@ -266,10 +266,10 @@ export default function StayOpsCasePage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
                 <SectionKicker label="Scope" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Prototype and product demonstration. Not production PMS software.
+                  Active PMS product development with a public demo workspace.
                 </p>
                 <p className="mt-5 text-base leading-8 text-muted">
-                  StayOps Core is built to demonstrate a coherent PMS workflow for boutique hotels and serviced apartments. It uses a localStorage mock store, not a live database, and is not intended for production use.
+                  StayOps Core demonstrates an evolving focused PMS workflow for boutique hotels and serviced apartments. The public demo is read-only and does not imply real hotel, guest or payment data. Enterprise-grade deployment, payments, locks, messaging and channel workflows remain planned integration surfaces until implemented.
                 </p>
               </article>
 
@@ -301,7 +301,7 @@ export default function StayOpsCasePage() {
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
               >
-                View Live Prototype
+                Open StayOps
               </a>
               <Link
                 href="/work"

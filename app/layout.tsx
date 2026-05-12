@@ -17,8 +17,8 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "AnisConsult — Operations Systems Specialist for B2B Teams",
-  description: "Fix messy operations, reduce manual work, and build internal systems teams actually use. Operations support for founders and lean teams.",
+  title: "AnisConsult — Business Systems & Workflow Specialist",
+  description: "Business systems, workflow structure and practical internal tools for service teams with recurring friction, manual follow-up and unclear visibility.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "AnisConsult — Operations Systems Specialist",
-    description: "Fix messy operations, reduce manual work, and build internal systems teams actually use.",
+    title: "AnisConsult — Business Systems & Workflow Specialist",
+    description: "Business systems, workflow structure and practical internal tools for service teams.",
     images: [
       {
         url: "/brand/og-image.jpg",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AnisConsult — Operations Systems Specialist",
-    description: "Fix messy operations, reduce manual work, and build internal systems teams actually use.",
+    title: "AnisConsult — Business Systems & Workflow Specialist",
+    description: "Business systems, workflow structure and practical internal tools for service teams.",
     images: ["/brand/og-image.jpg"],
   },
 };

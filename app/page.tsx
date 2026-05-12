@@ -12,39 +12,39 @@ import { ValueSection } from "@/components/value-section";
 import { bookingHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "AnisConsult — Operations, Workflow Systems & Business Tools",
+  title: "AnisConsult — Business Systems & Workflow Specialist",
   description:
-    "Operations systems for service businesses with scattered tools, manual follow-up and unclear ownership. Clearer workflows, reporting and internal tools.",
+    "Business systems and workflow tools for service teams with scattered tools, manual follow-up and recurring friction.",
 };
 
 const services = [
   {
-    title: "Ops Audit",
-    fixes: "Messy handoffs, unclear ownership and duplicated admin.",
+    title: "Workflow Audit",
+    fixes: "Recurring friction, unclear ownership and duplicated admin.",
     bestFor: "When the team feels the friction but the root cause is not clear.",
-    outcome: "A clear operating map with the first fixes prioritized.",
+    outcome: "A clear workflow map with the first fixes prioritized.",
   },
   {
     title: "Systems Setup",
     fixes: "Scattered trackers, manual follow-up and reporting gaps.",
     bestFor: "When the workflow is known, but the system around it is missing.",
-    outcome: "A working system the team can use in weeks, not months.",
+    outcome: "A working business system the team can use in weeks, not months.",
   },
   {
-    title: "Ongoing Support",
-    fixes: "Systems that drift, dashboards that go stale and changing operations.",
-    bestFor: "When operations keep evolving and the system needs to stay useful.",
+    title: "Ongoing Systems Support",
+    fixes: "Systems that drift, dashboards that go stale and workflows that keep changing.",
+    bestFor: "When the business keeps evolving and the system needs to stay useful.",
     outcome: "Cleaner weekly visibility and systems that keep improving with the business.",
   },
 ] as const;
 
-const featuredCases = [
+const realCases = [
   {
     sector: "Hospitality",
     title: "Résidence Cadet",
     problem: "Guest stays, access, follow-up and reporting were scattered across multiple tools.",
     system: "Ops Core operating flow for guest follow-up, access, issues and reporting.",
-    outcome: "7.6 → 9.2 / 10 guest satisfaction",
+    outcome: "7.6 → 9.2 / 10 guest satisfaction · ~10h/week admin work reduced",
     href: "/case-study/vesper",
     location: "home_proof_residence_cadet",
     ctaLabel: "View Case Study",
@@ -54,33 +54,59 @@ const featuredCases = [
     title: "Kepler Express",
     problem: "Mission follow-up, driver costs and billing lacked visibility and structure.",
     system: "Kepler workflow system connecting mission status, cost capture and billing.",
-    outcome: "+50% revenue in new operating segment",
+    outcome: "+50% revenue in a new operating segment",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View Case Study",
   },
+] as const;
+
+const conceptStudies = [
   {
+    badge: "Concept Case Study",
     sector: "Retail",
     title: "Northline Convenience",
-    problem: "Workflow redesign needed for margin visibility and daily execution.",
-    system: "StorePilot retail dashboard for daily execution, admin follow-up and reporting.",
-    outcome: "~10h/week saved on admin work",
+    problem: "Conceptual retail systems study for margin visibility and daily execution.",
+    system: "StorePilot concept prototype for daily execution, exceptions and reporting.",
+    outcome: "Scenario-based modeled outcomes, not reported client results",
     href: "/work/northline-convenience",
     location: "home_proof_northline",
-    ctaLabel: "View Case Study",
+    ctaLabel: "View Concept Study",
+  },
+  {
+    badge: "PMS in active development",
+    sector: "Hospitality / PMS",
+    title: "StayOps Core",
+    problem: "Boutique hospitality workflows need reservations, room planning and daily blockers in one focused workspace.",
+    system: "Focused PMS product for boutique hotels and serviced apartments, currently in active development.",
+    outcome: "Live public demo workspace; no real hotel, guest or payment data implied",
+    href: "/case-study/stayops-core",
+    location: "home_proof_stayops",
+    ctaLabel: "View Product Study",
   },
 ] as const;
 
 const products = [
   {
-    title: "StorePilot",
-    problem: "Daily retail control across tasks, stock, costs and execution.",
-    audience: "Retail and convenience store operations.",
-    workflow: "Makes stock levels, task completion and margin visibility easier to control.",
-    href: "https://storepilot.anisconsult.com",
+    badge: "PMS in active development",
+    title: "StayOps Core",
+    problem: "Reservations, rooms, balances, housekeeping and incidents often live across fragmented daily workflows.",
+    audience: "Boutique hotels and serviced apartment operators.",
+    workflow: "Brings front-desk operations, room readiness and daily blockers into one focused PMS workspace.",
+    href: "https://stayops.anisconsult.com",
     ctaLabel: "Explore",
   },
   {
+    badge: "Concept product",
+    title: "StorePilot",
+    problem: "Daily retail control across tasks, stock, waste, cost signals and execution.",
+    audience: "Convenience retail and small-format store operators — concept exploration.",
+    workflow: "Models how daily execution, exceptions and margin signals could be surfaced in one retail operating layer.",
+    href: "https://storepilot.anisconsult.com",
+    ctaLabel: "Explore concept",
+  },
+  {
+    badge: "Internal prototype",
     title: "Ops Core",
     problem: "Tasks, incidents, follow-up and reporting without one operating line.",
     audience: "Hospitality and service operations teams.",
@@ -89,6 +115,7 @@ const products = [
     ctaLabel: "Explore",
   },
   {
+    badge: "Business tool",
     title: "MyBi",
     problem: "Client work, project progress, invoicing and revenue visibility.",
     audience: "Freelancers and small business operators.",
@@ -97,6 +124,7 @@ const products = [
     ctaLabel: "Explore",
   },
   {
+    badge: "Workflow system",
     title: "Kepler Express",
     problem: "Missions, driver costs, invoicing and payments moving separately.",
     audience: "Logistics and delivery operations teams.",
@@ -223,16 +251,74 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Selected operational work across hospitality, logistics and retail, with real systems and measurable results.
+                Real case studies, active product work and conceptual systems studies, separated clearly.
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {featuredCases.map((item) => (
+            <div className="mt-12">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                Real Case Studies
+              </p>
+              <div className="mt-5 grid gap-6 md:grid-cols-2">
+                {realCases.map((item) => (
+                  <article key={item.title} className="premium-soft-card flex h-full flex-col">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                      {item.sector}
+                    </p>
+                    <h3 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2.2rem]">
+                      {item.title}
+                    </h3>
+                    <dl className="mt-6 space-y-5">
+                      <div>
+                        <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                          Problem
+                        </dt>
+                        <dd className="mt-2 text-sm leading-7 text-ink/78">{item.problem}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                          System
+                        </dt>
+                        <dd className="mt-2 text-sm leading-7 text-ink/78">{item.system}</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                          Outcome
+                        </dt>
+                        <dd className="mt-2 text-sm font-medium leading-7 text-ink">{item.outcome}</dd>
+                      </div>
+                    </dl>
+
+                    <div className="mt-auto pt-8">
+                      <TrackedLink
+                        href={item.href}
+                        event="case_study_cta_click"
+                        data={{ location: item.location }}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                      >
+                        {item.ctaLabel}
+                      </TrackedLink>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-12 border-t border-line pt-10">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                Concept & Product Studies
+              </p>
+              <div className="mt-5 grid gap-6 md:grid-cols-2">
+              {conceptStudies.map((item) => (
                 <article key={item.title} className="premium-soft-card flex h-full flex-col">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                    {item.sector}
-                  </p>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                      {item.sector}
+                    </p>
+                    <span className="rounded-full border border-black/8 bg-white px-3 py-1 text-xs font-medium text-ink/64">
+                      {item.badge}
+                    </span>
+                  </div>
                   <h3 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2.2rem]">
                     {item.title}
                   </h3>
@@ -269,6 +355,7 @@ export default function HomePage() {
                   </div>
                 </article>
               ))}
+              </div>
             </div>
 
             <div className="mt-10 flex justify-start border-t border-line pt-6">
@@ -302,9 +389,12 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {products.map((product) => (
                 <article key={product.title} className="premium-soft-card flex h-full flex-col">
+                  <p className="mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                    {product.badge}
+                  </p>
                   <h3 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
                     {product.title}
                   </h3>

@@ -5,15 +5,15 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "About | Operations Systems Specialist | AnisConsult",
+  title: "About | AnisConsult — Business Systems & Workflow Specialist",
   description:
-    "Operations perspective built inside real environments where execution matters, friction repeats and clearer systems improve the work.",
+    "Business systems and workflow perspective built inside real environments where friction repeats and clearer tools improve the work.",
 };
 
 const focusItems = [
   {
     title: "Systems",
-    detail: "Built to remove recurring friction.",
+    detail: "Built to remove recurring workflow friction.",
   },
   {
     title: "Ownership",
@@ -21,7 +21,7 @@ const focusItems = [
   },
   {
     title: "Execution",
-    detail: "The work should move properly every day.",
+    detail: "The work should move clearly every day.",
   },
 ] as const;
 
@@ -43,19 +43,19 @@ export default function AboutPage() {
             <div className="max-w-5xl">
               <SectionKicker label="About" />
               <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
-                Operations Systems Specialist
+                Business Systems & Workflow Specialist
               </p>
               <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                I come from operations first.
+                I come from real operating environments first.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 My perspective was built inside environments where execution matters daily: guests waiting, vehicles moving, incidents happening, money flowing.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Tools came later — as a way to remove recurring friction.
+                Tools came later — as a way to remove recurring workflow friction.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Today I focus on cleaner systems, clearer ownership and work that moves properly.
+                Today I focus on cleaner business systems, clearer ownership and work that moves properly.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -80,7 +80,7 @@ export default function AboutPage() {
                     Cleaner systems.
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
-                    Clearer ownership. Better execution.
+                    Clearer ownership. Work that moves properly.
                   </p>
                 </div>
               </article>

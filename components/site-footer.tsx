@@ -19,7 +19,7 @@ export function SiteFooter() {
               className="h-7 w-auto sm:h-8"
             />
           </Link>
-          <p>Operations Systems Specialist</p>
+          <p>Business Systems & Workflow Specialist</p>
         </div>
 
         <div className="flex flex-col gap-2 md:items-end">

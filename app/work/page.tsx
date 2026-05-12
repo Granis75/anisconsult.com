@@ -5,13 +5,14 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Work | Operations Systems Specialist | AnisConsult",
+  title: "Work | AnisConsult — Business Systems & Workflow Specialist",
   description:
-    "Operational case studies across hospitality, logistics and retail, showing clearer systems, less manual work and better execution.",
+    "Real case studies, active product work and conceptual systems studies built around clearer workflows, usable tools and better operating visibility.",
 };
 
 type Project = {
   category: string;
+  badge?: string;
   title: string;
   description: string;
   support: string;
@@ -22,44 +23,61 @@ type Project = {
   secondCtaHref?: string;
 };
 
-const projects: Project[] = [
+const projectGroups: { label: string; projects: Project[] }[] = [
   {
-    category: "Hospitality",
-    title: "Résidence Cadet",
-    description: "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
-    support: "Supported by Ops Core execution system",
-    href: "/case-study/vesper",
-    location: "work_page_residence_cadet",
-    ctaLabel: "View Case Study",
+    label: "Real Case Studies",
+    projects: [
+      {
+        category: "Hospitality",
+        title: "Résidence Cadet",
+        description: "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
+        support: "Real operating work · Supported by Ops Core workflow structure",
+        href: "/case-study/vesper",
+        location: "work_page_residence_cadet",
+        ctaLabel: "View Case Study",
+      },
+      {
+        category: "Logistics",
+        title: "Kepler Express",
+        description: "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
+        support: "Real operating work · Supported by Kepler workflow system",
+        href: "/case-study/kepler-express",
+        location: "work_page_kepler",
+        ctaLabel: "View Case Study",
+      },
+    ],
   },
   {
-    category: "Logistics",
-    title: "Kepler Express",
-    description: "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
-    support: "Supported by Kepler workflow system",
-    href: "/case-study/kepler-express",
-    location: "work_page_kepler",
-    ctaLabel: "View Case Study",
+    label: "Product in Development",
+    projects: [
+      {
+        category: "Hospitality / PMS",
+        badge: "PMS in development",
+        title: "StayOps Core",
+        description: "Focused PMS product for boutique hotels and serviced apartments, currently in active development around reservations, rooms, balances, housekeeping and front-desk clarity.",
+        support: "Live public demo workspace · No real hotel, guest or payment data implied",
+        href: "/case-study/stayops-core",
+        location: "work_page_stayops",
+        ctaLabel: "View Product Study",
+        secondCtaLabel: "Open StayOps",
+        secondCtaHref: "https://stayops.anisconsult.com",
+      },
+    ],
   },
   {
-    category: "Retail",
-    title: "Northline Convenience",
-    description: "Workflow redesign, margin visibility and daily execution systems for a clearer, more profitable convenience retail operation.",
-    support: "Supported by StorePilot retail dashboard",
-    href: "/work/northline-convenience",
-    location: "work_page_northline",
-    ctaLabel: "View Case Study",
-  },
-  {
-    category: "Hospitality SaaS / PMS Prototype",
-    title: "StayOps Core — Core PMS Prototype",
-    description: "A functional PMS prototype for boutique hotels and serviced apartments, designed around reservations, rooms, billing and daily front-desk clarity.",
-    support: "Prototype · Not production software",
-    href: "/case-study/stayops-core",
-    location: "work_page_stayops",
-    ctaLabel: "View Case Study",
-    secondCtaLabel: "View Live Prototype",
-    secondCtaHref: "https://stayops.anisconsult.com",
+    label: "Concept Case Studies",
+    projects: [
+      {
+        category: "Retail",
+        badge: "Concept Case Study",
+        title: "Northline Convenience",
+        description: "Conceptual retail operations study exploring workflow redesign, margin visibility and daily execution systems.",
+        support: "Scenario-based concept study · Modeled outcomes are not reported client results",
+        href: "/work/northline-convenience",
+        location: "work_page_northline",
+        ctaLabel: "View Concept Study",
+      },
+    ],
   },
 ];
 
@@ -77,57 +95,73 @@ export default function WorkPage() {
                 Proof, not promises.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Real operational work shaped inside hospitality, logistics and retail environments.
+                Real case studies, active product work and conceptual systems studies.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Each case shows what changed in the work itself.
+                All built around clearer workflows, usable tools and better operating visibility.
               </p>
             </div>
           </div>
         </section>
 
         <section className="bg-white">
-          <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 lg:px-10 lg:py-20">
-            {projects.map((project) => (
-              <article
-                key={project.title}
-                className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10"
-              >
-                <div className="flex flex-col gap-6">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                    {project.category}
-                  </p>
-                  <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
-                    {project.title}
-                  </h2>
-                  <p className="text-base leading-8 text-muted sm:text-lg">
-                    {project.description}
-                  </p>
-                  <p className="text-sm text-muted/70">
-                    {project.support}
-                  </p>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <TrackedLink
-                      href={project.href}
-                      event="case_study_cta_click"
-                      data={{ location: project.location }}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+          <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:px-10 lg:py-20">
+            {projectGroups.map((group) => (
+              <div key={group.label}>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                  {group.label}
+                </p>
+                <div className="mt-5 grid gap-8">
+                  {group.projects.map((project) => (
+                    <article
+                      key={project.title}
+                      className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10"
                     >
-                      {project.ctaLabel}
-                    </TrackedLink>
-                    {project.secondCtaHref && project.secondCtaLabel && (
-                      <a
-                        href={project.secondCtaHref}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
-                      >
-                        {project.secondCtaLabel}
-                      </a>
-                    )}
-                  </div>
+                      <div className="flex flex-col gap-6">
+                        <div className="flex flex-wrap items-center gap-3">
+                          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                            {project.category}
+                          </p>
+                          {project.badge ? (
+                            <span className="rounded-full border border-black/8 bg-white px-3 py-1 text-xs font-medium text-ink/64">
+                              {project.badge}
+                            </span>
+                          ) : null}
+                        </div>
+                        <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
+                          {project.title}
+                        </h2>
+                        <p className="text-base leading-8 text-muted sm:text-lg">
+                          {project.description}
+                        </p>
+                        <p className="text-sm text-muted/70">
+                          {project.support}
+                        </p>
+                        <div className="flex flex-wrap items-center gap-4">
+                          <TrackedLink
+                            href={project.href}
+                            event="case_study_cta_click"
+                            data={{ location: project.location }}
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                          >
+                            {project.ctaLabel}
+                          </TrackedLink>
+                          {project.secondCtaHref && project.secondCtaLabel && (
+                            <a
+                              href={project.secondCtaHref}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
+                            >
+                              {project.secondCtaLabel}
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </section>
