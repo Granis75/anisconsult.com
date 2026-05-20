@@ -11,17 +11,17 @@ export const siteContent = {
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "Fix recurring workflow problems. Build systems teams actually use.",
+    title: "I design and build operating systems for service teams — and the practical tools that make them work.",
     subtitle: "Business systems and workflow tools for service teams",
     description:
       "For service teams stuck in scattered tools, manual follow-up and recurring work that nobody can see clearly enough to control.",
     primaryCta: {
-      label: "Book a 15-min Call",
-      href: bookingHref,
+      label: "See my work",
+      href: "/#case-study",
     },
     secondaryCta: {
-      label: "See My Work",
-      href: "/#case-study",
+      label: "Get in touch",
+      href: "/#contact",
     },
   },
 } as const;

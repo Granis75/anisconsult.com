@@ -65,17 +65,17 @@ const projectGroups: { label: string; projects: Project[] }[] = [
     ],
   },
   {
-    label: "Concept Case Studies",
+    label: "Thinking Exercises",
     projects: [
       {
         category: "Retail",
-        badge: "Concept Case Study",
+        badge: "Thinking exercise — not a client engagement",
         title: "Northline Convenience",
-        description: "Conceptual retail operations study exploring workflow redesign, margin visibility and daily execution systems.",
-        support: "Scenario-based concept study · Modeled outcomes are not reported client results",
+        description: "A hypothetical retail operations study exploring how workflow redesign, margin visibility and daily execution systems could improve a founder-dependent urban store. This is a structured thinking exercise, not a delivered client engagement.",
+        support: "All outcomes are modeled estimates used to test the operating logic — not reported client results.",
         href: "/work/northline-convenience",
         location: "work_page_northline",
-        ctaLabel: "View Concept Study",
+        ctaLabel: "View thinking exercise",
       },
     ],
   },

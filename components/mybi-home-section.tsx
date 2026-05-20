@@ -8,22 +8,22 @@ export function MyBiHomeSection() {
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-center lg:gap-16">
           <div className="max-w-2xl">
-            <SectionKicker label="Internal Tool" />
+            <SectionKicker label="Business OS" />
 
             <h2 className="text-balance mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.6rem]">
               MyBi
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-[1.2rem]">
-              Client work, invoicing and payments kept in one operating line.
+              Business OS for freelancers and small operators: clients, missions, invoices, payments and revenue visibility.
             </p>
 
             <div className="mt-8 border-t border-black/8 pt-6">
               <p className="max-w-xl text-sm leading-7 text-ink">
-                Work, invoices and payment stay aligned.
+                Client work, billing and payment stay in one structured workflow.
               </p>
               <p className="mt-2 text-sm leading-7 text-neutral-600">
-                Built for service workflows where follow-up and billing need to move together.
+                Designed for service-based work where follow-up, invoicing and collections need to move together.
               </p>
             </div>
 

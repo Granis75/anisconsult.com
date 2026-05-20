@@ -9,7 +9,6 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 import { ValueSection } from "@/components/value-section";
-import { bookingHref } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "AnisConsult — Business Systems & Workflow Specialist",
@@ -63,17 +62,6 @@ const realCases = [
 
 const conceptStudies = [
   {
-    badge: "Concept Case Study",
-    sector: "Retail",
-    title: "Northline Convenience",
-    problem: "Conceptual retail systems study for margin visibility and daily execution.",
-    system: "StorePilot concept prototype for daily execution, exceptions and reporting.",
-    outcome: "Scenario-based modeled outcomes, not reported client results",
-    href: "/work/northline-convenience",
-    location: "home_proof_northline",
-    ctaLabel: "View Concept Study",
-  },
-  {
     badge: "PMS in active development",
     sector: "Hospitality / PMS",
     title: "StayOps Core",
@@ -86,40 +74,22 @@ const conceptStudies = [
   },
 ] as const;
 
-const products = [
+const primaryProducts = [
   {
     badge: "PMS in active development",
     title: "StayOps Core",
-    problem: "Reservations, rooms, balances, housekeeping and incidents often live across fragmented daily workflows.",
+    problem: "Reservations, rooms, balances, housekeeping, incidents and front-desk handoffs often live across fragmented daily workflows. Things get missed. The picture is never complete until someone manually assembles it.",
     audience: "Boutique hotels and serviced apartment operators.",
-    workflow: "Brings front-desk operations, room readiness and daily blockers into one focused PMS workspace.",
+    workflow: "Brings front-desk operations, room readiness, guest balance tracking and daily blockers into one focused PMS workspace. One place to start the day, run it, and close it out.",
     href: "https://stayops.anisconsult.com",
-    ctaLabel: "Explore",
-  },
-  {
-    badge: "Concept product",
-    title: "StorePilot",
-    problem: "Daily retail control across tasks, stock, waste, cost signals and execution.",
-    audience: "Convenience retail and small-format store operators — concept exploration.",
-    workflow: "Models how daily execution, exceptions and margin signals could be surfaced in one retail operating layer.",
-    href: "https://storepilot.anisconsult.com",
-    ctaLabel: "Explore concept",
-  },
-  {
-    badge: "Internal prototype",
-    title: "Ops Core",
-    problem: "Tasks, incidents, follow-up and reporting without one operating line.",
-    audience: "Hospitality and service operations teams.",
-    workflow: "Makes task ownership, blockers, and status tracking visible.",
-    href: "https://opscore.anisconsult.com",
-    ctaLabel: "Explore",
+    ctaLabel: "Explore StayOps Core",
   },
   {
     badge: "Business tool",
     title: "MyBi",
     problem: "Client work, project progress, invoicing and revenue visibility.",
     audience: "Freelancers and small business operators.",
-    workflow: "Makes client relationships, project status and payment follow-up clear.",
+    workflow: "Makes client relationships, project status and payment follow-up clear in one view.",
     href: "https://mybi.anisconsult.com",
     ctaLabel: "Explore",
   },
@@ -131,6 +101,21 @@ const products = [
     workflow: "Makes mission status, cost capture and billing workflows visible.",
     href: "https://kepler.anisconsult.com",
     ctaLabel: "Explore",
+  },
+] as const;
+
+const otherSystems = [
+  {
+    badge: "Concept product",
+    title: "StorePilot",
+    description: "Daily retail execution, exceptions and margin signals in one operating layer — concept exploration.",
+    href: "https://storepilot.anisconsult.com",
+  },
+  {
+    badge: "Internal prototype",
+    title: "Ops Core",
+    description: "Task ownership, blockers and status tracking for hospitality and service teams.",
+    href: "https://opscore.anisconsult.com",
   },
 ] as const;
 
@@ -221,17 +206,17 @@ export default function HomePage() {
 
             <div className="mt-10 flex flex-col gap-5 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-2xl text-sm leading-7 text-ink/78">
-                Not sure which one you need? Tell me what&apos;s broken - I&apos;ll point
+                Not sure which one you need? Tell me what&apos;s broken — I&apos;ll point
                 you in the right direction.
               </p>
 
               <TrackedLink
-                href={bookingHref}
+                href="/#contact"
                 event="contact_cta_click"
                 data={{ location: "services_footer" }}
                 className="premium-cta h-12 px-6"
               >
-                Book a 15-min Call
+                Get in touch
               </TrackedLink>
             </div>
           </Reveal>
@@ -306,7 +291,7 @@ export default function HomePage() {
 
             <div className="mt-12 border-t border-line pt-10">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                Concept & Product Studies
+                Product in Development
               </p>
               <div className="mt-5 grid gap-6 md:grid-cols-2">
               {conceptStudies.map((item) => (
@@ -389,8 +374,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {products.map((product) => (
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {primaryProducts.map((product) => (
                 <article key={product.title} className="premium-soft-card flex h-full flex-col">
                   <p className="mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
                     {product.badge}
@@ -431,6 +416,35 @@ export default function HomePage() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-10 border-t border-line pt-8">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
+                Other systems explored
+              </p>
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                {otherSystems.map((system) => (
+                  <div key={system.title} className="flex items-start justify-between gap-6 rounded-[20px] border border-line bg-[#fbfaf7] px-5 py-4">
+                    <div>
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                        {system.badge}
+                      </p>
+                      <p className="mt-1 text-base font-semibold tracking-[-0.02em] text-ink">
+                        {system.title}
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-muted">{system.description}</p>
+                    </div>
+                    <a
+                      href={system.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 shrink-0 text-sm font-semibold text-ink transition-opacity hover:opacity-70"
+                    >
+                      Explore →
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </section>

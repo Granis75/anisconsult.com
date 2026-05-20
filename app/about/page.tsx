@@ -117,6 +117,17 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <section className="border-t border-line bg-white">
+          <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-12">
+            <p className="max-w-2xl text-sm leading-7 text-muted">
+              Currently also open to full-time Application Support, Product Support and Implementation roles in B2B software.{" "}
+              <Link href="/#contact" className="font-medium text-ink underline-offset-2 hover:underline">
+                Reach out if relevant.
+              </Link>
+            </p>
+          </div>
+        </section>
       </main>
 
       <SiteFooter />

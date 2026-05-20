@@ -37,20 +37,20 @@ const implementationItems = [
 
 const resultItems = [
   {
-    title: "Improved Guest Satisfaction",
-    detail: "Guest follow-up, access and issue handling became easier to manage consistently",
+    title: "7.6 → 9.2 / 10",
+    detail: "Guest satisfaction score. Consistent follow-up, cleaner access and faster issue resolution.",
+  },
+  {
+    title: "~10h/week",
+    detail: "Admin workload reduced. Routine manual follow-up replaced by structured workflow.",
   },
   {
     title: "Stronger Platform Visibility",
-    detail: "Listing quality and operational consistency were easier to maintain",
+    detail: "Listing quality and operational consistency easier to maintain across units.",
   },
   {
-    title: "~10h/week Admin Workload Reduced",
-    detail: "Routine admin and manual follow-up took significantly less weekly time",
-  },
-  {
-    title: "New Revenue Segment Growth",
-    detail: "A clearer operating flow supported expansion into a new segment",
+    title: "New Revenue Segment",
+    detail: "A clearer operating flow supported expansion into a new segment.",
   },
 ] as const;
 
@@ -88,7 +88,13 @@ export default function VesperCaseStudyPage() {
                 Guest operations were running through Excel, calls and front-desk dependency.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The work was to make stays, access, follow-up and reporting easier to run day to day.
+                At the start of each week, the manager opened a spreadsheet to piece together who was arriving, who still owed a payment, and which maintenance issue from the previous week hadn&apos;t been closed. Guest data lived in three places. Access codes went out manually via message threads. Follow-up on late payments depended on whoever remembered to check first.
+              </p>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                When a guest reported a problem, it landed in someone&apos;s inbox. Whether it got resolved that day depended entirely on that inbox being read. That pattern was costing roughly 10 hours of admin work per week — and showing up in guest satisfaction scores.
+              </p>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                The work was to replace that with a flow the team could actually follow.
               </p>
             </div>
           </div>

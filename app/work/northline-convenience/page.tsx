@@ -116,7 +116,7 @@ export default function NorthlineConveniencePage() {
                 <div className="flex flex-wrap items-center gap-3">
                   <SectionKicker label="Retail" />
                   <span className="rounded-full border border-black/8 bg-[#f4f2ec] px-3 py-1 text-xs font-medium text-ink/70">
-                    Concept Case Study
+                    Thinking exercise — not a client engagement
                   </span>
                 </div>
                 <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[4.3rem]">
@@ -198,11 +198,14 @@ export default function NorthlineConveniencePage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <article className="premium-soft-card p-8 lg:p-10">
               <SectionKicker label="Executive Summary" />
+              <p className="mt-4 inline-block rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-medium text-amber-800">
+                This is a structured thinking exercise, not a client engagement. All outcomes are modeled estimates.
+              </p>
               <p className="mt-6 max-w-4xl text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 Independent retail stores often generate revenue but lose profit through friction, weak routines, invisible waste and founder dependency.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                This study models a clearer operating system. It is not presented as a delivered client engagement.
+                This study models a clearer operating system to test that logic — not to present delivered client work.
               </p>
             </article>
           </div>
