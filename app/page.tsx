@@ -11,31 +11,10 @@ import { TrackedLink } from "@/components/tracked-link";
 import { ValueSection } from "@/components/value-section";
 
 export const metadata: Metadata = {
-  title: "AnisConsult — Business Systems & Workflow Specialist",
+  title: "AnisConsult — Operational Systems Lab",
   description:
-    "Business systems and workflow tools for service teams with scattered tools, manual follow-up and recurring friction.",
+    "Operational systems, internal tools and AI-powered workflows for service businesses. Built from real operations, not theory.",
 };
-
-const services = [
-  {
-    title: "Workflow Audit",
-    fixes: "Recurring friction, unclear ownership and duplicated admin.",
-    bestFor: "When the team feels the friction but the root cause is not clear.",
-    outcome: "A clear workflow map with the first fixes prioritized.",
-  },
-  {
-    title: "Systems Setup",
-    fixes: "Scattered trackers, manual follow-up and reporting gaps.",
-    bestFor: "When the workflow is known, but the system around it is missing.",
-    outcome: "A working business system the team can use in weeks, not months.",
-  },
-  {
-    title: "Ongoing Systems Support",
-    fixes: "Systems that drift, dashboards that go stale and workflows that keep changing.",
-    bestFor: "When the business keeps evolving and the system needs to stay useful.",
-    outcome: "Cleaner weekly visibility and systems that keep improving with the business.",
-  },
-] as const;
 
 const realCases = [
   {
@@ -46,7 +25,7 @@ const realCases = [
     outcome: "7.6 → 9.2 / 10 guest satisfaction · ~10h/week admin work reduced",
     href: "/case-study/vesper",
     location: "home_proof_residence_cadet",
-    ctaLabel: "View Case Study",
+    ctaLabel: "View Proof",
   },
   {
     sector: "Logistics",
@@ -56,7 +35,7 @@ const realCases = [
     outcome: "+50% revenue in a new operating segment",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
-    ctaLabel: "View Case Study",
+    ctaLabel: "View Proof",
   },
 ] as const;
 
@@ -70,51 +49,51 @@ const conceptStudies = [
     outcome: "Live public demo workspace; no real hotel, guest or payment data implied",
     href: "/case-study/stayops-core",
     location: "home_proof_stayops",
-    ctaLabel: "View Product Study",
+    ctaLabel: "View System",
   },
 ] as const;
 
 const primaryProducts = [
   {
-    badge: "PMS in active development",
+    badge: "Product in development",
     title: "StayOps Core",
-    problem: "Reservations, rooms, balances, housekeeping, incidents and front-desk handoffs often live across fragmented daily workflows. Things get missed. The picture is never complete until someone manually assembles it.",
-    audience: "Boutique hotels and serviced apartment operators.",
-    workflow: "Brings front-desk operations, room readiness, guest balance tracking and daily blockers into one focused PMS workspace. One place to start the day, run it, and close it out.",
+    problem: "Hospitality operations system for serviced residences and small operators — covering reservations, rooms, housekeeping, incidents, supplier follow-up and operational visibility.",
+    audience: "Product in development",
+    workflow: "Built and tested around the operational problem of keeping daily hospitality work visible in one practical system.",
     href: "https://stayops.anisconsult.com",
-    ctaLabel: "Explore StayOps Core",
+    ctaLabel: "View product",
   },
   {
-    badge: "Business tool",
+    badge: "Prototype",
     title: "MyBi",
-    problem: "Client work, project progress, invoicing and revenue visibility.",
-    audience: "Freelancers and small business operators.",
-    workflow: "Makes client relationships, project status and payment follow-up clear in one view.",
+    problem: "Business operations OS for freelancers and small operators — centralizing clients, missions, invoices, payments and revenue visibility.",
+    audience: "Prototype",
+    workflow: "Modeled around the workflow from client activity to invoice status, payment follow-up and revenue visibility.",
     href: "https://mybi.anisconsult.com",
-    ctaLabel: "Explore",
+    ctaLabel: "View product",
   },
   {
-    badge: "Workflow system",
-    title: "Kepler Express",
-    problem: "Missions, driver costs, invoicing and payments moving separately.",
-    audience: "Logistics and delivery operations teams.",
-    workflow: "Makes mission status, cost capture and billing workflows visible.",
+    badge: "Operational system",
+    title: "Kepler Ops",
+    problem: "Internal workflow system designed to clarify mission status, expenses, invoicing and payment follow-up in transport operations.",
+    audience: "Operational system",
+    workflow: "Case-built system for making transport operations, cost capture and payment follow-up more visible.",
     href: "https://kepler.anisconsult.com",
-    ctaLabel: "Explore",
+    ctaLabel: "View system",
   },
 ] as const;
 
 const otherSystems = [
   {
-    badge: "Concept product",
+    badge: "Concept exploration",
     title: "StorePilot",
-    description: "Daily retail execution, exceptions and margin signals in one operating layer — concept exploration.",
+    description: "Concept explorations around recurring operational problems in daily retail execution, exceptions and margin visibility.",
     href: "https://storepilot.anisconsult.com",
   },
   {
-    badge: "Internal prototype",
+    badge: "Concept exploration",
     title: "Ops Core",
-    description: "Task ownership, blockers and status tracking for hospitality and service teams.",
+    description: "Concept explorations around recurring operational problems in task ownership, blockers and workflow visibility.",
     href: "https://opscore.anisconsult.com",
   },
 ] as const;
@@ -155,74 +134,6 @@ export default function HomePage() {
         <BeforeAfterSection />
 
         <section
-          id="services"
-          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
-        >
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={32}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
-              <div className="max-w-3xl">
-                <SectionKicker label="Services" />
-                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Choose the right entry point.
-                </h2>
-              </div>
-
-              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Start with diagnosis, build the system, or keep improving the operating layer as the business changes.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {services.map((service) => (
-                <article key={service.title} className="premium-soft-card flex h-full flex-col">
-                  <h3 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                    {service.title}
-                  </h3>
-                  <div className="mt-7 space-y-5">
-                    <div>
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                        What it fixes
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-ink/78">{service.fixes}</p>
-                    </div>
-                    <div>
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                        Best for
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-ink/78">{service.bestFor}</p>
-                    </div>
-                  </div>
-                  <div className="mt-7 border-t border-line pt-5">
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                      Outcome
-                    </p>
-                    <p className="text-sm leading-7 text-ink/78">
-                      {service.outcome}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-10 flex flex-col gap-5 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-2xl text-sm leading-7 text-ink/78">
-                Not sure which one you need? Tell me what&apos;s broken — I&apos;ll point
-                you in the right direction.
-              </p>
-
-              <TrackedLink
-                href="/#contact"
-                event="contact_cta_click"
-                data={{ location: "services_footer" }}
-                className="premium-cta h-12 px-6"
-              >
-                Get in touch
-              </TrackedLink>
-            </div>
-          </Reveal>
-        </section>
-
-        <section
           id="case-study"
           className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
         >
@@ -236,7 +147,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Real case studies, active product work and conceptual systems studies, separated clearly.
+                Real operations, real constraints, real outcomes — and the systems built from them.
               </p>
             </div>
 
@@ -363,14 +274,14 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={55}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Systems" />
+                <SectionKicker label="Products & Systems" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Internal systems built around recurring operational problems.
+                  Products & Systems
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                AnisConsult does not only advise. It models, structures and builds practical systems around repeated operating pain.
+                AnisConsult builds operational systems, internal tools and AI-powered workflows from real operating problems. Some are active products, some are prototypes, and some are concept explorations.
               </p>
             </div>
 
@@ -386,13 +297,13 @@ export default function HomePage() {
                   <dl className="mt-6 space-y-5">
                     <div>
                       <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                        Problem
+                        Description
                       </dt>
                       <dd className="mt-2 text-sm leading-7 text-ink/78">{product.problem}</dd>
                     </div>
                     <div>
                       <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                        For
+                        Status
                       </dt>
                       <dd className="mt-2 text-sm leading-7 text-ink/78">{product.audience}</dd>
                     </div>
@@ -420,7 +331,7 @@ export default function HomePage() {
 
             <div className="mt-10 border-t border-line pt-8">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                Other systems explored
+                Concepts
               </p>
               <div className="mt-5 grid gap-4 sm:grid-cols-2">
                 {otherSystems.map((system) => (
@@ -440,7 +351,7 @@ export default function HomePage() {
                       rel="noreferrer"
                       className="mt-1 shrink-0 text-sm font-semibold text-ink transition-opacity hover:opacity-70"
                     >
-                      Explore →
+                      View system
                     </a>
                   </div>
                 ))}

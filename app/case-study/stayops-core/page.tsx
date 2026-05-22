@@ -5,68 +5,70 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "StayOps Core — PMS in Active Development | AnisConsult",
+  title: "StayOps Core — Hospitality Operations System | AnisConsult",
   description:
-    "StayOps Core is a focused PMS product in active development for boutique hotels and serviced apartments, built around reservations, rooms, balances, housekeeping, incidents and front-desk clarity.",
+    "StayOps Core is a lightweight hospitality operations system for serviced residences and small operators.",
 };
 
 const sectionLinks = [
-  { label: "Context", href: "#context" },
-  { label: "Problem", href: "#problem" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Stack", href: "#stack" },
+  { label: "Operations", href: "#context" },
+  { label: "For", href: "#problem" },
+  { label: "Covers", href: "#workflow" },
+  { label: "Status", href: "#stack" },
   { label: "Scope", href: "#scope" },
 ] as const;
 
 const problemItems = [
-  "Many PMS tools are powerful but too complex for small hospitality teams",
-  "Modern alternatives are clean but rigid — no room to adapt the workflow",
-  "Room status, guest balances and housekeeping readiness are tracked separately",
-  "Billing, invoicing and checkout are disconnected from the reservation flow",
-  "Front-desk teams have no single clear workspace for the day's work",
+  "Serviced residences",
+  "Small hospitality operators",
+  "Hybrid hotel/apartment operations",
+  "Teams that need operational clarity without enterprise complexity",
 ] as const;
 
 const featureAreas = [
   {
-    title: "Reservation workflow",
+    title: "Reservations",
     detail: "Create, assign and manage reservations with guest context from one view.",
   },
   {
-    title: "Room assignment",
-    detail: "Link reservations to specific rooms with readiness status at a glance.",
+    title: "Rooms",
+    detail: "Link reservations to rooms with readiness and occupancy context.",
   },
   {
-    title: "Check-in / Checkout",
-    detail: "Guided check-in and checkout flow with status tracking throughout.",
+    title: "Housekeeping",
+    detail: "Track room cleaning readiness around departures and upcoming arrivals.",
   },
   {
-    title: "Billing control",
-    detail: "Add charges, track balances and manage payments against the stay.",
+    title: "Incidents",
+    detail: "Log operational issues and keep follow-up visible.",
   },
   {
-    title: "Invoice preview",
-    detail: "Preview and generate invoices at checkout without leaving the workflow.",
+    title: "Supplier follow-up",
+    detail: "Keep supplier-related operational follow-up connected to the daily workflow.",
   },
   {
-    title: "Housekeeping readiness",
-    detail: "Track room cleaning status linked to departures and upcoming arrivals.",
+    title: "Operational reporting",
+    detail: "Keep daily operating information easier to review and act on.",
   },
   {
-    title: "Guest requests",
-    detail: "Lightweight request logging connected to the active stay.",
+    title: "Activity visibility",
+    detail: "See what moved, what is waiting and what needs attention.",
   },
   {
-    title: "Integration readiness",
-    detail: "Planned integration surfaces for database, payment and workflow connections as the product matures.",
+    title: "Payment/billing visibility",
+    detail: "Track balances, charges and invoice context against the stay.",
   },
 ] as const;
 
 const stackItems = [
-  { label: "Framework", value: "Next.js (App Router)" },
-  { label: "Language", value: "TypeScript" },
-  { label: "Styling", value: "Tailwind CSS" },
-  { label: "Demo mode", value: "Read-only public demo workspace" },
-  { label: "Planned surfaces", value: "Database · Payments · Webhooks" },
+  {
+    label: "Current capabilities",
+    value: "Reservations, rooms, housekeeping, incidents, balances, activity visibility and reporting.",
+  },
+  {
+    label: "Planned integrations",
+    value: "Payments, messaging, smart locks, channel connectivity and automation workflows.",
+  },
 ] as const;
 
 const flowSteps = [
@@ -82,12 +84,12 @@ const flowSteps = [
 const distinctionItems = [
   {
     name: "StayOps Core",
-    role: "PMS in active development",
-    covers: "Reservations, room assignment, check-in / checkout, billing, invoicing and front-desk clarity.",
+    role: "Product in development",
+    covers: "Reservations, rooms, housekeeping, incidents, supplier follow-up, operational reporting and activity visibility.",
   },
   {
     name: "Ops Core",
-    role: "Operational Management System",
+    role: "Concept exploration",
     covers: "Tasks, incidents, follow-up, reporting and internal workflows for service-based businesses.",
   },
 ] as const;
@@ -101,19 +103,19 @@ export default function StayOpsCasePage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <SectionKicker label="PMS in active development" />
+              <SectionKicker label="Product in development" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
                 StayOps Core
               </h1>
               <p className="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                Hospitality / PMS / Serviced Residences & Boutique Hotels
+                Hospitality operations / Serviced residences / Small operators
               </p>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Focused PMS product for boutique hotels and serviced apartments, currently in active development around reservations, rooms, balances, housekeeping, incidents and front-desk clarity.
+                A lightweight hospitality operations system for serviced residences and small operators.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Built from real front-desk and operating experience. StayOps Core gives a small hospitality team one clear workspace for arrivals, departures, room assignment, guest balances, housekeeping readiness and daily blockers.
+                StayOps Core is built from real serviced-residence operations. It brings reservations, rooms, housekeeping, incidents, supplier follow-up and operational reporting into one practical operating layer.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -123,13 +125,13 @@ export default function StayOpsCasePage() {
                   rel="noreferrer"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  Open StayOps
+                  Open the demo
                 </a>
                 <Link
-                  href="/work"
+                  href="/#ops-core"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
                 >
-                  ← Back to Work
+                  View other systems
                 </Link>
               </div>
             </div>
@@ -159,18 +161,24 @@ export default function StayOpsCasePage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-6 lg:grid-cols-2">
               <article className="rounded-[2rem] border border-line bg-surface p-8">
-                <SectionKicker label="Context" />
+                <SectionKicker label="Built from real operations" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Hospitality operating experience reveals a consistent gap: small teams are caught between PMS tools that are too complex to adapt and modern products that are too rigid to extend. StayOps Core is a focused PMS product in active development, designed for boutique hotels and serviced apartments where the full reservation-to-reporting flow needs to work simply and reliably.
+                  The product direction comes from daily operational experience managing serviced residence workflows: arrivals, departures, rooms, housekeeping, incidents, payments, suppliers and reporting.
                 </p>
               </article>
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  What it demonstrates
+                  Why StayOps exists
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
-                  An evolving reservation-to-invoice workflow — from arrival to checkout — in one clear front-desk workspace. Reservation management, room status, guest balances and housekeeping readiness are connected rather than scattered.
+                  StayOps Core was created to solve a simple operational problem.
+                </p>
+                <p className="mt-5 text-base leading-8 text-ink">
+                  Small hospitality teams often manage reservations, housekeeping, incidents, payments and daily follow-up across multiple tools, messages and spreadsheets.
+                </p>
+                <p className="mt-5 text-base leading-8 text-ink">
+                  StayOps brings that operational work into one focused workspace designed around visibility, ownership and daily execution.
                 </p>
               </article>
             </div>
@@ -180,9 +188,9 @@ export default function StayOpsCasePage() {
         <section id="problem" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="Problem" />
+              <SectionKicker label="Who it is for" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Small hospitality teams are caught between tools that are too complex and tools that are too rigid.
+                Built for operators who need practical clarity without enterprise complexity.
               </p>
             </div>
 
@@ -202,15 +210,15 @@ export default function StayOpsCasePage() {
         <section id="workflow" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <SectionKicker label="Workflow" />
+              <SectionKicker label="What it covers" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The full front-desk flow in one connected workspace.
+                The core operating layer connects daily hospitality work that is usually spread across tools and memory.
               </p>
             </div>
 
             <div className="mt-10 border-t border-line pt-6">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                Core Workflow
+                Core workflow
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 {flowSteps.map((step, index) => (
@@ -243,9 +251,9 @@ export default function StayOpsCasePage() {
         <section id="stack" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="Stack" />
+              <SectionKicker label="Product status" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Built lean. Demo-ready.
+                Product in development.
               </p>
             </div>
 
@@ -266,16 +274,22 @@ export default function StayOpsCasePage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
                 <SectionKicker label="Scope" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Active PMS product development with a public demo workspace.
+                  Product in development with a public demo workspace.
                 </p>
                 <p className="mt-5 text-base leading-8 text-muted">
-                  StayOps Core demonstrates an evolving focused PMS workflow for boutique hotels and serviced apartments. The public demo is read-only and does not imply real hotel, guest or payment data. Enterprise-grade deployment, payments, locks, messaging and channel workflows remain planned integration surfaces until implemented.
+                  StayOps Core demonstrates a practical operating layer for serviced residences and small hospitality operators.
+                </p>
+                <p className="mt-5 text-base leading-8 text-muted">
+                  The focus is operational visibility, room readiness, reservation management, housekeeping coordination and daily execution.
+                </p>
+                <p className="mt-5 text-base leading-8 text-muted">
+                  Demo product. No real hotel, guest or payment data is implied. Payments, messaging, smart locks, channel connectivity and automation workflows remain planned integrations.
                 </p>
               </article>
 
               <div className="flex flex-col gap-4">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Two distinct products
+                  Related systems
                 </p>
                 {distinctionItems.map((item) => (
                   <article
@@ -301,13 +315,13 @@ export default function StayOpsCasePage() {
                 rel="noreferrer"
                 className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
               >
-                Open StayOps
+                Open the demo
               </a>
               <Link
-                href="/work"
+                href="/#ops-core"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
               >
-                ← Back to Work
+                View other systems
               </Link>
             </div>
           </div>

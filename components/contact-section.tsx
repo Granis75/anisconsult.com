@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import { TrackedLink } from "@/components/tracked-link";
-import { directEmailHref, bookingHref } from "@/lib/site-content";
 import { track } from "@/lib/track";
 
 type ContactFormState = {
@@ -104,31 +102,17 @@ export function ContactSection() {
     <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start lg:gap-14">
       <div className="max-w-xl">
         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[2.85rem]">
-          Got a workflow that keeps breaking?
+          Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          Tell me what is slowing the team down. In 15 minutes, I&apos;ll tell you
-          if I can help - and what I would fix first.
+          Reach out about operational systems, product work, workflow tooling or international collaboration.
         </p>
-
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <TrackedLink
-            href={bookingHref}
-            event="contact_cta_click"
-            data={{ location: "contact_primary" }}
-            className="premium-cta h-12 px-6"
-          >
-            Book a 15-min Call
-          </TrackedLink>
-
-          <a
-            href={directEmailHref}
-            onClick={() => track("contact_cta_click", { location: "contact_email" })}
-            className="premium-cta-outline h-12 px-6"
-          >
-            Email me directly
-          </a>
-        </div>
+        <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
+          AnisConsult is currently focused on building operational systems and AI-powered workflows for service businesses. If you want to discuss a product, a workflow problem, or a potential collaboration, send a message.
+        </p>
+        <p className="mt-4 text-sm leading-6 text-muted">
+          For custom operational systems or implementation work, include the current workflow, the tools involved and what keeps breaking.
+        </p>
       </div>
 
       <div className="premium-card p-6 sm:p-8">

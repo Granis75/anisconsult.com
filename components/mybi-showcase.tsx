@@ -56,7 +56,7 @@ interface MyBiShowcaseProps {
   mode?: DashboardMode;
 }
 
-const pipelineStages = ["Client", "Mission", "Invoice", "Payment"] as const;
+const pipelineStages = ["Client", "Mission", "Invoice", "Payment", "Follow-up"] as const;
 
 const populatedDashboard: DashboardSnapshot = {
   metrics: [
@@ -88,10 +88,10 @@ const populatedDashboard: DashboardSnapshot = {
     },
   ],
   attention: {
-    title: "3 invoices are overdue",
-    amount: "€1,450 unpaid",
-    note: "The oldest unpaid invoice should be checked first so collections do not slip further this week.",
-    action: "Open invoices",
+    title: "Admin follow-up is scattered",
+    amount: "Clients, missions, invoices and payments need one operating view",
+    note: "Freelancers and small operators often manage client work, invoices and payment follow-up across scattered tools and memory.",
+    action: "View product",
   },
   activities: [
     {
@@ -125,9 +125,9 @@ const populatedDashboard: DashboardSnapshot = {
     },
   ],
   insight: {
-    title: "Collections are fine overall, but 3 unpaid invoices still need follow-up.",
-    summary: "Most current work sits with 2 active clients.",
-    secondary: "No major delivery risk flagged this week.",
+    title: "One operating layer for independent work.",
+    summary: "MyBi follows the same AnisConsult principle: make operational work visible before it becomes unmanageable.",
+    secondary: "Prototype product. Built to test how independent operators can track work, revenue and follow-up from one practical view.",
   },
 };
 
@@ -141,23 +141,28 @@ export function MyBiShowcase({
           <header className="flex flex-col gap-6 rounded-[32px] border border-slate-100 bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_16px_40px_rgba(15,23,42,0.04)] sm:p-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
-                MyBi
+                Prototype
               </p>
               <h1 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-slate-950 sm:text-5xl">
-                Dashboard
+                MyBi
               </h1>
               <p className="mt-4 text-lg leading-8 text-slate-600 sm:text-xl">
-                Client work, invoicing and payments at a glance
+                A business operations OS for freelancers and small operators.
+              </p>
+              <p className="mt-3 max-w-2xl text-base leading-7 text-slate-500">
+                MyBi centralizes clients, missions, invoices, payments and revenue visibility — turning fragmented administrative follow-up into a clearer operating system.
               </p>
             </div>
 
-            <button
-              type="button"
+            <a
+              href="https://mybi.anisconsult.com"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-[24px] bg-[#0066FF] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#0057d9]"
             >
               <Plus className="h-4 w-4" />
-              Add invoice
-            </button>
+              View product
+            </a>
           </header>
 
           {mode === "loading" ? <LoadingDashboard /> : null}
@@ -240,7 +245,7 @@ function AttentionCard({ attention }: { attention: AttentionData }) {
         <div className="flex items-start justify-between gap-6">
           <div className="max-w-xl">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-orange-600">
-              Needs attention
+              Problem
             </p>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.04em] text-slate-950 sm:text-4xl">
               {attention.title}
@@ -260,13 +265,15 @@ function AttentionCard({ attention }: { attention: AttentionData }) {
             {attention.note}
           </p>
 
-          <button
-            type="button"
+          <a
+            href="https://mybi.anisconsult.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex h-12 items-center justify-center gap-2 rounded-[24px] bg-[#0066FF] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#0057d9]"
           >
             {attention.action}
             <ArrowRight className="h-4 w-4" />
-          </button>
+          </a>
         </div>
       </div>
     </article>
@@ -339,13 +346,13 @@ function WorkflowCard() {
   return (
     <article className="h-full rounded-[32px] border border-slate-100 bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_16px_40px_rgba(15,23,42,0.04)] sm:p-8">
       <p className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
-        Workflow
+        System
       </p>
       <h2 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-slate-950">
-        Client to payment
+        Client to follow-up
       </h2>
       <p className="mt-3 max-w-sm text-sm leading-6 text-slate-500">
-        Client work, billing and follow-up stay in the same place.
+        MyBi creates a simple operating layer for clients, missions, invoices, payments, revenue visibility and follow-up.
       </p>
 
       <div className="mt-8 space-y-3">

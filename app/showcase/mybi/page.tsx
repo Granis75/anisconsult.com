@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { MyBiShowcase } from "@/components/mybi-showcase";
 
 export const metadata: Metadata = {
-  title: "MyBi — Business OS | AnisConsult",
+  title: "MyBi | AnisConsult",
   description:
-    "Business OS for freelancers and small operators, managing clients, missions, invoices, payments and revenue visibility in one structured workflow.",
+    "A business operations OS prototype for freelancers and small operators, centralizing clients, missions, invoices, payments and revenue visibility.",
 };
 
 export default function MyBiShowcasePage() {

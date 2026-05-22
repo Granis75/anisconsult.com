@@ -5,17 +5,17 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express Case Study | Logistics Operations | Anis",
+  title: "Operational workflow visibility for transport operations | AnisConsult",
   description:
-    "Logistics operations case study covering dispatch follow-up, mission costs and invoicing brought into one clearer workflow.",
+    "Structuring the mission lifecycle from request to execution, expenses, invoicing and payment follow-up.",
 };
 
 const problemItems = [
-  "Drivers and office staff relied on calls, paper notes and spreadsheets",
-  "There was no shared view of mission status",
+  "Mission requests, execution notes and back-office follow-up were fragmented",
+  "There was no shared view of mission status, blockers or next actions",
   "Expenses were logged late or missed",
-  "Invoices had to be rebuilt from scattered information",
-  "Margin per mission was hard to see",
+  "Invoices and payment follow-up had to be rebuilt from scattered information",
+  "Mission costs were hard to review in the daily workflow",
 ] as const;
 
 const resultItems = [
@@ -38,14 +38,15 @@ const resultItems = [
 ] as const;
 
 const implementationItems = [
-  "Set a single flow from client request to payment",
+  "Tracked the mission lifecycle from request to execution",
+  "Created clearer operational statuses for mission follow-up",
   "Captured driver and trip costs inside the mission workflow",
   "Separated advances, company expenses and billable items",
-  "Made mission margin easier to review",
-  "Reduced manual handoffs between operations and billing",
+  "Connected invoice and payment visibility to executed work",
+  "Reduced fragmented admin follow-up between operations and billing",
 ] as const;
 
-const flowSteps = ["Client", "Mission", "Expense", "Invoice", "Payment"] as const;
+const flowSteps = ["Request", "Mission", "Execution", "Expense", "Invoice", "Payment"] as const;
 
 export default function KeplerExpressCaseStudyPage() {
   return (
@@ -56,15 +57,15 @@ export default function KeplerExpressCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-6xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-4xl">
-              <SectionKicker label="Case Study" />
+              <SectionKicker label="Operational Proof" />
               <h1 className="mt-6 max-w-4xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.65rem]">
-                Kepler Express
+                Operational workflow visibility for transport operations
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Daily logistics work was spread across calls, notes and separate files.
+                Structuring the mission lifecycle from request to execution, expenses, invoicing and payment follow-up.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The work was to connect mission follow-up, expense capture and billing so the team could coordinate from one clearer flow.
+                Transport operations needed one clearer workflow for mission requests, execution, expenses, invoicing and payment follow-up.
               </p>
             </div>
           </div>
@@ -76,7 +77,10 @@ export default function KeplerExpressCaseStudyPage() {
               <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
                 <SectionKicker label="Context" />
                 <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
-                  Small transport operations with dispatch, driver costs and invoices handled separately. Based on real logistics work with heavy manual coordination and follow-up.
+                  Transport and logistics operations with fragmented follow-up across mission requests, execution, expenses, invoicing and payment. Based on real logistics work with heavy manual coordination and follow-up.
+                </p>
+                <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
+                  The workflow structure was developed through day-to-day coordination of transport missions, expense tracking, invoicing and payment follow-up.
                 </p>
               </section>
 
@@ -87,7 +91,7 @@ export default function KeplerExpressCaseStudyPage() {
                 >
                   <SectionKicker label="Problem" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    Mission status, expenses and billing were being managed in different places, which slowed coordination and hid margin.
+                    Mission status, blockers, costs and back-office follow-up were being managed in different places, which slowed coordination.
                   </p>
 
                   <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
@@ -98,9 +102,9 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
-                  <SectionKicker label="Workflow" />
+                  <SectionKicker label="System built" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    The workflow was rebuilt so missions, expenses and invoicing moved together from start to finish.
+                    The workflow was structured so mission tracking, operational statuses, expenses, invoices and payments could move together.
                   </p>
 
                   <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 sm:px-5">
@@ -131,7 +135,7 @@ export default function KeplerExpressCaseStudyPage() {
 
               <section className="space-y-6">
                 <div className="max-w-3xl">
-                  <SectionKicker label="Results" />
+                  <SectionKicker label="Outcome" />
                 </div>
 
                 <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -155,31 +159,23 @@ export default function KeplerExpressCaseStudyPage() {
                 <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
                   <SectionKicker label="Insight" />
                   <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                    Once mission updates, costs and invoices moved together, coordination became much less reactive.
+                    When work becomes visible, teams can act faster.
                   </p>
                   <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    The improvement came from cleaner follow-up and fewer manual reconciliations between dispatch and billing.
+                    This case shows the same operating principle behind AnisConsult: when work becomes visible, teams can act faster and follow-up stops living in scattered messages.
+                  </p>
+                  <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+                    The same visibility-first approach continues across AnisConsult products and operational systems.
                   </p>
 
                   <div className="mt-6">
-                    <a
-                      href="https://kepler.anisconsult.com"
-                      target="_blank"
-                      rel="noreferrer"
+                    <Link
+                      href="/#ops-core"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      Open tool
-                    </a>
+                      View products & systems
+                    </Link>
                   </div>
-                </div>
-
-                <div>
-                  <Link
-                    href="/"
-                    className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
-                  >
-                    Back to home
-                  </Link>
                 </div>
               </section>
             </div>

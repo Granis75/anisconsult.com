@@ -34,7 +34,7 @@ export function MyBiHomeSection() {
                 rel="noreferrer"
                 className="premium-cta h-12 px-6"
               >
-                Explore
+                View product
               </a>
             </div>
 

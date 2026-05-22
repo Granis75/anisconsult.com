@@ -5,17 +5,19 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Work | AnisConsult — Business Systems & Workflow Specialist",
+  title: "Work | AnisConsult — Proof of execution",
   description:
-    "Real case studies, active product work and conceptual systems studies built around clearer workflows, usable tools and better operating visibility.",
+    "Real operations, real constraints, real outcomes — and the systems built from them.",
 };
 
 type Project = {
   category: string;
   badge?: string;
   title: string;
-  description: string;
-  support: string;
+  problem: string;
+  system: string;
+  outcome: string;
+  status: string;
   href: string;
   location: string;
   ctaLabel: string;
@@ -25,57 +27,105 @@ type Project = {
 
 const projectGroups: { label: string; projects: Project[] }[] = [
   {
-    label: "Real Case Studies",
+    label: "Real operations",
     projects: [
       {
         category: "Hospitality",
-        title: "Résidence Cadet",
-        description: "Guest stays, access, follow-up and reporting were reorganized into one clearer operating flow.",
-        support: "Real operating work · Supported by Ops Core workflow structure",
+        title: "Cadet Residence",
+        problem: "Guest stays, access, follow-up, payments and reporting were spread across files, calls and front-desk memory.",
+        system: "A clearer operating flow for guest follow-up, access, issues and reporting, supported by Ops Core workflow structure.",
+        outcome: "7.6 → 9.2 / 10 guest satisfaction · ~10h/week admin work reduced",
+        status: "Real operation",
         href: "/case-study/vesper",
         location: "work_page_residence_cadet",
-        ctaLabel: "View Case Study",
+        ctaLabel: "View operation",
       },
       {
         category: "Logistics",
         title: "Kepler Express",
-        description: "Mission follow-up, driver costs and billing were connected in one clearer logistics workflow.",
-        support: "Real operating work · Supported by Kepler workflow system",
+        problem: "Mission follow-up, driver costs, invoicing and payments moved separately, making daily control harder.",
+        system: "A logistics workflow system connecting mission status, cost capture and billing.",
+        outcome: "+50% revenue in a new operating segment",
+        status: "Real operation",
         href: "/case-study/kepler-express",
         location: "work_page_kepler",
-        ctaLabel: "View Case Study",
+        ctaLabel: "View operation",
       },
     ],
   },
   {
-    label: "Product in Development",
+    label: "Built systems",
     projects: [
       {
         category: "Hospitality / PMS",
-        badge: "PMS in development",
+        badge: "Product in development",
         title: "StayOps Core",
-        description: "Focused PMS product for boutique hotels and serviced apartments, currently in active development around reservations, rooms, balances, housekeeping and front-desk clarity.",
-        support: "Live public demo workspace · No real hotel, guest or payment data implied",
+        problem: "Small hospitality teams need reservations, rooms, balances, housekeeping and daily blockers in one focused workspace.",
+        system: "A hospitality operations system connecting reservations, rooms, housekeeping, incidents and operational visibility in one focused workspace.",
+        outcome: "Demo product. No real hotel, guest or payment data is implied.",
+        status: "Product in development",
         href: "/case-study/stayops-core",
         location: "work_page_stayops",
-        ctaLabel: "View Product Study",
+        ctaLabel: "View system",
         secondCtaLabel: "Open StayOps",
         secondCtaHref: "https://stayops.anisconsult.com",
+      },
+      {
+        category: "Business operating system",
+        badge: "Prototype",
+        title: "MyBi",
+        problem: "Client work, project progress, invoicing and payment follow-up are difficult to control when they live in separate places.",
+        system: "A business operations OS connecting clients, missions, invoices, payments and revenue visibility.",
+        outcome: "Prototype workspace for testing clearer payment follow-up, client concentration and activity visibility.",
+        status: "Prototype",
+        href: "/showcase/mybi",
+        location: "work_page_mybi",
+        ctaLabel: "View system",
+        secondCtaLabel: "Open MyBi",
+        secondCtaHref: "https://mybi.anisconsult.com",
+      },
+      {
+        category: "Logistics / internal tools",
+        badge: "Operational workflow system",
+        title: "Kepler Ops / internal tools",
+        problem: "Operational teams need mission status, cost capture, invoicing and payment movement visible in one flow.",
+        system: "Internal tooling shaped around Kepler Express operating logic and logistics follow-up.",
+        outcome: "A visible workflow for connecting executed work, costs and billing.",
+        status: "Field-tested internal system",
+        href: "/case-study/kepler-express",
+        location: "work_page_kepler_ops",
+        ctaLabel: "View workflow",
+        secondCtaLabel: "Open Kepler",
+        secondCtaHref: "https://kepler.anisconsult.com",
       },
     ],
   },
   {
-    label: "Thinking Exercises",
+    label: "Concept explorations",
     projects: [
       {
         category: "Retail",
-        badge: "Thinking exercise — not a client engagement",
-        title: "Northline Convenience",
-        description: "A hypothetical retail operations study exploring how workflow redesign, margin visibility and daily execution systems could improve a founder-dependent urban store. This is a structured thinking exercise, not a delivered client engagement.",
-        support: "All outcomes are modeled estimates used to test the operating logic — not reported client results.",
-        href: "/work/northline-convenience",
-        location: "work_page_northline",
-        ctaLabel: "View thinking exercise",
+        badge: "Concept exploration",
+        title: "StorePilot",
+        problem: "Retail operators need daily execution, exceptions and margin signals in one operating layer.",
+        system: "A concept product for store-level visibility and operational control.",
+        outcome: "Concept exploration used to test retail workflow and margin visibility logic.",
+        status: "Concept exploration",
+        href: "https://storepilot.anisconsult.com",
+        location: "work_page_storepilot",
+        ctaLabel: "Open concept",
+      },
+      {
+        category: "Service operations",
+        badge: "Internal prototype",
+        title: "Ops Core",
+        problem: "Tasks, blockers and follow-up lose momentum when ownership is unclear.",
+        system: "An internal prototype for task ownership, blockers and status tracking.",
+        outcome: "Prototype logic for making operational work easier to see and run.",
+        status: "Prototype",
+        href: "https://opscore.anisconsult.com",
+        location: "work_page_ops_core",
+        ctaLabel: "Open prototype",
       },
     ],
   },
@@ -92,13 +142,10 @@ export default function WorkPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Work" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Proof, not promises.
+                Proof of execution
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Real case studies, active product work and conceptual systems studies.
-              </p>
-              <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                All built around clearer workflows, usable tools and better operating visibility.
+                Real operations, real constraints, real outcomes — and the systems built from them.
               </p>
             </div>
           </div>
@@ -131,21 +178,60 @@ export default function WorkPage() {
                         <h2 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                           {project.title}
                         </h2>
-                        <p className="text-base leading-8 text-muted sm:text-lg">
-                          {project.description}
-                        </p>
-                        <p className="text-sm text-muted/70">
-                          {project.support}
-                        </p>
+                        <dl className="grid gap-5">
+                          <div>
+                            <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                              Problem
+                            </dt>
+                            <dd className="mt-2 text-base leading-8 text-muted sm:text-lg">
+                              {project.problem}
+                            </dd>
+                          </div>
+                          <div>
+                            <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                              System
+                            </dt>
+                            <dd className="mt-2 text-base leading-8 text-muted sm:text-lg">
+                              {project.system}
+                            </dd>
+                          </div>
+                          <div>
+                            <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                              Outcome
+                            </dt>
+                            <dd className="mt-2 text-base leading-8 text-muted sm:text-lg">
+                              {project.outcome}
+                            </dd>
+                          </div>
+                          <div>
+                            <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                              Status
+                            </dt>
+                            <dd className="mt-2 text-sm text-muted/70">
+                              {project.status}
+                            </dd>
+                          </div>
+                        </dl>
                         <div className="flex flex-wrap items-center gap-4">
-                          <TrackedLink
-                            href={project.href}
-                            event="case_study_cta_click"
-                            data={{ location: project.location }}
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                          >
-                            {project.ctaLabel}
-                          </TrackedLink>
+                          {project.href.startsWith("http") ? (
+                            <a
+                              href={project.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                            >
+                              {project.ctaLabel}
+                            </a>
+                          ) : (
+                            <TrackedLink
+                              href={project.href}
+                              event="case_study_cta_click"
+                              data={{ location: project.location }}
+                              className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                            >
+                              {project.ctaLabel}
+                            </TrackedLink>
+                          )}
                           {project.secondCtaHref && project.secondCtaLabel && (
                             <a
                               href={project.secondCtaHref}
@@ -163,6 +249,16 @@ export default function WorkPage() {
                 </div>
               </div>
             ))}
+            <div className="border-t border-line pt-2">
+              <TrackedLink
+                href="/#ops-core"
+                event="case_study_cta_click"
+                data={{ location: "work_page_footer" }}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+              >
+                Explore products & systems
+              </TrackedLink>
+            </div>
           </div>
         </section>
       </main>

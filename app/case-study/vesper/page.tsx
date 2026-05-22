@@ -5,34 +5,34 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Résidence Cadet Case Study | Hospitality Operations | Anis",
+  title: "Operational visibility for a 23-unit serviced residence | AnisConsult",
   description:
-    "Hospitality operations case study covering guest follow-up, access, reporting and lighter admin workload at Résidence Cadet in Paris.",
+    "How scattered daily operations were turned into clearer workflows across reservations, payments, incidents, housekeeping and reporting.",
 };
 
 const sectionLinks = [
   { label: "Context", href: "#context" },
   { label: "Problem", href: "#problem" },
-  { label: "Workflow", href: "#implementation" },
-  { label: "Results", href: "#results" },
+  { label: "System", href: "#implementation" },
+  { label: "Outcomes", href: "#results" },
   { label: "Insight", href: "#insight" },
 ] as const;
 
 const problemItems = [
-  "Guest information lived across Excel, PMS and messages",
-  "Front desk handled too many routine tasks",
-  "Payment and admin follow-up took too much manual work",
-  "Issues were hard to track from start to resolution",
-  "Managers had no clean view of daily execution",
+  "Work was spread across tools, messages, PMS workflows and individual memory",
+  "Front desk handled too many routine checks and repeated follow-up tasks",
+  "Payment and billing follow-up took too much manual work",
+  "Incidents were hard to track from report to resolution",
+  "Managers had no clean view of daily execution, housekeeping and reporting",
 ] as const;
 
 const implementationItems = [
-  "Mapped the full chain from booking to stay to reporting",
-  "Grouped guest data, follow-up and preferences in one place",
-  "Reduced front-desk dependency through automated access",
-  "Cleaned up payment and admin steps",
-  "Built internal views for daily follow-up",
-  "Made operations and revenue easier to read together",
+  "Created clearer ownership across recurring operational tasks",
+  "Structured daily routines from reservations to stays to reporting",
+  "Tracked recurring follow-up instead of relying on memory",
+  "Made incidents visible from report to resolution",
+  "Clarified payment and billing follow-up",
+  "Built operational reporting views for daily control",
 ] as const;
 
 const resultItems = [
@@ -55,18 +55,18 @@ const resultItems = [
 ] as const;
 
 const changeItems = [
-  "Guest issues were easier to track",
-  "Less dependency on front desk for routine tasks",
-  "Managers could see status and revenue earlier",
-  "The stay experience became more consistent",
+  "Guest requests and incidents were easier to track",
+  "Less dependency on front desk for routine follow-up",
+  "Managers could see operational status and revenue earlier",
+  "Reservations, payments, housekeeping and reporting became easier to coordinate",
 ] as const;
 
 const flowSteps = [
-  "Acquisition",
-  "Booking",
-  "CRM",
-  "Access",
+  "Reservation",
+  "Assignment",
+  "Check-in",
   "Operations",
+  "Checkout",
   "Reporting",
 ] as const;
 
@@ -79,22 +79,22 @@ export default function VesperCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <SectionKicker label="Case Study" />
+              <SectionKicker label="Operational Proof" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Résidence Cadet
+                Operational visibility for a 23-unit serviced residence
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Guest operations were running through Excel, calls and front-desk dependency.
+                How scattered daily operations were turned into clearer workflows across reservations, payments, incidents, housekeeping and reporting.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                At the start of each week, the manager opened a spreadsheet to piece together who was arriving, who still owed a payment, and which maintenance issue from the previous week hadn&apos;t been closed. Guest data lived in three places. Access codes went out manually via message threads. Follow-up on late payments depended on whoever remembered to check first.
+                Résidence Cadet operated as a 23-unit serviced residence with daily complexity across arrivals, departures, guest requests, payments, housekeeping, maintenance and reporting.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                When a guest reported a problem, it landed in someone&apos;s inbox. Whether it got resolved that day depended entirely on that inbox being read. That pattern was costing roughly 10 hours of admin work per week — and showing up in guest satisfaction scores.
+                Work was spread across tools, messages, PMS workflows, manual follow-up and individual memory. At the start of each week, the manager still had to piece together who was arriving, who still owed a payment, and which maintenance issue had not been closed.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The work was to replace that with a flow the team could actually follow.
+                The operational system created clearer ownership, recurring follow-up, incident visibility, payment and billing follow-up, operational reporting and structured daily routines.
               </p>
             </div>
           </div>
@@ -125,16 +125,19 @@ export default function VesperCaseStudyPage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Context" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Multi-unit short-stay operations with guest communication, access, issues and reporting spread across too many tools. Based on real operational work at Résidence Cadet in Paris.
+                  A 23-unit serviced residence with daily operational complexity across arrivals, departures, guest requests, payments, housekeeping, maintenance and reporting. Based on real operational work at Résidence Cadet in Paris.
+                </p>
+                <p className="mt-5 text-base leading-8 text-ink">
+                  This operational framework was developed through day-to-day management of reservations, payments, incidents, housekeeping coordination and reporting workflows inside the residence.
                 </p>
               </article>
 
               <article className="rounded-[2rem] border border-line bg-white p-8 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_30px_rgba(15,23,42,0.04)]">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                  Where It Broke
+                  Operational Constraint
                 </p>
                 <p className="mt-6 text-base leading-8 text-ink">
-                  Too much depended on manual checks, front-desk coordination and scattered guest information.
+                  Too much depended on manual checks, front-desk coordination, PMS workflows, scattered guest information and individual memory.
                 </p>
               </article>
             </div>
@@ -146,7 +149,7 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-3xl">
               <SectionKicker label="Problem" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The day-to-day work was hard to run cleanly because the basic flow was split across files, calls and people.
+                Daily work was hard to run cleanly because the basic operating flow was split across tools, messages, PMS workflows, manual follow-up and people.
               </p>
             </div>
 
@@ -166,9 +169,9 @@ export default function VesperCaseStudyPage() {
         <section id="implementation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <SectionKicker label="Workflow" />
+              <SectionKicker label="Operational system" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The work was reorganized into one operating flow the team could actually follow.
+                A practical operating system was created so the team could see ownership, follow-up, incidents, payments and reporting more clearly.
               </p>
             </div>
 
@@ -188,7 +191,7 @@ export default function VesperCaseStudyPage() {
         <section id="results" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="Results" />
+              <SectionKicker label="Outcomes" />
             </div>
 
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -211,9 +214,9 @@ export default function VesperCaseStudyPage() {
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
-                <SectionKicker label="What Changed" />
+                <SectionKicker label="What changed" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  The team spent less time chasing information and more time running the work.
+                  The team spent less time chasing information and more time running the operation.
                 </p>
               </article>
 
@@ -239,10 +242,10 @@ export default function VesperCaseStudyPage() {
                 Most of the improvement came from removing manual follow-up and unclear handoffs.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The gains came from giving the team one working flow instead of separate files, calls and workarounds.
+                The gains came from giving the team one working flow instead of separate files, calls, PMS workarounds and manual checks.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The setup came from real operating constraints, not a blank-sheet process map.
+                Many of the workflows later explored in StayOps Core — room readiness, operational visibility, incident tracking and structured follow-up — originated from challenges encountered in this environment.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">
@@ -266,10 +269,10 @@ export default function VesperCaseStudyPage() {
 
               <div className="mt-8">
                 <Link
-                  href="/work"
+                  href="/case-study/stayops-core"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  View work
+                  Explore StayOps Core
                 </Link>
               </div>
             </div>

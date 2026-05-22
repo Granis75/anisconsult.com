@@ -1,27 +1,25 @@
-export const bookingHref = "https://cal.com/anisconsult/ops-call";
-
 export const directEmailHref = "mailto:hello@anisconsult.com";
 
 export const siteContent = {
   brand: "Anis",
   navigation: [
+    { label: "Products", href: "/#ops-core" },
     { label: "Work", href: "/work" },
     { label: "About", href: "/about" },
-    { label: "Systems", href: "/#ops-core" },
     { label: "Contact", href: "/#contact" },
   ],
   hero: {
-    title: "I design and build operating systems for service teams — and the practical tools that make them work.",
-    subtitle: "Business systems and workflow tools for service teams",
+    title: "Operational systems and AI-powered workflows for service businesses.",
+    subtitle: "Operational Systems Lab",
     description:
-      "For service teams stuck in scattered tools, manual follow-up and recurring work that nobody can see clearly enough to control.",
+      "Built from real operations to reduce scattered tools, manual follow-up and operational blind spots.",
     primaryCta: {
-      label: "See my work",
-      href: "/#case-study",
+      label: "Explore the systems",
+      href: "/#ops-core",
     },
     secondaryCta: {
-      label: "Get in touch",
-      href: "/#contact",
+      label: "View the work",
+      href: "/#case-study",
     },
   },
 } as const;

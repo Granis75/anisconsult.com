@@ -23,7 +23,7 @@ export function BeforeAfterSection() {
     <section className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
         <div className="mb-14 max-w-3xl">
-          <SectionKicker label="Transformation" />
+          <SectionKicker label="Operating shift" />
           <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
             From scattered work to operational control.
           </h2>

@@ -19,14 +19,14 @@ export function SiteFooter() {
               className="h-7 w-auto sm:h-8"
             />
           </Link>
-          <p>Business Systems & Workflow Specialist</p>
+          <p>Operational Systems Lab</p>
         </div>
 
         <div className="flex flex-col gap-2 md:items-end">
           <a href={directEmailHref} className="transition-colors duration-200 hover:text-ink">
             hello@anisconsult.com
           </a>
-          <p>Paris · Remote Worldwide</p>
+          <p>Paris · Building for teams worldwide</p>
         </div>
       </div>
     </footer>
