@@ -44,6 +44,9 @@ const backgroundItems = [
   "Reservations, incidents & housekeeping",
   "Payments, suppliers & reporting",
   "Business software & operational systems",
+  "Full-stack web application development",
+  "Database design & workflow automation",
+  "Product design",
 ] as const;
 
 export default function AboutPage() {
