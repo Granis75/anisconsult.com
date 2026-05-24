@@ -60,19 +60,19 @@ export default function AboutPage() {
                 Operational Systems Lab
               </p>
               <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                An operator who became a systems and product builder.
+                I build operational software for service businesses — informed by the operations I've run myself.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 AnisConsult started from a simple operational problem: service businesses often run on scattered tools, manual follow-up and invisible work.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Anis is an operations professional, systems builder and product-minded operator with experience across hospitality, serviced residences, logistics and internal workflows.
+                I'm a product builder focused on operational software, with deep domain experience across hospitality, serviced residences, logistics and daily business operations.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Before building products, I spent years inside service operations — running serviced-residence workflows, coordinating logistics, resolving operational issues and working daily inside business software. That made one thing obvious: most operational problems are not people problems. They are visibility problems.
+                I build for service operations because I've run them — serviced-residence workflows, logistics coordination, incident resolution and daily work inside business software. That experience made one thing obvious: most operational problems are not people problems. They are visibility problems.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                After years running operations, tracking incidents, reservations, payments, suppliers, housekeeping, reporting and back-office workflows, the work naturally moved from managing operations to building systems that make operations clearer.
+                Having handled incidents, reservations, payments, suppliers, housekeeping, reporting and back-office workflows myself, I now build the systems I wish those operations had — ones that make the work visible and easy to run.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -91,10 +91,10 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-start lg:gap-8">
               <article className="premium-card p-8 lg:p-10">
-                <SectionKicker label="From operations to systems" />
+                <SectionKicker label="Why I build what I build" />
                 <div className="mt-6 grid gap-5">
                   <p className="text-base leading-8 text-ink sm:text-lg">
-                    After years inside service operations, the problem became clear: most teams do not lack effort. They lack a usable operating layer.
+                    One pattern was constant across those operations: most teams do not lack effort. They lack a usable operating layer.
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
                     Work lives across messages, spreadsheets, PMS tools, emails and memory. AnisConsult exists to turn that scattered work into systems people can actually run.

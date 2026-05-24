@@ -55,7 +55,7 @@ export default function KeplerExpressCaseStudyPage() {
 
       <main className="bg-white text-ink antialiased">
         <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-6xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
+          <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-4xl">
               <SectionKicker label="Operational Proof" />
               <h1 className="mt-6 max-w-4xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.65rem]">
@@ -72,9 +72,9 @@ export default function KeplerExpressCaseStudyPage() {
         </section>
 
         <section className="bg-surface">
-          <div className="mx-auto max-w-6xl px-6 py-10 lg:px-10 lg:py-14">
-            <div className="space-y-12 lg:space-y-16">
-              <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <div className="space-y-20">
+              <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
                 <SectionKicker label="Context" />
                 <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
                   Transport and logistics operations with fragmented follow-up across mission requests, execution, expenses, invoicing and payment. Based on real logistics work with heavy manual coordination and follow-up.
@@ -84,10 +84,10 @@ export default function KeplerExpressCaseStudyPage() {
                 </p>
               </section>
 
-              <div className="grid gap-6 pt-2 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-7">
+              <div className="grid gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
                 <section
                   id="problem"
-                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7"
+                  className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
                 >
                   <SectionKicker label="Problem" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
@@ -101,7 +101,7 @@ export default function KeplerExpressCaseStudyPage() {
                   </ul>
                 </section>
 
-                <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7">
+                <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
                   <SectionKicker label="System built" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
                     The workflow was structured so mission tracking, operational statuses, expenses, invoices and payments could move together.
@@ -133,7 +133,7 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
               </div>
 
-              <section className="space-y-6">
+              <section className="space-y-10">
                 <div className="max-w-3xl">
                   <SectionKicker label="Outcome" />
                 </div>
@@ -142,7 +142,7 @@ export default function KeplerExpressCaseStudyPage() {
                   {resultItems.map((item) => (
                     <article
                       key={item.title}
-                      className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+                      className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
                     >
                       <p className="text-sm font-semibold tracking-[-0.01em] text-ink">
                         {item.title}
@@ -155,8 +155,8 @@ export default function KeplerExpressCaseStudyPage() {
                 </div>
               </section>
 
-              <section className="space-y-8">
-                <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+              <section>
+                <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
                   <SectionKicker label="Insight" />
                   <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                     When work becomes visible, teams can act faster.

@@ -99,7 +99,7 @@ export function Hero() {
                   Operating logic
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Turn loose work into a usable system.
+                  Turn scattered work into a system the team can actually run.
                 </h2>
               </div>
 

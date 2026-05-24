@@ -136,7 +136,7 @@ export function MyBiShowcase({
 }: MyBiShowcaseProps) {
   return (
     <section className="min-h-screen bg-[#F9F9FB] text-slate-950">
-      <div className="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 sm:py-10 lg:px-10 lg:py-12">
+      <div className="mx-auto max-w-7xl px-6 py-8 sm:py-10 lg:px-10 lg:py-12">
         <div className="space-y-6">
           <header className="flex flex-col gap-6 rounded-[32px] border border-slate-100 bg-white p-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_16px_40px_rgba(15,23,42,0.04)] sm:p-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">

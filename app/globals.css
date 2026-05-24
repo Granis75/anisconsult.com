@@ -20,6 +20,16 @@
     scroll-behavior: smooth;
   }
 
+  [id] {
+    scroll-margin-top: 8rem;
+  }
+
+  @media (min-width: 768px) {
+    [id] {
+      scroll-margin-top: 6rem;
+    }
+  }
+
   body {
     font-family: var(--font-sans), system-ui, sans-serif;
     color: var(--foreground);

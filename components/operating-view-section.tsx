@@ -40,10 +40,10 @@ export function OperatingViewSection() {
           <div className="max-w-3xl">
             <SectionKicker label="Operating view" />
             <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-              This is what clearer operations look like.
+              This is what clearer operations actually look like.
             </h2>
             <p className="mt-6 text-base leading-7 text-muted sm:text-lg sm:leading-8">
-              The goal is not another dashboard. It is one practical layer where work has a shape, a person, a next step and a result.
+              Not another dashboard. One practical layer where every piece of work has an owner, a status, a next step and a result.
             </p>
           </div>
 
