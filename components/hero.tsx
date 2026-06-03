@@ -6,11 +6,11 @@ import { siteContent } from "@/lib/site-content";
 
 const focusAreas = [
   {
-    title: "Make ownership visible",
+    title: "Clarify ownership",
     description: "Every request has a responsible person and a next step.",
   },
   {
-    title: "Reduce manual follow-up",
+    title: "Clean up follow-up",
     description: "The work stops living across chats, sheets and memory.",
   },
   {
@@ -42,6 +42,9 @@ export function Hero() {
             <p className="mt-7 max-w-3xl text-lg leading-8 text-neutral-600 sm:text-[1.35rem] sm:leading-9">
               {hero.description}
             </p>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+              {hero.support}
+            </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <TrackedLink
@@ -64,7 +67,7 @@ export function Hero() {
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
-              Owner - Action - Follow-up - Outcome
+              Owner - Status - Next action - Outcome
             </p>
 
             <div className="mt-14 border-t border-line pt-8">
@@ -99,7 +102,7 @@ export function Hero() {
                   Operating logic
                 </p>
                 <h2 className="text-balance mt-4 font-display text-2xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                  Turn scattered work into a system the team can actually run.
+                  Owner → Status → Next action → Outcome
                 </h2>
               </div>
 
@@ -138,7 +141,7 @@ export function Hero() {
 
               <div className="mt-6 border-t border-line pt-5">
                 <p className="text-sm leading-6 text-ink/70">
-                  A simple operating layer for deciding what matters, who owns it and what happens next.
+                  Every piece of work needs a responsible person, a clear status, a next step and a result.
                 </p>
               </div>
             </div>

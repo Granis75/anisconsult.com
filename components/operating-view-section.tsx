@@ -2,7 +2,7 @@
 
 import { SectionKicker } from "@/components/section-kicker";
 
-const flowSteps = ["Request", "Owner", "Action", "Outcome"] as const;
+const flowSteps = ["Owner", "Status", "Next action", "Outcome"] as const;
 
 const visibleFields = [
   { label: "Status", value: "Open", tone: "Needs movement" },
@@ -40,10 +40,10 @@ export function OperatingViewSection() {
           <div className="max-w-3xl">
             <SectionKicker label="Operating view" />
             <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-              This is what clearer operations actually look like.
+              Every piece of work needs a simple operating path.
             </h2>
             <p className="mt-6 text-base leading-7 text-muted sm:text-lg sm:leading-8">
-              Not another dashboard. One practical layer where every piece of work has an owner, a status, a next step and a result.
+              A responsible person, a clear status, a next step and a result. That is the basic structure behind follow-up, reporting and daily control.
             </p>
           </div>
 

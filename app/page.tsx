@@ -11,17 +11,17 @@ import { TrackedLink } from "@/components/tracked-link";
 import { ValueSection } from "@/components/value-section";
 
 export const metadata: Metadata = {
-  title: "AnisConsult — Operational Systems Lab",
+  title: "AnisConsult — Business Systems & Workflow Tools",
   description:
-    "Operational systems, internal tools and AI-powered workflows for service businesses. Built from real operations, not theory.",
+    "AnisConsult helps service businesses structure clearer workflows, internal tools and reporting systems to reduce manual follow-up and improve operational visibility.",
 };
 
 const realCases = [
   {
     sector: "Hospitality",
     title: "Résidence Cadet",
-    problem: "Guest stays, access, follow-up and reporting were scattered across multiple tools.",
-    system: "Ops Core operating flow for guest follow-up, access, issues and reporting.",
+    problem: "Guest stays, access, follow-up, payments and reporting were spread across files, calls and front-desk memory.",
+    system: "A structured operating flow for guest follow-up, access, issues and reporting.",
     outcome: "7.6 → 9.2 / 10 guest satisfaction · ~10h/week admin work reduced",
     href: "/case-study/vesper",
     location: "home_proof_residence_cadet",
@@ -30,9 +30,9 @@ const realCases = [
   {
     sector: "Logistics",
     title: "Kepler Express",
-    problem: "Mission follow-up, driver costs and billing lacked visibility and structure.",
-    system: "Kepler workflow system connecting mission status, cost capture and billing.",
-    outcome: "+50% revenue in a new operating segment",
+    problem: "Mission follow-up, driver costs, invoicing and payments moved separately, making daily control harder.",
+    system: "A logistics workflow system connecting mission status, cost capture and billing.",
+    outcome: "Supported the launch and control of a new revenue segment.",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View Proof",
@@ -41,36 +41,36 @@ const realCases = [
 
 const conceptStudies = [
   {
-    badge: "PMS in active development",
+    badge: "Prototype in development",
     sector: "Hospitality / PMS",
     title: "StayOps Core",
     problem: "Boutique hospitality workflows need reservations, room planning and daily blockers in one focused workspace.",
-    system: "Focused PMS product for boutique hotels and serviced apartments, currently in active development.",
-    outcome: "Live public demo workspace; no real hotel, guest or payment data implied",
+    system: "Prototype workspace for reservations, rooms, housekeeping, incidents and daily operating views.",
+    outcome: "Demo workspace only; no real hotel, guest or payment data is implied.",
     href: "/case-study/stayops-core",
     location: "home_proof_stayops",
-    ctaLabel: "View System",
+    ctaLabel: "View prototype",
   },
 ] as const;
 
-const primaryProducts = [
+const primarySystems = [
   {
-    badge: "Product in development",
+    badge: "Prototype in development",
     title: "StayOps Core",
-    problem: "Hospitality operations system for serviced residences and small operators — covering reservations, rooms, housekeeping, incidents, supplier follow-up and operational visibility.",
-    audience: "Product in development",
-    workflow: "Built and tested around the operational problem of keeping daily hospitality work visible in one practical system.",
+    problem: "Hospitality operations prototype for serviced residences and small operators, covering reservations, rooms, housekeeping, incidents, supplier follow-up and reporting.",
+    audience: "Prototype in development",
+    workflow: "Built around the problem of keeping daily hospitality work easier to see and run.",
     href: "https://stayops.anisconsult.com",
-    ctaLabel: "View product",
+    ctaLabel: "View prototype",
   },
   {
     badge: "Prototype",
     title: "MyBi",
-    problem: "Business operations OS for freelancers and small operators — centralizing clients, missions, invoices, payments and revenue visibility.",
+    problem: "Business tracking workspace for freelancers and small operators — centralizing clients, missions, invoices, payments and revenue visibility.",
     audience: "Prototype",
     workflow: "Modeled around the workflow from client activity to invoice status, payment follow-up and revenue visibility.",
     href: "https://mybi.anisconsult.com",
-    ctaLabel: "View product",
+    ctaLabel: "View workspace",
   },
   {
     badge: "Operational system",
@@ -85,15 +85,15 @@ const primaryProducts = [
 
 const otherSystems = [
   {
-    badge: "Concept exploration",
+    badge: "Concept only — not a client engagement",
     title: "StorePilot",
-    description: "Concept explorations around recurring operational problems in daily retail execution, exceptions and margin visibility.",
+    description: "Concept only for daily retail execution, exceptions and margin visibility.",
     href: "https://storepilot.anisconsult.com",
   },
   {
-    badge: "Concept exploration",
+    badge: "Concept only — not a client engagement",
     title: "Ops Core",
-    description: "Concept explorations around recurring operational problems in task ownership, blockers and workflow visibility.",
+    description: "Concept only for task ownership, blockers and workflow visibility.",
     href: "https://opscore.anisconsult.com",
   },
 ] as const;
@@ -114,6 +114,25 @@ const audienceFit = [
   {
     title: "International teams",
     description: "For English, French or Arabic environments where simple structure matters across contexts.",
+  },
+] as const;
+
+const servicesPreview = [
+  {
+    title: "Workflow Audit",
+    description: "Map how work currently moves, where follow-up breaks and what needs clearer ownership.",
+  },
+  {
+    title: "Internal Tools Setup",
+    description: "Set up a simple workspace around clients, missions, incidents, payments or recurring work.",
+  },
+  {
+    title: "Reporting & Automation",
+    description: "Create recurring views and simple automation so reporting is less manual.",
+  },
+  {
+    title: "Ongoing Systems Support",
+    description: "Keep tools documented, adjusted and useful after the first setup.",
   },
 ] as const;
 
@@ -147,7 +166,7 @@ export default function HomePage() {
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Real operations, real constraints, real outcomes — and the systems built from them.
+                Field-tested work, clear constraints and practical outcomes.
               </p>
             </div>
 
@@ -202,7 +221,7 @@ export default function HomePage() {
 
             <div className="mt-12 border-t border-line pt-10">
               <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                Product in Development
+                Prototype in Development
               </p>
               <div className="mt-5 grid gap-6 md:grid-cols-2">
               {conceptStudies.map((item) => (
@@ -268,61 +287,61 @@ export default function HomePage() {
         </section>
 
         <section
-          id="ops-core"
+          id="systems-prototypes"
           className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
         >
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={55}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Products & Systems" />
+                <SectionKicker label="Systems & Prototypes" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Products & Systems
+                  Systems & Prototypes
                 </h2>
               </div>
 
               <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                AnisConsult builds operational systems, internal tools and AI-powered workflows from real operating problems. Some are active products, some are prototypes, and some are concept explorations.
+                A small set of field-tested systems, prototypes and clearly labeled concept work.
               </p>
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {primaryProducts.map((product) => (
-                <article key={product.title} className="premium-soft-card flex h-full flex-col">
+              {primarySystems.map((system) => (
+                <article key={system.title} className="premium-soft-card flex h-full flex-col">
                   <p className="mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                    {product.badge}
+                    {system.badge}
                   </p>
                   <h3 className="font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2rem]">
-                    {product.title}
+                    {system.title}
                   </h3>
                   <dl className="mt-6 space-y-5">
                     <div>
                       <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
                         Description
                       </dt>
-                      <dd className="mt-2 text-sm leading-7 text-ink/78">{product.problem}</dd>
+                      <dd className="mt-2 text-sm leading-7 text-ink/78">{system.problem}</dd>
                     </div>
                     <div>
                       <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
                         Status
                       </dt>
-                      <dd className="mt-2 text-sm leading-7 text-ink/78">{product.audience}</dd>
+                      <dd className="mt-2 text-sm leading-7 text-ink/78">{system.audience}</dd>
                     </div>
                     <div>
                       <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
                         Visible workflow
                       </dt>
-                      <dd className="mt-2 text-sm leading-7 text-ink/78">{product.workflow}</dd>
+                      <dd className="mt-2 text-sm leading-7 text-ink/78">{system.workflow}</dd>
                     </div>
                   </dl>
 
                   <div className="mt-auto pt-8">
                     <a
-                      href={product.href}
+                      href={system.href}
                       target="_blank"
                       rel="noreferrer"
                       className="premium-cta-outline h-12 px-6"
                     >
-                      {product.ctaLabel}
+                      {system.ctaLabel}
                     </a>
                   </div>
                 </article>
@@ -351,11 +370,52 @@ export default function HomePage() {
                       rel="noreferrer"
                       className="mt-1 shrink-0 text-sm font-semibold text-ink transition-opacity hover:opacity-70"
                     >
-                      View system
+                      Open concept
                     </a>
                   </div>
                 ))}
               </div>
+            </div>
+          </Reveal>
+        </section>
+
+        <section
+          id="services"
+          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+        >
+          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={65}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
+              <div className="max-w-3xl">
+                <SectionKicker label="Services" />
+                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
+                  Practical help for recurring workflow problems.
+                </h2>
+              </div>
+              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+                Audits, internal tool setup, reporting structure and support for service teams that need cleaner day-to-day control.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {servicesPreview.map((service) => (
+                <article key={service.title} className="premium-soft-card flex h-full flex-col">
+                  <h3 className="text-base font-semibold tracking-[-0.02em] text-ink">
+                    {service.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-muted">{service.description}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-10">
+              <TrackedLink
+                href="/services"
+                event="contact_cta_click"
+                data={{ location: "home_services_preview" }}
+                className="premium-cta-outline h-12 px-6"
+              >
+                View services
+              </TrackedLink>
             </div>
           </Reveal>
         </section>

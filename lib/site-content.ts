@@ -1,25 +1,27 @@
 export const directEmailHref = "mailto:hello@anisconsult.com";
 
 export const siteContent = {
-  brand: "Anis",
+  brand: "AnisConsult",
   navigation: [
-    { label: "Products", href: "/#ops-core" },
     { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Operational systems and AI-powered workflows for service businesses.",
-    subtitle: "Operational Systems Lab",
+    title: "Fix recurring workflow problems. Build systems teams actually use.",
+    subtitle: "Business systems & workflow tools",
     description:
-      "Built from real operations to reduce scattered tools, manual follow-up and operational blind spots.",
+      "Business systems and workflow tools for service teams stuck in scattered tools, manual follow-up and unclear ownership.",
+    support:
+      "Built from real operations to reduce operational blind spots and make day-to-day work easier to run.",
     primaryCta: {
-      label: "Explore the systems",
-      href: "/#ops-core",
+      label: "View work",
+      href: "/work",
     },
     secondaryCta: {
-      label: "View the work",
-      href: "/#case-study",
+      label: "Discuss a workflow problem",
+      href: "/contact",
     },
   },
 } as const;

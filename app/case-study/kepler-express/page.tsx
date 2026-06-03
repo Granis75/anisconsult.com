@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Operational workflow visibility for transport operations | AnisConsult",
+  title: "Kepler Express Case Study | AnisConsult",
   description:
-    "Structuring the mission lifecycle from request to execution, expenses, invoicing and payment follow-up.",
+    "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
 };
 
 const problemItems = [
@@ -46,7 +46,7 @@ const implementationItems = [
   "Reduced fragmented admin follow-up between operations and billing",
 ] as const;
 
-const flowSteps = ["Request", "Mission", "Execution", "Expense", "Invoice", "Payment"] as const;
+const flowSteps = ["Client", "Mission", "Expense", "Invoice", "Payment"] as const;
 
 export default function KeplerExpressCaseStudyPage() {
   return (
@@ -62,7 +62,7 @@ export default function KeplerExpressCaseStudyPage() {
                 Operational workflow visibility for transport operations
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Structuring the mission lifecycle from request to execution, expenses, invoicing and payment follow-up.
+                Structuring mission status, expenses, invoicing and payment follow-up.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
                 Transport operations needed one clearer workflow for mission requests, execution, expenses, invoicing and payment follow-up.
@@ -91,7 +91,7 @@ export default function KeplerExpressCaseStudyPage() {
                 >
                   <SectionKicker label="Problem" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    Mission status, blockers, costs and back-office follow-up were being managed in different places, which slowed coordination.
+                    Mission status, expenses and billing were being managed in different places, which slowed coordination and hid margin.
                   </p>
 
                   <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
@@ -165,15 +165,15 @@ export default function KeplerExpressCaseStudyPage() {
                     This case shows the same operating principle behind AnisConsult: when work becomes visible, teams can act faster and follow-up stops living in scattered messages.
                   </p>
                   <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    The same visibility-first approach continues across AnisConsult products and operational systems.
+                    The same approach continues across AnisConsult business systems and internal tools.
                   </p>
 
                   <div className="mt-6">
                     <Link
-                      href="/#ops-core"
+                      href="/#systems-prototypes"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      View products & systems
+                      View systems & prototypes
                     </Link>
                   </div>
                 </div>

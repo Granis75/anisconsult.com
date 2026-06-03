@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "StayOps Core — Hospitality Operations System | AnisConsult",
+  title: "StayOps Core — Hospitality Operations Prototype | AnisConsult",
   description:
-    "StayOps Core is a lightweight hospitality operations system for serviced residences and small operators.",
+    "StayOps Core is a prototype workspace in development for serviced residences and small hospitality operators.",
 };
 
 const sectionLinks = [
@@ -84,7 +84,7 @@ const flowSteps = [
 const distinctionItems = [
   {
     name: "StayOps Core",
-    role: "Product in development",
+    role: "Prototype in development",
     covers: "Reservations, rooms, housekeeping, incidents, supplier follow-up, operational reporting and activity visibility.",
   },
   {
@@ -103,7 +103,7 @@ export default function StayOpsCasePage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <SectionKicker label="Product in development" />
+              <SectionKicker label="Prototype in development" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
                 StayOps Core
               </h1>
@@ -112,10 +112,10 @@ export default function StayOpsCasePage() {
               </p>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                A lightweight hospitality operations system for serviced residences and small operators.
+                A prototype workspace in development for serviced residences and small operators.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                StayOps Core is built from real serviced-residence operations. It brings reservations, rooms, housekeeping, incidents, supplier follow-up and operational reporting into one practical operating layer.
+                StayOps Core is built from real serviced-residence constraints. It explores reservations, rooms, housekeeping, incidents, supplier follow-up and reporting in one practical workspace.
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -128,10 +128,10 @@ export default function StayOpsCasePage() {
                   Open the demo
                 </a>
                 <Link
-                  href="/#ops-core"
+                  href="/#systems-prototypes"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
                 >
-                  View other systems
+                  View systems & prototypes
                 </Link>
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function StayOpsCasePage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8">
                 <SectionKicker label="Built from real operations" />
                 <p className="mt-6 text-base leading-8 text-ink">
-                  The product direction comes from daily operational experience managing serviced residence workflows: arrivals, departures, rooms, housekeeping, incidents, payments, suppliers and reporting.
+                  The prototype direction comes from daily operational experience managing serviced residence workflows: arrivals, departures, rooms, housekeeping, incidents, payments, suppliers and reporting.
                 </p>
               </article>
 
@@ -178,7 +178,7 @@ export default function StayOpsCasePage() {
                   Small hospitality teams often manage reservations, housekeeping, incidents, payments and daily follow-up across multiple tools, messages and spreadsheets.
                 </p>
                 <p className="mt-5 text-base leading-8 text-ink">
-                  StayOps brings that operational work into one focused workspace designed around visibility, ownership and daily execution.
+                  StayOps explores how that daily work could sit in one focused workspace designed around ownership, status and follow-up.
                 </p>
               </article>
             </div>
@@ -251,9 +251,9 @@ export default function StayOpsCasePage() {
         <section id="stack" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="Product status" />
+              <SectionKicker label="Prototype status" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                Product in development.
+                Prototype in development.
               </p>
             </div>
 
@@ -274,16 +274,16 @@ export default function StayOpsCasePage() {
               <article className="rounded-[2rem] border border-line bg-surface p-8 lg:p-10">
                 <SectionKicker label="Scope" />
                 <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                  Product in development with a public demo workspace.
+                  Prototype in development with a public demo workspace.
                 </p>
                 <p className="mt-5 text-base leading-8 text-muted">
-                  StayOps Core demonstrates a practical operating layer for serviced residences and small hospitality operators.
+                  StayOps Core demonstrates a practical workspace for serviced residences and small hospitality operators. No real hotel, guest or payment data is implied.
                 </p>
                 <p className="mt-5 text-base leading-8 text-muted">
                   The focus is operational visibility, room readiness, reservation management, housekeeping coordination and daily execution.
                 </p>
                 <p className="mt-5 text-base leading-8 text-muted">
-                  Demo product. No real hotel, guest or payment data is implied. Payments, messaging, smart locks, channel connectivity and automation workflows remain planned integrations.
+                  Demo workspace. No real hotel, guest or payment data is implied. Payments, messaging, smart locks and channel connectivity remain planned integrations.
                 </p>
               </article>
 
@@ -318,7 +318,7 @@ export default function StayOpsCasePage() {
                 Open the demo
               </a>
               <Link
-                href="/#ops-core"
+                href="/#systems-prototypes"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-muted transition-[gap,color] duration-200 hover:gap-3 hover:text-ink"
               >
                 View other systems

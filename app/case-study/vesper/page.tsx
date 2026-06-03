@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Operational visibility for a 23-unit serviced residence | AnisConsult",
+  title: "Résidence Cadet Case Study | AnisConsult",
   description:
-    "How scattered daily operations were turned into clearer workflows across reservations, payments, incidents, housekeeping and reporting.",
+    "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
 };
 
 const sectionLinks = [
@@ -45,12 +45,12 @@ const resultItems = [
     detail: "Admin workload reduced. Routine manual follow-up replaced by structured workflow.",
   },
   {
-    title: "Stronger Platform Visibility",
-    detail: "Listing quality and operational consistency easier to maintain across units.",
+    title: "Top 30 / ~450",
+    detail: "Platform ranking supported by cleaner guest follow-up and operational consistency.",
   },
   {
-    title: "New Revenue Segment",
-    detail: "A clearer operating flow supported expansion into a new segment.",
+    title: "Cleaner handoffs",
+    detail: "Access, incidents, payments and reporting became easier to coordinate.",
   },
 ] as const;
 
@@ -91,10 +91,10 @@ export default function VesperCaseStudyPage() {
                 Résidence Cadet operated as a 23-unit serviced residence with daily complexity across arrivals, departures, guest requests, payments, housekeeping, maintenance and reporting.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Work was spread across tools, messages, PMS workflows, manual follow-up and individual memory. At the start of each week, the manager still had to piece together who was arriving, who still owed a payment, and which maintenance issue had not been closed.
+                Guest operations were running through Excel, calls and front-desk dependency. At the start of each week, the manager still had to piece together who was arriving, who still owed a payment, and which maintenance issue had not been closed.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The operational system created clearer ownership, recurring follow-up, incident visibility, payment and billing follow-up, operational reporting and structured daily routines.
+                The workflow structure clarified ownership, recurring follow-up, incidents, payment tracking, reporting and daily routines.
               </p>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function VesperCaseStudyPage() {
                   A 23-unit serviced residence with daily operational complexity across arrivals, departures, guest requests, payments, housekeeping, maintenance and reporting. Based on real operational work at Résidence Cadet in Paris.
                 </p>
                 <p className="mt-5 text-base leading-8 text-ink">
-                  This operational framework was developed through day-to-day management of reservations, payments, incidents, housekeeping coordination and reporting workflows inside the residence.
+                  The setup came from real operating constraints, not a blank-sheet process map.
                 </p>
               </article>
 
@@ -169,9 +169,9 @@ export default function VesperCaseStudyPage() {
         <section id="implementation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-              <SectionKicker label="Operational system" />
+                <SectionKicker label="Workflow response" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                A practical operating system was created so the team could see ownership, follow-up, incidents, payments and reporting more clearly.
+                A practical operating flow was created so the team could see ownership, follow-up, incidents, payments and reporting more clearly.
               </p>
             </div>
 
@@ -245,7 +245,7 @@ export default function VesperCaseStudyPage() {
                 The gains came from giving the team one working flow instead of separate files, calls, PMS workarounds and manual checks.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Many of the workflows later explored in StayOps Core — room readiness, operational visibility, incident tracking and structured follow-up — originated from challenges encountered in this environment.
+                The setup came from real operating constraints, not a blank-sheet process map.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">
@@ -272,7 +272,7 @@ export default function VesperCaseStudyPage() {
                   href="/case-study/stayops-core"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  Explore StayOps Core
+                  Explore the related prototype
                 </Link>
               </div>
             </div>

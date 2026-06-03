@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_NAME_LENGTH = 120;
-const MAX_SUBJECT_LENGTH = 160;
+const MAX_ACTIVITY_LENGTH = 180;
 const MIN_MESSAGE_LENGTH = 10;
 const MAX_MESSAGE_LENGTH = 5000;
 const RATE_LIMIT_WINDOW_MS = 10_000;
@@ -16,14 +16,18 @@ type ContactPayload = {
   company?: unknown;
   name?: unknown;
   email?: unknown;
-  subject?: unknown;
+  activity?: unknown;
+  workflowProblem?: unknown;
+  toolsUsed?: unknown;
   message?: unknown;
 };
 
 type ValidatedContactPayload = {
   name: string;
   email: string;
-  subject: string;
+  activity: string;
+  workflowProblem: string;
+  toolsUsed: string;
   message: string;
 };
 
@@ -79,7 +83,9 @@ function validatePayload(payload: ContactPayload) {
   const company = getStringValue(payload.company);
   const name = getStringValue(payload.name);
   const email = getStringValue(payload.email);
-  const subject = getStringValue(payload.subject);
+  const activity = getStringValue(payload.activity);
+  const workflowProblem = getStringValue(payload.workflowProblem);
+  const toolsUsed = getStringValue(payload.toolsUsed);
   const message = getStringValue(payload.message);
 
   if (company) {
@@ -89,7 +95,7 @@ function validatePayload(payload: ContactPayload) {
     };
   }
 
-  if (name.length > MAX_NAME_LENGTH) {
+  if (name.length < 2 || name.length > MAX_NAME_LENGTH) {
     return { ok: false as const, error: "NAME_INVALID" };
   }
 
@@ -97,8 +103,19 @@ function validatePayload(payload: ContactPayload) {
     return { ok: false as const, error: "EMAIL_INVALID" };
   }
 
-  if (subject.length < 2 || subject.length > MAX_SUBJECT_LENGTH) {
-    return { ok: false as const, error: "SUBJECT_INVALID" };
+  if (activity.length < 2 || activity.length > MAX_ACTIVITY_LENGTH) {
+    return { ok: false as const, error: "ACTIVITY_INVALID" };
+  }
+
+  if (
+    workflowProblem.length < MIN_MESSAGE_LENGTH ||
+    workflowProblem.length > MAX_MESSAGE_LENGTH
+  ) {
+    return { ok: false as const, error: "WORKFLOW_INVALID" };
+  }
+
+  if (toolsUsed.length < 2 || toolsUsed.length > MAX_MESSAGE_LENGTH) {
+    return { ok: false as const, error: "TOOLS_INVALID" };
   }
 
   if (
@@ -111,7 +128,14 @@ function validatePayload(payload: ContactPayload) {
   return {
     ok: true as const,
     spam: false as const,
-    value: { name, email, subject, message } satisfies ValidatedContactPayload,
+    value: {
+      name,
+      email,
+      activity,
+      workflowProblem,
+      toolsUsed,
+      message,
+    } satisfies ValidatedContactPayload,
   };
 }
 
@@ -173,7 +197,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { name, email, subject, message } = validation.value;
+  const { name, email, activity, workflowProblem, toolsUsed, message } = validation.value;
   const rateLimitKey = `${getClientIp(request)}:${email.toLowerCase()}`;
 
   if (isRateLimited(rateLimitKey, Date.now())) {
@@ -186,17 +210,25 @@ export async function POST(request: Request) {
   const resend = new Resend(resendApiKey);
   const html = `
     <div style="font-family: Inter, Arial, sans-serif; color: #0b1020; line-height: 1.6;">
-      ${name ? `<p><strong>Name</strong><br />${escapeHtml(name)}</p>` : ""}
+      <p><strong>Name</strong><br />${escapeHtml(name)}</p>
       <p><strong>Email</strong><br />${escapeHtml(email)}</p>
-      <p><strong>Subject</strong><br />${escapeHtml(subject)}</p>
+      <p><strong>Company / activity</strong><br />${escapeHtml(activity)}</p>
+      <p><strong>Current workflow problem</strong><br />${escapeHtml(workflowProblem).replace(/\n/g, "<br />")}</p>
+      <p><strong>Tools currently used</strong><br />${escapeHtml(toolsUsed).replace(/\n/g, "<br />")}</p>
       <p><strong>Message</strong><br />${escapeHtml(message).replace(/\n/g, "<br />")}</p>
     </div>
   `;
 
   const text = [
-    name ? `Name: ${name}` : "",
+    `Name: ${name}`,
     `Email: ${email}`,
-    `Subject: ${subject}`,
+    `Company / activity: ${activity}`,
+    "",
+    "Current workflow problem:",
+    workflowProblem,
+    "",
+    "Tools currently used:",
+    toolsUsed,
     "",
     message,
   ]
@@ -208,7 +240,7 @@ export async function POST(request: Request) {
       from: fromEmail,
       to: [toEmail],
       replyTo: email,
-      subject: `Portfolio contact: ${subject}`,
+      subject: `AnisConsult workflow inquiry: ${activity}`,
       text,
       html,
     });

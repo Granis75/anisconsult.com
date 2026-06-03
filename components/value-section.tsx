@@ -31,20 +31,6 @@ const valueCards = [
     meta: ["Open", "Blocked", "Done"],
     size: "medium",
   },
-  {
-    title: "Internal tools",
-    pain: "Generic tools force the team to bend around someone else's workflow.",
-    improvement: "The system is shaped around the real operating flow.",
-    meta: ["Built around the work"],
-    size: "small",
-  },
-  {
-    title: "Team adoption",
-    pain: "Complex systems look impressive, then quietly stop being used.",
-    improvement: "The system stays simple enough for the team to actually use.",
-    meta: ["Clear enough to keep using"],
-    size: "small",
-  },
 ] as const;
 
 export function ValueSection() {

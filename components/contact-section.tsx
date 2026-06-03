@@ -4,20 +4,29 @@ import { useState, type ChangeEvent, type FormEvent } from "react";
 import { track } from "@/lib/track";
 
 type ContactFormState = {
+  name: string;
   email: string;
-  subject: string;
+  activity: string;
+  workflowProblem: string;
+  toolsUsed: string;
   message: string;
 };
 
 const INITIAL_STATE: ContactFormState = {
+  name: "",
   email: "",
-  subject: "",
+  activity: "",
+  workflowProblem: "",
+  toolsUsed: "",
   message: "",
 };
 
 const ERROR_MESSAGES: Record<string, string> = {
   EMAIL_INVALID: "Invalid email.",
-  SUBJECT_INVALID: "Invalid subject.",
+  NAME_INVALID: "Invalid name.",
+  ACTIVITY_INVALID: "Invalid company or activity.",
+  WORKFLOW_INVALID: "Describe the workflow problem in a little more detail.",
+  TOOLS_INVALID: "Describe the tools currently used.",
   MESSAGE_INVALID: "Invalid message.",
   RESEND_NOT_CONFIGURED: "The form is not configured yet.",
   EMAIL_SEND_FAILED: "Sending failed.",
@@ -50,10 +59,13 @@ export function ContactSection() {
     setSuccess("");
 
     const email = form.email.trim();
-    const subject = form.subject.trim();
+    const name = form.name.trim();
+    const activity = form.activity.trim();
+    const workflowProblem = form.workflowProblem.trim();
+    const toolsUsed = form.toolsUsed.trim();
     const message = form.message.trim();
 
-    if (!email || !subject || !message) {
+    if (!name || !email || !activity || !workflowProblem || !toolsUsed || !message) {
       setError("All fields are required.");
       return;
     }
@@ -67,8 +79,11 @@ export function ContactSection() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          name,
           email,
-          subject,
+          activity,
+          workflowProblem,
+          toolsUsed,
           message,
         }),
       });
@@ -105,18 +120,41 @@ export function ContactSection() {
           Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          Reach out about operational systems, product work, workflow tooling or international collaboration.
+          Reach out if your operations rely on scattered tools, manual follow-up or unclear ownership.
         </p>
         <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-          AnisConsult is currently focused on building operational systems and AI-powered workflows for service businesses. If you want to discuss a product, a workflow problem, or a potential collaboration, send a message.
+          AnisConsult helps service businesses structure clearer workflows, internal tools and reporting systems.
         </p>
         <p className="mt-4 text-sm leading-6 text-muted">
-          For custom operational systems or implementation work, include the current workflow, the tools involved and what keeps breaking.
+          Tell me what workflow is currently hard to run, what tools you use, and what keeps breaking.
         </p>
       </div>
 
       <div className="premium-card p-6 sm:p-8">
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+            aria-hidden="true"
+          />
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-ink" htmlFor="contact-name">
+              Name
+            </label>
+            <input
+              id="contact-name"
+              type="text"
+              autoComplete="name"
+              value={form.name}
+              onChange={updateField("name")}
+              className="field-input"
+            />
+          </div>
+
           <div className="space-y-2">
             <label className="text-sm font-medium text-ink" htmlFor="contact-email">
               Email
@@ -132,15 +170,44 @@ export function ContactSection() {
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-medium text-ink" htmlFor="contact-subject">
-              Subject
+            <label className="text-sm font-medium text-ink" htmlFor="contact-activity">
+              Company / activity
             </label>
             <input
-              id="contact-subject"
+              id="contact-activity"
               type="text"
-              value={form.subject}
-              onChange={updateField("subject")}
+              placeholder="Serviced residence, logistics operator, agency, clinic..."
+              value={form.activity}
+              onChange={updateField("activity")}
               className="field-input"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-ink" htmlFor="contact-workflow">
+              Current workflow problem
+            </label>
+            <textarea
+              id="contact-workflow"
+              rows={4}
+              placeholder="Example: guest issue follow-up, invoice chasing, mission tracking, weekly reporting..."
+              value={form.workflowProblem}
+              onChange={updateField("workflowProblem")}
+              className="field-input resize-none"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium text-ink" htmlFor="contact-tools">
+              Tools currently used
+            </label>
+            <textarea
+              id="contact-tools"
+              rows={3}
+              placeholder="Example: Excel, WhatsApp, email, PMS, Notion, Airtable, accounting tool..."
+              value={form.toolsUsed}
+              onChange={updateField("toolsUsed")}
+              className="field-input resize-none"
             />
           </div>
 
@@ -150,7 +217,8 @@ export function ContactSection() {
             </label>
             <textarea
               id="contact-message"
-              rows={7}
+              rows={5}
+              placeholder="What outcome would make the workflow easier to run?"
               value={form.message}
               onChange={updateField("message")}
               className="field-input resize-none"

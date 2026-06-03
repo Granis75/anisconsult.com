@@ -91,7 +91,7 @@ const populatedDashboard: DashboardSnapshot = {
     title: "Admin follow-up is scattered",
     amount: "Clients, missions, invoices and payments need one operating view",
     note: "Freelancers and small operators often manage client work, invoices and payment follow-up across scattered tools and memory.",
-    action: "View product",
+    action: "View workspace",
   },
   activities: [
     {
@@ -127,7 +127,7 @@ const populatedDashboard: DashboardSnapshot = {
   insight: {
     title: "One operating layer for independent work.",
     summary: "MyBi follows the same AnisConsult principle: make operational work visible before it becomes unmanageable.",
-    secondary: "Prototype product. Built to test how independent operators can track work, revenue and follow-up from one practical view.",
+    secondary: "Prototype workspace. Built to test how independent operators can track work, revenue and follow-up from one practical view.",
   },
 };
 
@@ -147,10 +147,10 @@ export function MyBiShowcase({
                 MyBi
               </h1>
               <p className="mt-4 text-lg leading-8 text-slate-600 sm:text-xl">
-                A business operations OS for freelancers and small operators.
+                A business tracking workspace for freelancers and small operators.
               </p>
               <p className="mt-3 max-w-2xl text-base leading-7 text-slate-500">
-                MyBi centralizes clients, missions, invoices, payments and revenue visibility — turning fragmented administrative follow-up into a clearer operating system.
+                MyBi centralizes clients, missions, invoices, payments and revenue visibility, turning fragmented administrative follow-up into a clearer workspace.
               </p>
             </div>
 
@@ -161,7 +161,7 @@ export function MyBiShowcase({
               className="inline-flex h-12 items-center justify-center gap-2 rounded-[24px] bg-[#0066FF] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#0057d9]"
             >
               <Plus className="h-4 w-4" />
-              View product
+              View workspace
             </a>
           </header>
 

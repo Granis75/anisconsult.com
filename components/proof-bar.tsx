@@ -3,7 +3,7 @@
 const proofPoints = [
   { metric: "7.6 → 9.2", source: "Guest satisfaction · Résidence Cadet" },
   { metric: "Top 30 of ~450", source: "Platform ranking · Résidence Cadet" },
-  { metric: "+50%", source: "New revenue segment · Kepler Express" },
+  { metric: "New segment", source: "Launch control · Kepler Express" },
   { metric: "~10h/week saved", source: "Admin work · Résidence Cadet" },
 ] as const;
 
