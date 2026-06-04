@@ -269,10 +269,10 @@ export default function VesperCaseStudyPage() {
 
               <div className="mt-8">
                 <Link
-                  href="/case-study/stayops-core"
+                  href="/work"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  Explore the related prototype
+                  View more operational work
                 </Link>
               </div>
             </div>

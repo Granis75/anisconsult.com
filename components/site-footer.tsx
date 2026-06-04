@@ -19,7 +19,19 @@ export function SiteFooter() {
               className="h-7 w-auto sm:h-8"
             />
           </Link>
-          <p>Business systems &amp; workflow tools</p>
+          <p>Operational improvement &amp; process clarity</p>
+          <p className="max-w-md text-xs leading-6">
+            For software builds, internal tools and business applications, visit{" "}
+            <a
+              href="https://lyanstudio.com"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-ink underline-offset-2 hover:underline"
+            >
+              Lyan Studio
+            </a>
+            .
+          </p>
         </div>
 
         <div className="flex flex-col gap-2 md:items-end">

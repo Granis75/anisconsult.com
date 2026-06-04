@@ -5,9 +5,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "About | AnisConsult — Business Systems & Workflow Tools",
+  title: "About | AnisConsult — Operational Improvement & Process Clarity",
   description:
-    "AnisConsult helps service businesses structure clearer workflows, internal tools and reporting systems.",
+    "AnisConsult helps service businesses improve daily operations, clarify workflows and reduce manual friction.",
 };
 
 const focusItems = [
@@ -16,27 +16,26 @@ const focusItems = [
     detail: "Map the current flow, identify friction and clarify ownership, status and next actions.",
   },
   {
-    title: "Internal tools",
-    detail: "Set up practical tracking spaces for recurring work, issues, payments and follow-up.",
+    title: "Process cleanup",
+    detail: "Simplify recurring handoffs, statuses, review rhythms and follow-up routines.",
   },
   {
-    title: "Reporting systems",
-    detail: "Create recurring status views and reporting layers that are easier to maintain.",
+    title: "Execution structure",
+    detail: "Clarify who owns what, what happens next and how operational work is reviewed.",
   },
   {
-    title: "Process automation",
-    detail: "Reduce repeated manual steps where the workflow is stable enough to support it.",
+    title: "Service quality",
+    detail: "Identify recurring misses and improve consistency across daily service delivery.",
   },
 ] as const;
 
 const backgroundItems = [
   "Service operations",
   "Workflow management",
-  "Internal tools",
   "Operational reporting",
-  "Business software",
-  "Database-backed systems",
   "Process improvement",
+  "Service quality",
+  "Execution structure",
 ] as const;
 
 export default function AboutPage() {
@@ -50,22 +49,22 @@ export default function AboutPage() {
             <div className="max-w-5xl">
               <SectionKicker label="About" />
               <p className="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-black/42">
-                Business systems &amp; workflow tools
+                Operational improvement &amp; process clarity
               </p>
               <h1 className="mt-5 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                I help service businesses structure clearer workflows, tools and reporting systems.
+                I help service businesses improve daily operations and structure clearer execution.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 Most operational problems are not people problems. They are visibility problems.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                I work at the intersection of operations, workflow design and business tools, with experience across hospitality, serviced residences, logistics and daily business operations.
+                I work at the intersection of operations, workflow design and practical process improvement, with experience across hospitality, serviced residences, logistics and daily business operations.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                After working directly with reservations, payments, incidents, suppliers, housekeeping and reporting, I focus on systems that make daily operations easier to see and run.
+                After working directly with reservations, payments, incidents, suppliers, housekeeping and reporting, I focus on operating routines that make daily work easier to see and run.
               </p>
               <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-ink sm:text-lg">
-                I build and improve business systems that make operations simpler, more visible and more reliable.
+                The work is practical: clarify the process, reduce manual friction, improve follow-up and make execution more reliable.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -84,16 +83,16 @@ export default function AboutPage() {
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1.02fr)_minmax(320px,0.98fr)] lg:items-start lg:gap-8">
               <article className="premium-card p-8 lg:p-10">
-                <SectionKicker label="Why I build what I build" />
+                <SectionKicker label="Why this work matters" />
                 <div className="mt-6 grid gap-5">
                   <p className="text-base leading-8 text-ink sm:text-lg">
                     One pattern was constant across those operations: most teams do not lack effort. They lack a usable view of the work.
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
-                    Requests, handoffs, payments, issues and reporting often live across messages, spreadsheets, emails and memory. AnisConsult exists to turn that work into tools and routines people can actually run.
+                    Requests, handoffs, payments, issues and reporting often live across messages, spreadsheets, emails and memory. AnisConsult exists to turn that scattered work into clearer routines people can actually run.
                   </p>
                   <p className="text-base leading-8 text-muted sm:text-lg">
-                    That field experience includes a 23-unit serviced residence, hospitality systems exposure, logistics workflows, manual follow-up reduction and internal tools shaped around operating constraints.
+                    That field experience includes a 23-unit serviced residence, hospitality operations exposure, logistics workflows, manual follow-up reduction and process improvement shaped around real operating constraints.
                   </p>
                 </div>
               </article>
@@ -119,7 +118,7 @@ export default function AboutPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
             <div className="mb-10 max-w-3xl">
-              <SectionKicker label="What AnisConsult builds" />
+              <SectionKicker label="What AnisConsult improves" />
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {focusItems.map((item) => (
@@ -137,7 +136,7 @@ export default function AboutPage() {
         <section className="border-t border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-10 lg:px-10 lg:py-12">
             <p className="max-w-2xl text-sm leading-7 text-muted">
-              This is not a traditional consulting firm built around slide decks and abstract recommendations. The focus is on practical systems, working tools and visible operational flows.{" "}
+              This is not a traditional consulting firm built around slide decks and abstract recommendations. The focus is on practical operating clarity, service quality and visible execution.{" "}
               <Link href="/work" className="font-medium text-ink underline-offset-2 hover:underline">
                 View the work.
               </Link>

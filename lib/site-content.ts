@@ -3,25 +3,25 @@ export const directEmailHref = "mailto:hello@anisconsult.com";
 export const siteContent = {
   brand: "AnisConsult",
   navigation: [
-    { label: "Work", href: "/work" },
+    { label: "Cases", href: "/work" },
     { label: "Services", href: "/services" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Fix recurring workflow problems. Build systems teams actually use.",
-    subtitle: "Business systems & workflow tools",
+    title: "Operational improvement for service businesses.",
+    subtitle: "Operational improvement & process optimization",
     description:
-      "Business systems and workflow tools for service teams stuck in scattered tools, manual follow-up and unclear ownership.",
+      "AnisConsult helps small service teams clarify responsibilities, reduce manual friction and improve day-to-day execution.",
     support:
-      "Built from real operations to reduce operational blind spots and make day-to-day work easier to run.",
+      "Field-tested operational thinking for teams dealing with scattered follow-up, unclear ownership and recurring execution issues.",
     primaryCta: {
-      label: "View work",
-      href: "/work",
+      label: "Discuss an operations issue",
+      href: "/contact",
     },
     secondaryCta: {
-      label: "Discuss a workflow problem",
-      href: "/contact",
+      label: "View operational cases",
+      href: "/work",
     },
   },
 } as const;

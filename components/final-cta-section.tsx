@@ -11,7 +11,7 @@ export function FinalCTASection() {
             Contact
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted sm:text-xl">
-            Tell me what workflow is currently hard to run, what tools you use, and what keeps breaking.
+            Tell me what process is currently hard to run, where follow-up slows down, and what keeps breaking.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -25,12 +25,12 @@ export function FinalCTASection() {
             </TrackedLink>
 
             <TrackedLink
-              href="/#systems-prototypes"
+              href="/work"
               event="contact_cta_click"
               data={{ location: "final_cta_secondary" }}
               className="premium-cta-outline h-12 px-8"
             >
-              View systems
+              View operational cases
             </TrackedLink>
           </div>
         </div>

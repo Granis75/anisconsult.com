@@ -26,7 +26,7 @@ const ERROR_MESSAGES: Record<string, string> = {
   NAME_INVALID: "Invalid name.",
   ACTIVITY_INVALID: "Invalid company or activity.",
   WORKFLOW_INVALID: "Describe the workflow problem in a little more detail.",
-  TOOLS_INVALID: "Describe the tools currently used.",
+  TOOLS_INVALID: "Describe the current tracking method.",
   MESSAGE_INVALID: "Invalid message.",
   RESEND_NOT_CONFIGURED: "The form is not configured yet.",
   EMAIL_SEND_FAILED: "Sending failed.",
@@ -120,13 +120,13 @@ export function ContactSection() {
           Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          Reach out if your operations rely on scattered tools, manual follow-up or unclear ownership.
+          Reach out if daily operations rely on scattered information, manual follow-up or unclear ownership.
         </p>
         <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-          AnisConsult helps service businesses structure clearer workflows, internal tools and reporting systems.
+          AnisConsult helps service businesses clarify workflows, responsibilities and practical routines for better execution.
         </p>
         <p className="mt-4 text-sm leading-6 text-muted">
-          Tell me what workflow is currently hard to run, what tools you use, and what keeps breaking.
+          Tell me what process is hard to run, where follow-up slows down, and what keeps breaking.
         </p>
       </div>
 
@@ -199,12 +199,12 @@ export function ContactSection() {
 
           <div className="space-y-2">
             <label className="text-sm font-medium text-ink" htmlFor="contact-tools">
-              Tools currently used
+              Current tracking method
             </label>
             <textarea
               id="contact-tools"
               rows={3}
-              placeholder="Example: Excel, WhatsApp, email, PMS, Notion, Airtable, accounting tool..."
+              placeholder="Example: Excel, WhatsApp, email, PMS, shared documents, accounting tool..."
               value={form.toolsUsed}
               onChange={updateField("toolsUsed")}
               className="field-input resize-none"

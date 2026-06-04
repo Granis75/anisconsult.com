@@ -15,11 +15,11 @@ const focusAreas = [
   },
   {
     title: "Keep it usable",
-    description: "Systems are built around how the team already works.",
+    description: "Routines fit the way daily work actually happens.",
   },
 ] as const;
 
-const messySignals = ["Scattered tools", "Manual follow-up", "Unclear owners"] as const;
+const messySignals = ["Scattered follow-up", "Manual friction", "Unclear owners"] as const;
 
 const systemSignals = ["Owner", "Status", "Next action", "Outcome"] as const;
 

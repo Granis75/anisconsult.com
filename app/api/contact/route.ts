@@ -214,7 +214,7 @@ export async function POST(request: Request) {
       <p><strong>Email</strong><br />${escapeHtml(email)}</p>
       <p><strong>Company / activity</strong><br />${escapeHtml(activity)}</p>
       <p><strong>Current workflow problem</strong><br />${escapeHtml(workflowProblem).replace(/\n/g, "<br />")}</p>
-      <p><strong>Tools currently used</strong><br />${escapeHtml(toolsUsed).replace(/\n/g, "<br />")}</p>
+      <p><strong>Current tracking method</strong><br />${escapeHtml(toolsUsed).replace(/\n/g, "<br />")}</p>
       <p><strong>Message</strong><br />${escapeHtml(message).replace(/\n/g, "<br />")}</p>
     </div>
   `;
@@ -227,7 +227,7 @@ export async function POST(request: Request) {
     "Current workflow problem:",
     workflowProblem,
     "",
-    "Tools currently used:",
+    "Current tracking method:",
     toolsUsed,
     "",
     message,

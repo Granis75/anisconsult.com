@@ -4,9 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Contact | AnisConsult — Business Systems & Workflow Tools",
+  title: "Contact | AnisConsult — Operational Improvement & Process Clarity",
   description:
-    "Contact AnisConsult to discuss scattered tools, manual follow-up, unclear ownership, internal tools or reporting problems.",
+    "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
 };
 
 export default function ContactPage() {

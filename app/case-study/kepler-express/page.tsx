@@ -102,7 +102,7 @@ export default function KeplerExpressCaseStudyPage() {
                 </section>
 
                 <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                  <SectionKicker label="System built" />
+                  <SectionKicker label="Operating change" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
                     The workflow was structured so mission tracking, operational statuses, expenses, invoices and payments could move together.
                   </p>
@@ -165,15 +165,15 @@ export default function KeplerExpressCaseStudyPage() {
                     This case shows the same operating principle behind AnisConsult: when work becomes visible, teams can act faster and follow-up stops living in scattered messages.
                   </p>
                   <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    The same approach continues across AnisConsult business systems and internal tools.
+                    The same approach continues across AnisConsult operational improvement work.
                   </p>
 
                   <div className="mt-6">
                     <Link
-                      href="/#systems-prototypes"
+                      href="/work"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      View systems & prototypes
+                      View operational case studies
                     </Link>
                   </div>
                 </div>

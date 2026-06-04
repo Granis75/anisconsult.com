@@ -5,57 +5,70 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Services | AnisConsult — Workflow Audits, Internal Tools & Reporting",
+  title: "Services | AnisConsult — Operational Improvement & Process Optimization",
   description:
-    "Workflow audits, internal tools setup, reporting structure and ongoing systems support for service-based businesses.",
+    "Workflow audits, process cleanup, responsibility clarity and service quality improvement for service-based businesses.",
 };
 
 const services = [
   {
-    title: "Workflow Audit",
-    fit: "For teams relying on spreadsheets, chats, emails or scattered tools.",
+    title: "Operational Audit",
+    fit: "For teams relying on spreadsheets, chats, emails, memory or scattered information.",
     problem: "Work is moving, but ownership, status and follow-up are hard to see.",
     delivers: [
-      "Workflow map",
-      "Friction points",
-      "Ownership, status and next-action review",
-      "Reporting gaps",
-      "Improvement plan",
+      "Recurring blocker review",
+      "Manual follow-up gaps",
+      "Coordination issues",
+      "Ownership risks",
+      "Action plan",
     ],
   },
   {
-    title: "Internal Tools Setup",
-    fit: "For businesses that need a simple internal system around a recurring workflow.",
-    problem: "A repeated process needs one workspace instead of improvised tracking.",
+    title: "Process Clarification",
+    fit: "For businesses with recurring handoffs, delays or avoidable admin work.",
+    problem: "A repeated process has too many unclear steps, manual checks or hidden dependencies.",
     delivers: [
-      "Client/missions/incidents/payments tracking",
-      "Statuses and ownership",
-      "Simple dashboards",
-      "Reporting views",
-      "Usable internal workspace",
+      "Current process map",
+      "Responsibility definition",
+      "Simplified handoffs",
+      "Unnecessary step removal",
+      "Clearer operating routine",
     ],
   },
   {
-    title: "Reporting & Automation",
-    fit: "For teams rebuilding reports manually.",
-    problem: "Updates take too long because the underlying work is not structured.",
+    title: "Follow-up Structure",
+    fit: "For teams that need clearer daily control without adding complexity.",
+    problem: "People are working hard, but priorities, blockers and next actions are not consistently visible.",
     delivers: [
-      "Reporting structure",
-      "Recurring status views",
-      "Simple automation",
-      "Clearer operational indicators",
+      "Status rhythm",
+      "Next-action rules",
+      "Priority review",
+      "Blocker escalation",
+      "Accountability routine",
     ],
   },
   {
-    title: "Ongoing Systems Support",
-    fit: "For keeping systems usable after setup.",
-    problem: "Tools drift unless they are adjusted around how work changes.",
+    title: "Reporting Routine",
+    fit: "For leaders who need to see what is happening without chasing information.",
+    problem: "Reporting is too dependent on manual chasing, late updates or individual memory.",
     delivers: [
-      "Adjustments",
-      "Documentation",
-      "Improvement cycles",
-      "Workflow cleanup",
-      "Reporting support",
+      "Reporting rhythm",
+      "Update routine",
+      "Operational indicators",
+      "Ownership of updates",
+      "Leadership review format",
+    ],
+  },
+  {
+    title: "Execution Support",
+    fit: "For service businesses that want more consistent delivery and follow-up.",
+    problem: "New routines need implementation support, team coordination and operational discipline over time.",
+    delivers: [
+      "Implementation support",
+      "Team coordination",
+      "Routine adjustment",
+      "Service quality follow-up",
+      "Ongoing action plan review",
     ],
   },
 ] as const;
@@ -71,13 +84,13 @@ export default function ServicesPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Services" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Business systems and workflow tools for service teams.
+                Operational improvement for service teams.
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 Practical help for teams that need clearer ownership, cleaner follow-up and reporting they can trust.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Start with an audit when the workflow is unclear. Move to setup when the recurring process needs one shared workspace.
+                Start with an audit when the workflow is unclear. Move into process cleanup when the recurring work needs simpler ownership, fewer manual checks and a clearer review rhythm.
               </p>
             </div>
           </div>
@@ -93,7 +106,7 @@ export default function ServicesPage() {
                 <div className="grid gap-8 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:gap-12">
                   <div>
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      What you can buy
+                      Consulting focus
                     </p>
                     <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {service.title}
@@ -124,7 +137,7 @@ export default function ServicesPage() {
 
             <div className="border-t border-line pt-8">
               <Link href="/contact" className="premium-cta h-12 px-6">
-                Discuss a workflow problem
+                Discuss an operations issue
               </Link>
             </div>
           </div>
