@@ -51,6 +51,17 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         location: "work_page_kepler",
         ctaLabel: "View operation",
       },
+      {
+        category: "Retail operations / Process improvement",
+        title: "Famimart",
+        problem: "A family-run convenience store context relied on informal routines, manual coordination and unclear daily handovers.",
+        system: "A clearer store operating model for cashier routines, stock replenishment, supplier follow-up and daily control.",
+        outcome: "Structured retail routines designed to reduce informal follow-up and make day-to-day execution easier to control.",
+        status: "Operational improvement case",
+        href: "/case-study/famimart",
+        location: "work_page_famimart",
+        ctaLabel: "View operation",
+      },
     ],
   },
 ];
