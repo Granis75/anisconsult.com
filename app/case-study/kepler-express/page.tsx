@@ -172,13 +172,16 @@ export default function KeplerExpressCaseStudyPage() {
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                       Operational tool built for this mission
                     </p>
+                    <p className="mt-4 text-sm font-semibold leading-7 text-ink">
+                      Kepler Express — kepler.anisconsult.com
+                    </p>
                     <a
                       href="https://kepler.anisconsult.com"
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-4 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
+                      className="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      Kepler Express demo
+                      Operational tool built for this mission
                     </a>
                   </div>
 
@@ -187,7 +190,7 @@ export default function KeplerExpressCaseStudyPage() {
                       href="/work"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      View operational case studies
+                      View operational cases
                     </Link>
                   </div>
                 </div>

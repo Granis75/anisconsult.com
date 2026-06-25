@@ -264,7 +264,7 @@ export default function FamimartCaseStudyPage() {
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <span className="inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-muted/70">
-                      Alcaisse demo to add
+                      Alcaisse (demo to add)
                     </span>
                     <a
                       href="https://storepilot.anisconsult.com"
@@ -272,7 +272,7 @@ export default function FamimartCaseStudyPage() {
                       rel="noreferrer"
                       className="inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
                     >
-                      StorePilot demo
+                      StorePilot — storepilot.anisconsult.com
                     </a>
                   </div>
                 </div>
@@ -280,7 +280,7 @@ export default function FamimartCaseStudyPage() {
                   href="/work"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  View operational case studies
+                  View operational cases
                 </Link>
               </div>
             </div>

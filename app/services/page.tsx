@@ -77,7 +77,12 @@ const optionalService = {
   title: "Operational Tool Build",
   description:
     "When the process is clear and a tool would make it more reliable, I can scope and build it. Not as a software product. As an operational output.",
-  delivers: "Scoped operational tool, deployed and usable, built around the clarified workflow.",
+  delivers: [
+    "Scoped operational tool",
+    "Deployed and usable",
+    "Built around the clarified workflow",
+    "Integrated into existing operating routine",
+  ],
 } as const;
 
 export default function ServicesPage() {
@@ -147,7 +152,10 @@ export default function ServicesPage() {
                 <div className="grid gap-8 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:gap-12">
                   <div>
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Optional operational output
+                      Consulting focus
+                    </p>
+                    <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-black/35">
+                      Extended service
                     </p>
                     <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
                       {optionalService.title}
@@ -161,10 +169,12 @@ export default function ServicesPage() {
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                       Delivered
                     </p>
-                    <div className="mt-5 rounded-2xl border border-line bg-surface px-4 py-3">
-                      <p className="text-sm font-medium leading-7 text-ink">
-                        {optionalService.delivers}
-                      </p>
+                    <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                      {optionalService.delivers.map((item) => (
+                        <div key={item} className="rounded-2xl border border-line bg-surface px-4 py-3">
+                          <p className="text-sm font-medium leading-6 text-ink">{item}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

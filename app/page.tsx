@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { BeforeAfterSection } from "@/components/before-after-section";
 import { ContactSection } from "@/components/contact-section";
 import { Hero } from "@/components/hero";
-import { OperatingViewSection } from "@/components/operating-view-section";
 import { Reveal } from "@/components/reveal";
 import { SectionKicker } from "@/components/section-kicker";
 import { SiteFooter } from "@/components/site-footer";
@@ -82,31 +81,37 @@ const operationalTools = [
     name: "StayOps",
     context: "Property & hospitality operations",
     href: "https://stayops.anisconsult.com",
-  },
-  {
-    name: "Alcaisse",
-    context: "Retail POS & cashier sessions",
-    href: undefined,
-  },
-  {
-    name: "StorePilot",
-    context: "Stock, margin & sales visibility",
-    href: "https://storepilot.anisconsult.com",
+    label: "stayops.anisconsult.com",
   },
   {
     name: "Kepler Express",
     context: "Logistics & mission billing",
     href: "https://kepler.anisconsult.com",
+    label: "kepler.anisconsult.com",
+  },
+  {
+    name: "StorePilot",
+    context: "Stock, margin & sales visibility",
+    href: "https://storepilot.anisconsult.com",
+    label: "storepilot.anisconsult.com",
   },
   {
     name: "MyBi",
     context: "Business management & invoice tracking",
     href: "https://mybi.anisconsult.com",
+    label: "mybi.anisconsult.com",
   },
   {
     name: "OpsCore",
     context: "Internal task & operations platform",
     href: "https://opscore.anisconsult.com",
+    label: "opscore.anisconsult.com",
+  },
+  {
+    name: "Alcaisse",
+    context: "Retail POS & cashier sessions",
+    href: undefined,
+    label: "Demo to add",
   },
 ] as const;
 
@@ -119,8 +124,6 @@ export default function HomePage() {
         <Reveal>
           <Hero />
         </Reveal>
-
-        <OperatingViewSection />
 
         <ValueSection />
 
@@ -233,11 +236,11 @@ export default function HomePage() {
                         rel="noreferrer"
                         className="text-sm font-semibold text-ink underline-offset-2 hover:underline sm:text-right"
                       >
-                        Demo
+                        {tool.label}
                       </a>
                     ) : (
                       <span className="text-sm font-medium text-muted/60 sm:text-right">
-                        Demo to add
+                        {tool.label}
                       </span>
                     )}
                   </div>

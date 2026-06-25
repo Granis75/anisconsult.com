@@ -81,7 +81,7 @@ export default function VesperCaseStudyPage() {
             <div className="max-w-5xl">
               <SectionKicker label="Operational Proof" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Operational visibility for a 23-unit serviced residence
+                Résidence Cadet — Hospitality operations improvement
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
@@ -272,20 +272,23 @@ export default function VesperCaseStudyPage() {
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
                     Operational tool built for this context
                   </p>
+                  <p className="mt-4 text-sm font-semibold leading-7 text-ink">
+                    StayOps — Property management system prototype
+                  </p>
                   <a
                     href="https://stayops.anisconsult.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
+                    className="mt-3 inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
                   >
-                    StayOps demo
+                    stayops.anisconsult.com
                   </a>
                 </div>
                 <Link
                   href="/work"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
                 >
-                  View more operational work
+                  View operational cases
                 </Link>
               </div>
             </div>

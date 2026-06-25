@@ -45,7 +45,7 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         ctaLabel: "View operation",
         tools: [
           {
-            label: "StayOps",
+            label: "StayOps — stayops.anisconsult.com",
             href: "https://stayops.anisconsult.com",
           },
         ],
@@ -62,7 +62,7 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         ctaLabel: "View operation",
         tools: [
           {
-            label: "Kepler Express",
+            label: "Kepler Express — kepler.anisconsult.com",
             href: "https://kepler.anisconsult.com",
           },
         ],
@@ -79,10 +79,10 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         ctaLabel: "View operation",
         tools: [
           {
-            label: "Alcaisse",
+            label: "Alcaisse (demo to add)",
           },
           {
-            label: "StorePilot",
+            label: "StorePilot — storepilot.anisconsult.com",
             href: "https://storepilot.anisconsult.com",
           },
         ],
@@ -195,7 +195,7 @@ export default function WorkPage() {
                                       key={tool.label}
                                       className="inline-flex items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-muted/70"
                                     >
-                                      {tool.label} demo to add
+                                      {tool.label}
                                     </span>
                                   ),
                                 )}

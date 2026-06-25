@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="space-y-3">
           <Link
             href="/"
-            aria-label="Back to home"
+            aria-label="AnisConsult home"
             className="inline-flex items-center transition-opacity hover:opacity-80"
           >
             <img

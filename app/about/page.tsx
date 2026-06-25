@@ -29,15 +29,6 @@ const focusItems = [
   },
 ] as const;
 
-const backgroundItems = [
-  "Service operations",
-  "Workflow management",
-  "Operational reporting",
-  "Process improvement",
-  "Service quality",
-  "Execution structure",
-] as const;
-
 export default function AboutPage() {
   return (
     <>
@@ -66,6 +57,12 @@ export default function AboutPage() {
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
                 Some of those tools were built to test what the process had made visible.
               </p>
+              <Link
+                href="/#operational-tools"
+                className="mt-3 inline-flex text-sm font-semibold text-ink underline-offset-2 hover:underline"
+              >
+                View operational tools
+              </Link>
               <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-ink sm:text-lg">
                 The work is practical: clarify the process, reduce manual friction, improve follow-up and make execution more reliable.
               </p>
@@ -88,6 +85,9 @@ export default function AboutPage() {
               <article className="premium-card p-8 lg:p-10">
                 <SectionKicker label="Why this work matters" />
                 <div className="mt-6 grid gap-5">
+                  <p className="text-xl font-semibold leading-8 tracking-[-0.02em] text-ink sm:text-2xl">
+                    Most operational problems are not people problems. They are visibility problems.
+                  </p>
                   <p className="text-base leading-8 text-ink sm:text-lg">
                     One pattern was constant across those operations: most teams do not lack effort. They lack a usable view of the work.
                   </p>
@@ -104,15 +104,12 @@ export default function AboutPage() {
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
                   Background
                 </p>
-                <div className="mt-6 grid gap-4">
-                  {backgroundItems.map((item) => (
-                    <div key={item} className="border-t border-black/8 pt-4">
-                      <p className="text-sm font-semibold leading-7 text-ink/90">
-                        {item}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <p className="mt-6 text-base leading-8 text-ink">
+                  Background in service operations across hospitality, logistics and daily business execution.
+                </p>
+                <p className="mt-5 text-base leading-8 text-muted">
+                  Field experience shaped the method: most operational problems become visible once the workflow is mapped.
+                </p>
               </article>
             </div>
           </div>

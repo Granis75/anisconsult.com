@@ -3,6 +3,9 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { track } from "@/lib/track";
 
+const directEmailHref = "mailto:hello@anisconsult.com";
+const linkedInHref = "https://www.linkedin.com/in/anisallouachepro/";
+
 type ContactFormState = {
   name: string;
   email: string;
@@ -229,6 +232,23 @@ export function ContactSection() {
           {success ? (
             <p className="text-sm font-medium text-emerald-600">{success}</p>
           ) : null}
+
+          <p className="text-sm leading-6 text-muted">
+            Responses within 48 hours. You can also reach out directly:{" "}
+            <a href={directEmailHref} className="font-semibold text-ink underline-offset-2 hover:underline">
+              hello@anisconsult.com
+            </a>
+            {" "}or{" "}
+            <a
+              href={linkedInHref}
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-ink underline-offset-2 hover:underline"
+            >
+              LinkedIn
+            </a>
+            .
+          </p>
 
           <div className="pt-2">
             <button type="submit" disabled={isLoading} className="premium-cta w-full sm:w-auto">
