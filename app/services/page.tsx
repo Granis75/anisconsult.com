@@ -73,6 +73,13 @@ const services = [
   },
 ] as const;
 
+const optionalService = {
+  title: "Operational Tool Build",
+  description:
+    "When the process is clear and a tool would make it more reliable, I can scope and build it. Not as a software product. As an operational output.",
+  delivers: "Scoped operational tool, deployed and usable, built around the clarified workflow.",
+} as const;
+
 export default function ServicesPage() {
   return (
     <>
@@ -134,6 +141,35 @@ export default function ServicesPage() {
                 </div>
               </article>
             ))}
+
+            <article className="border-t border-line pt-8">
+              <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
+                <div className="grid gap-8 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:gap-12">
+                  <div>
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                      Optional operational output
+                    </p>
+                    <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-4xl">
+                      {optionalService.title}
+                    </h2>
+                    <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
+                      {optionalService.description}
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                      Delivered
+                    </p>
+                    <div className="mt-5 rounded-2xl border border-line bg-surface px-4 py-3">
+                      <p className="text-sm font-medium leading-7 text-ink">
+                        {optionalService.delivers}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
 
             <div className="border-t border-line pt-8">
               <Link href="/contact" className="premium-cta h-12 px-6">

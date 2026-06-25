@@ -77,6 +77,39 @@ const servicesPreview = [
   },
 ] as const;
 
+const operationalTools = [
+  {
+    name: "StayOps",
+    context: "Property & hospitality operations",
+    href: "https://stayops.anisconsult.com",
+  },
+  {
+    name: "Alcaisse",
+    context: "Retail POS & cashier sessions",
+    href: undefined,
+  },
+  {
+    name: "StorePilot",
+    context: "Stock, margin & sales visibility",
+    href: "https://storepilot.anisconsult.com",
+  },
+  {
+    name: "Kepler Express",
+    context: "Logistics & mission billing",
+    href: "https://kepler.anisconsult.com",
+  },
+  {
+    name: "MyBi",
+    context: "Business management & invoice tracking",
+    href: "https://mybi.anisconsult.com",
+  },
+  {
+    name: "OpsCore",
+    context: "Internal task & operations platform",
+    href: "https://opscore.anisconsult.com",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <>
@@ -168,6 +201,48 @@ export default function HomePage() {
               >
                 View operational cases
               </TrackedLink>
+            </div>
+          </Reveal>
+        </section>
+
+        <section id="operational-tools" className="border-t border-line bg-surface">
+          <Reveal className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20" delayMs={55}>
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
+              <div className="max-w-3xl">
+                <SectionKicker label="From process to system" />
+                <h2 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.3rem]">
+                  Operational tools built.
+                </h2>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+                  When the operating process is clear, the right tool becomes obvious. Some missions led to building one.
+                </p>
+              </div>
+
+              <div className="grid gap-3">
+                {operationalTools.map((tool) => (
+                  <div
+                    key={tool.name}
+                    className="grid gap-3 border-t border-black/10 py-4 sm:grid-cols-[minmax(0,0.34fr)_minmax(0,0.46fr)_auto] sm:items-center"
+                  >
+                    <p className="text-sm font-semibold text-ink">{tool.name}</p>
+                    <p className="text-sm leading-6 text-muted">{tool.context}</p>
+                    {tool.href ? (
+                      <a
+                        href={tool.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-sm font-semibold text-ink underline-offset-2 hover:underline sm:text-right"
+                      >
+                        Demo
+                      </a>
+                    ) : (
+                      <span className="text-sm font-medium text-muted/60 sm:text-right">
+                        Demo to add
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </section>

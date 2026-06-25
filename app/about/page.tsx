@@ -63,6 +63,9 @@ export default function AboutPage() {
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
                 After working directly with reservations, payments, incidents, suppliers, housekeeping and reporting, I focus on operating routines that make daily work easier to see and run.
               </p>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
+                Some of those tools were built to test what the process had made visible.
+              </p>
               <p className="mt-5 max-w-3xl text-base font-medium leading-8 text-ink sm:text-lg">
                 The work is practical: clarify the process, reduce manual friction, improve follow-up and make execution more reliable.
               </p>

@@ -268,6 +268,19 @@ export default function VesperCaseStudyPage() {
               </div>
 
               <div className="mt-8">
+                <div className="mb-6 border-t border-line pt-6">
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                    Operational tool built for this context
+                  </p>
+                  <a
+                    href="https://stayops.anisconsult.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
+                  >
+                    StayOps demo
+                  </a>
+                </div>
                 <Link
                   href="/work"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"

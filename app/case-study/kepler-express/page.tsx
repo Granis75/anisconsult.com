@@ -168,6 +168,20 @@ export default function KeplerExpressCaseStudyPage() {
                     The same approach continues across AnisConsult operational improvement work.
                   </p>
 
+                  <div className="mt-6 border-t border-slate-200 pt-6">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
+                      Operational tool built for this mission
+                    </p>
+                    <a
+                      href="https://kepler.anisconsult.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
+                    >
+                      Kepler Express demo
+                    </a>
+                  </div>
+
                   <div className="mt-6">
                     <Link
                       href="/work"

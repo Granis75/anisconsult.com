@@ -23,6 +23,10 @@ type Project = {
   ctaLabel: string;
   secondCtaLabel?: string;
   secondCtaHref?: string;
+  tools?: {
+    label: string;
+    href?: string;
+  }[];
 };
 
 const projectGroups: { label: string; projects: Project[] }[] = [
@@ -39,6 +43,12 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         href: "/case-study/vesper",
         location: "work_page_residence_cadet",
         ctaLabel: "View operation",
+        tools: [
+          {
+            label: "StayOps",
+            href: "https://stayops.anisconsult.com",
+          },
+        ],
       },
       {
         category: "Logistics",
@@ -50,6 +60,12 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         href: "/case-study/kepler-express",
         location: "work_page_kepler",
         ctaLabel: "View operation",
+        tools: [
+          {
+            label: "Kepler Express",
+            href: "https://kepler.anisconsult.com",
+          },
+        ],
       },
       {
         category: "Retail operations / Process improvement",
@@ -61,6 +77,15 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         href: "/case-study/famimart",
         location: "work_page_famimart",
         ctaLabel: "View operation",
+        tools: [
+          {
+            label: "Alcaisse",
+          },
+          {
+            label: "StorePilot",
+            href: "https://storepilot.anisconsult.com",
+          },
+        ],
       },
     ],
   },
@@ -146,6 +171,37 @@ export default function WorkPage() {
                               {project.status}
                             </dd>
                           </div>
+                          {project.tools ? (
+                            <div>
+                              <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
+                                {project.tools.length > 1
+                                  ? "Operational tools built for this context"
+                                  : "Operational tool built for this context"}
+                              </dt>
+                              <dd className="mt-3 flex flex-wrap gap-3">
+                                {project.tools.map((tool) =>
+                                  tool.href ? (
+                                    <a
+                                      key={tool.label}
+                                      href={tool.href}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className="inline-flex items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-ink transition hover:bg-surface"
+                                    >
+                                      {tool.label}
+                                    </a>
+                                  ) : (
+                                    <span
+                                      key={tool.label}
+                                      className="inline-flex items-center rounded-full border border-line bg-white px-4 py-2 text-sm font-semibold text-muted/70"
+                                    >
+                                      {tool.label} demo to add
+                                    </span>
+                                  ),
+                                )}
+                              </dd>
+                            </div>
+                          ) : null}
                         </dl>
                         <div className="flex flex-wrap items-center gap-4">
                           {project.href.startsWith("http") ? (
