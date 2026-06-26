@@ -225,7 +225,7 @@ export default function HomePage() {
                 {operationalTools.map((tool) => (
                   <div
                     key={tool.name}
-                    className="grid gap-3 border-t border-black/10 py-4 sm:grid-cols-[minmax(0,0.34fr)_minmax(0,0.46fr)_auto] sm:items-center"
+                    className="grid items-center gap-3 border-t border-black/10 py-4 sm:grid-cols-[minmax(0,0.34fr)_minmax(0,0.46fr)_auto]"
                   >
                     <p className="text-sm font-semibold text-ink">{tool.name}</p>
                     <p className="text-sm leading-6 text-muted">{tool.context}</p>
@@ -293,9 +293,9 @@ export default function HomePage() {
 
         <section
           id="who-i-work-with"
-          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
+          className="scroll-mt-32 bg-neutral-50 md:scroll-mt-24"
         >
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={70}>
+          <Reveal className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-28" delayMs={70}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
               <div className="max-w-3xl">
                 <SectionKicker label="Fit" />
