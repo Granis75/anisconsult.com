@@ -5,9 +5,23 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Work | AnisConsult — Operational Case Studies",
+  title: "Operational Case Studies | AnisConsult",
   description:
-    "Operational case studies showing workflow clarity, follow-up improvement and service business execution.",
+    "Selected operational improvement cases across hospitality, logistics and service environments.",
+  alternates: {
+    canonical: "/work",
+  },
+  openGraph: {
+    title: "Operational Case Studies | AnisConsult",
+    description:
+      "Selected operational improvement cases across hospitality, logistics and service environments.",
+    url: "/work",
+  },
+  twitter: {
+    title: "Operational Case Studies | AnisConsult",
+    description:
+      "Selected operational improvement cases across hospitality, logistics and service environments.",
+  },
 };
 
 type Project = {
@@ -36,13 +50,13 @@ const projectGroups: { label: string; projects: Project[] }[] = [
       {
         category: "Hospitality",
         title: "Résidence Cadet",
-        problem: "Guest stays, access, follow-up, payments and reporting were spread across files, calls and front-desk memory.",
-        system: "A clearer operating routine for guest follow-up, access, issues and reporting.",
+        problem: "Guest stays, access, payments, incidents, housekeeping and reporting depended on fragmented information and recurring manual follow-up.",
+        system: "Clearer routines for daily follow-up, incidents, payments, housekeeping coordination and reporting.",
         outcome: "7.6 → 9.2 guest satisfaction · Top 30 / ~450 platform ranking · ~10h/week admin workload reduced",
         status: "Operational improvement case",
         href: "/case-study/vesper",
         location: "work_page_residence_cadet",
-        ctaLabel: "View operation",
+        ctaLabel: "View operational case",
         tools: [
           {
             label: "StayOps — stayops.anisconsult.com",
@@ -53,13 +67,13 @@ const projectGroups: { label: string; projects: Project[] }[] = [
       {
         category: "Logistics",
         title: "Kepler Express",
-        problem: "Mission follow-up, driver costs, invoicing and payments moved separately, making daily control harder.",
-        system: "A clearer operating flow connecting mission status, cost capture and billing follow-up.",
+        problem: "Mission follow-up, costs, invoicing and payments moved separately, making daily control harder.",
+        system: "A clearer operating flow connecting mission execution, expense tracking, invoicing and payment follow-up.",
         outcome: "Cleaner daily follow-up · mission-level cost visibility · billing matched to executed work · stronger dispatch-billing coordination",
         status: "Operational improvement case",
         href: "/case-study/kepler-express",
         location: "work_page_kepler",
-        ctaLabel: "View operation",
+        ctaLabel: "View operational case",
         tools: [
           {
             label: "Kepler Express — kepler.anisconsult.com",
@@ -68,24 +82,15 @@ const projectGroups: { label: string; projects: Project[] }[] = [
         ],
       },
       {
-        category: "Retail operations / Process improvement",
+        category: "Retail operations",
         title: "Famimart",
         problem: "A family-run convenience store context relied on informal routines, manual coordination and unclear daily handovers.",
         system: "A clearer store operating model for cashier routines, stock replenishment, supplier follow-up and daily control.",
-        outcome: "Structured retail routines designed to reduce informal follow-up and make day-to-day execution easier to control.",
-        status: "Operational improvement case",
+        outcome: "No measured business outcome is presented; this remains a workflow study around retail routines and daily control.",
+        status: "Operational study",
         href: "/case-study/famimart",
         location: "work_page_famimart",
-        ctaLabel: "View operation",
-        tools: [
-          {
-            label: "Alcaisse (demo to add)",
-          },
-          {
-            label: "StorePilot — storepilot.anisconsult.com",
-            href: "https://storepilot.anisconsult.com",
-          },
-        ],
+        ctaLabel: "View operational study",
       },
     ],
   },
@@ -105,7 +110,7 @@ export default function WorkPage() {
                 Operational case studies
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Field-tested examples of clearer follow-up, responsibility and daily operating control.
+                Field-tested examples of clearer follow-up, responsibility and day-to-day operating control.
               </p>
             </div>
           </div>

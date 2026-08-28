@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function MyBiShowcasePage() {
+export default function RemovedShowcasePage() {
   redirect("/work");
 }

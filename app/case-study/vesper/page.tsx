@@ -5,15 +5,29 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Résidence Cadet Case Study | AnisConsult",
+  title: "Résidence Cadet Operational Case | AnisConsult",
   description:
     "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
+  alternates: {
+    canonical: "/case-study/vesper",
+  },
+  openGraph: {
+    title: "Résidence Cadet Operational Case | AnisConsult",
+    description:
+      "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
+    url: "/case-study/vesper",
+  },
+  twitter: {
+    title: "Résidence Cadet Operational Case | AnisConsult",
+    description:
+      "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
+  },
 };
 
 const sectionLinks = [
   { label: "Context", href: "#context" },
-  { label: "Problem", href: "#problem" },
-  { label: "System", href: "#implementation" },
+  { label: "Constraints", href: "#problem" },
+  { label: "Operating changes", href: "#implementation" },
   { label: "Outcomes", href: "#results" },
   { label: "Insight", href: "#insight" },
 ] as const;
@@ -57,7 +71,7 @@ const resultItems = [
 const changeItems = [
   "Guest requests and incidents were easier to track",
   "Less dependency on front desk for routine follow-up",
-  "Managers could see operational status and revenue earlier",
+  "Managers could see operational status earlier",
   "Reservations, payments, housekeeping and reporting became easier to coordinate",
 ] as const;
 
@@ -79,13 +93,13 @@ export default function VesperCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <SectionKicker label="Operational Proof" />
+              <SectionKicker label="Operational Case" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Résidence Cadet — Hospitality operations improvement
+                Operational improvement for a 23-unit serviced residence
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                How scattered daily operations were turned into clearer workflows across reservations, payments, incidents, housekeeping and reporting.
+                How recurring manual follow-up across guest stays, payments, incidents, housekeeping and reporting was turned into clearer daily operating routines.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
                 Résidence Cadet operated as a 23-unit serviced residence with daily complexity across arrivals, departures, guest requests, payments, housekeeping, maintenance and reporting.
@@ -147,7 +161,7 @@ export default function VesperCaseStudyPage() {
         <section id="problem" className="border-b border-line bg-surface">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-3xl">
-              <SectionKicker label="Problem" />
+              <SectionKicker label="Operational constraints" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 Daily work was hard to run cleanly because the basic operating flow was split across tools, messages, PMS workflows, manual follow-up and people.
               </p>
@@ -169,7 +183,7 @@ export default function VesperCaseStudyPage() {
         <section id="implementation" className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
             <div className="max-w-4xl">
-                <SectionKicker label="Workflow response" />
+                <SectionKicker label="Operating changes" />
               <p className="mt-6 text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
                 A practical operating flow was created so the team could see ownership, follow-up, incidents, payments and reporting more clearly.
               </p>
@@ -270,10 +284,10 @@ export default function VesperCaseStudyPage() {
               <div className="mt-8">
                 <div className="mb-6 border-t border-line pt-6">
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                    Operational tool built for this context
+                    Related operational tool
                   </p>
                   <p className="mt-4 text-sm font-semibold leading-7 text-ink">
-                    StayOps — Property management system prototype
+                    Some workflow ideas later informed the StayOps prototype.
                   </p>
                   <a
                     href="https://stayops.anisconsult.com"

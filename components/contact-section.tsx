@@ -126,7 +126,7 @@ export function ContactSection() {
           Reach out if daily operations rely on scattered information, manual follow-up or unclear ownership.
         </p>
         <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-          AnisConsult helps service businesses clarify workflows, responsibilities and practical routines for better execution.
+          AnisConsult is focused on operational coordination, process improvement and clearer routines for better execution.
         </p>
         <p className="mt-4 text-sm leading-6 text-muted">
           Tell me what process is hard to run, where follow-up slows down, and what keeps breaking.

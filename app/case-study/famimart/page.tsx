@@ -5,9 +5,23 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Famimart Case Study | AnisConsult",
+  title: "Famimart Operational Study | AnisConsult",
   description:
-    "Convenience store workflow renovation for a family-run retail context, focused on routines, ownership, stock visibility and daily execution.",
+    "Convenience store workflow study focused on routines, ownership, stock visibility and daily execution.",
+  alternates: {
+    canonical: "/case-study/famimart",
+  },
+  openGraph: {
+    title: "Famimart Operational Study | AnisConsult",
+    description:
+      "Convenience store workflow study focused on routines, ownership, stock visibility and daily execution.",
+    url: "/case-study/famimart",
+  },
+  twitter: {
+    title: "Famimart Operational Study | AnisConsult",
+    description:
+      "Convenience store workflow study focused on routines, ownership, stock visibility and daily execution.",
+  },
 };
 
 const sectionLinks = [
@@ -73,16 +87,16 @@ export default function FamimartCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-5xl">
-              <SectionKicker label="Retail operations / Process improvement" />
+              <SectionKicker label="Operational study" />
               <h1 className="mt-6 max-w-5xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Famimart — Convenience store workflow renovation
+                Famimart — Convenience store workflow study
               </h1>
 
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Operational redesign for a family-run neighborhood store, inspired by Japanese konbini execution standards.
+                A workflow study for a family-run neighborhood store, focused on routines, stock discipline and day-to-day control.
               </p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Famimart is a convenience store workflow renovation case based on a family-run retail context in Algeria. The goal was to rethink how a small neighborhood store could operate with clearer routines, better stock discipline and a more structured daily execution rhythm.
+                Famimart is based on a family-run retail context in Algeria. The goal was to study how a small neighborhood store could operate with clearer routines, better stock discipline and a more structured daily execution rhythm.
               </p>
             </div>
           </div>
@@ -232,10 +246,10 @@ export default function FamimartCaseStudyPage() {
             <div className="rounded-[2rem] border border-line bg-white p-8 lg:p-10">
               <SectionKicker label="Outcome" />
               <p className="mt-5 max-w-4xl text-2xl font-bold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                The result was a structured retail operating model designed to reduce informal follow-up and make day-to-day execution easier to control.
+                The result was a structured retail operating model designed to reduce dependency on informal follow-up and make day-to-day execution easier to review.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                A dedicated POS workflow later supported the operating model, but this case focuses on process, routines and execution clarity.
+                No measured business outcome is presented here. This study focuses on process, routines and execution clarity.
               </p>
 
               <div className="mt-10 border-t border-line pt-6">
@@ -258,24 +272,6 @@ export default function FamimartCaseStudyPage() {
               </div>
 
               <div className="mt-8">
-                <div className="mb-6 border-t border-line pt-6">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                    Operational tools built for this context
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <span className="inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-muted/70">
-                      Alcaisse (demo to add)
-                    </span>
-                    <a
-                      href="https://storepilot.anisconsult.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center rounded-full border border-line bg-surface px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
-                    >
-                      StorePilot — storepilot.anisconsult.com
-                    </a>
-                  </div>
-                </div>
                 <Link
                   href="/work"
                   className="inline-flex items-center rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"

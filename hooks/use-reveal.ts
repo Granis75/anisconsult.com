@@ -12,7 +12,7 @@ export function useReveal<T extends HTMLElement>({
   rootMargin = "0px 0px -10% 0px",
 }: UseRevealOptions = {}) {
   const ref = useRef<T | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const node = ref.current;

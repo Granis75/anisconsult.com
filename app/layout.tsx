@@ -17,9 +17,12 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "AnisConsult — Operational Improvement & Process Clarity",
+  title: "AnisConsult — Operations & Process Improvement",
   description:
-    "AnisConsult helps small service businesses improve daily operations, clarify responsibilities, reduce manual friction and structure execution.",
+    "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -36,9 +39,11 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "AnisConsult — Operational Improvement & Process Clarity",
+    title: "AnisConsult — Operations & Process Improvement",
     description:
-      "Operational improvement, workflow analysis and practical process optimization for service-based businesses.",
+      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+    url: "/",
+    siteName: "AnisConsult",
     images: [
       {
         url: "/brand/og-image.jpg",
@@ -50,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AnisConsult — Operational Improvement & Process Clarity",
+    title: "AnisConsult — Operations & Process Improvement",
     description:
-      "Operational improvement, workflow analysis and practical process optimization for service-based businesses.",
+      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
     images: ["/brand/og-image.jpg"],
   },
 };

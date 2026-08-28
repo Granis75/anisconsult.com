@@ -9,19 +9,19 @@ export const siteContent = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Operational improvement for service businesses.",
+    title: "Clearer operations. Less manual friction.",
     subtitle: "Operational improvement & process optimization",
     description:
-      "AnisConsult helps small service teams clarify responsibilities, reduce manual friction and improve day-to-day execution.",
+      "Selected operational work across hospitality, logistics and service environments, focused on day-to-day execution, follow-up, reporting and process improvement.",
     support:
-      "Field-tested operational thinking for teams dealing with scattered follow-up, unclear ownership and recurring execution issues.",
+      "Field-tested operational thinking for environments dealing with scattered follow-up, unclear ownership and recurring execution issues.",
     primaryCta: {
-      label: "Discuss an operations issue",
-      href: "/contact",
-    },
-    secondaryCta: {
       label: "View operational cases",
       href: "/work",
+    },
+    secondaryCta: {
+      label: "Get in touch",
+      href: "/contact",
     },
   },
 } as const;

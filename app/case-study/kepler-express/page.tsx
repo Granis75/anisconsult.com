@@ -5,9 +5,23 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express Case Study | AnisConsult",
+  title: "Kepler Express Operational Case | AnisConsult",
   description:
     "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
+  alternates: {
+    canonical: "/case-study/kepler-express",
+  },
+  openGraph: {
+    title: "Kepler Express Operational Case | AnisConsult",
+    description:
+      "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
+    url: "/case-study/kepler-express",
+  },
+  twitter: {
+    title: "Kepler Express Operational Case | AnisConsult",
+    description:
+      "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
+  },
 };
 
 const problemItems = [
@@ -57,9 +71,9 @@ export default function KeplerExpressCaseStudyPage() {
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
             <div className="max-w-4xl">
-              <SectionKicker label="Operational Proof" />
+              <SectionKicker label="Operational Case" />
               <h1 className="mt-6 max-w-4xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.65rem]">
-                Operational workflow visibility for transport operations
+                Operational workflow improvement for transport operations
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
                 Structuring mission status, expenses, invoicing and payment follow-up.
@@ -91,7 +105,7 @@ export default function KeplerExpressCaseStudyPage() {
                 >
                   <SectionKicker label="Problem" />
                   <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    Mission status, expenses and billing were being managed in different places, which slowed coordination and hid margin.
+                    Mission status, expenses and billing were being managed in different places, which slowed coordination and made daily control harder.
                   </p>
 
                   <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
@@ -162,15 +176,12 @@ export default function KeplerExpressCaseStudyPage() {
                     When work becomes visible, teams can act faster.
                   </p>
                   <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    This case shows the same operating principle behind AnisConsult: when work becomes visible, teams can act faster and follow-up stops living in scattered messages.
-                  </p>
-                  <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    The same approach continues across AnisConsult operational improvement work.
+                    The main improvement came from connecting operational execution and administrative follow-up in one clearer workflow.
                   </p>
 
                   <div className="mt-6 border-t border-slate-200 pt-6">
                     <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Operational tool built for this mission
+                      Related operational tool
                     </p>
                     <p className="mt-4 text-sm font-semibold leading-7 text-ink">
                       Kepler Express — kepler.anisconsult.com
@@ -181,7 +192,7 @@ export default function KeplerExpressCaseStudyPage() {
                       rel="noreferrer"
                       className="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      Operational tool built for this mission
+                      kepler.anisconsult.com
                     </a>
                   </div>
 
@@ -190,7 +201,7 @@ export default function KeplerExpressCaseStudyPage() {
                       href="/work"
                       className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
                     >
-                      View operational cases
+                      Back to operational cases
                     </Link>
                   </div>
                 </div>

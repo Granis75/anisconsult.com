@@ -4,9 +4,23 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Contact | AnisConsult — Operational Improvement & Process Clarity",
+  title: "Contact | AnisConsult — Operations & Process Improvement",
   description:
     "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact | AnisConsult — Operations & Process Improvement",
+    description:
+      "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
+    url: "/contact",
+  },
+  twitter: {
+    title: "Contact | AnisConsult — Operations & Process Improvement",
+    description:
+      "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
+  },
 };
 
 export default function ContactPage() {

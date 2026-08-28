@@ -10,9 +10,23 @@ import { TrackedLink } from "@/components/tracked-link";
 import { ValueSection } from "@/components/value-section";
 
 export const metadata: Metadata = {
-  title: "AnisConsult — Operational Improvement & Process Clarity",
+  title: "AnisConsult — Operations & Process Improvement",
   description:
-    "AnisConsult helps small service businesses improve daily operations, clarify responsibilities, reduce manual friction and structure execution.",
+    "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "AnisConsult — Operations & Process Improvement",
+    description:
+      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+    url: "/",
+  },
+  twitter: {
+    title: "AnisConsult — Operations & Process Improvement",
+    description:
+      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+  },
 };
 
 const realCases = [
@@ -31,7 +45,7 @@ const realCases = [
     title: "Kepler Express",
     problem: "Mission follow-up, driver costs, invoicing and payments moved separately, making daily control harder.",
     system: "A clearer operating flow connecting mission status, cost capture and billing follow-up.",
-    outcome: "Supported the launch and control of a new revenue segment.",
+    outcome: "Cleaner daily follow-up · mission-level cost visibility · billing matched to executed work",
     href: "/case-study/kepler-express",
     location: "home_proof_kepler",
     ctaLabel: "View operational case",
@@ -40,20 +54,20 @@ const realCases = [
 
 const audienceFit = [
   {
-    title: "Founders and lean teams",
-    description: "When operations depend too much on memory, urgency and manual follow-up.",
+    title: "Hospitality operations",
+    description: "Guest operations, incidents, payments, housekeeping, maintenance and reporting.",
   },
   {
-    title: "Hospitality operators",
-    description: "For guest follow-up, access, issues, payments and reporting that need one clearer flow.",
+    title: "Service & on-site operations",
+    description: "Recurring execution, stakeholder coordination, follow-up and operational control.",
   },
   {
-    title: "Retail and service businesses",
-    description: "For teams managing daily execution, admin work, margins and recurring operational tasks.",
+    title: "Logistics operations",
+    description: "Mission follow-up, costs, invoicing and coordination between execution and administration.",
   },
   {
-    title: "International teams",
-    description: "For English, French or Arabic environments where simple structure matters across contexts.",
+    title: "International environments",
+    description: "Operational work across multilingual and customer-facing contexts.",
   },
 ] as const;
 
@@ -85,33 +99,9 @@ const operationalTools = [
   },
   {
     name: "Kepler Express",
-    context: "Logistics & mission billing",
+    context: "Logistics & mission follow-up",
     href: "https://kepler.anisconsult.com",
     label: "kepler.anisconsult.com",
-  },
-  {
-    name: "StorePilot",
-    context: "Stock, margin & sales visibility",
-    href: "https://storepilot.anisconsult.com",
-    label: "storepilot.anisconsult.com",
-  },
-  {
-    name: "MyBi",
-    context: "Business management & invoice tracking",
-    href: "https://mybi.anisconsult.com",
-    label: "mybi.anisconsult.com",
-  },
-  {
-    name: "OpsCore",
-    context: "Internal task & operations platform",
-    href: "https://opscore.anisconsult.com",
-    label: "opscore.anisconsult.com",
-  },
-  {
-    name: "Alcaisse",
-    context: "Retail POS & cashier sessions",
-    href: undefined,
-    label: "Demo to add",
   },
 ] as const;
 
@@ -212,12 +202,12 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20" delayMs={55}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="From process to system" />
+                <SectionKicker label="Selected operational tools" />
                 <h2 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.3rem]">
-                  Operational tools built.
+                  Supporting work from real operating problems.
                 </h2>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                  When the operating process is clear, the right tool becomes obvious. Some missions led to building one.
+                  Some operational problems led to practical internal tools or prototypes. They are shown here as supporting work, not as a separate software business.
                 </p>
               </div>
 
@@ -229,20 +219,14 @@ export default function HomePage() {
                   >
                     <p className="text-sm font-semibold text-ink">{tool.name}</p>
                     <p className="text-sm leading-6 text-muted">{tool.context}</p>
-                    {tool.href ? (
-                      <a
-                        href={tool.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-sm font-semibold text-ink underline-offset-2 hover:underline sm:text-right"
-                      >
-                        {tool.label}
-                      </a>
-                    ) : (
-                      <span className="text-sm font-medium text-muted/60 sm:text-right">
-                        {tool.label}
-                      </span>
-                    )}
+                    <a
+                      href={tool.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm font-semibold text-ink underline-offset-2 hover:underline sm:text-right"
+                    >
+                      {tool.label}
+                    </a>
                   </div>
                 ))}
               </div>
@@ -298,9 +282,9 @@ export default function HomePage() {
           <Reveal className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-28" delayMs={70}>
             <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
               <div className="max-w-3xl">
-                <SectionKicker label="Fit" />
+                <SectionKicker label="Where this experience applies" />
                 <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Built for operators who need clarity, not theater.
+                  Practical contexts, not a claim to cover every sector.
                 </h2>
               </div>
 
