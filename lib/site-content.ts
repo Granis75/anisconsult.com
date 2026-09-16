@@ -1,4 +1,6 @@
 export const directEmailHref = "mailto:hello@anisconsult.com";
+export const linkedInHref = "https://www.linkedin.com/in/anisallouachepro/";
+export const cvHref: string | null = null;
 
 export const siteContent = {
   brand: "ANIS ALLOUACHE",
@@ -21,8 +23,8 @@ export const siteContent = {
       href: "/work",
     },
     secondaryCta: {
-      label: "View systems",
-      href: "/systems",
+      label: "Download CV",
+      href: cvHref,
     },
   },
 } as const;

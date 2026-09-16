@@ -2,7 +2,7 @@
 
 import { TrackedLink } from "@/components/tracked-link";
 import { ProofBar } from "@/components/proof-bar";
-import { siteContent } from "@/lib/site-content";
+import { linkedInHref, siteContent } from "@/lib/site-content";
 
 const focusAreas = [
   {
@@ -56,17 +56,23 @@ export function Hero() {
                 {hero.primaryCta.label}
               </TrackedLink>
 
-              <TrackedLink
-                href={hero.secondaryCta.href}
-                event="case_study_cta_click"
-                data={{ location: "hero_secondary" }}
-                className="premium-cta-outline h-12 px-6"
-              >
-                {hero.secondaryCta.label}
-              </TrackedLink>
+              {hero.secondaryCta.href ? (
+                <a href={hero.secondaryCta.href} className="premium-cta-outline h-12 px-6" download>
+                  {hero.secondaryCta.label}
+                </a>
+              ) : null}
             </div>
 
             <p className="mt-4 text-sm text-slate-500">
+              <a
+                href={linkedInHref}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-ink underline-offset-4 hover:underline"
+              >
+                LinkedIn
+              </a>
+              <span className="mx-2 text-slate-300">/</span>
               Owner - Status - Next action - Outcome
             </p>
 

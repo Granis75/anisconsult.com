@@ -255,7 +255,7 @@ export default function HomePage() {
           className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
         >
           <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={80}>
-            <ContactSection />
+            <ContactSection headingLevel="h2" />
           </Reveal>
         </section>
       </main>

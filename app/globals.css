@@ -173,25 +173,4 @@
     box-shadow: 0 8px 18px rgba(17, 17, 17, 0.035);
   }
 
-  .field-input {
-    width: 100%;
-    border: 1px solid rgba(17, 17, 17, 0.08);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.92);
-    padding: 0.875rem 1rem;
-    color: var(--foreground);
-    outline: none;
-    transition:
-      border-color 200ms ease,
-      box-shadow 200ms ease;
-  }
-
-  .field-input::placeholder {
-    color: #a3a3a3;
-  }
-
-  .field-input:focus {
-    border-color: #111111;
-    box-shadow: 0 0 0 4px rgba(17, 17, 17, 0.03);
-  }
 }
