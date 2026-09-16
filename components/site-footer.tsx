@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { directEmailHref } from "@/lib/site-content";
+import { directEmailHref, siteContent } from "@/lib/site-content";
 
 export function SiteFooter() {
   return (
@@ -8,25 +8,24 @@ export function SiteFooter() {
         <div className="space-y-3">
           <Link
             href="/"
-            aria-label="AnisConsult home"
-            className="inline-flex items-center transition-opacity hover:opacity-80"
+            aria-label="ANIS ALLOUACHE home"
+            className="inline-flex flex-col transition-opacity hover:opacity-80"
           >
-            <img
-              src="/brand/ac-horizontal.svg"
-              alt="AnisConsult"
-              width={240}
-              height={60}
-              className="h-7 w-auto sm:h-8"
-            />
+            <span className="font-display text-base font-semibold uppercase tracking-[0.16em] text-ink">
+              {siteContent.brand}
+            </span>
+            <span className="mt-1 text-xs font-medium uppercase tracking-[0.18em] text-muted">
+              {siteContent.brandContext}
+            </span>
           </Link>
-          <p>Operational improvement &amp; process clarity</p>
+          <p>Selected operational work and supporting systems.</p>
         </div>
 
         <div className="flex flex-col gap-2 md:items-end">
           <a href={directEmailHref} className="transition-colors duration-200 hover:text-ink">
             hello@anisconsult.com
           </a>
-          <p>Paris · Remote</p>
+          <p>Paris, France</p>
         </div>
       </div>
     </footer>

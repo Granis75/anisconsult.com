@@ -240,7 +240,7 @@ export async function POST(request: Request) {
       from: fromEmail,
       to: [toEmail],
       replyTo: email,
-      subject: `AnisConsult workflow inquiry: ${activity}`,
+      subject: `Operations portfolio inquiry: ${activity}`,
       text,
       html,
     });

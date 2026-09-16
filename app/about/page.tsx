@@ -5,32 +5,32 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "About | AnisConsult — Operations & Process Improvement",
+  title: "About | ANIS ALLOUACHE",
   description:
-    "Hands-on operational experience across hospitality, logistics, service environments and process improvement.",
+    "Short professional context for Anis Allouache's operations portfolio.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About | AnisConsult — Operations & Process Improvement",
+    title: "About | ANIS ALLOUACHE",
     description:
-      "Hands-on operational experience across hospitality, logistics, service environments and process improvement.",
+      "Short professional context for Anis Allouache's operations portfolio.",
     url: "/about",
   },
   twitter: {
-    title: "About | AnisConsult — Operations & Process Improvement",
+    title: "About | ANIS ALLOUACHE",
     description:
-      "Hands-on operational experience across hospitality, logistics, service environments and process improvement.",
+      "Short professional context for Anis Allouache's operations portfolio.",
   },
 };
 
 const areas = [
-  "Hospitality & serviced residences",
-  "Operational coordination",
+  "Residence & property operations",
+  "Serviced apartments & aparthotels",
+  "Resident operations",
+  "Facility and on-site coordination",
   "Logistics & field operations",
-  "Incident follow-up",
-  "Reporting & process improvement",
-  "International environments",
+  "Reporting and operating controls",
 ] as const;
 
 const approach = [
@@ -54,10 +54,10 @@ export default function AboutPage() {
                 About
               </h1>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                AnisConsult documents selected operational work across hospitality, logistics and service environments.
+                This portfolio documents selected operational work by Anis Allouache across residence, property, hospitality and service environments.
               </p>
               <p className="mt-5 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                The focus is simple: clearer workflows, better follow-up and less manual friction in day-to-day operations.
+                The focus is how operational problems are understood, structured and improved through clearer ownership, follow-up routines, reporting and simple supporting systems.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">

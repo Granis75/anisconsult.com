@@ -5,22 +5,22 @@ import { SiteHeader } from "@/components/site-header";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "Operational Case Studies | AnisConsult",
+  title: "Selected Operational Work | ANIS ALLOUACHE",
   description:
-    "Selected operational improvement cases across hospitality, logistics and service environments.",
+    "Selected operational work across residence, property, hospitality and service environments.",
   alternates: {
     canonical: "/work",
   },
   openGraph: {
-    title: "Operational Case Studies | AnisConsult",
+    title: "Selected Operational Work | ANIS ALLOUACHE",
     description:
-      "Selected operational improvement cases across hospitality, logistics and service environments.",
+      "Selected operational work across residence, property, hospitality and service environments.",
     url: "/work",
   },
   twitter: {
-    title: "Operational Case Studies | AnisConsult",
+    title: "Selected Operational Work | ANIS ALLOUACHE",
     description:
-      "Selected operational improvement cases across hospitality, logistics and service environments.",
+      "Selected operational work across residence, property, hospitality and service environments.",
   },
 };
 
@@ -81,17 +81,6 @@ const projectGroups: { label: string; projects: Project[] }[] = [
           },
         ],
       },
-      {
-        category: "Retail operations",
-        title: "Famimart",
-        problem: "A family-run convenience store context relied on informal routines, manual coordination and unclear daily handovers.",
-        system: "A clearer store operating model for cashier routines, stock replenishment, supplier follow-up and daily control.",
-        outcome: "No measured business outcome is presented; this remains a workflow study around retail routines and daily control.",
-        status: "Operational study",
-        href: "/case-study/famimart",
-        location: "work_page_famimart",
-        ctaLabel: "View operational study",
-      },
     ],
   },
 ];
@@ -107,10 +96,10 @@ export default function WorkPage() {
             <div className="max-w-4xl">
               <SectionKicker label="Operational cases" />
               <h1 className="mt-6 font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-6xl">
-                Operational case studies
+                Selected operational work
               </h1>
               <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Field-tested examples of clearer follow-up, responsibility and day-to-day operating control.
+                Field-tested examples of clearer follow-up, ownership, reporting and day-to-day operating control.
               </p>
             </div>
           </div>

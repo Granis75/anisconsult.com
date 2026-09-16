@@ -5,20 +5,20 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Kepler Express Operational Case | AnisConsult",
+  title: "Kepler Express Operational Case | ANIS ALLOUACHE",
   description:
     "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
   alternates: {
     canonical: "/case-study/kepler-express",
   },
   openGraph: {
-    title: "Kepler Express Operational Case | AnisConsult",
+    title: "Kepler Express Operational Case | ANIS ALLOUACHE",
     description:
       "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
     url: "/case-study/kepler-express",
   },
   twitter: {
-    title: "Kepler Express Operational Case | AnisConsult",
+    title: "Kepler Express Operational Case | ANIS ALLOUACHE",
     description:
       "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
   },

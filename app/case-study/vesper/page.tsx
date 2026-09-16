@@ -5,20 +5,20 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Résidence Cadet Operational Case | AnisConsult",
+  title: "Résidence Cadet Operational Case | ANIS ALLOUACHE",
   description:
     "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
   alternates: {
     canonical: "/case-study/vesper",
   },
   openGraph: {
-    title: "Résidence Cadet Operational Case | AnisConsult",
+    title: "Résidence Cadet Operational Case | ANIS ALLOUACHE",
     description:
       "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
     url: "/case-study/vesper",
   },
   twitter: {
-    title: "Résidence Cadet Operational Case | AnisConsult",
+    title: "Résidence Cadet Operational Case | ANIS ALLOUACHE",
     description:
       "How Résidence Cadet clarified guest follow-up, access, payments, incidents and reporting across a 23-unit serviced residence.",
   },

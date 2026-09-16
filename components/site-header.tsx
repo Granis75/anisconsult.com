@@ -7,25 +7,15 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-3.5 lg:px-10 md:flex-row md:items-center md:py-5 md:justify-between">
         <Link
           href="/"
-          aria-label="AnisConsult — home"
-          className="flex items-center transition-opacity hover:opacity-80"
+          aria-label="ANIS ALLOUACHE home"
+          className="flex flex-col transition-opacity hover:opacity-80"
         >
-          {/* Mobile: monogram only */}
-          <img
-            src="/brand/ac-monogram.svg"
-            alt="AnisConsult"
-            className="h-8 w-auto md:hidden"
-            width="32"
-            height="32"
-          />
-          {/* Desktop: monogram + wordmark, no tagline */}
-          <img
-            src="/brand/ac-header.svg"
-            alt="AnisConsult"
-            className="hidden md:block h-12 lg:h-14 w-auto"
-            width="240"
-            height="60"
-          />
+          <span className="font-display text-lg font-semibold uppercase tracking-[0.16em] text-ink sm:text-xl">
+            {siteContent.brand}
+          </span>
+          <span className="mt-0.5 text-xs font-medium uppercase tracking-[0.18em] text-muted">
+            {siteContent.brandContext}
+          </span>
         </Link>
 
         <div className="flex items-center gap-5 md:gap-7">
@@ -40,12 +30,6 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
-          <Link
-            href="/contact"
-            className="hidden h-9 items-center rounded-full border border-black/10 bg-white/70 px-4 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-surface md:inline-flex"
-          >
-            Let&apos;s talk
-          </Link>
         </div>
       </div>
     </header>

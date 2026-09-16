@@ -10,22 +10,22 @@ import { TrackedLink } from "@/components/tracked-link";
 import { ValueSection } from "@/components/value-section";
 
 export const metadata: Metadata = {
-  title: "AnisConsult — Operations & Process Improvement",
+  title: "ANIS ALLOUACHE — Operations Portfolio",
   description:
-    "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+    "Selected operational work across residence, property, hospitality and service environments.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "AnisConsult — Operations & Process Improvement",
+    title: "ANIS ALLOUACHE — Operations Portfolio",
     description:
-      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+      "Selected operational work across residence, property, hospitality and service environments.",
     url: "/",
   },
   twitter: {
-    title: "AnisConsult — Operations & Process Improvement",
+    title: "ANIS ALLOUACHE — Operations Portfolio",
     description:
-      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+      "Selected operational work across residence, property, hospitality and service environments.",
   },
 };
 
@@ -68,25 +68,6 @@ const audienceFit = [
   {
     title: "International environments",
     description: "Operational work across multilingual and customer-facing contexts.",
-  },
-] as const;
-
-const servicesPreview = [
-  {
-    title: "Operational Audit",
-    description: "Map how work currently moves, where follow-up breaks and what needs clearer ownership.",
-  },
-  {
-    title: "Process Cleanup",
-    description: "Simplify handoffs, statuses and routines so recurring work is easier to run.",
-  },
-  {
-    title: "Execution Structure",
-    description: "Define owners, next actions and review rhythms for daily operational control.",
-  },
-  {
-    title: "Service Quality Review",
-    description: "Use operating facts to improve consistency, response time and follow-up quality.",
   },
 ] as const;
 
@@ -209,6 +190,14 @@ export default function HomePage() {
                 <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
                   Some operational problems led to practical internal tools or prototypes. They are shown here as supporting work, not as a separate software business.
                 </p>
+                <TrackedLink
+                  href="/systems"
+                  event="case_study_cta_click"
+                  data={{ location: "home_systems_intro" }}
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
+                >
+                  View supporting systems
+                </TrackedLink>
               </div>
 
               <div className="grid gap-3">
@@ -230,47 +219,6 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </div>
-          </Reveal>
-        </section>
-
-        <section
-          id="services"
-          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
-        >
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={65}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end lg:gap-16">
-              <div className="max-w-3xl">
-                <SectionKicker label="Services" />
-                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Practical help for recurring workflow problems.
-                </h2>
-              </div>
-              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Workflow analysis, process cleanup, responsibility clarity and practical operating support for service teams that need cleaner day-to-day control.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {servicesPreview.map((service) => (
-                <article key={service.title} className="premium-soft-card flex h-full flex-col">
-                  <h3 className="text-base font-semibold tracking-[-0.02em] text-ink">
-                    {service.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-muted">{service.description}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-10">
-              <TrackedLink
-                href="/services"
-                event="contact_cta_click"
-                data={{ location: "home_services_preview" }}
-                className="premium-cta-outline h-12 px-6"
-              >
-                View services
-              </TrackedLink>
             </div>
           </Reveal>
         </section>

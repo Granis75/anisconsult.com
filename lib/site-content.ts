@@ -1,27 +1,28 @@
 export const directEmailHref = "mailto:hello@anisconsult.com";
 
 export const siteContent = {
-  brand: "AnisConsult",
+  brand: "ANIS ALLOUACHE",
+  brandContext: "Operations Portfolio",
   navigation: [
-    { label: "Cases", href: "/work" },
-    { label: "Services", href: "/services" },
+    { label: "Work", href: "/work" },
+    { label: "Systems", href: "/systems" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Clearer operations. Less manual friction.",
-    subtitle: "Operational improvement & process optimization",
+    title: "Operations portfolio.",
+    subtitle: "Residence & Property Operations",
     description:
-      "Selected operational work across hospitality, logistics and service environments, focused on day-to-day execution, follow-up, reporting and process improvement.",
+      "Selected work showing how operational problems were structured, improved and turned into clearer routines, controls and supporting systems.",
     support:
-      "Field-tested operational thinking for environments dealing with scattered follow-up, unclear ownership and recurring execution issues.",
+      "Focused on serviced residences, resident operations, property workflows and field-tested operations work across service environments.",
     primaryCta: {
-      label: "View operational cases",
+      label: "View selected work",
       href: "/work",
     },
     secondaryCta: {
-      label: "Get in touch",
-      href: "/contact",
+      label: "View systems",
+      href: "/systems",
     },
   },
 } as const;

@@ -123,10 +123,10 @@ export function ContactSection() {
           Contact
         </h2>
         <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
-          Reach out if daily operations rely on scattered information, manual follow-up or unclear ownership.
+          Reach out about operations roles, residence and property operations, or work where clearer follow-up and operating control matter.
         </p>
         <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-          AnisConsult is focused on operational coordination, process improvement and clearer routines for better execution.
+          The portfolio is focused on practical operational work: understanding the constraint, clarifying ownership and making daily execution easier to run.
         </p>
         <p className="mt-4 text-sm leading-6 text-muted">
           Tell me what process is hard to run, where follow-up slows down, and what keeps breaking.

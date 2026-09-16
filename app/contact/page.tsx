@@ -4,22 +4,22 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Contact | AnisConsult — Operations & Process Improvement",
+  title: "Contact | ANIS ALLOUACHE",
   description:
-    "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
+    "Contact Anis Allouache about operations roles, residence and property operations, or relevant operational work.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact | AnisConsult — Operations & Process Improvement",
+    title: "Contact | ANIS ALLOUACHE",
     description:
-      "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
+      "Contact Anis Allouache about operations roles, residence and property operations, or relevant operational work.",
     url: "/contact",
   },
   twitter: {
-    title: "Contact | AnisConsult — Operations & Process Improvement",
+    title: "Contact | ANIS ALLOUACHE",
     description:
-      "Contact AnisConsult to discuss scattered information, manual follow-up, unclear ownership or recurring operational friction.",
+      "Contact Anis Allouache about operations roles, residence and property operations, or relevant operational work.",
   },
 };
 

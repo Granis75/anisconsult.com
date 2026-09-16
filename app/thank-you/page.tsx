@@ -4,8 +4,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Message received. — AnisConsult",
-  description: "Thanks for reaching out to AnisConsult.",
+  title: "Message received. — ANIS ALLOUACHE",
+  description: "Thanks for reaching out.",
   robots: {
     index: false,
     follow: false,
@@ -39,7 +39,7 @@ export default function ThankYouPage() {
               <div className="mt-12 border-t border-line pt-8">
                 <article className="premium-card p-6 sm:p-8 lg:p-10">
                   <Link href="/" className="premium-cta h-12 px-6">
-                    Back to AnisConsult
+                    Back to portfolio
                   </Link>
                 </article>
               </div>

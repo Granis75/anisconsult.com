@@ -17,9 +17,9 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "AnisConsult — Operations & Process Improvement",
+  title: "ANIS ALLOUACHE — Operations Portfolio",
   description:
-    "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+    "Operations portfolio showing selected work across residence, property, hospitality and service operations.",
   alternates: {
     canonical: "/",
   },
@@ -39,25 +39,25 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "AnisConsult — Operations & Process Improvement",
+    title: "ANIS ALLOUACHE — Operations Portfolio",
     description:
-      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+      "Selected operational work, operating structures and supporting systems.",
     url: "/",
-    siteName: "AnisConsult",
+    siteName: "ANIS ALLOUACHE",
     images: [
       {
         url: "/brand/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "AnisConsult brand preview",
+        alt: "ANIS ALLOUACHE operations portfolio preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AnisConsult — Operations & Process Improvement",
+    title: "ANIS ALLOUACHE — Operations Portfolio",
     description:
-      "Operational case studies and process improvement work across hospitality, logistics and service environments.",
+      "Selected operational work, operating structures and supporting systems.",
     images: ["/brand/og-image.jpg"],
   },
 };
