@@ -17,9 +17,9 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "ANIS ALLOUACHE — Operations Portfolio",
+  title: "Anis Allouache — Organisation opérationnelle & outils métiers",
   description:
-    "Operations portfolio showing selected work across residence, property, hospitality and service operations.",
+    "Coordination des activités, amélioration des processus et outils métiers adaptés aux besoins du terrain.",
   alternates: {
     canonical: "/",
   },
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "ANIS ALLOUACHE — Operations Portfolio",
+    title: "Anis Allouache — Organisation opérationnelle & outils métiers",
     description:
-      "Selected operational work, operating structures and supporting systems.",
+      "Organisation opérationnelle, processus, coordination et outils métiers.",
     url: "/",
     siteName: "ANIS ALLOUACHE",
     images: [
@@ -49,15 +49,15 @@ export const metadata: Metadata = {
         url: "/brand/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANIS ALLOUACHE operations portfolio preview",
+        alt: "Anis Allouache — organisation opérationnelle et outils métiers",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANIS ALLOUACHE — Operations Portfolio",
+    title: "Anis Allouache — Organisation opérationnelle & outils métiers",
     description:
-      "Selected operational work, operating structures and supporting systems.",
+      "Organisation opérationnelle, processus, coordination et outils métiers.",
     images: ["/brand/og-image.jpg"],
   },
 };
@@ -68,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={`${inter.variable} ${interTight.variable}`}>
         {children}
         <Analytics />

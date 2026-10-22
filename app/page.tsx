@@ -1,265 +1,84 @@
 import type { Metadata } from "next";
-import { BeforeAfterSection } from "@/components/before-after-section";
-import { ContactSection } from "@/components/contact-section";
-import { Hero } from "@/components/hero";
-import { Reveal } from "@/components/reveal";
-import { SectionKicker } from "@/components/section-kicker";
-import { SiteFooter } from "@/components/site-footer";
+import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
-import { TrackedLink } from "@/components/tracked-link";
-import { ValueSection } from "@/components/value-section";
+import { SiteFooter } from "@/components/site-footer";
+import { ContactSection } from "@/components/contact-section";
 
 export const metadata: Metadata = {
-  title: "ANIS ALLOUACHE — Operations Portfolio",
-  description:
-    "Selected operational work across residence, property, hospitality and service environments.",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "ANIS ALLOUACHE — Operations Portfolio",
-    description:
-      "Selected operational work across residence, property, hospitality and service environments.",
-    url: "/",
-  },
-  twitter: {
-    title: "ANIS ALLOUACHE — Operations Portfolio",
-    description:
-      "Selected operational work across residence, property, hospitality and service environments.",
-  },
+  title: "Anis Allouache — Organisation opérationnelle et outils métiers",
+  description: "Coordination opérationnelle, amélioration des processus et conception d'outils métiers adaptés aux besoins du terrain.",
+  alternates: { canonical: "/" },
 };
 
-const realCases = [
-  {
-    sector: "Hospitality",
-    title: "Résidence Cadet",
-    problem: "Guest stays, access, follow-up, payments and reporting were spread across files, calls and front-desk memory.",
-    system: "A clearer operating routine for guest follow-up, access, issues and reporting.",
-    outcome: "7.6 → 9.2 / 10 guest satisfaction · ~10h/week admin work reduced",
-    href: "/case-study/vesper",
-    location: "home_proof_residence_cadet",
-    ctaLabel: "View operational case",
-  },
-  {
-    sector: "Logistics",
-    title: "Kepler Express",
-    problem: "Mission follow-up, driver costs, invoicing and payments moved separately, making daily control harder.",
-    system: "A clearer operating flow connecting mission status, cost capture and billing follow-up.",
-    outcome: "Cleaner daily follow-up · mission-level cost visibility · billing matched to executed work",
-    href: "/case-study/kepler-express",
-    location: "home_proof_kepler",
-    ctaLabel: "View operational case",
-  },
+const expertises = [
+  { num: "01", title: "Coordination opérationnelle", text: "Organiser le quotidien, suivre les interventions, les prestataires, les incidents et la qualité du travail réalisé." },
+  { num: "02", title: "Amélioration des processus", text: "Identifier les frictions, clarifier les responsabilités et mettre en place des méthodes de suivi simples." },
+  { num: "03", title: "Outils métiers", text: "Concevoir des tableaux de bord et des applications qui répondent à des besoins opérationnels identifiés." },
 ] as const;
 
-const audienceFit = [
-  {
-    title: "Hospitality operations",
-    description: "Guest operations, incidents, payments, housekeeping, maintenance and reporting.",
-  },
-  {
-    title: "Service & on-site operations",
-    description: "Recurring execution, stakeholder coordination, follow-up and operational control.",
-  },
-  {
-    title: "Logistics operations",
-    description: "Mission follow-up, costs, invoicing and coordination between execution and administration.",
-  },
-  {
-    title: "International environments",
-    description: "Operational work across multilingual and customer-facing contexts.",
-  },
-] as const;
-
-const operationalTools = [
-  {
-    name: "StayOps",
-    context: "Property & hospitality operations",
-    href: "https://stayops.anisconsult.com",
-    label: "stayops.anisconsult.com",
-  },
-  {
-    name: "Kepler Express",
-    context: "Logistics & mission follow-up",
-    href: "https://kepler.anisconsult.com",
-    label: "kepler.anisconsult.com",
-  },
+const cases = [
+  { area: "Résidences de services", title: "Résidence Cadet", summary: "Coordination des activités d'une résidence de 23 unités : séjours, accès, interventions, incidents et reporting.", href: "/case-study/vesper" },
+  { area: "Transport et logistique", title: "Kepler Express", summary: "Structuration du suivi des missions, des dépenses et de la facturation, avec conception d'un outil métier.", href: "/case-study/kepler-express" },
 ] as const;
 
 export default function HomePage() {
   return (
     <>
       <SiteHeader />
-
-      <main id="home" className="bg-white text-ink antialiased">
-        <Reveal>
-          <Hero />
-        </Reveal>
-
-        <ValueSection />
-
-        <BeforeAfterSection />
-
-        <section
-          id="case-study"
-          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
-        >
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={40}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-end lg:gap-16">
-              <div className="max-w-3xl">
-                <SectionKicker label="Operational cases" />
-                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.7rem]">
-                  Proof of execution.
-                </h2>
-              </div>
-
-              <p className="max-w-2xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Field-tested work, clear constraints and practical outcomes.
-              </p>
+      <main className="bg-white text-ink">
+        <section className="border-b border-line">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Organisation opérationnelle · Processus · Outils métiers</p>
+            <h1 className="mt-8 max-w-5xl font-display text-5xl font-semibold leading-[1.02] tracking-[-0.055em] sm:text-6xl lg:text-[5.5rem]">Des opérations mieux organisées. Des outils vraiment utiles.</h1>
+            <p className="mt-9 max-w-3xl text-xl leading-9 text-muted">Mon travail consiste à comprendre le fonctionnement d'une activité, organiser son suivi et résoudre les problèmes concrets du quotidien.</p>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-muted sm:text-lg">Je combine une expérience de terrain en coordination opérationnelle avec la capacité à concevoir des méthodes de suivi, des tableaux de bord et des applications métiers.</p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link href="/work" className="premium-cta h-12 px-6">Voir les réalisations</Link>
+              <Link href="/services" className="premium-cta-outline h-12 px-6">Mes expertises</Link>
             </div>
-
-            <div className="mt-12">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                Field-tested operational cases
-              </p>
-              <div className="mt-5 grid gap-6 md:grid-cols-2">
-                {realCases.map((item) => (
-                  <article key={item.title} className="premium-soft-card flex h-full flex-col">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/42">
-                      {item.sector}
-                    </p>
-                    <h3 className="mt-5 font-display text-3xl font-semibold tracking-[-0.04em] text-ink sm:text-[2.2rem]">
-                      {item.title}
-                    </h3>
-                    <dl className="mt-6 space-y-5">
-                      <div>
-                        <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                          Problem
-                        </dt>
-                        <dd className="mt-2 text-sm leading-7 text-ink/78">{item.problem}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                          Operating change
-                        </dt>
-                        <dd className="mt-2 text-sm leading-7 text-ink/78">{item.system}</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-black/38">
-                          Outcome
-                        </dt>
-                        <dd className="mt-2 text-sm font-medium leading-7 text-ink">{item.outcome}</dd>
-                      </div>
-                    </dl>
-
-                    <div className="mt-auto pt-8">
-                      <TrackedLink
-                        href={item.href}
-                        event="case_study_cta_click"
-                        data={{ location: item.location }}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                      >
-                        {item.ctaLabel}
-                      </TrackedLink>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-            <div className="mt-10 flex justify-start border-t border-line pt-6">
-              <TrackedLink
-                href="/work"
-                event="case_study_cta_click"
-                data={{ location: "home_proof_footer" }}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-              >
-                View operational cases
-              </TrackedLink>
-            </div>
-          </Reveal>
+            <p className="mt-9 text-sm text-muted">Expérience en hôtellerie, résidences de services et coordination d'activités.</p>
+          </div>
         </section>
-
-        <section id="operational-tools" className="border-t border-line bg-surface">
-          <Reveal className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20" delayMs={55}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
-              <div className="max-w-3xl">
-                <SectionKicker label="Selected operational tools" />
-                <h2 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.3rem]">
-                  Supporting work from real operating problems.
-                </h2>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                  Some operational problems led to practical internal tools or prototypes. They are shown here as supporting work, not as a separate software business.
-                </p>
-                <TrackedLink
-                  href="/systems"
-                  event="case_study_cta_click"
-                  data={{ location: "home_systems_intro" }}
-                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-[gap,color] duration-200 hover:gap-3 hover:text-black"
-                >
-                  View supporting systems
-                </TrackedLink>
-              </div>
-
-              <div className="grid gap-3">
-                {operationalTools.map((tool) => (
-                  <div
-                    key={tool.name}
-                    className="grid items-center gap-3 border-t border-black/10 py-4 sm:grid-cols-[minmax(0,0.34fr)_minmax(0,0.46fr)_auto]"
-                  >
-                    <p className="text-sm font-semibold text-ink">{tool.name}</p>
-                    <p className="text-sm leading-6 text-muted">{tool.context}</p>
-                    <a
-                      href={tool.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm font-semibold text-ink underline-offset-2 hover:underline sm:text-right"
-                    >
-                      {tool.label}
-                    </a>
-                  </div>
-                ))}
-              </div>
+        <section className="border-b border-line bg-[#f8f7f3]">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Mon activité</p>
+            <h2 className="mt-4 max-w-3xl font-display text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Du problème constaté à une solution utilisable.</h2>
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
+              {expertises.map((item) => (
+                <article key={item.num} className="rounded-[24px] border border-line bg-white p-7">
+                  <span className="text-sm font-semibold text-muted">{item.num}</span>
+                  <h3 className="mt-7 text-xl font-semibold tracking-tight">{item.title}</h3>
+                  <p className="mt-4 text-base leading-7 text-muted">{item.text}</p>
+                </article>
+              ))}
             </div>
-          </Reveal>
+            <Link href="/services" className="mt-9 inline-block font-semibold underline underline-offset-4">Découvrir les expertises →</Link>
+          </div>
         </section>
-
-        <section
-          id="who-i-work-with"
-          className="scroll-mt-32 bg-neutral-50 md:scroll-mt-24"
-        >
-          <Reveal className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-28" delayMs={70}>
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start lg:gap-16">
-              <div className="max-w-3xl">
-                <SectionKicker label="Where this experience applies" />
-                <h2 className="text-balance mt-5 max-w-4xl font-display text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.5rem]">
-                  Practical contexts, not a claim to cover every sector.
-                </h2>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                {audienceFit.map((item) => (
-                  <article key={item.title} className="rounded-[24px] border border-line bg-[#fbfaf7] p-5">
-                    <h3 className="text-base font-semibold tracking-[-0.02em] text-ink">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-muted">{item.description}</p>
-                  </article>
-                ))}
-              </div>
+        <section className="border-b border-line">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Réalisations</p>
+            <h2 className="mt-4 font-display text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">Des situations concrètes, pas des promesses.</h2>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {cases.map((item) => (
+                <article key={item.title} className="rounded-[28px] border border-line p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">{item.area}</p>
+                  <h3 className="mt-5 font-display text-3xl font-semibold">{item.title}</h3>
+                  <p className="mt-5 leading-8 text-muted">{item.summary}</p>
+                  <Link href={item.href} className="mt-7 inline-block font-semibold underline underline-offset-4">Voir le cas →</Link>
+                </article>
+              ))}
             </div>
-          </Reveal>
+          </div>
         </section>
-
-        <section
-          id="contact"
-          className="scroll-mt-32 border-t border-line bg-white md:scroll-mt-24"
-        >
-          <Reveal className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24" delayMs={80}>
-            <ContactSection headingLevel="h2" />
-          </Reveal>
+        <section className="border-b border-line bg-[#f8f7f3]">
+          <div className="mx-auto grid max-w-7xl gap-6 px-6 py-20 lg:grid-cols-2 lg:gap-20 lg:px-10">
+            <div><p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Approche</p><h2 className="mt-4 font-display text-4xl font-semibold tracking-tight">Partir du terrain, pas de l'outil.</h2></div>
+            <div><p className="text-base leading-8 text-muted">Observer le travail réel, comprendre les points de friction, clarifier les responsabilités, puis choisir la bonne réponse : une méthode, un suivi partagé ou un outil numérique.</p><Link href="/about" className="mt-6 inline-block font-semibold underline underline-offset-4">Ma façon de travailler →</Link></div>
+          </div>
         </section>
+        <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10"><ContactSection headingLevel="h2" /></section>
       </main>
-
       <SiteFooter />
     </>
   );

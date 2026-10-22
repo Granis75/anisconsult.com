@@ -4,22 +4,22 @@ export const cvHref: string | null = null;
 
 export const siteContent = {
   brand: "ANIS ALLOUACHE",
-  brandContext: "Operations Portfolio",
+  brandContext: "Organisation opérationnelle & outils métiers",
   navigation: [
-    { label: "Work", href: "/work" },
-    { label: "Systems", href: "/systems" },
-    { label: "About", href: "/about" },
+    { label: "Réalisations", href: "/work" },
+    { label: "Expertises", href: "/services" },
+    { label: "Approche", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Operations portfolio.",
-    subtitle: "Residence & Property Operations",
+    title: "Des opérations mieux organisées.",
+    subtitle: "Organisation opérationnelle et outils métiers",
     description:
-      "Selected work showing how operational problems were structured, improved and turned into clearer routines, controls and supporting systems.",
+      "Coordination des activités, amélioration des processus et outils numériques adaptés au terrain.",
     support:
-      "Focused on serviced residences, resident operations, property workflows and field-tested operations work across service environments.",
+      "Une approche concrète fondée sur l’expérience des résidences de services et des opérations quotidiennes.",
     primaryCta: {
-      label: "View selected work",
+      label: "Voir les réalisations",
       href: "/work",
     },
     secondaryCta: {

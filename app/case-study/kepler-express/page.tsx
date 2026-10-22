@@ -1,217 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SectionKicker } from "@/components/section-kicker";
-import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-
+import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
-  title: "Kepler Express Operational Case | ANIS ALLOUACHE",
-  description:
-    "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
-  alternates: {
-    canonical: "/case-study/kepler-express",
-  },
-  openGraph: {
-    title: "Kepler Express Operational Case | ANIS ALLOUACHE",
-    description:
-      "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
-    url: "/case-study/kepler-express",
-  },
-  twitter: {
-    title: "Kepler Express Operational Case | ANIS ALLOUACHE",
-    description:
-      "How Kepler Express structured mission status, expenses, invoicing and payment follow-up for transport operations.",
-  },
+  title: "Kepler Express — Organisation et outil métier | Anis Allouache",
+  description: "Structurer le suivi de missions de transport, des coûts, de la facturation et des paiements.",
+  alternates: { canonical: "/case-study/kepler-express" },
 };
-
-const problemItems = [
-  "Mission requests, execution notes and back-office follow-up were fragmented",
-  "There was no shared view of mission status, blockers or next actions",
-  "Expenses were logged late or missed",
-  "Invoices and payment follow-up had to be rebuilt from scattered information",
-  "Mission costs were hard to review in the daily workflow",
+const actions = [
+  "Définir les étapes de suivi d'une mission, de la demande à l'exécution.",
+  "Structurer les informations liées aux intervenants et aux dépenses.",
+  "Relier les missions effectuées aux éléments de facturation et au suivi des paiements.",
+  "Concevoir une interface réunissant ces informations selon le déroulement réel du travail.",
 ] as const;
-
-const resultItems = [
-  {
-    title: "Cleaner Daily Follow-Up",
-    detail: "Less dependence on calls, paper notes and spreadsheet backtracking",
-  },
-  {
-    title: "Mission-Level Cost Visibility",
-    detail: "Mission costs were captured inside the day-to-day workflow",
-  },
-  {
-    title: "Billing Matched to Executed Work",
-    detail: "Invoices were prepared from the same mission and expense data used in operations",
-  },
-  {
-    title: "Stronger Dispatch-Billing Coordination",
-    detail: "Dispatch and billing worked from the same operational picture",
-  },
-] as const;
-
-const implementationItems = [
-  "Tracked the mission lifecycle from request to execution",
-  "Created clearer operational statuses for mission follow-up",
-  "Captured driver and trip costs inside the mission workflow",
-  "Separated advances, company expenses and billable items",
-  "Connected invoice and payment visibility to executed work",
-  "Reduced fragmented admin follow-up between operations and billing",
-] as const;
-
-const flowSteps = ["Client", "Mission", "Expense", "Invoice", "Payment"] as const;
-
-export default function KeplerExpressCaseStudyPage() {
+export default function KeplerCase() {
   return (
-    <>
-      <SiteHeader />
-
-      <main className="bg-white text-ink antialiased">
-        <section className="border-b border-line bg-white">
-          <div className="mx-auto max-w-7xl px-6 pb-14 pt-16 lg:px-10 lg:pb-20 lg:pt-24">
-            <div className="max-w-4xl">
-              <SectionKicker label="Operational Case" />
-              <h1 className="mt-6 max-w-4xl font-display text-balance text-4xl font-semibold leading-[0.96] tracking-[-0.05em] text-ink sm:text-5xl lg:text-[3.65rem]">
-                Operational workflow improvement for transport operations
-              </h1>
-              <p className="mt-8 max-w-3xl text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Structuring mission status, expenses, invoicing and payment follow-up.
-              </p>
-              <p className="mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg">
-                Transport operations needed one clearer workflow for mission requests, execution, expenses, invoicing and payment follow-up.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-surface">
-          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
-            <div className="space-y-20">
-              <section className="max-w-3xl rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                <SectionKicker label="Context" />
-                <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
-                  Transport and logistics operations with fragmented follow-up across mission requests, execution, expenses, invoicing and payment. Based on real logistics work with heavy manual coordination and follow-up.
-                </p>
-                <p className="mt-5 text-base leading-8 text-ink sm:text-lg">
-                  The workflow structure was developed through day-to-day coordination of transport missions, expense tracking, invoicing and payment follow-up.
-                </p>
-              </section>
-
-              <div className="grid gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-                <section
-                  id="problem"
-                  className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
-                >
-                  <SectionKicker label="Problem" />
-                  <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    Mission status, expenses and billing were being managed in different places, which slowed coordination and made daily control harder.
-                  </p>
-
-                  <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
-                    {problemItems.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </section>
-
-                <section className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                  <SectionKicker label="Operating change" />
-                  <p className="mt-5 max-w-xl text-lg font-semibold leading-8 tracking-[-0.02em] text-ink">
-                    The workflow was structured so mission tracking, operational statuses, expenses, invoices and payments could move together.
-                  </p>
-
-                  <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 sm:px-5">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Operating Flow
-                    </p>
-                    <div className="mt-4 flex flex-wrap items-center gap-2.5">
-                      {flowSteps.map((item, index) => (
-                        <div key={item} className="flex items-center gap-2.5">
-                          <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-ink">
-                            {item}
-                          </span>
-                          {index < flowSteps.length - 1 ? (
-                            <span className="text-sm text-black/25">→</span>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <ul className="mt-6 space-y-3 pl-5 text-sm leading-7 text-ink marker:text-black/30 sm:text-base">
-                    {implementationItems.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </section>
-              </div>
-
-              <section className="space-y-10">
-                <div className="max-w-3xl">
-                  <SectionKicker label="Outcome" />
-                </div>
-
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                  {resultItems.map((item) => (
-                    <article
-                      key={item.title}
-                      className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
-                    >
-                      <p className="text-sm font-semibold tracking-[-0.01em] text-ink">
-                        {item.title}
-                      </p>
-                      <p className="mt-3 text-sm leading-7 text-muted">
-                        {item.detail}
-                      </p>
-                    </article>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <div className="max-w-3xl rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-                  <SectionKicker label="Insight" />
-                  <p className="mt-5 text-2xl font-semibold leading-tight tracking-[-0.03em] text-ink sm:text-3xl">
-                    When work becomes visible, teams can act faster.
-                  </p>
-                  <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-                    The main improvement came from connecting operational execution and administrative follow-up in one clearer workflow.
-                  </p>
-
-                  <div className="mt-6 border-t border-slate-200 pt-6">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-black/45">
-                      Related operational tool
-                    </p>
-                    <p className="mt-4 text-sm font-semibold leading-7 text-ink">
-                      Kepler Express — kepler.anisconsult.com
-                    </p>
-                    <a
-                      href="https://kepler.anisconsult.com"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
-                    >
-                      kepler.anisconsult.com
-                    </a>
-                  </div>
-
-                  <div className="mt-6">
-                    <Link
-                      href="/work"
-                      className="inline-flex items-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-slate-50"
-                    >
-                      Back to operational cases
-                    </Link>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <SiteFooter />
-    </>
+    <><SiteHeader /><main className="bg-white text-ink">
+      <section className="border-b border-line"><div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <Link href="/work" className="text-sm font-semibold text-muted underline underline-offset-4">← Toutes les réalisations</Link>
+        <p className="mt-12 text-xs font-semibold uppercase tracking-[0.18em] text-muted">Logistique · Organisation et outil métier</p>
+        <h1 className="mt-6 max-w-5xl font-display text-5xl font-semibold tracking-[-0.055em] sm:text-6xl">Kepler Express : relier les missions au suivi administratif.</h1>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">Un exemple de structuration d'un processus opérationnel et de conception d'un outil de suivi.</p>
+      </div></section>
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10"><div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+        <aside><h2 className="font-display text-2xl font-semibold">Le contexte</h2>
+        <p className="mt-5 leading-8 text-muted">Missions de transport, frais associés, informations clients, suivi des factures et règlements.</p></aside>
+        <div className="space-y-12">
+          <div><h2 className="font-display text-3xl font-semibold">La difficulté</h2>
+          <p className="mt-5 leading-8 text-muted">Quand les missions, les frais et la facturation sont suivis séparément, il est difficile d'obtenir une vue fiable de chaque opération.</p></div>
+          <div><h2 className="font-display text-3xl font-semibold">La réponse conçue</h2>
+          <ul className="mt-6 space-y-4">{actions.map(item=><li key={item} className="border-l-2 border-ink pl-5 leading-8 text-muted">{item}</li>)}</ul></div>
+          <div><h2 className="font-display text-3xl font-semibold">Ce que ce projet démontre</h2>
+          <p className="mt-5 leading-8 text-muted">Une capacité à traduire un processus opérationnel en règles de suivi et en interfaces. Ce cas présente le système conçu ; il ne prétend pas démontrer des résultats commerciaux mesurés.</p>
+          <p className="mt-6 leading-8 text-muted">La partie logicielle est également présentée sur <a href="https://www.lyanstudio.com/work.html" target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline underline-offset-4">Lyan Studio</a>.</p></div>
+        </div>
+      </div></section>
+    </main><SiteFooter /></>
   );
 }
