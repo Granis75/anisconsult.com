@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Réalisations — Anis Allouache",
   description: "Exemples concrets de coordination, structuration et conception d'outils métiers : Résidence Cadet et Kepler Express.",
-  alternates: { canonical: "/work" },
+  alternates: { canonical: "/work", languages: { "fr-FR": "/work", "en-US": "/en/work" } },
 };
 
 const cases = [

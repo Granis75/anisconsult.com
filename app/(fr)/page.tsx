@@ -7,7 +7,7 @@ import { ContactSection } from "@/components/contact-section";
 export const metadata: Metadata = {
   title: "Anis Allouache — Organisation opérationnelle et outils métiers",
   description: "Coordination opérationnelle, amélioration des processus et conception d'outils métiers adaptés aux besoins du terrain.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: { "fr-FR": "/", "en-US": "/en" } },
 };
 
 const expertises = [

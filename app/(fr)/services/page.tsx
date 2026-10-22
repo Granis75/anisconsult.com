@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Expertises — Anis Allouache",
   description: "Coordination opérationnelle, contrôle qualité, amélioration des processus et conception d'outils de suivi.",
-  alternates: { canonical: "/services" },
+  alternates: { canonical: "/services", languages: { "fr-FR": "/services", "en-US": "/en/services" } },
 };
 const domains = [
   { title: "Coordination opérationnelle", detail: "Organisation du travail quotidien, suivi des tâches, des prestataires, des interventions et des incidents.", purpose: "Donner de la visibilité aux priorités et aux responsabilités." },

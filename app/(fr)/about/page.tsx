@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Approche — Anis Allouache",
   description: "Partir des réalités du terrain, structurer les processus et choisir des outils utiles.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about", languages: { "fr-FR": "/about", "en-US": "/en/about" } },
 };
 const steps = [
   { title: "Comprendre", text: "Observer les opérations, les personnes impliquées et les outils existants. Identifier où se perdent l'information et le temps." },

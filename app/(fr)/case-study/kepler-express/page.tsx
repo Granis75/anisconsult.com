@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Kepler Express — Organisation et outil métier | Anis Allouache",
   description: "Structurer le suivi de missions de transport, des coûts, de la facturation et des paiements.",
-  alternates: { canonical: "/case-study/kepler-express" },
+  alternates: { canonical: "/case-study/kepler-express", languages: { "fr-FR": "/case-study/kepler-express", "en-US": "/en/case-study/kepler-express" } },
 };
 const actions = [
   "Définir les étapes de suivi d'une mission, de la demande à l'exécution.",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "Coordination des activités, amélioration des processus et outils métiers adaptés aux besoins du terrain.",
   alternates: {
     canonical: "/",
+    languages: { "fr-FR": "/", "en-US": "/en" },
   },
   icons: {
     icon: [

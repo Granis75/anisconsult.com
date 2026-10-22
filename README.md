@@ -1,31 +1,31 @@
-# anisconsult.com — Site de référence professionnelle
+# AnisConsult — French / English
 
-Site personnel présentant l'activité d'Anis Allouache : coordination opérationnelle, amélioration des processus et outils métiers.
+Personal reference site presenting Anis Allouache's professional activity in operations coordination, process improvement and business tools.
 
-## Rôle
+- **French:** https://anisconsult.com/ (default)
+- **English:** https://anisconsult.com/en
 
-- **AnisConsult** : activité, savoir-faire, méthode de travail et études de cas opérationnelles.
-- **Lyan Studio** : applications et réalisations strictement logicielles.
+Both languages provide the home, expertise, selected work, approach, contact and two operational case studies. The header's FR / EN switch preserves the current page. No machine translation is used at runtime.
 
-Ce site n'est ni un CV, ni une agence fictive, ni un catalogue de produits. Aucun résultat chiffré non accompagné de sa méthode de mesure n'est mis en avant.
+## Architecture
 
-## Pages
+Next.js App Router uses two route groups with separate root layouts:
 
-- `/` — activité
-- `/services` — expertises
-- `/work` — réalisations
-- `/about` — approche
-- `/contact` — contact
-- `/case-study/vesper` — Résidence Cadet
-- `/case-study/kepler-express` — Kepler Express
+- `app/(fr)/` — French routes and `<html lang="fr">`
+- `app/(en)/en/` — English routes and `<html lang="en">`
 
-L'ancienne page `/systems` redirige vers les expertises.
+Both share the visual system in `app/globals.css` and the navigation, footer and contact components. Canonical and hreflang metadata are included per language and in the sitemap. Legacy French paths are retained through the French route group.
 
-## Développement
+## Separation of roles
+
+- **AnisConsult:** professional activity, methodology and concrete operational case studies.
+- **Lyan Studio:** software products, prototypes and implementation work.
+
+## Verification
 
 ```sh
 npm install
 npm run build
 ```
 
-Domaine public : https://anisconsult.com/
+Ensure both languages compile; verify links on mobile; inspect `/sitemap.xml`, `/en`, `/en/work`, and case-study equivalents.

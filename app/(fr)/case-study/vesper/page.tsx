@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Résidence Cadet — Réalisation opérationnelle | Anis Allouache",
   description: "Organisation des opérations d'une résidence de 23 unités : suivi des séjours, interventions, incidents et reporting.",
-  alternates: { canonical: "/case-study/vesper" },
+  alternates: { canonical: "/case-study/vesper", languages: { "fr-FR": "/case-study/vesper", "en-US": "/en/case-study/vesper" } },
 };
 const actions = [
   "Clarifier les tâches et les responsabilités au quotidien.",
