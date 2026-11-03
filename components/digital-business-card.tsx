@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Check, Globe2, Linkedin, Mail, Share2, UserRoundPlus } from "lucide-react";
+import { ArrowUpRight, Check, Globe2, Mail, Share2, UserRoundPlus } from "lucide-react";
 
 const FRENCH_URL = "https://anisconsult.com/carte";
 const ENGLISH_URL = "https://anisconsult.com/en/card";
@@ -172,7 +172,7 @@ export function DigitalBusinessCard({ locale }: { locale: "fr" | "en" }) {
           </a>
           <div className="mx-5 border-t border-[#eeece7]" />
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-5 py-4 transition-colors hover:bg-[#faf9f6]">
-            <Linkedin size={18} className="text-[#6d6b65]" aria-hidden="true" />
+            <Globe2 size={18} className="text-[#6d6b65]" aria-hidden="true" />
             <span className="flex-1 text-sm font-medium">LinkedIn</span>
             <ArrowUpRight size={17} className="text-[#88867f]" aria-hidden="true" />
           </a>
