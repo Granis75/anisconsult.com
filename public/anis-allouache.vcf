@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Allouache;Anis;;;
+FN:Anis Allouache
+ORG:Anis Consult
+TITLE:Organisation operationnelle et outils metiers
+EMAIL;TYPE=INTERNET;TYPE=WORK:hello@anisconsult.com
+URL;TYPE=WORK:https://anisconsult.com/carte
+URL;TYPE=OTHER:https://www.linkedin.com/in/anisallouachepro/
+ADR;TYPE=WORK:;;;Paris;;;France
+END:VCARD
