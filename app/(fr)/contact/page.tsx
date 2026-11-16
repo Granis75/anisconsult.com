@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 export const metadata: Metadata = {
   title: "Contact — Anis Allouache",
-  description: "Contacter Anis Allouache pour échanger sur l'organisation opérationnelle, la coordination et les outils métiers.",
+  description: "Contacter Anis Allouache pour échanger sur les opérations métier, l'amélioration des processus, les solutions numériques ou une opportunité professionnelle.",
   alternates: { canonical: "/contact", languages: { "fr-FR": "/contact", "en-US": "/en/contact" } },
 };
 export default function ContactPage() {

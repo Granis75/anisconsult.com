@@ -9,7 +9,7 @@ export function SiteFooter({ locale = "fr" }: { locale?: Locale }) {
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 px-6 py-10 text-sm text-muted md:flex-row lg:px-10">
         <div className="space-y-2">
           <Link href={english ? "/en" : "/"} className="font-display font-semibold uppercase tracking-[0.12em] text-ink">{siteContent.brand}</Link>
-          <p>{english ? "Operations coordination, process improvement and business tools." : "Organisation opérationnelle, coordination et outils métiers."}</p>
+          <p>{english ? "Business operations, process improvement and digital solutions." : "Opérations métier, amélioration des processus et solutions numériques."}</p>
           <p>{english ? "Paris · France" : "Paris · France"}</p>
         </div>
         <div className="flex flex-col gap-2 md:items-end">
