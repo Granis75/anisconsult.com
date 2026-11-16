@@ -30,8 +30,13 @@ export default function EnglishKeplerCase() {
           <p className="mt-5 leading-8 text-muted">When missions, costs and billing are tracked separately, it becomes difficult to build a reliable picture of each operation.</p></div>
           <div><h2 className="font-display text-3xl font-semibold">The solution designed</h2>
           <ul className="mt-6 space-y-4">{actions.map(item=><li key={item} className="border-l-2 border-ink pl-5 leading-8 text-muted">{item}</li>)}</ul></div>
+          <div><h2 className="font-display text-3xl font-semibold">Workflow structure</h2>
+          <ol aria-label="Simplified operational workflow" className="mt-6 grid gap-3 sm:grid-cols-2">
+            {["Mission", "Expenses", "Invoice", "Payment follow-up"].map((step, i) => <li key={step} className="rounded-xl border border-line bg-[#f8f7f3] p-4"><span className="mr-3 text-sm font-semibold text-muted">0{i+1}</span>{step}</li>)}
+          </ol>
+          <p className="mt-4 text-sm leading-7 text-muted">Simplified process diagram, not a client screenshot or a measured outcome.</p></div>
           <div><h2 className="font-display text-3xl font-semibold">What this case demonstrates</h2>
-          <p className="mt-5 leading-8 text-muted">The ability to translate an operational process into tracking rules and usable interfaces. It documents the system design, not independently measured commercial outcomes.</p>
+          <p className="mt-5 leading-8 text-muted">The ability to translate an operational process into tracking rules and usable interfaces. This case focuses on process design and the tracking system rather than commercial performance figures.</p>
           <p className="mt-6 leading-8 text-muted">The software itself is also presented on <a href="https://www.lyanstudio.com/work.html" target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline underline-offset-4">Lyan Studio</a>.</p></div>
         </div>
       </div></section>

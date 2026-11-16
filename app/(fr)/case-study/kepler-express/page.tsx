@@ -30,8 +30,13 @@ export default function KeplerCase() {
           <p className="mt-5 leading-8 text-muted">Quand les missions, les frais et la facturation sont suivis séparément, il est difficile d'obtenir une vue fiable de chaque opération.</p></div>
           <div><h2 className="font-display text-3xl font-semibold">La réponse conçue</h2>
           <ul className="mt-6 space-y-4">{actions.map(item=><li key={item} className="border-l-2 border-ink pl-5 leading-8 text-muted">{item}</li>)}</ul></div>
+          <div><h2 className="font-display text-3xl font-semibold">Structure du suivi</h2>
+          <ol aria-label="Flux opérationnel simplifié" className="mt-6 grid gap-3 sm:grid-cols-2">
+            {["Mission", "Dépenses", "Facturation", "Suivi du paiement"].map((step, i) => <li key={step} className="rounded-xl border border-line bg-[#f8f7f3] p-4"><span className="mr-3 text-sm font-semibold text-muted">0{i+1}</span>{step}</li>)}
+          </ol>
+          <p className="mt-4 text-sm leading-7 text-muted">Schéma simplifié du processus, et non capture d'un outil client ou résultat mesuré.</p></div>
           <div><h2 className="font-display text-3xl font-semibold">Ce que ce projet démontre</h2>
-          <p className="mt-5 leading-8 text-muted">Une capacité à traduire un processus opérationnel en règles de suivi et en interfaces. Ce cas présente le système conçu ; il ne prétend pas démontrer des résultats commerciaux mesurés.</p>
+          <p className="mt-5 leading-8 text-muted">Une capacité à traduire un processus opérationnel en règles de suivi et en interfaces. Ce cas présente la conception du processus et de son outil de suivi, sans y associer de résultat commercial chiffré.</p>
           <p className="mt-6 leading-8 text-muted">La partie logicielle est également présentée sur <a href="https://www.lyanstudio.com/work.html" target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline underline-offset-4">Lyan Studio</a>.</p></div>
         </div>
       </div></section>
