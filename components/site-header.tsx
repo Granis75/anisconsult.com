@@ -12,7 +12,7 @@ const routes = [
 ] as const;
 const availablePages = new Set([
   "/", "/services", "/work", "/about", "/contact",
-  "/case-study/vesper", "/case-study/kepler-express",
+  "/case-study/vesper", "/case-study/kepler-express", "/case-study/hotel-modernization",
 ]);
 
 export function SiteHeader() {
@@ -30,7 +30,7 @@ export function SiteHeader() {
         <Link href={english ? "/en" : "/"} aria-label={english ? "Anis Allouache — home" : "Anis Allouache — accueil"} className="flex flex-col transition-opacity hover:opacity-80">
           <span className="font-display text-lg font-semibold uppercase tracking-[0.14em] text-ink">{siteContent.brand}</span>
           <span className="mt-1 text-[0.65rem] font-medium tracking-[0.075em] text-muted sm:text-xs">
-            {english ? "Operations & Business Systems" : "Organisation opérationnelle & outils métiers"}
+            {english ? "Business Operations & Digital Solutions" : "Opérations métier & solutions numériques"}
           </span>
         </Link>
         <div className="flex flex-wrap items-center justify-between gap-5">

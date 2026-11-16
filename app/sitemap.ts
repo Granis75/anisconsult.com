@@ -9,6 +9,7 @@ const routes = [
   "/contact",
   "/case-study/vesper",
   "/case-study/kepler-express",
+  "/case-study/hotel-modernization",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,14 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return [
       {
         url: languages["fr-FR"],
-        lastModified: new Date(),
         changeFrequency: "monthly" as const,
         priority: route === "" ? 1 : route === "/work" ? 0.9 : 0.7,
         alternates: { languages },
       },
       {
         url: languages["en-US"],
-        lastModified: new Date(),
         changeFrequency: "monthly" as const,
         priority: route === "" ? 0.9 : route === "/work" ? 0.8 : 0.6,
         alternates: { languages },
