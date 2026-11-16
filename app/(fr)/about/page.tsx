@@ -19,7 +19,7 @@ export default function AboutPage() {
       <section className="border-b border-line"><div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Approche</p>
         <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold tracking-[-0.055em] sm:text-6xl">Comprendre avant de proposer.</h1>
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">Mon expérience en coordination opérationnelle m'a appris qu'un processus n'est utile que s'il correspond aux contraintes du terrain. C'est aussi ce qui guide ma manière de concevoir des outils numériques.</p>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">L'expérience opérationnelle guide ma manière d'aborder les systèmes : comprendre le travail réel, identifier les informations utiles et confronter les solutions aux contraintes du terrain.</p>
       </div></section>
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="grid gap-5 md:grid-cols-2">
@@ -31,7 +31,12 @@ export default function AboutPage() {
         </div>
         <div className="mt-14 max-w-3xl">
           <h2 className="font-display text-3xl font-semibold">Le numérique est un moyen, pas une finalité.</h2>
-          <p className="mt-5 leading-8 text-muted">Je sais développer des interfaces et des outils de gestion. Mais tous les problèmes ne nécessitent pas un logiciel supplémentaire : une procédure claire ou un meilleur suivi suffit parfois.</p>
+          <p className="mt-5 leading-8 text-muted">La bonne réponse peut être une procédure plus claire, un meilleur reporting ou une application adaptée. Le choix de la technologie vient après l'analyse du besoin.</p>
+          <div className="mt-8 rounded-[24px] border border-line bg-[#f8f7f3] p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Exemple · Travail en cours</p>
+            <h3 className="mt-3 text-xl font-semibold">Des archives aux décisions</h3>
+            <p className="mt-3 leading-8 text-muted">Dans un projet hôtelier actuel, des documents historiques sont structurés pour créer une base de travail. Un prototype interactif aide à envisager de futurs processus ; la vérification sur place reste une étape distincte.</p>
+          </div>
           <p className="mt-5 leading-8 text-muted">Pour la dimension exclusivement logicielle de mon travail, mes projets sont présentés sur <a href="https://www.lyanstudio.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline underline-offset-4">Lyan Studio</a>.</p>
           <Link href="/work" className="mt-7 inline-block font-semibold underline underline-offset-4">Voir les réalisations →</Link>
         </div>

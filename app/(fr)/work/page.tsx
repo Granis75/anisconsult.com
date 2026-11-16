@@ -5,25 +5,14 @@ import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: "Réalisations — Anis Allouache",
-  description: "Exemples concrets de coordination, structuration et conception d'outils métiers : Résidence Cadet et Kepler Express.",
+  description: "Missions en opérations et solutions numériques : modernisation hôtelière en cours, Résidence Cadet et Kepler Express.",
   alternates: { canonical: "/work", languages: { "fr-FR": "/work", "en-US": "/en/work" } },
 };
 
 const cases = [
-  {
-    num: "01", area: "Résidences de services", title: "Résidence Cadet",
-    context: "Exploitation quotidienne d'une résidence de 23 unités.",
-    challenge: "Suivi des séjours, demandes, accès, incidents et interventions réparti entre plusieurs supports.",
-    response: "Coordination des activités, clarification des routines et mise en place d'un suivi plus structuré des sujets opérationnels.",
-    href: "/case-study/vesper",
-  },
-  {
-    num: "02", area: "Transport et logistique", title: "Kepler Express",
-    context: "Gestion et suivi de missions de transport.",
-    challenge: "Missions, frais et facturation suivis séparément, avec une vision partielle des opérations.",
-    response: "Structuration d'un flux de suivi et conception d'un outil reliant missions, dépenses et informations de facturation.",
-    href: "/case-study/kepler-express",
-  },
+  { num: "01", area: "Hôtellerie · Projet en cours", title: "Modernisation d'un hôtel parisien", context: "Modernisation opérationnelle et numérique en cours.", challenge: "Des archives et informations techniques dispersées doivent être organisées avant de décider des futurs outils et processus.", response: "Structuration des sources et prototype interactif ; l'audit terrain et le choix des logiciels restent à venir.", href: "/case-study/hotel-modernization" },
+  { num: "02", area: "Résidences de services", title: "Résidence Cadet", context: "Exploitation quotidienne d'une résidence de 23 unités.", challenge: "Suivi des séjours, demandes, accès, incidents et interventions réparti entre plusieurs supports.", response: "Coordination des activités, clarification des routines et mise en place d'un suivi plus structuré des sujets opérationnels.", href: "/case-study/vesper" },
+  { num: "03", area: "Transport et logistique", title: "Kepler Express", context: "Gestion et suivi de missions de transport.", challenge: "Missions, frais et facturation suivis séparément, avec une vision partielle des opérations.", response: "Structuration du suivi et conception d'un outil reliant missions, dépenses et informations de facturation.", href: "/case-study/kepler-express" },
 ] as const;
 
 export default function WorkPage() {
@@ -32,7 +21,7 @@ export default function WorkPage() {
       <section className="border-b border-line"><div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Réalisations</p>
         <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold tracking-[-0.055em] sm:text-6xl">Des exemples concrets de mon travail.</h1>
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">Pour chaque situation : le contexte, la difficulté rencontrée et ce que j'ai contribué à structurer. Sans confondre expérience de terrain et démonstration d'un logiciel.</p>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">Chaque cas présente le contexte, le problème et le travail réalisé. Les projets en cours sont distingués des missions achevées.</p>
       </div></section>
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="space-y-8">{cases.map((item) =>
