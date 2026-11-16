@@ -31,7 +31,7 @@ export default function EnglishResidenceCadetCase() {
           <div><h2 className="font-display text-3xl font-semibold">Work carried out</h2>
           <ul className="mt-6 space-y-4">{actions.map(item=><li key={item} className="border-l-2 border-ink pl-5 leading-8 text-muted">{item}</li>)}</ul></div>
           <div><h2 className="font-display text-3xl font-semibold">Operational value</h2>
-          <p className="mt-5 leading-8 text-muted">Clearer routines, better visibility of pending issues and handovers that rely less on individual memory. Historical performance figures without an accessible measurement method are not presented here as independently verified evidence.</p></div>
+          <p className="mt-5 leading-8 text-muted">Clearer routines, better visibility of pending issues and handovers that rely less on individual memory. The work established clearer routines and a more structured approach to pending issues and handovers.</p></div>
         </div>
       </div></section>
     </main><SiteFooter locale="en" /></>

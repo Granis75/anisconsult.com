@@ -17,9 +17,9 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "Anis Allouache — Organisation opérationnelle & outils métiers",
+  title: "Anis Allouache — Business Operations & Digital Solutions",
   description:
-    "Coordination des activités, amélioration des processus et outils métiers adaptés aux besoins du terrain.",
+    "Opérations métier, amélioration des processus et solutions numériques adaptées aux besoins des organisations.",
   alternates: {
     canonical: "/",
     languages: { "fr-FR": "/", "en-US": "/en" },
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Anis Allouache — Organisation opérationnelle & outils métiers",
+    title: "Anis Allouache — Business Operations & Digital Solutions",
     description:
-      "Organisation opérationnelle, processus, coordination et outils métiers.",
+      "Opérations métier, analyse des processus et solutions numériques.",
     url: "/",
     siteName: "ANIS ALLOUACHE",
     images: [
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: "/brand/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Anis Allouache — organisation opérationnelle et outils métiers",
+        alt: "Anis Allouache — opérations métier et solutions numériques",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anis Allouache — Organisation opérationnelle & outils métiers",
+    title: "Anis Allouache — Business Operations & Digital Solutions",
     description:
-      "Organisation opérationnelle, processus, coordination et outils métiers.",
+      "Opérations métier, analyse des processus et solutions numériques.",
     images: ["/brand/og-image.jpg"],
   },
 };

@@ -19,7 +19,7 @@ export default function EnglishApproachPage() {
       <section className="border-b border-line"><div className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">Approach</p>
         <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold tracking-[-0.055em] sm:text-6xl">Understand first. Then improve.</h1>
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">Working in operational coordination has taught me that a process only works if it fits the constraints people face on the ground. That is also how I approach digital tools.</p>
+        <p className="mt-8 max-w-3xl text-lg leading-8 text-muted">Operational experience informs my approach to systems: understand the work, identify the useful information and test ideas against real constraints.</p>
       </div></section>
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
         <div className="grid gap-5 md:grid-cols-2">
@@ -31,7 +31,12 @@ export default function EnglishApproachPage() {
         </div>
         <div className="mt-14 max-w-3xl">
           <h2 className="font-display text-3xl font-semibold">Technology is a means, not the goal.</h2>
-          <p className="mt-5 leading-8 text-muted">I can build interfaces and management tools. But not every problem needs new software: clearer procedures and better coordination can be enough.</p>
+          <p className="mt-5 leading-8 text-muted">The right response may be a clearer procedure, better reporting or a tailored application. Technology comes after the need is understood.</p>
+          <div className="mt-8 rounded-[24px] border border-line bg-[#f8f7f3] p-7">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Example · Work in progress</p>
+            <h3 className="mt-3 text-xl font-semibold">From archives to decisions</h3>
+            <p className="mt-3 leading-8 text-muted">In a current hotel project, historical records are being organised into a structured working base. An interactive prototype helps discuss possible workflows, while on-site verification remains a separate next step.</p>
+          </div>
           <p className="mt-5 leading-8 text-muted">For the software side of my work, see the projects on <a href="https://www.lyanstudio.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline underline-offset-4">Lyan Studio</a>.</p>
           <Link href="/en/work" className="mt-7 inline-block font-semibold underline underline-offset-4">Explore selected work →</Link>
         </div>

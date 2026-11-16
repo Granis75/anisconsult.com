@@ -17,9 +17,9 @@ const interTight = Inter_Tight({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anisconsult.com"),
-  title: "Anis Allouache — Operations & Business Systems",
+  title: "Anis Allouache — Business Operations & Digital Solutions",
   description:
-    "Operations coordination, process improvement and practical business tools shaped by real-world needs.",
+    "Business operations, process improvement and digital solutions informed by real operational needs.",
   alternates: {
     canonical: "/en",
     languages: { "fr-FR": "/", "en-US": "/en" },
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Anis Allouache — Operations & Business Systems",
+    title: "Anis Allouache — Business Operations & Digital Solutions",
     description:
-      "Operations coordination, workflow design, process improvement and business tools.",
+      "Business operations, workflow design, process improvement and digital solutions.",
     url: "/en",
     siteName: "ANIS ALLOUACHE",
     images: [
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
         url: "/brand/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Anis Allouache — operations and business systems",
+        alt: "Anis Allouache — business operations and digital solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anis Allouache — Operations & Business Systems",
+    title: "Anis Allouache — Business Operations & Digital Solutions",
     description:
-      "Operations coordination, workflow design, process improvement and business tools.",
+      "Business operations, workflow design, process improvement and digital solutions.",
     images: ["/brand/og-image.jpg"],
   },
 };

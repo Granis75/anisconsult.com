@@ -31,7 +31,7 @@ export default function ResidenceCadetCase() {
           <div><h2 className="font-display text-3xl font-semibold">Le travail réalisé</h2>
           <ul className="mt-6 space-y-4">{actions.map(item=><li key={item} className="border-l-2 border-ink pl-5 leading-8 text-muted">{item}</li>)}</ul></div>
           <div><h2 className="font-display text-3xl font-semibold">L'apport opérationnel</h2>
-          <p className="mt-5 leading-8 text-muted">Des routines plus lisibles, des sujets à traiter mieux identifiés et des transmissions moins dépendantes de la mémoire individuelle. Les indicateurs historiques non accompagnés de leur méthode de mesure ne sont pas utilisés ici comme preuve chiffrée.</p></div>
+          <p className="mt-5 leading-8 text-muted">Des routines plus lisibles, des sujets à traiter mieux identifiés et des transmissions moins dépendantes de la mémoire individuelle. Le travail a permis de rendre les routines plus lisibles et de mieux structurer le suivi des sujets ouverts et des transmissions.</p></div>
         </div>
       </div></section>
     </main><SiteFooter /></>

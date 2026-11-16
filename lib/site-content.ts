@@ -4,7 +4,7 @@ export const cvHref: string | null = null;
 
 export const siteContent = {
   brand: "ANIS ALLOUACHE",
-  brandContext: "Organisation opérationnelle & outils métiers",
+  brandContext: "Opérations métier & solutions numériques",
   navigation: [
     { label: "Réalisations", href: "/work" },
     { label: "Expertises", href: "/services" },
@@ -12,8 +12,8 @@ export const siteContent = {
     { label: "Contact", href: "/contact" },
   ],
   hero: {
-    title: "Des opérations mieux organisées.",
-    subtitle: "Organisation opérationnelle et outils métiers",
+    title: "Comprendre les opérations. Améliorer leur fonctionnement.",
+    subtitle: "Opérations métier & solutions numériques",
     description:
       "Coordination des activités, amélioration des processus et outils numériques adaptés au terrain.",
     support:

@@ -11,12 +11,12 @@ export function ContactSection({ headingLevel = "h1", locale = "fr" }: ContactSe
     <div className="max-w-3xl">
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">{english ? "Contact" : "Contact"}</p>
       <Heading className="mt-5 font-display text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
-        {english ? "Let's discuss your situation." : "Parlons de votre contexte."}
+        {english ? "Let's discuss your project or opportunity." : "Échangeons sur votre projet ou votre besoin."}
       </Heading>
       <p className="mt-6 text-base leading-8 text-muted sm:text-lg">
         {english
-          ? "Have a question about my work, an operations challenge or a practical project? You can reach me directly by email or LinkedIn."
-          : "Une question sur mon activité, une problématique de coordination ou un projet concret ? Vous pouvez me joindre directement par e-mail ou LinkedIn."}
+          ? "For a role within your organisation, a process improvement assignment or a digital tools project, you can reach me directly by email or LinkedIn."
+          : "Pour une opportunité professionnelle, une mission d'amélioration des processus ou un projet numérique, vous pouvez me contacter par e-mail ou LinkedIn."}
       </p>
       <div className="mt-9 flex flex-wrap gap-3">
         <a href={directEmailHref} className="premium-cta h-12 px-6">{english ? "Send an email" : "Écrire un e-mail"}</a>
